@@ -275,13 +275,13 @@
 								<div class="col-xs-12 col-lg-9">
 								  <div class="collapse solucions results">
 									<div class="head-collapse js-collapse">
-									  <p><a href="#collapse3" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions"}}<span class="icon icon--arrow-down"></span></a></p>
+									  <p><a href="#collapse_solucions" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions"}}<span class="icon icon--arrow-down"></span></a></p>
 									</div>
 									
 									<div class="head-collapse subCollapse js-collapse">
-									  <p><a href="#collapse4" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_tec"}}<span class="icon icon--arrow-down"></span></a></p>
+									  <p><a href="#collapse_solucions_tec" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_tec"}}<span class="icon icon--arrow-down"></span></a></p>
 									</div>
-									<div id="collapse4" class="contentCollapse show ajaxLoading solucionsTecResults">
+									<div id="collapse_solucions_tec" class="contentCollapse show ajaxLoading solucionsTecResults">
 									  <div class="card-in-acordeon js-changeVist">
 										<div class="row">
 										  {{ range $i, $solTec := .Params.solucions_tecnologiques }}
@@ -303,9 +303,9 @@
 									
 									
 									<div class="head-collapse subCollapse js-collapse">
-									  <p><a href="#collapse5" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_patents"}}<span class="icon icon--arrow-down"></span></a></p>
+									  <p><a href="#collapse_solucions_patents" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_patents"}}<span class="icon icon--arrow-down"></span></a></p>
 									</div>
-									<div id="collapse5" class="contentCollapse show ajaxLoading solucionsPatentsResults">
+									<div id="collapse_solucions_patents" class="contentCollapse show ajaxLoading solucionsPatentsResults">
 									  <div class="card-in-acordeon js-changeVist">
 										<div class="row">
 										  {{ range $i, $pat :=  $patents }}
@@ -349,15 +349,15 @@
 									
 									
 									<div class="head-collapse subCollapse js-collapse">
-										<p><a href="#collapse6" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_serveis"}}<span class="icon icon--arrow-down"></span></a></p>
+										<p><a href="#collapse_solucions_serveis" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_serveis"}}<span class="icon icon--arrow-down"></span></a></p>
 									</div>
-									<div id="collapse6" class="contentCollapse show ajaxLoading solucionsServeissResults">
+									<div id="collapse_solucions_serveis" class="contentCollapse show ajaxLoading solucionsServeissResults">
 									  <div class="card-in-acordeon js-changeVist">
 										<div class="row">
 										  {{ range $i, $serv :=  $serveis }}
 										  {{ if isset $serv "value" }}
 										  <div class="col-xs-12 col-md-4">
-											<a href="" onclick="" class="card-absolute-link"></a>
+											<!-- <a href="" onclick="" class="card-absolute-link"></a> -->
 											<div class="uoc_card_placeholder">
 											  <img src="{{$serv.img_background}}"/>
 											  <div class="title">{{$serv.display_name}}</div>
@@ -377,10 +377,10 @@
 								  
 								  <div class="collapse spin results">
                     <div class="head-collapse js-collapse">
-                      <p><a href="#collapse8" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_spin_off"}}<span class="icon icon--arrow-down"></span></a></p>
+                      <p><a href="#collapse_spin" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_spin_off"}}<span class="icon icon--arrow-down"></span></a></p>
                       <p class="result"></p>
                     </div>
-                    <div id="collapse8" class="contentCollapse show ajaxLoading spinResults">
+                    <div id="collapse_spin" class="contentCollapse show ajaxLoading spinResults">
                       <div class="card-in-acordeon js-changeVist">
                       <div class="row">
                         {{ range $i, $spin :=  $spin_offs }}
@@ -479,10 +479,10 @@
 						<div class="col-xs-12 col-lg-9">
 								<div class="collapse grup results">
 									<div class="head-collapse js-collapse">
-											<p><a href="#collapse4" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_grups"}}<span class="icon icon--arrow-down"></span></a></p>
+											<p><a href="#collapse_grups" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_grups"}}<span class="icon icon--arrow-down"></span></a></p>
 									</div>
 									
-									<div id="collapse4" class="contentCollapse show ajaxLoading grupResults">
+									<div id="collapse_grups" class="contentCollapse show ajaxLoading grupResults">
 										<div class="card-in-acordeon js-changeVist">
 											<div class="row">
 											{{ range $i, $solTec := .Params.solucions_tecnologiques }}
@@ -505,10 +505,10 @@
 
 								<div class="collapse fitxa results">
 									<div class="head-collapse js-collapse">
-										<p><a href="#collapse2" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_investigadors"}}<span class="icon icon--arrow-down"></span></a></p>
+										<p><a href="#collapse_fitxa" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_investigadors"}}<span class="icon icon--arrow-down"></span></a></p>
 										<p class="result"></p>
 									</div>
-									<div id="collapse2" class="contentCollapse show ajaxLoading fitxaResults">
+									<div id="collapse_fitxa" class="contentCollapse show ajaxLoading fitxaResults">
 										<div class="card-in-acordeon js-changeVist">
 											<div class="row">
 												{{ range $i, $sequence :=  (seq 3) }}
@@ -528,13 +528,13 @@
 
 								<div class="collapse solucions results">
 									<div class="head-collapse js-collapse">
-										<p><a href="#collapse3" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions"}}<span class="icon icon--arrow-down"></span></a></p>
+										<p><a href="#collapse_sol" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions"}}<span class="icon icon--arrow-down"></span></a></p>
 									</div>
 										
 									<div class="head-collapse subCollapse js-collapse">
-									<p><a href="#collapse4" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_tec"}}<span class="icon icon--arrow-down"></span></a></p>
+									<p><a href="#collapse_sol_tec" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_tec"}}<span class="icon icon--arrow-down"></span></a></p>
 									</div>
-									<div id="collapse4" class="contentCollapse show ajaxLoading solucionsTecResults">
+									<div id="collapse_sol_tec" class="contentCollapse show ajaxLoading solucionsTecResults">
 									<div class="card-in-acordeon js-changeVist">
 										<div class="row">
 										{{ range $i, $solTec := .Params.solucions_tecnologiques }}
@@ -556,9 +556,9 @@
 										
 										
 									<div class="head-collapse subCollapse js-collapse">
-									<p><a href="#collapse5" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_patents"}}<span class="icon icon--arrow-down"></span></a></p>
+									<p><a href="#collapse_sol_pat" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_patents"}}<span class="icon icon--arrow-down"></span></a></p>
 									</div>
-									<div id="collapse5" class="contentCollapse show ajaxLoading solucionsPatentsResults">
+									<div id="collapse_sol_pat" class="contentCollapse show ajaxLoading solucionsPatentsResults">
 									<div class="card-in-acordeon js-changeVist">
 										<div class="row">
 										{{ range $i, $pat :=  $patents }}
@@ -580,9 +580,9 @@
 										
 										
 									<div class="head-collapse subCollapse js-collapse">
-										<p><a href="#collapse6" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_serveis"}}<span class="icon icon--arrow-down"></span></a></p>
+										<p><a href="#collapse_sol_serv" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_serveis"}}<span class="icon icon--arrow-down"></span></a></p>
 									</div>
-									<div id="collapse6" class="contentCollapse show ajaxLoading solucionsServeissResults">
+									<div id="collapse_sol_serv" class="contentCollapse show ajaxLoading solucionsServeissResults">
 									<div class="card-in-acordeon js-changeVist">
 										<div class="row">
 										{{ range $i, $serv :=  $serveis }}
@@ -607,10 +607,10 @@
 								
 								<div class="collapse spin results">
 									<div class="head-collapse js-collapse">
-									<p><a href="#collapse8" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_spin_off"}}<span class="icon icon--arrow-down"></span></a></p>
+									<p><a href="#collapse_spins" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_spin_off"}}<span class="icon icon--arrow-down"></span></a></p>
 									<p class="result"></p>
 									</div>
-									<div id="collapse8" class="contentCollapse show ajaxLoading spinResults">
+									<div id="collapse_spins" class="contentCollapse show ajaxLoading spinResults">
 									<div class="card-in-acordeon js-changeVist">
 										<div class="row">
 										{{ range $i, $spin :=  $spin_offs }}
@@ -641,6 +641,19 @@
 </div>
 	{{ partial "ri_js_imports.html" . }}
 	<script src="/js/search.js"></script>
-	<script type="text/javascript"></script>
+  <script type="text/javascript">
+    console.log('init!!!');
+    console.log('window.location.pathname',window.location.pathname);
+    console.log('window.location.hostname',window.location.hostname);
+    console.log('window.location.href',window.location.href);
+    langs = $("a[lang]");
+    for(var l = 0; l < langs.length; l++){
+      console.log('l--->',langs[l]);
+      //var langAttr = lang[l].getAttribute("lang");
+      //var newUrlByLang = window.location.pathname
+      //lang[l].setAttribute("href",window.location.href)
+    }
+    //console.log('langs---> ',langs);
+  </script>
 </body>
 </html>

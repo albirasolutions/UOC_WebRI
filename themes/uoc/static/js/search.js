@@ -100,7 +100,7 @@ jQuery(document).ready(function ($) {
 	searchParams=parseQueryString(location.search);
 	querySearchEngine(searchParams);				//All results in first load
 	console.log('incoming Params :: ',searchParams);
-	loadTab2Search(searchParams["target"]);
+	loadTab2Search(searchParams["target"] ? searchParams["target"] : 1);
 	$(document).on('click', ".pagination__item", function(e){
 		$(".pagination__item").unbind();
 		e.stopImmediatePropagation();

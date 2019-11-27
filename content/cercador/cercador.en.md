@@ -1,4 +1,4 @@
-{
+{	"title" : "R&I in UOC",
 	"ambits_especialitzacio" : [
 		{"display_name" : "All areas", "value" : ""},
 		{"display_name" : "Education and IT", "value" : "Education and IT"},

@@ -1,4 +1,5 @@
 ---
+title: R&I in UOC
 general:
   - nom_solucio: nom_solucio_en
     text_breu: text_en

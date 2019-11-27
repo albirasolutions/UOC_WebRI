@@ -1,8 +1,9 @@
 ---
+title: R&I a la UOC
 general:
   - nom_solucio: nom_solucio_ca
     text_breu: text_ca
-    img_background: 
+    img_background: /img/detall_solucions_principal.png
     tipologia: 
     sector: 
     centre: 

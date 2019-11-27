@@ -15,88 +15,83 @@
     {{ partial "header.html" . }}
     <div class="site-wrapper">
         
-        <main id="main-global" role="main" class="col-xs-12 ">
-        
-            <div class="clearfix">
+            <section class="titol-pagina">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="page-title title-border-green">
+                            <h2>{{ $generalInfo.nom_solucio }}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-xs-8 card__contents img-wpr img-wpr--horizontal">
+                    <section class="banner-full banner-full--inverse">
+                        <img src="{{$generalInfo.img_background}}" aria-labelledby="banner-full__title1" aria-describedby="banner-full__description1" class="fullwidth__image">
+                        <div class="banner-full__content col-xs-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <span id="banner-full__title1" class="banner-full__title">{{$generalInfo.text_breu}}</span>
+                                    <p id="banner-full__description1" class="banner-full__description">{{$generalInfo.text_breu}}</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="row" style="vertical-align:bottom;"><div class="col-md-6"><a href="#" class="btn btn--call-to-action col-xs-6">Call to action</a></div></div>
+                        </div>
+                    </section>
+                </div>
 
-                <div class="col-xs-12 col-md-12 col-lg-12 col-sm-10 col-clear-right">
-                    <div class="component-header ruler m-bottom-4y ruler--dynamic p-right-4x"> 
-                        
-                        <h2 class="h1 h1-responsive">{{ $generalInfo.nom_solucio }}</h2>
-                        
+                <div class="card col-md-4 col-xs-4" role="region">
+                    <div class="card__contents">
+                        <div>
+                            <p></p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-xs-12 col-md-12 col-lg-12 col-sm-10 col-clear-right">
-
-                        <div class="col-xs-9 col-md-7 col-lg-8 col-sm-10 col-clear-right">
-                            <div class="component-header ruler m-bottom-4y ruler--dynamic p-right-4x"> 
-                                
-                                <!-- <h2 class="h1 h1-responsive">Proyectos</h2> IMAGEN + DESCRIPCION GENERAL -->
+                <div id="main-contents">
+    
+                    <div class="col-xs-12 col-md-3"></div>
+                        <div class="projectDetail col-xs-12 col-md-6">
+                            
+                            
+                            <div class="paragraph"><span class="bold"></span></div>
+                            
+                            
+                            <div class="paragraph"><span class="bold"></span> 
                                 
                             </div>
-                        </div>
-
-                        <div class="col-xs-12 col-md-3 col-clear-left hidden-xs hidden-sm">
-                            <div class="component-header ruler  ruler--dynamic p-right-4x"> 
-                                <!-- <span class="h4"><a target="_self" href="/portal/es/ri/projectes-publicacions/index.html">Qué se investiga</a></span> INFO GENERAL DE LA SOLUCION -->
+                            
+                            
+                            <div class="paragraph">
+                                <span class="bold"></span>
                             </div>
+                            
+                            
+                            <div class="paragraph">
+                                <span class="bold"></span>
+                            </div>
+                            
+                            
+                            <div class="paragraph">
+                                <span class="bold"></span>
+                            </div>
+                            
+                            
+                            
+                            <div class="paragraph">
+                                <span class="bold"></span>
+                            </div>
+                            
+                            <div class="paragraph"><span class="bold"></span></div>
+                            <div class="paragraph"><span class="bold"></span></div>
+                            
                         </div>
+                    
+                    </div>
 
-                </div>                
-                
-            </div>
+            </section>           
             
-            
-            <div id="main-contents">
-    
-                
-                <div class="col-xs-12 col-md-3"></div>
-                <div class="projectDetail col-xs-12 col-md-6">
-                    
-                    
-                    <div class="paragraph"><span class="bold"></span></div>
-                    
-                    
-                    <div class="paragraph"><span class="bold"></span> 
-                        
-                    </div>
-                    
-                    
-                    <div class="paragraph">
-                        <span class="bold"></span>
-                    </div>
-                    
-                    
-                    <div class="paragraph">
-                        <span class="bold"></span>  
-    
-                        
-                    </div>
-                    
-                    
-                    <div class="paragraph">
-                        <span class="bold"></span>
-                        
-                        
-                    </div>
-                    
-                    
-                    
-                    <div class="paragraph">
-                        <span class="bold"></span>
-                        
-                    </div>
-                    
-                    <div class="paragraph"><span class="bold"></span></div>
-                    <div class="paragraph"><span class="bold">:</span></div>
-                    
-                </div>
-                
-            </div>
-        </main>
+        {{ partial "footer.html" . }}
     </div>    
-    {{ partial "footer.html" . }}
 </div>
 {{ partial "ri_js_imports.html" . }}
 <!--script src="/js/search.js"></script-->

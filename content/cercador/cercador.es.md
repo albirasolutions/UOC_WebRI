@@ -1,4 +1,5 @@
-"ambits_especialitzacio" : [
+{	"title" : "R&I en la UOC",
+	"ambits_especialitzacio" : [
 		{"display_name" : "Todos", "value" : ""},
 		{"display_name" : "Educación y TIC", "value" : "Educación y TIC"},
 		{"display_name" : "Sociedad en red", "value" : "Sociedad en red"},
@@ -66,3 +67,4 @@
         {"display_name":"spin_off_1", "value" : "spin_off_1", "img_background":""},
         {"display_name":"spin_off_2", "value" : "spin_off_2", "img_background":""}
     ]
+}

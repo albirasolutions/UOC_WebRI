@@ -18,15 +18,19 @@ jQuery(document).ready(function ($) {
     function collapse(){
 
         $('.js-collapseClick').on('click', function () {
-
+            console.log('clicking collapseClick ... ',$('.js-collapseClick'));
+            console.log('has class .js-sub ? ... ',$(this).closest('.js-collapse').hasClass('js-sub'));
             if ($(this).closest('.js-collapse').hasClass('js-sub')){
-
+                
                 if ($(this).closest('.js-collapse').siblings().hasClass('show')) {
+                    console.log('already showing sub tab ... ',$(this).closest('.js-collapse').siblings().hasClass('show'));
+                    console.log('siblings ... ',$(this).closest('.js-collapse').siblings());
                     $(this).closest('.js-collapse').siblings().removeClass('show');
                     $(this).attr('aria-expanded', 'false');
 
 
                 } else {
+                    console.log('hidden sub tab ... ',$(this).closest('.js-collapse').siblings().hasClass('show'));
                     $('.js-sub .js-collapseClick').attr('aria-expanded', 'false');
                     $('.js-sub').siblings().removeClass('show');
                     $(this).closest('.js-sub').siblings().addClass('show');
@@ -35,13 +39,16 @@ jQuery(document).ready(function ($) {
 
 
             }else{
-
+                
                 if ($(this).closest('.js-collapse').siblings().hasClass('show')) {
+                    console.log('already showing tab ... ',$(this).closest('.js-collapse').siblings().hasClass('show'));
                     $(this).closest('.js-collapse').siblings().removeClass('show');
                     $(this).attr('aria-expanded', 'false');
 
 
                 } else {
+                    console.log('hidden tab ... ',$(this).closest('.js-collapse').siblings().hasClass('show'));
+                    console.log('siblings ... ',$(this).closest('.js-collapse').siblings());
                     $(this).closest('.js-collapse-group').find('.js-collapseClick').attr('aria-expanded', 'false');
                     $(this).closest('.js-collapse-group').find('.js-collapse').siblings().removeClass('show');
                     $(this).closest('.js-collapse').siblings().addClass('show');
@@ -58,6 +65,7 @@ jQuery(document).ready(function ($) {
     }
 
     if($('.js-collapseAll').length > 0) {
+        console.log('clicking collapseAll ... ',$('.js-collapseAll'));
         $('.js-collapseAll').on('click', function(e) {
             e.preventDefault();
             // console.log($(this).parent().find('a').html())
