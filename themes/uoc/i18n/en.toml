@@ -145,3 +145,13 @@
 [uoc_contact_fields_textarea] other = "Enter your questions"
 [uoc_contact_send] other = "Placeholder data"
 [uoc_contact_selecciona] other = "Select"
+
+[uoc_ri_tipologia] other = 'Tipology'
+[uoc_ri_sector] other = 'Sector'
+[uoc_ri_centre] other = 'Center'
+[uoc_ri_keywords] other = 'Keywords'
+[uoc_ri_about_tec] other = 'About technology'
+[uoc_ri_aspect_innov] other = 'Innovative aspects'
+[uoc_ri_apps] other = 'Aplications'
+[uoc_ri_research_groups] other = 'Research groups'
+[uoc_ri_contacte] other = 'Contact'

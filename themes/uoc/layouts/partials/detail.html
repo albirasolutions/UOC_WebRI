@@ -1,0 +1,221 @@
+<!-- Aqui tendremos la comprobación del campo que nos dira que html cargar según el contenido a mostrar-->
+{{ $generalInfo := index (.Params.general) 0 }}
+{{ $sobreTec := index (.Params.sobre_tecnologia) 0 }}
+{{ $aspectesInnova := index (.Params.aspectes_innovadors) 0 }}
+{{ $apps := index (.Params.aplicacions) 0 }}
+{{ $grupsRecerca := index (.Params.grups_recerca) 0 }}
+{{ $contacte := index (.Params.contacte) 0 }}
+<section class="titol-pagina">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="page-title title-border-green">
+                    <h2>{{ $generalInfo.nom_solucio }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-9 col-xs-9 card" role="region">
+                <div class="card__contents img-wpr img-wpr--horizontal img--tint">
+                    <img src="{{ $generalInfo.img_background}}"  class="img-wpr__cover">
+                    <div class="img-wpr__contents">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p class="h1 inverse">{{ $generalInfo.text_breu}}</p>
+                                <br/><br/>
+                                <p class="inverse">{{ $generalInfo.text_breu}}</p><br/><br/><br/><br/><br/><br/>
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                             <a href="#" class="btn btn--call-to-action col-xs-6">Call to action</a>
+                          </div>
+                       </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="card col-md-3 col-xs-3" role="region">
+                <div class="card__contents">
+                    <div class="" style="height: 40px;margin-bottom:25px;">
+                       <p class="h5" style="font-weight: bold;">{{ T "uoc_ri_tipologia" }} :</p>
+                       <p class="text-small">{{ $generalInfo.tipologia}}</p>
+                    </div>
+
+                    <div style="height: 40px;margin-bottom:25px;">
+                        <p class="h5" style="font-weight: bold;">{{ T "uoc_ri_sector" }} :</p>
+                        <p class="text-small">{{ $generalInfo.sector }}</p>
+                     </div>
+
+                     <div style="height: 40px;margin-bottom:20px;">
+                        <p class="h5" style="font-weight: bold;">{{ T "uoc_ri_centre" }} :</p>
+                        <a href="#"><p class="text-small"><u>{{ $generalInfo.centre}}</u></p></a> 
+                     </div>
+
+                     <div class="img--y col-xs-12" style="margin-bottom:10px;">
+                        <div class="img-wpr img-wpr--horizontal">
+                          <img class="img-wpr__cover" src="{{ $generalInfo.logo }}" alt="Texto alternativo" />
+                        </div>
+                      </div>
+                      
+                      <div class="col-xs-12">
+
+                          <div data-collapse="" class="collapse" role="listitem">
+                              <a id="content_keywords" style="border-top:none;" data-collapse-trigger="" data-collapse-system-trigger="" href="#collapse__content_keywords" aria-selected="true" aria-controls="collapse__content_keywords" class="collapse__trigger">
+                                  <h6 class="h5 collapse__title">{{ T "uoc_ri_keywords" }}</h6>
+                                  <span aria-hidden="false" class="icon icon--arrow-down icon--after is-active-hidden float-right"></span>
+                                  <span aria-hidden="true" class="icon icon--arrow-up icon--after is-active-visible float-right"></span>
+                              </a>
+                              <div data-collapse-content="" class="collapse__content" id="collapse__content_keywords">
+                                  <div data-collapse-inner="" class="row">
+                                      <ul class="list-group">
+                                          {{ range $k := $generalInfo.keywords }}
+                                          <li class="list-group__item">
+                                            <p class="text-small">
+                                              {{$k}}
+                                            </p>
+                                          </li>
+                                          {{end}}
+                                      </ul>
+
+                                  </div>
+                              </div>
+                          </div>
+
+                      </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row"><div class="col-xs-12"><!-- pdf download --></div></div>
+        <div class="row">
+
+            <div class="col-md-3 col-xs-12" style="padding-right: 5px;">
+
+                  <div class="ruler xx-grid-block">
+                      <ul class="list-group list-group--thin">
+                          <li class="list-group__item"><a href="#sobre_tecnologia" aria-controls="sobre_tecnologia">{{ T "uoc_ri_about_tec" }}</a></li>
+                          <li class="list-group__item"><a href="#aspect_innov" aria-controls="aspect_innov">{{ T "uoc_ri_aspect_innov" }}</a></li>
+                          <li class="list-group__item"><a href="#apps" aria-controls="apps">{{ T "uoc_ri_apps" }}</a></li>
+                          <li class="list-group__item"><a href="#research_groups" aria-controls="research_groups">{{ T "uoc_ri_research_groups" }}</a></li>
+                          <li class="list-group__item"><a href="#contact" aria-controls="contact">{{ T "uoc_ri_contacte" }}</a></li>
+                      </ul>
+                  </div>
+              
+            </div>
+            <div class="col-md-9">
+
+              <div class="ruler ruler--primary">
+
+                  <div id="sobre_tecnologia" class="col-xs-12">
+                        
+                      <div data-collapse="" class="collapse collapse__wrapper">
+                          <a style="border-top:none;" data-collapse-trigger="" data-collapse-system-trigger="" href="#" aria-expanded="false" aria-controls="collapse__content_sobre_tec" class="collapse__trigger">
+                              <h6 class="h3 collapse__title">{{ T "uoc_ri_about_tec" }}</h6>
+                              <span aria-hidden="false" class="icon icon--arrow-down icon--after is-active-hidden float-right"></span>
+                              <span aria-hidden="true" class="icon icon--arrow-up icon--after is-active-visible float-right"></span>
+                          </a>
+                          <div data-collapse-content="" class="collapse__content" id="collapse__content_sobre_tec">
+                              <div data-collapse-inner="" class="row">
+                                  <div class="">
+                                      <p>{{ $sobreTec.descripcio}}</p>
+                                  </div>
+
+                              </div>
+                          </div>
+                      </div>
+
+                  </div> 
+
+                  <div id="aspect_innov" class="col-xs-12">
+                        
+                      <div data-collapse="" class="collapse collapse__wrapper">
+                          <a style="border-top:none;" data-collapse-trigger="" data-collapse-system-trigger="" href="#" aria-expanded="false" aria-controls="collapse__content_sobre_tec" class="collapse__trigger">
+                              <h6 class="h3 collapse__title">{{ T "uoc_ri_aspect_innov" }}</h6>
+                              <span aria-hidden="false" class="icon icon--arrow-down icon--after is-active-hidden float-right"></span>
+                              <span aria-hidden="true" class="icon icon--arrow-up icon--after is-active-visible float-right"></span>
+                          </a>
+                          <div data-collapse-content="" class="collapse__content" id="collapse__content_aspect_innov">
+                              <div data-collapse-inner="" class="row">
+                                  <div class="">
+                                      <p contenteditable="true">{{ $aspectesInnova.descripcio}}</p>
+                                  </div>
+
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+
+                  <div id="apps" class="col-xs-12">
+                        
+                      <div data-collapse="" class="collapse collapse__wrapper">
+                          <a style="border-top:none;" data-collapse-trigger="" data-collapse-system-trigger="" href="#" aria-expanded="false" aria-controls="collapse__content_sobre_tec" class="collapse__trigger">
+                              <h6 class="h3 collapse__title">{{ T "uoc_ri_apps" }}</h6>
+                              <span aria-hidden="false" class="icon icon--arrow-down icon--after is-active-hidden float-right"></span>
+                              <span aria-hidden="true" class="icon icon--arrow-up icon--after is-active-visible float-right"></span>
+                          </a>
+                          <div data-collapse-content="" class="collapse__content" id="collapse__content_apps">
+                              <div data-collapse-inner="" class="row">
+                                  <div class="">
+                                      <p contenteditable="true">{{ $apps.descripcio}}</p>
+                                  </div>
+
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+
+                  <div id="research_groups" class="col-xs-12">
+                        
+                      <div data-collapse="" class="collapse collapse__wrapper">
+                          <a style="border-top:none;" data-collapse-trigger="" data-collapse-system-trigger="" href="#" aria-expanded="false" aria-controls="collapse__content_sobre_tec" class="collapse__trigger">
+                              <h6 class="h3 collapse__title">{{ T "uoc_ri_research_groups" }}</h6>
+                              <span aria-hidden="false" class="icon icon--arrow-down icon--after is-active-hidden float-right"></span>
+                              <span aria-hidden="true" class="icon icon--arrow-up icon--after is-active-visible float-right"></span>
+                          </a>
+                          <div data-collapse-content="" class="collapse__content" id="collapse__content_rgroups">
+                              <div data-collapse-inner="" class="row">
+                                  <div class="">
+                                      <p>{{ $grupsRecerca.grups}}</p>
+                                      <p >{{ $grupsRecerca.investigadors}}</p>
+                                  </div>
+
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+
+                  <div id="contact" class="col-xs-12">
+                        
+                      <div data-collapse="" class="collapse collapse__wrapper">
+                          <a style="border-top:none;" data-collapse-trigger="" data-collapse-system-trigger="" href="#" aria-expanded="false" aria-controls="collapse__content_sobre_tec" class="collapse__trigger">
+                              <h6 class="h3 collapse__title">{{ T "uoc_ri_contacte" }}</h6>
+                              <span aria-hidden="false" class="icon icon--arrow-down icon--after is-active-hidden float-right"></span>
+                              <span aria-hidden="true" class="icon icon--arrow-up icon--after is-active-visible float-right"></span>
+                          </a>
+                          <div data-collapse-content="" class="collapse__content" id="collapse__content_contact">
+                              <div data-collapse-inner="" class="row">
+                                  <div class="">
+                                      <p >{{ $contacte.text}}</p>
+                                      <p >{{ $contacte.address}}</p>
+                                      <p >{{ $contacte.telefon}}</p>
+                                      <p >{{ $contacte.email}}</p>
+                                  </div>
+
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+
+              </div>
+
+            </div>
+        
+        </div>
+
+    </section>

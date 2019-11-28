@@ -146,3 +146,13 @@
 [uoc_contact_fields_textarea] other = "Tu consulta..."
 [uoc_contact_send] other = "Enviar la consulta"
 [uoc_contact_selecciona] other = "Selecciona"
+
+[uoc_ri_tipologia] other = 'Tipología'
+[uoc_ri_sector] other = 'Sector'
+[uoc_ri_centre] other = 'Centro'
+[uoc_ri_keywords] other = 'Keywords'
+[uoc_ri_about_tec] other = 'Sobre la tecnología'
+[uoc_ri_aspect_innov] other = 'Aspectes Innovadores'
+[uoc_ri_apps] other = 'Aplicaciones'
+[uoc_ri_research_groups] other = 'Grupos de Recerca'
+[uoc_ri_contacte] other = 'Contacto'
