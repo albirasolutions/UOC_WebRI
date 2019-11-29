@@ -165,6 +165,40 @@ collections: # A list of collections the CMS should be able to edit
         fields : 
           - { label : display_name, name: display_name, widget: string }
           - { label : value, name: value, widget: string }
+      - label: sector_productiu
+        name : sector_productiu 
+        widget: list
+        fields : 
+          - { label : display_name, name: display_name, widget: string }
+          - { label : value, name: value, widget: string }
+      - label: solucions_tecnologiques
+        name : solucions_tecnologiques 
+        widget: list
+        fields : 
+          - { label : display_name, name: display_name, widget: string }
+          - { label : value, name: value, widget: string }
+          - { label : img_background, name : img_background, widget : image }
+      - label: patents
+        name : patents 
+        widget: list
+        fields : 
+          - { label : display_name, name: display_name, widget: string }
+          - { label : value, name: value, widget: string }
+          - { label : img_background, name : img_background, widget : image }
+      - label: serveis
+        name : serveis 
+        widget: list
+        fields : 
+          - { label : display_name, name: display_name, widget: string }
+          - { label : value, name: value, widget: string }
+          - { label : img_background, name : img_background, widget : image }
+      - label: spin_offs
+        name : spin_offs 
+        widget: list
+        fields : 
+          - { label : display_name, name: display_name, widget: string }
+          - { label : value, name: value, widget: string }
+          - { label : img_background, name : img_background, widget : image }
   - name: "mapa-ambits-recerca"
     label: "Mapa Ambits Recerca"
     folder: "content/mapa-ambits-recerca"
