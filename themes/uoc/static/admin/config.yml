@@ -264,7 +264,7 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: titol, name: titol, widget: string}
               - {label: descripcio, name: descripcio, widget: markdown}
-              -  label: Docs Relacionats
+              - label: Docs Relacionats
                 name: docs_rels
                 widget: list
                 fields:
@@ -275,7 +275,7 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: titol, name: titol, widget: string}
               - {label: descripcio, name: descripcio, widget: markdown}
-              -  label: Docs Relacionats
+              - label: Docs Relacionats
                 name: docs_rels
                 widget: list
                 fields:
