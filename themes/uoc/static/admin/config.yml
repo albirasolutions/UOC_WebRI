@@ -117,17 +117,17 @@ collections: # A list of collections the CMS should be able to edit
           - label: "Albira Content2"
             name: "albiraContent2"
             widget: selector_custom
-  - name: "solucio_tecnologica"
+  - name: "solucio_tec"
     label: "solucio_tecnologica"
     files:
       - label: "CA"
         name: "ca"
+        #slug: "{{slug_key}}"
         identifier_field: slug_key
-        slug: "{{slug_key}}"
-        file: content/solucio_tec/{{slug}}/{{slug}}.ca.md
+        file: content/solucio_tec/{{fields.slug_key}}/{{fields.slug_key}}.ca.md
         #folder: "content/solucio_tec"
         create: true
-        #preview_path: content/solucio_tec/{{title}}
+        preview_path: content/solucio_tec/{{slug}}/
         fields:
           - {label: Title, name: title, widget : string}
           - {label: Slug, name: slug_key, widget : string}
