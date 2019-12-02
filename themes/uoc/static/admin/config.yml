@@ -119,17 +119,10 @@ collections: # A list of collections the CMS should be able to edit
             widget: selector_custom
   - name: "solucio_tec"
     label: "solucio_tecnologica"
-    files:
-      - label: "CA"
-        name: "ca"
-        #slug: "{{slug_key}}"
-        #identifier_field: slug_key
-        #slug: "{{slug}}"
-        folder: content/solucio_tec/
-        #folder: "content/solucio_tec"
-        create: true
-        preview_path: solucio_tec/{{title}}/{{title}}.ca.md
-        fields:
+    folder: "content/solucio_tec"
+    create: true
+    fields:
+      fields:
           - {label: Title, name: title, widget : string}
           - label: General
             name: general
@@ -180,6 +173,67 @@ collections: # A list of collections the CMS should be able to edit
                 widget: list
                 fields:
                   - {label: path, name: path, widget: string}
+    # files:
+    #   - label: "CA"
+    #     name: "ca"
+    #     #slug: "{{slug_key}}"
+    #     #identifier_field: slug_key
+    #     #slug: "{{slug}}"
+    #     folder: content/solucio_tec/{{title}}/{{title}}.ca.md
+    #     #folder: "content/solucio_tec"
+    #     create: true
+    #     #preview_path: content/solucio_tec/{{fields.slug_key}}/{{fields.slug_key}}
+    #     fields:
+    #       - {label: Title, name: title, widget : string}
+    #       - label: General
+    #         name: general
+    #         widget: list
+    #         fields: 
+    #           - {label: Nom Solucio, name: nom_solucio, widget: string}
+    #       - label: Sobre la Tecnologia
+    #         name: sobre_tecnologia      
+    #         widget: list
+    #         fields:
+    #           - {label: titol, name: titol, widget: string}
+    #           - {label: descripcio, name: descripcio, widget: markdown}
+    #           - label: Docs Relacionats
+    #             name: docs_rels
+    #             widget: list
+    #             fields:
+    #               - {label: path, name: path, widget: string}
+    #       - label: Sobre la Tecnologia
+    #         name: sobre_tecnologia      
+    #         widget: list
+    #         fields:
+    #           - {label: titol, name: titol, widget: string}
+    #           - {label: descripcio, name: descripcio, widget: markdown}
+    #           - label: Docs Relacionats
+    #             name: docs_rels
+    #             widget: list
+    #             fields:
+    #               - {label: path, name: path, widget: string}
+    #       - label: Sobre la Tecnologia
+    #         name: sobre_tecnologia      
+    #         widget: list
+    #         fields:
+    #           - {label: titol, name: titol, widget: string}
+    #           - {label: descripcio, name: descripcio, widget: markdown}
+    #           - label: Docs Relacionats
+    #             name: docs_rels
+    #             widget: list
+    #             fields:
+    #               - {label: path, name: path, widget: string}
+    #       - label: Sobre la Tecnologia
+    #         name: sobre_tecnologia      
+    #         widget: list
+    #         fields:
+    #           - {label: titol, name: titol, widget: string}
+    #           - {label: descripcio, name: descripcio, widget: markdown}
+    #           - label: Docs Relacionats
+    #             name: docs_rels
+    #             widget: list
+    #             fields:
+    #               - {label: path, name: path, widget: string}
       # - label: "ES"
       #   name: "es"
       #   slug: "{{slug}}"
