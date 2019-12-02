@@ -243,60 +243,181 @@ collections: # A list of collections the CMS should be able to edit
               - {label: value, name: value, widget: string}
   - name: "solucio_tecnologica"
     label: "solucio_tecnologica"
-    folder: "content/solucio_tec"
-    create: true
-    preview_path: content/solucio_tec/{{title}}
-    fields:
-      - {label: Title, name:title, widget : string}
-      - label: General
-        name: general
-        widget: object
-        fields: 
-          - {label: Nom Solucio, name: nom_solucio, widget: string}
-      - label: Sobre la Tecnologia
-        name: sobre_tecnologia      
-        widget: object
+    files:
+      - label: "CA"
+        name: "ca"
+        slug: "{{slug}}"
+        file: content/solucio_tec/{{slug}}/{{slug}}.ca.md
+        #folder: "content/solucio_tec"
+        create: true
+        #preview_path: content/solucio_tec/{{title}}
         fields:
-          - {label: titol, name: titol, widget: string}
-          - {label: descripcio, name: descripcio, widget: markdown}
-          -  label: Docs Relacionats
-             name: docs_rels
-             widget: list
-             fields:
-              - {label: path, name: path, widget: string}
-      - label: Sobre la Tecnologia
-        name: sobre_tecnologia      
-        widget: object
+          - {label: Title, name:title, widget : string}
+          - label: General
+            name: general
+            widget: object
+            fields: 
+              - {label: Nom Solucio, name: nom_solucio, widget: string}
+          - label: Sobre la Tecnologia
+            name: sobre_tecnologia      
+            widget: object
+            fields:
+              - {label: titol, name: titol, widget: string}
+              - {label: descripcio, name: descripcio, widget: markdown}
+              -  label: Docs Relacionats
+                name: docs_rels
+                widget: list
+                fields:
+                  - {label: path, name: path, widget: string}
+          - label: Sobre la Tecnologia
+            name: sobre_tecnologia      
+            widget: object
+            fields:
+              - {label: titol, name: titol, widget: string}
+              - {label: descripcio, name: descripcio, widget: markdown}
+              -  label: Docs Relacionats
+                name: docs_rels
+                widget: list
+                fields:
+                  - {label: path, name: path, widget: string}
+          - label: Sobre la Tecnologia
+            name: sobre_tecnologia      
+            widget: object
+            fields:
+              - {label: titol, name: titol, widget: string}
+              - {label: descripcio, name: descripcio, widget: markdown}
+              -  label: Docs Relacionats
+                name: docs_rels
+                widget: list
+                fields:
+                  - {label: path, name: path, widget: string}
+          - label: Sobre la Tecnologia
+            name: sobre_tecnologia      
+            widget: object
+            fields:
+              - {label: titol, name: titol, widget: string}
+              - {label: descripcio, name: descripcio, widget: markdown}
+              -  label: Docs Relacionats
+                name: docs_rels
+                widget: list
+                fields:
+                  - {label: path, name: path, widget: string}
+      - label: "ES"
+        name: "es"
+        slug: "{{slug}}"
+        file: content/solucio_tec/{{slug}}/{{slug}}.es.md
+        #folder: "content/solucio_tec"
+        create: true
+        #preview_path: content/solucio_tec/{{title}}
         fields:
-          - {label: titol, name: titol, widget: string}
-          - {label: descripcio, name: descripcio, widget: markdown}
-          -  label: Docs Relacionats
-             name: docs_rels
-             widget: list
-             fields:
-              - {label: path, name: path, widget: string}
-      - label: Sobre la Tecnologia
-        name: sobre_tecnologia      
-        widget: object
+          - {label: Title, name:title, widget : string}
+          - label: General
+            name: general
+            widget: object
+            fields: 
+              - {label: Nom Solucio, name: nom_solucio, widget: string}
+          - label: Sobre la Tecnologia
+            name: sobre_tecnologia      
+            widget: object
+            fields:
+              - {label: titol, name: titol, widget: string}
+              - {label: descripcio, name: descripcio, widget: markdown}
+              -  label: Docs Relacionats
+                name: docs_rels
+                widget: list
+                fields:
+                  - {label: path, name: path, widget: string}
+          - label: Sobre la Tecnologia
+            name: sobre_tecnologia      
+            widget: object
+            fields:
+              - {label: titol, name: titol, widget: string}
+              - {label: descripcio, name: descripcio, widget: markdown}
+              -  label: Docs Relacionats
+                name: docs_rels
+                widget: list
+                fields:
+                  - {label: path, name: path, widget: string}
+          - label: Sobre la Tecnologia
+            name: sobre_tecnologia      
+            widget: object
+            fields:
+              - {label: titol, name: titol, widget: string}
+              - {label: descripcio, name: descripcio, widget: markdown}
+              -  label: Docs Relacionats
+                name: docs_rels
+                widget: list
+                fields:
+                  - {label: path, name: path, widget: string}
+          - label: Sobre la Tecnologia
+            name: sobre_tecnologia      
+            widget: object
+            fields:
+              - {label: titol, name: titol, widget: string}
+              - {label: descripcio, name: descripcio, widget: markdown}
+              -  label: Docs Relacionats
+                name: docs_rels
+                widget: list
+                fields:
+                  - {label: path, name: path, widget: string}  
+      - label: "EN"
+        name: "en"
+        slug: "{{slug}}"
+        file: content/solucio_tec/{{slug}}/{{slug}}.en.md
+        #folder: "content/solucio_tec"
+        create: true
+        #preview_path: content/solucio_tec/{{title}}
         fields:
-          - {label: titol, name: titol, widget: string}
-          - {label: descripcio, name: descripcio, widget: markdown}
-          -  label: Docs Relacionats
-             name: docs_rels
-             widget: list
-             fields:
-              - {label: path, name: path, widget: string}
-      - label: Sobre la Tecnologia
-        name: sobre_tecnologia      
-        widget: object
-        fields:
-          - {label: titol, name: titol, widget: string}
-          - {label: descripcio, name: descripcio, widget: markdown}
-          -  label: Docs Relacionats
-             name: docs_rels
-             widget: list
-             fields:
-              - {label: path, name: path, widget: string}
+          - {label: Title, name:title, widget : string}
+          - label: General
+            name: general
+            widget: object
+            fields: 
+              - {label: Nom Solucio, name: nom_solucio, widget: string}
+          - label: Sobre la Tecnologia
+            name: sobre_tecnologia      
+            widget: object
+            fields:
+              - {label: titol, name: titol, widget: string}
+              - {label: descripcio, name: descripcio, widget: markdown}
+              -  label: Docs Relacionats
+                name: docs_rels
+                widget: list
+                fields:
+                  - {label: path, name: path, widget: string}
+          - label: Sobre la Tecnologia
+            name: sobre_tecnologia      
+            widget: object
+            fields:
+              - {label: titol, name: titol, widget: string}
+              - {label: descripcio, name: descripcio, widget: markdown}
+              -  label: Docs Relacionats
+                name: docs_rels
+                widget: list
+                fields:
+                  - {label: path, name: path, widget: string}
+          - label: Sobre la Tecnologia
+            name: sobre_tecnologia      
+            widget: object
+            fields:
+              - {label: titol, name: titol, widget: string}
+              - {label: descripcio, name: descripcio, widget: markdown}
+              -  label: Docs Relacionats
+                name: docs_rels
+                widget: list
+                fields:
+                  - {label: path, name: path, widget: string}
+          - label: Sobre la Tecnologia
+            name: sobre_tecnologia      
+            widget: object
+            fields:
+              - {label: titol, name: titol, widget: string}
+              - {label: descripcio, name: descripcio, widget: markdown}
+              -  label: Docs Relacionats
+                name: docs_rels
+                widget: list
+                fields:
+                  - {label: path, name: path, widget: string}            
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
     editor:
