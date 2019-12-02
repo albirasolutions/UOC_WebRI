@@ -122,13 +122,14 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - label: "CA"
         name: "ca"
-        #slug: "solucio_tec_1"
+        slug: "{{fields.slug}}"
         file: content/solucio_tec/{{slug}}/{{slug}}.ca.md
         #folder: "content/solucio_tec"
         create: true
         #preview_path: content/solucio_tec/{{title}}
         fields:
           - {label: Title, name: title, widget : string}
+          - {label: Slug, name: slug, widget : string}
           - label: General
             name: general
             widget: list
@@ -180,13 +181,14 @@ collections: # A list of collections the CMS should be able to edit
                   - {label: path, name: path, widget: string}
       - label: "ES"
         name: "es"
-        slug: "solucio_tec_1"
+        slug: "{{slug}}"
         file: content/solucio_tec/{{slug}}/{{slug}}.es.md
         #folder: "content/solucio_tec"
         create: true
         #preview_path: content/solucio_tec/{{title}}
         fields:
           - {label: Title, name: title, widget : string}
+          - {label: Slug, name: slug, widget : string}
           - label: General
             name: general
             widget: list
@@ -245,6 +247,7 @@ collections: # A list of collections the CMS should be able to edit
         #preview_path: content/solucio_tec/{{title}}
         fields:
           - {label: Title, name: title, widget : string}
+          - {label: Slug, name: slug, widget : string}
           - label: General
             name: general
             widget: list
