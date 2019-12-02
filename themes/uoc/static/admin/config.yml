@@ -122,8 +122,8 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - label: "CA"
         name: "ca"
-        slug: "{{slug}}"
-        file: content/solucio_tec/{{slug}}/{{slug}}.ca.md
+        slug: "solucio_tec_1"
+        file: content/solucio_tec/solucio_tec_1/solucio_tec_1.ca.md
         #folder: "content/solucio_tec"
         create: true
         #preview_path: content/solucio_tec/{{title}}
@@ -181,7 +181,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: "ES"
         name: "es"
         slug: "solucio_tec_1"
-        file: content/solucio_tec/{{slug}}/{{slug}}.es.md
+        file: content/solucio_tec/solucio_tec_1/solucio_tec_1.es.md
         #folder: "content/solucio_tec"
         create: true
         #preview_path: content/solucio_tec/{{title}}
