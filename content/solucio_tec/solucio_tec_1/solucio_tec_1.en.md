@@ -1,5 +1,5 @@
 ---
-slug: solucio_tec_1
+slug_key: solucio_tec_1
 title: R&I in UOC
 general:
   - nom_solucio: nom_solucio_en
