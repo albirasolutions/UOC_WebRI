@@ -1,6 +1,5 @@
 ---
 title: solucio_tec_1
-page_title: R&I a la UOC
 general:
   - nom_solucio: nom_solucio_es
     text_breu: text_es

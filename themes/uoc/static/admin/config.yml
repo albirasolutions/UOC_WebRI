@@ -119,21 +119,18 @@ collections: # A list of collections the CMS should be able to edit
             widget: selector_custom
   - name: "solucio_tec"
     label: "solucio_tecnologica"
-    folder: "content/solucio_tec"
-    filter:
     files:
       - label: "CA"
         name: "ca"
         #slug: "{{slug_key}}"
         #identifier_field: slug_key
         #slug: "{{slug}}"
-        file: content/solucio_tec/{{slug}}/{{slug}}.ca.md
+        file: content/solucio_tec/{{title}}/{{title}}.ca.md
         #folder: "content/solucio_tec"
         create: true
         #preview_path: content/solucio_tec/{{fields.slug_key}}/{{fields.slug_key}}
         fields:
           - {label: Title, name: title, widget : string}
-          - {label: Page Title, name: page_title, widget : string} 
           - label: General
             name: general
             widget: list

@@ -1,6 +1,5 @@
 ---
 title: solucio_tec_1
-page_title: R&I a la UOC
 general:
   - nom_solucio: SpeakApps
     text_breu: Eines i activitats per a l'aprenentatge oral de les llengües
