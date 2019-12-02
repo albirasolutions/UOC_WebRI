@@ -117,130 +117,6 @@ collections: # A list of collections the CMS should be able to edit
           - label: "Albira Content2"
             name: "albiraContent2"
             widget: selector_custom
-  - name: "cercador"
-    label: "Cercador"
-    folder: "content/cercador"
-    format: "json-frontmatter"
-    #extension : "json"
-    #filter: {field: "contenttype", value: "section"}    
-    #create: true
-    #slug: "cercador.{{language}}"
-    fields:
-      - {label: title, name: title, widget: string}
-      - label: ambits_especialitzacio
-        name : ambits_especialitzacio
-        widget : list
-        fields : 
-          - {label: display_name, name: display_name, widget: string }
-          - {label: value, name: value, widget: string }
-      - label: ods
-        name : ods 
-        widget: list 
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-          - { label : color, name : color, widget : string }
-      - label: centre
-        name : centre 
-        widget: list
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-      - label: sector_productiu
-        name : sector_productiu 
-        widget: list
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-      - label: solucions_tecnologiques
-        name : solucions_tecnologiques 
-        widget: list
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-          - { label : img_background, name : img_background, widget : image }
-      - label: patents
-        name : patents 
-        widget: list
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-          - { label : img_background, name : img_background, widget : image }
-      - label: serveis
-        name : serveis 
-        widget: list
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-          - { label : img_background, name : img_background, widget : image }
-      - label: spin_offs
-        name : spin_offs 
-        widget: list
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-          - { label : img_background, name : img_background, widget : image }
-  - name: "mapa-ambits-recerca"
-    label: "Mapa Ambits Recerca"
-    folder: "content/mapa-ambits-recerca"
-    format: "json-frontmatter"
-    #extension : "json"
-    #filter: {field: "contenttype", value: "section"}    
-    #create: true
-    #slug: "mapa-ambits-recerca.{{language}}"
-    fields:
-      - {label: title, name: title, widget: string}
-      - label: ambits_especialitzacio
-        name : ambits_especialitzacio
-        widget: list
-        fields : 
-          - {label: display_name, name: display_name, widget: string }
-          - {label: value, name: value, widget: string }
-      - label: ambit
-        name : ambit 
-        widget: list 
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-          - { label : color, name : color, widget : string }
-  - name: "contacte"
-    label: "Contacte"
-    folder: "content/contacte"
-    format: "json-frontmatter"
-    #extension : "json"
-    #filter: {field: "contenttype", value: "section"}    
-    #create: true
-    #slug: "mapa-ambits-recerca.{{language}}"
-    fields:
-          - {label: title, name: title, widget: string}
-          - label: section
-            name: section
-            widget: list
-            fields :
-              - name: form
-                label: form
-                widget : object
-                fields :
-                  - {label: form, name: form, widget: boolean}
-                  - {label: name, name : name, widget: string}
-                  - {label: addr_1, name: addr_1, widget: string}
-                  - {label: addr_2, name: addr_2, widget: string}
-                  - label: phones
-                    name: phones
-                    widget: list 
-                    fields:
-                      - {label: phone, name : phone ,widget: string}
-                  - label: urls
-                    name: urls
-                    widget: list
-                    fields:
-                      - {label: url, name: url, widget: string}
-          - label: motius
-            name: motius
-            widget: list 
-            fields:
-              - {label: display_name, name : display_name, widget: string}
-              - {label: value, name: value, widget: string}
   - name: "solucio_tecnologica"
     label: "solucio_tecnologica"
     files:
@@ -417,7 +293,131 @@ collections: # A list of collections the CMS should be able to edit
                 name: docs_rels
                 widget: list
                 fields:
-                  - {label: path, name: path, widget: string}            
+                  - {label: path, name: path, widget: string}
+  - name: "cercador"
+    label: "Cercador"
+    folder: "content/cercador"
+    format: "json-frontmatter"
+    #extension : "json"
+    #filter: {field: "contenttype", value: "section"}    
+    #create: true
+    #slug: "cercador.{{language}}"
+    fields:
+      - {label: title, name: title, widget: string}
+      - label: ambits_especialitzacio
+        name : ambits_especialitzacio
+        widget : list
+        fields : 
+          - {label: display_name, name: display_name, widget: string }
+          - {label: value, name: value, widget: string }
+      - label: ods
+        name : ods 
+        widget: list 
+        fields : 
+          - { label : display_name, name: display_name, widget: string }
+          - { label : value, name: value, widget: string }
+          - { label : color, name : color, widget : string }
+      - label: centre
+        name : centre 
+        widget: list
+        fields : 
+          - { label : display_name, name: display_name, widget: string }
+          - { label : value, name: value, widget: string }
+      - label: sector_productiu
+        name : sector_productiu 
+        widget: list
+        fields : 
+          - { label : display_name, name: display_name, widget: string }
+          - { label : value, name: value, widget: string }
+      - label: solucions_tecnologiques
+        name : solucions_tecnologiques 
+        widget: list
+        fields : 
+          - { label : display_name, name: display_name, widget: string }
+          - { label : value, name: value, widget: string }
+          - { label : img_background, name : img_background, widget : image }
+      - label: patents
+        name : patents 
+        widget: list
+        fields : 
+          - { label : display_name, name: display_name, widget: string }
+          - { label : value, name: value, widget: string }
+          - { label : img_background, name : img_background, widget : image }
+      - label: serveis
+        name : serveis 
+        widget: list
+        fields : 
+          - { label : display_name, name: display_name, widget: string }
+          - { label : value, name: value, widget: string }
+          - { label : img_background, name : img_background, widget : image }
+      - label: spin_offs
+        name : spin_offs 
+        widget: list
+        fields : 
+          - { label : display_name, name: display_name, widget: string }
+          - { label : value, name: value, widget: string }
+          - { label : img_background, name : img_background, widget : image }
+  - name: "mapa-ambits-recerca"
+    label: "Mapa Ambits Recerca"
+    folder: "content/mapa-ambits-recerca"
+    format: "json-frontmatter"
+    #extension : "json"
+    #filter: {field: "contenttype", value: "section"}    
+    #create: true
+    #slug: "mapa-ambits-recerca.{{language}}"
+    fields:
+      - {label: title, name: title, widget: string}
+      - label: ambits_especialitzacio
+        name : ambits_especialitzacio
+        widget: list
+        fields : 
+          - {label: display_name, name: display_name, widget: string }
+          - {label: value, name: value, widget: string }
+      - label: ambit
+        name : ambit 
+        widget: list 
+        fields : 
+          - { label : display_name, name: display_name, widget: string }
+          - { label : value, name: value, widget: string }
+          - { label : color, name : color, widget : string }
+  - name: "contacte"
+    label: "Contacte"
+    folder: "content/contacte"
+    format: "json-frontmatter"
+    #extension : "json"
+    #filter: {field: "contenttype", value: "section"}    
+    #create: true
+    #slug: "mapa-ambits-recerca.{{language}}"
+    fields:
+          - {label: title, name: title, widget: string}
+          - label: section
+            name: section
+            widget: list
+            fields :
+              - name: form
+                label: form
+                widget : object
+                fields :
+                  - {label: form, name: form, widget: boolean}
+                  - {label: name, name : name, widget: string}
+                  - {label: addr_1, name: addr_1, widget: string}
+                  - {label: addr_2, name: addr_2, widget: string}
+                  - label: phones
+                    name: phones
+                    widget: list 
+                    fields:
+                      - {label: phone, name : phone ,widget: string}
+                  - label: urls
+                    name: urls
+                    widget: list
+                    fields:
+                      - {label: url, name: url, widget: string}
+          - label: motius
+            name: motius
+            widget: list 
+            fields:
+              - {label: display_name, name : display_name, widget: string}
+              - {label: value, name: value, widget: string}            
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
     editor:
