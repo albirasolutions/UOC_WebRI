@@ -127,7 +127,7 @@ collections: # A list of collections the CMS should be able to edit
         file: content/solucio_tec/{{fields.slug_key}}/{{fields.slug_key}}.ca.md
         #folder: "content/solucio_tec"
         create: true
-        preview_path: content/solucio_tec/{{slug}}/
+        preview_path: content/solucio_tec/{{fields.slug_key}}/{{fields.slug_key}}
         fields:
           - {label: Title, name: title, widget : string}
           - {label: Slug, name: slug_key, widget : string}
