@@ -13,11 +13,7 @@ disableKinds = ["home", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap",
 [permalinks]
   grup = "/:filename"
   principal = "/index"
-  solucio_tecnologica = "solucio_tec/:slug/:slug"
-  patent = "patents/:slug/:slug"
-  servei = "serveis/:slug/:slug"
-  spin_off = "spin_offs/:slug/:slug"
-
+  
 [languages]
   [languages.ca]
     url = "/ca/"
