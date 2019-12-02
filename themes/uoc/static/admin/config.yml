@@ -125,10 +125,10 @@ collections: # A list of collections the CMS should be able to edit
         #slug: "{{slug_key}}"
         #identifier_field: slug_key
         #slug: "{{slug}}"
-        file: content/solucio_tec/{{title}}/{{title}}.ca.md
+        folder: content/solucio_tec/
         #folder: "content/solucio_tec"
         create: true
-        #preview_path: content/solucio_tec/{{fields.slug_key}}/{{fields.slug_key}}
+        preview_path: solucio_tec/{{title}}/{{title}}.ca.md
         fields:
           - {label: Title, name: title, widget : string}
           - label: General
