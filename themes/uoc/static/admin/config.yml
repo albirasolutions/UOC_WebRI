@@ -122,7 +122,7 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - label: "CA"
         name: "ca"
-        slug: "solucio_tec_1"
+        #slug: "solucio_tec_1"
         file: content/solucio_tec/{{slug}}/{{slug}}.ca.md
         #folder: "content/solucio_tec"
         create: true
