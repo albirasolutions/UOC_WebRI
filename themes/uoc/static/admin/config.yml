@@ -122,57 +122,56 @@ collections: # A list of collections the CMS should be able to edit
     folder: "content/solucio_tec"
     create: true
     fields:
-      fields:
-          - {label: Title, name: title, widget : string}
-          - label: General
-            name: general
-            widget: list
-            fields: 
-              - {label: Nom Solucio, name: nom_solucio, widget: string}
-          - label: Sobre la Tecnologia
-            name: sobre_tecnologia      
-            widget: list
-            fields:
-              - {label: titol, name: titol, widget: string}
-              - {label: descripcio, name: descripcio, widget: markdown}
-              - label: Docs Relacionats
-                name: docs_rels
-                widget: list
-                fields:
-                  - {label: path, name: path, widget: string}
-          - label: Sobre la Tecnologia
-            name: sobre_tecnologia      
+      - {label: Title, name: title, widget : string}
+      - label: General
+        name: general
+        widget: list
+        fields: 
+          - {label: Nom Solucio, name: nom_solucio, widget: string}
+      - label: Sobre la Tecnologia
+        name: sobre_tecnologia      
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
             widget: list
             fields:
-              - {label: titol, name: titol, widget: string}
-              - {label: descripcio, name: descripcio, widget: markdown}
-              - label: Docs Relacionats
-                name: docs_rels
-                widget: list
-                fields:
-                  - {label: path, name: path, widget: string}
-          - label: Sobre la Tecnologia
-            name: sobre_tecnologia      
+              - {label: path, name: path, widget: string}
+      - label: Sobre la Tecnologia
+        name: sobre_tecnologia      
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
             widget: list
             fields:
-              - {label: titol, name: titol, widget: string}
-              - {label: descripcio, name: descripcio, widget: markdown}
-              - label: Docs Relacionats
-                name: docs_rels
-                widget: list
-                fields:
-                  - {label: path, name: path, widget: string}
-          - label: Sobre la Tecnologia
-            name: sobre_tecnologia      
+              - {label: path, name: path, widget: string}
+      - label: Sobre la Tecnologia
+        name: sobre_tecnologia      
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
             widget: list
             fields:
-              - {label: titol, name: titol, widget: string}
-              - {label: descripcio, name: descripcio, widget: markdown}
-              - label: Docs Relacionats
-                name: docs_rels
-                widget: list
-                fields:
-                  - {label: path, name: path, widget: string}
+              - {label: path, name: path, widget: string}
+      - label: Sobre la Tecnologia
+        name: sobre_tecnologia      
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
     # files:
     #   - label: "CA"
     #     name: "ca"
