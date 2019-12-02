@@ -123,7 +123,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: "CA"
         name: "ca"
         identifier_field: slug_key
-        slug: "{{fields.slug_key}}"
+        slug: "{{slug_key}}"
         file: content/solucio_tec/{{slug}}/{{slug}}.ca.md
         #folder: "content/solucio_tec"
         create: true
