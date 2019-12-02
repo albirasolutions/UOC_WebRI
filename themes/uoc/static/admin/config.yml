@@ -304,7 +304,7 @@ collections: # A list of collections the CMS should be able to edit
                   - {label: path, name: path, widget: string}
       - label: "ES"
         name: "es"
-        slug: "{{slug}}"
+        slug: "solucio_tec_1"
         file: content/solucio_tec/{{slug}}/{{slug}}.es.md
         #folder: "content/solucio_tec"
         create: true
