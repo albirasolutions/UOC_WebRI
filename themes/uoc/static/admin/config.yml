@@ -173,7 +173,7 @@ collections: # A list of collections the CMS should be able to edit
                   - {label: path, name: path, widget: string}
   - name: "solucio_tec_3"
     label: "solucio_tecnologica 3"
-    #folder: "content/solucio_tec"
+    folder: "content/solucio_tec"
     #preview_path: "{{slug}}"
     #summary: "{{language}}"
     #create: true
@@ -182,8 +182,8 @@ collections: # A list of collections the CMS should be able to edit
         name: ca
         file: content/solucio_tec/{{title}}.ca.md
         create: true
-        #format: json
-        #extension: frontmatter
+        format: md
+        extension: md
         #preview_path: {{slug}}.ca.md
         fields:
           - {label: Title, name: title, widget : string}
