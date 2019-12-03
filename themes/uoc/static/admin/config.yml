@@ -151,8 +151,8 @@ collections: # A list of collections the CMS should be able to edit
         name: es
         #slug: "{{slug}}/{{slug}}"
         create: true
-        file: content/solucio_tec/{{slug}}.es.md
-        #preview_path: "{{slug}}.es.md"
+        file: content/solucio_tec/
+        preview_path: "{{slug}}.es.md"
         fields:
           - {label: Title, name: title, widget : string}
           - label: General
@@ -174,7 +174,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: "solucio_tec_3"
     label: "solucio_tecnologica 3"
     folder: "content/solucio_tec"
-    3preview_path: "{{slug}}"
+    #preview_path: "{{slug}}"
     #summary: "{{language}}"
     #create: true
     files:
