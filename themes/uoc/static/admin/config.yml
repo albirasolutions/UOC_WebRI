@@ -9,7 +9,7 @@ backend:
 
 media_folder: "static/img" # Media files will be stored in the repo under static/img/
 public_folder: "/img"
-publish_mode: editorial_workflow
+#publish_mode: editorial_workflow
 
 collections: # A list of collections the CMS should be able to edit
   - name: "principal"
@@ -120,14 +120,14 @@ collections: # A list of collections the CMS should be able to edit
   - name: "solucio_tec"
     label: "solucio_tecnologica"
     #folder: "content/solucio_tec/{{slug}}"
-    preview_path: "{{slug}}"
+    #preview_path: "{{slug}}"
     #create: true
     files:
       - label: ES
         name: es
         #slug: "{{slug}}/{{slug}}"
         create: true
-        file: content/solucio_tec/{{slug}}/{{slug}}.es.md
+        file: content/solucio_tec/{{title}}/{{title}}.es.md
         preview_path: "{{slug}}"
         fields:
           - {label: Title, name: title, widget : string}
