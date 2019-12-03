@@ -9,7 +9,7 @@ backend:
 
 media_folder: "static/img" # Media files will be stored in the repo under static/img/
 public_folder: "/img"
-#publish_mode: editorial_workflow
+publish_mode: editorial_workflow
 
 collections: # A list of collections the CMS should be able to edit
   - name: "principal"
@@ -119,64 +119,66 @@ collections: # A list of collections the CMS should be able to edit
             widget: selector_custom
   - name: "solucio_tec"
     label: "solucio_tecnologica"
-    #folder: "content/solucio_tec/"
-    files:
-      - label: ES
-        name: es
-        #slug: "{{slug}}/{{slug}}"
-        create: true
-        file: content/solucio_tec/solucio_tec_1/solucio_tec_1.ca.md
+    folder: "content/solucio_tec"
+    preview_path: "solucio_tec/{{title}}"
+    create: true
+    # files:
+    #   - label: ES
+    #     name: es
+    #     #slug: "{{slug}}/{{slug}}"
+    #     create: true
+    #     file: content/solucio_tec/solucio_tec_1/solucio_tec_1.ca.md
+    fields:
+      - {label: Title, name: title, widget : string}
+      - label: General
+        name: general
+        widget: list
+        fields: 
+          - {label: Nom Solucio, name: nom_solucio, widget: string}
+      - label: Sobre la Tecnologia
+        name: sobre_tecnologia      
+        widget: list
         fields:
-          - {label: Title, name: title, widget : string}
-          - label: General
-            name: general
-            widget: list
-            fields: 
-              - {label: Nom Solucio, name: nom_solucio, widget: string}
-          - label: Sobre la Tecnologia
-            name: sobre_tecnologia      
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
             widget: list
             fields:
-              - {label: titol, name: titol, widget: string}
-              - {label: descripcio, name: descripcio, widget: markdown}
-              - label: Docs Relacionats
-                name: docs_rels
-                widget: list
-                fields:
-                  - {label: path, name: path, widget: string}
-          - label: Sobre la Tecnologia
-            name: sobre_tecnologia      
+              - {label: path, name: path, widget: string}
+      - label: Sobre la Tecnologia
+        name: sobre_tecnologia      
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
             widget: list
             fields:
-              - {label: titol, name: titol, widget: string}
-              - {label: descripcio, name: descripcio, widget: markdown}
-              - label: Docs Relacionats
-                name: docs_rels
-                widget: list
-                fields:
-                  - {label: path, name: path, widget: string}
-          - label: Sobre la Tecnologia
-            name: sobre_tecnologia      
+              - {label: path, name: path, widget: string}
+      - label: Sobre la Tecnologia
+        name: sobre_tecnologia      
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
             widget: list
             fields:
-              - {label: titol, name: titol, widget: string}
-              - {label: descripcio, name: descripcio, widget: markdown}
-              - label: Docs Relacionats
-                name: docs_rels
-                widget: list
-                fields:
-                  - {label: path, name: path, widget: string}
-          - label: Sobre la Tecnologia
-            name: sobre_tecnologia      
+              - {label: path, name: path, widget: string}
+      - label: Sobre la Tecnologia
+        name: sobre_tecnologia      
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
             widget: list
             fields:
-              - {label: titol, name: titol, widget: string}
-              - {label: descripcio, name: descripcio, widget: markdown}
-              - label: Docs Relacionats
-                name: docs_rels
-                widget: list
-                fields:
-                  - {label: path, name: path, widget: string}
+              - {label: path, name: path, widget: string}
           # files:
           #   - label: "CA"
           #     name: "ca"
