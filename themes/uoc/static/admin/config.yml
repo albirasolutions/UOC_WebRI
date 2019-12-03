@@ -127,8 +127,7 @@ collections: # A list of collections the CMS should be able to edit
         name: es
         #slug: "{{slug}}/{{slug}}"
         create: true
-        file: {{title}}.es.md
-        #preview_path: "{{slug}}"
+        file: {{slug}}.es.md
         fields:
           - {label: Title, name: title, widget : string}
           - label: General
