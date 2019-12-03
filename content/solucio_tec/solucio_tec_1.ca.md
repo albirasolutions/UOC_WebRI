@@ -1,6 +1,5 @@
 ---
 title: solucio_tec_1
-url: solucio_tec/solucio_tec_1/
 general:
   - nom_solucio: SpeakApps
     text_breu: Eines i activitats per a l'aprenentatge oral de les llengües
