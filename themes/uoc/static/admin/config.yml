@@ -119,7 +119,7 @@ collections: # A list of collections the CMS should be able to edit
             widget: selector_custom
   - name: "solucio_tec"
     label: "solucio_tecnologica"
-    folder: "content/solucio_tec/{{slug}}"
+    folder: "content/solucio_tec"
     preview_path: "{{slug}}"
     summary: "{{language}}"
     create: true
@@ -151,7 +151,7 @@ collections: # A list of collections the CMS should be able to edit
         name: es
         #slug: "{{slug}}/{{slug}}"
         create: true
-        file: content/solucio_tec/{{slug}}
+        file: content/solucio_tec/
         preview_path: "{{slug}}.es.md"
         fields:
           - {label: Title, name: title, widget : string}
