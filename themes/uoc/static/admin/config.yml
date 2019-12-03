@@ -125,7 +125,7 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - label: CA
         name: ca
-        slug: "{{filename}}"
+        slug: "{{title}}"
         create: true
         file: content/solucio_tec/{{slug}}/{{slug}}.ca
         fields:
