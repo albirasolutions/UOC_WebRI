@@ -127,6 +127,9 @@ jQuery(document).ready(function ($) {
             $this.siblings().removeClass('box-green-selected');
             $('.filters-main__content').addClass('hidde-content');
         }
+        var ref = $(this)[0].getAttribute("href");
+        var x = ref.split("-");
+        sessionStorage.setItem("target",x[2]);
     });
 
     if($('.sticky-sidebar').length > 0) {

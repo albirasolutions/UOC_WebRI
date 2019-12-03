@@ -33,7 +33,7 @@
 										{{ range .AllTranslations }}
 											{{ if eq $.Site.Language.LanguageName .Language.LanguageName }}
 												<li role="menuitem" class="dropdown__item is-active">
-													<a href="#" class="dropdown__link">{{ .Language.LanguageName }}</a>
+													<a href="#" lang="{{ .Language }}" class="dropdown__link">{{ .Language.LanguageName }}</a>
 												</li>
 											{{ else }}
 												<li role="menuitem" class="dropdown__item">
