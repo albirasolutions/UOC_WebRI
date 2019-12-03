@@ -119,8 +119,8 @@ collections: # A list of collections the CMS should be able to edit
             widget: selector_custom
   - name: "solucio_tec"
     label: "solucio_tecnologica"
-    folder: "content/solucio_tec/{{title}}"
-    preview_path: "{{title}}/{{title}}.{{language}}"
+    folder: "content/solucio_tec/{{slug}}"
+    #preview_path: "{{slug}}"
     create: true
     # files:
     #   - label: CA
