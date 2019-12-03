@@ -120,7 +120,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: "solucio_tec"
     label: "solucio_tecnologica"
     folder: "content/solucio_tec/{{title}}"
-    preview_path: "{{title}}/{{title}}.{{language}}.md"
+    #preview_path: "{{title}}/{{title}}.{{language}}.md"
     create: true
     # files:
     #   - label: ES
