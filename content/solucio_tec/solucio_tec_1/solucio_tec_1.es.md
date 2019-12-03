@@ -1,5 +1,6 @@
 ---
 title: solucio_tec_1
+url: solucio_tec/solucio_tec_1/
 general:
   - nom_solucio: nom_solucio_es
     text_breu: text_es
