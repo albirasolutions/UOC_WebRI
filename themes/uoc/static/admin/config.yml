@@ -180,9 +180,9 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - label: "CA"
         name: ca
-        file: content/solucio_tec/{{slug}}
+        file: content/solucio_tec/{{slug}}.ca.md
         create: true
-        preview_path: {{slug}}.ca.md
+        #preview_path: {{slug}}.ca.md
         fields:
           - {label: Title, name: title, widget : string}
           - label: General
