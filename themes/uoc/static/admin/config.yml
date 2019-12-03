@@ -152,7 +152,7 @@ collections: # A list of collections the CMS should be able to edit
     #folder: "content/solucio_tec"
     #preview_path: "{{slug}}"
     #create: true
-     files:
+    files:
       - label: ES
         name: es
         #slug: "{{slug}}/{{slug}}"
