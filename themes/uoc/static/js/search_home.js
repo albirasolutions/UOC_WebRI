@@ -76,6 +76,7 @@ function buildURL(searchParams,target){
 		//return cercadorURL;
 		
 	}
+	sessionStorage.setItem("target",target);
 	return cercadorURL;
 	
 }

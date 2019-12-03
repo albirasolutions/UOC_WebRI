@@ -129,6 +129,7 @@ jQuery(document).ready(function ($) {
         }
         var ref = $(this)[0].getAttribute("href");
         var x = ref.split("-");
+        console.log('x--->',x);
         sessionStorage.setItem("target",x[2]);
     });
 

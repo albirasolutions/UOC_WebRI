@@ -645,22 +645,5 @@
 </div>
 {{ partial "ri_js_imports.html" . }}
 <script src="/js/search.js"></script>
-<<<<<<< HEAD
-<script type="text/javascript">
-	var dynamicUrl;
-	console.log('init!!!');
-	console.log('window.location.pathname',window.location.pathname);
-	console.log('window.location.hostname',window.location.hostname);
-	console.log('window.location.href',window.location.href);
-	langs = $("a[lang]");
-	for(var l = 0; l < langs.length; l++){
-		console.log('l--->',langs[l]);
-		var langAttr = lang[l].getAttribute("lang");
-		if(langAttr == document.getAttribute("lang")) lang[l].setAttribute("href",dynamicUrl);
-	}
-	//console.log('langs---> ',langs);
-</script>
-=======
->>>>>>> c72ff41261e1f4b4ae698e53987ccece67a6969a
 </body>
 </html>
