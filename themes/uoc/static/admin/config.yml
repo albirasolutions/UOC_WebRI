@@ -120,12 +120,12 @@ collections: # A list of collections the CMS should be able to edit
   - name: "solucio_tec"
     label: "solucio_tecnologica"
     #folder: "content/solucio_tec/"
-    slug: {{slug}}/{{slug}}
     files:
       - label: ES
         name: es
-        file: content/solucio_tec/{{slug}}.ca.md
+        slug: {{slug}}/{{slug}}
         create: true
+        file: content/solucio_tec/{{slug}}.ca.md
         fields:
           - {label: Title, name: title, widget : string}
           - label: General
