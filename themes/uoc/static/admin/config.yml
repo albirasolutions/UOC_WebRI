@@ -121,7 +121,6 @@ collections: # A list of collections the CMS should be able to edit
     label: "solucio_tecnologica"
     #folder: "content/solucio_tec/"
     slug: {{slug}}/{{slug}}
-    #create: true
     files:
       - label: ES
         name: es
