@@ -119,34 +119,34 @@ collections: # A list of collections the CMS should be able to edit
             widget: selector_custom
   - name: "solucio_tec"
     label: "solucio_tecnologica"
-    #folder: "content/solucio_tec/{{title}}"
-    #preview_path: "{{title}}/"
-    #create: true
-    files:
-      - label: CA
-        name: ca
-        slug: "{{title}}"
-        create: true
-        file: content/solucio_tec/{{slug}}/{{slug}}.ca
+    folder: "content/solucio_tec/{{title}}"
+    preview_path: "{{title}}/{{title}}.{{language}}"
+    create: true
+    # files:
+    #   - label: CA
+    #     name: ca
+    #     slug: "{{title}}"
+    #     create: true
+    #     file: content/solucio_tec/{{slug}}/{{slug}}.ca
+    fields:
+      - {label: Title, name: title, widget : string}
+      - {label: URL, name: url, widget : string}
+      - label: General
+        name: general
+        widget: list
+        fields: 
+          - {label: Nom Solucio, name: nom_solucio, widget: string}
+      - label: Sobre la Tecnologia
+        name: sobre_tecnologia      
+        widget: list
         fields:
-          - {label: Title, name: title, widget : string}
-          - {label: URL, name: url, widget : string}
-          - label: General
-            name: general
-            widget: list
-            fields: 
-              - {label: Nom Solucio, name: nom_solucio, widget: string}
-          - label: Sobre la Tecnologia
-            name: sobre_tecnologia      
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
             widget: list
             fields:
-              - {label: titol, name: titol, widget: string}
-              - {label: descripcio, name: descripcio, widget: markdown}
-              - label: Docs Relacionats
-                name: docs_rels
-                widget: list
-                fields:
-                  - {label: path, name: path, widget: string}
+              - {label: path, name: path, widget: string}
           # files:
           #   - label: "CA"
           #     name: "ca"
