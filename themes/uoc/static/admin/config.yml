@@ -127,7 +127,7 @@ collections: # A list of collections the CMS should be able to edit
         name: es
         #slug: "{{slug}}/{{slug}}"
         create: true
-        file: content/solucio_tec/{{title}}/{{title}}.es.md
+        file: content/solucio_tec/{{slug}}/{{slug}}.es
         fields:
           - {label: Title, name: title, widget : string}
           - label: General

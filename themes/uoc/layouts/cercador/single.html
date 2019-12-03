@@ -646,6 +646,7 @@
 {{ partial "ri_js_imports.html" . }}
 <script src="/js/search.js"></script>
 <script type="text/javascript">
+	var dynamicUrl;
 	console.log('init!!!');
 	console.log('window.location.pathname',window.location.pathname);
 	console.log('window.location.hostname',window.location.hostname);
@@ -653,9 +654,8 @@
 	langs = $("a[lang]");
 	for(var l = 0; l < langs.length; l++){
 		console.log('l--->',langs[l]);
-		//var langAttr = lang[l].getAttribute("lang");
-		//var newUrlByLang = window.location.pathname
-		//lang[l].setAttribute("href",window.location.href)
+		var langAttr = lang[l].getAttribute("lang");
+		if(langAttr == document.getAttribute("lang")) lang[l].setAttribute("href",dynamicUrl);
 	}
 	//console.log('langs---> ',langs);
 </script>
