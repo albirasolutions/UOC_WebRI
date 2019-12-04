@@ -122,7 +122,9 @@ collections: # A list of collections the CMS should be able to edit
     folder: "content/solucio_tec"
     preview_path: "{{slug}}"
     #filter: {field: "language", value: "en"}
-    summary: "{{language}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    summary: '{{title}} -- {{year}}/{{month}}/{{day}}'
+    #summary: "{{language}}"
     create: true
     fields:
       - {label: Title, name: title, widget : string}
@@ -181,11 +183,11 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - label: "CA"
         name: ca
-        file: content/solucio_tec/{{slug}}.ca.md
+        file: content/solucio_tec/
         create: true
         format: markdown
         extension: frontmatter
-        #preview_path: {{slug}}
+        preview_path: {{slug}}.ca.md
         fields:
           - {label: Title, name: title, widget : string}
           - label: General
