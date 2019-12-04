@@ -183,11 +183,11 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - label: "CA"
         name: ca
-        file: content/solucio_tec/
+        file: content/solucio_tec/{{title}}.ca.md
         create: true
         #format: markdown
         #extension: frontmatter
-        preview_path: {{slug}}
+        #preview_path: {{slug}}
         fields:
           - {label: Title, name: title, widget : string}
           - label: General
