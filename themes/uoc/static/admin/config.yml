@@ -1,6 +1,7 @@
  
 backend:
   name: git-gateway
+  base_url: "https://clever-jackson-347844.netlify.com"
 media_folder: "static/img" # Media files will be stored in the repo under static/img/
 public_folder: "/img"
 #publish_mode: editorial_workflow
