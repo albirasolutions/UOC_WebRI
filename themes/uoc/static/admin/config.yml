@@ -3,7 +3,7 @@ backend:
   name: github
   repo: albirasolutions/UOC_WebRI
   branch: master
-  site_domain: https://clever-jackson-347844.netlify.com
+  site_domain: clever-jackson-347844.netlify.com
 media_folder: "static/img" # Media files will be stored in the repo under static/img/
 public_folder: "/img"
 #publish_mode: editorial_workflow
