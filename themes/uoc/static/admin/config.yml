@@ -124,6 +124,7 @@ collections: # A list of collections the CMS should be able to edit
     #filter: {field: "language", value: "en"}
     slug: '{{title}}-{{language}}'
     #summary: '{{title}} -- {{year}}/{{month}}/{{day}}'
+    format: md
     extension: '{{language}}.md'
     create: true
     fields:
