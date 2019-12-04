@@ -122,8 +122,9 @@ collections: # A list of collections the CMS should be able to edit
     folder: "content/solucio_tec"
     preview_path: "{{slug}}"
     #filter: {field: "language", value: "en"}
-    slug: '{{title.language}}'
+    slug: '{{title}}-{{language}}'
     #summary: '{{title}} -- {{year}}/{{month}}/{{day}}'
+    extension: '{{language}}.md'
     create: true
     fields:
       - {label: Title, name: title, widget : string}
