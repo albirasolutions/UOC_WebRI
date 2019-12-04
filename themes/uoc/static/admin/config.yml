@@ -125,7 +125,7 @@ collections: # A list of collections the CMS should be able to edit
     slug: '{{title}}-{{language}}'
     #summary: '{{title}} -- {{year}}/{{month}}/{{day}}'
     format: yaml
-    extension: '{{language}}.md'
+    extension: 'ca.md'
     create: true
     fields:
       - {label: Title, name: title, widget : string}
