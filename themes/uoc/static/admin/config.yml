@@ -150,8 +150,8 @@ collections: # A list of collections the CMS should be able to edit
     #preview_path: "{{slug}}"
     create: true
     files:
-      - label: '{{slug}}-ES'
-        name: es
+      - name: '{{slug}}-ES'
+        #label: '{{slug}}-ES'
         #slug: "{{slug}}/{{slug}}"
         create: true
         file: content/solucio_tec/
