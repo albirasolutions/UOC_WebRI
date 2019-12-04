@@ -176,7 +176,7 @@ collections: # A list of collections the CMS should be able to edit
                   - {label: path, name: path, widget: string}
   - name: "solucio_tec_3"
     label: "solucio_tecnologica 3"
-    folder: "content/solucio_tec"
+    #folder: "content/solucio_tec/"
     #preview_path: "{{slug}}"
     #summary: "{{language}}"
     #create: true
