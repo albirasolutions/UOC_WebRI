@@ -1,26 +1,10 @@
 ---
-title: solucio_tec_1
-url: solucio_tec/solucio_tec_1/
+title: sol tec test
+language: ca
 general:
-  - nom_solucio: nom_solucio_es
-    text_breu: text_es
-    img_background: 
-    tipologia: 
-    sector: 
-    centre: 
-    logo: 
-    keywords: 
-    xarxes:
-      - xarxa: 
-        address: 
+  - nom_solucio: test nom
 sobre_tecnologia:
-  - titol: 
-    descripcio:
-    docs_rel:
-      - path:
-        url: 
-        size: 
-        type:  
+  - titol: sobre tecnologia CA
 aspectes_innovadors:
   - titol: 
     descripcio:
@@ -44,5 +28,6 @@ contacte:
   - text: 
     address: 
     telefon: 
-    email: 
+    email:
 ---
+

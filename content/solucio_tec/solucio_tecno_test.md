@@ -1,18 +1,7 @@
 ---
-title: solucio_tec_1
-url: solucio_tec/solucio_tec_1/
+title: solucio_tecno_test
 general:
-  - nom_solucio: nom_solucio_es
-    text_breu: text_es
-    img_background: 
-    tipologia: 
-    sector: 
-    centre: 
-    logo: 
-    keywords: 
-    xarxes:
-      - xarxa: 
-        address: 
+  - nom_solucio: Test Test
 sobre_tecnologia:
   - titol: 
     descripcio:
@@ -46,3 +35,4 @@ contacte:
     telefon: 
     email: 
 ---
+

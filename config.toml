@@ -13,7 +13,7 @@ disableKinds = ["home", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap",
 [permalinks]
   grup = "/:filename"
   principal = "/index"
-
+  
 [languages]
   [languages.ca]
     url = "/ca/"
