@@ -118,7 +118,7 @@ collections: # A list of collections the CMS should be able to edit
     label: "sol_tec_{{language}}"
     folder: "content/solucio_tec"
     #preview_path: "{{slug}}"
-    filter: {field: "language", value: "{{language}}"}
+    #filter: {field: "language", value: "{{language}}"}
     slug: '{{title}}.{{language}}'
     #summary: '{{title}} -- {{year}}/{{month}}/{{day}}'
     extension: 'md'
