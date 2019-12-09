@@ -142,17 +142,17 @@ collections: # A list of collections the CMS should be able to edit
             widget: list
             fields:
               - {label: path, name: path, widget: string}
-  - name: "solucio_tec"
+  - name: "solucio_tec_2"
     label: "solucio_tecnologica 2"
     #folder: "content/solucio_tec"
     #preview_path: "{{slug}}"
     create: true
     files:
-      - label: {{language}}
+      - label: {{title}}
         name: {{language}}
         slug: '{{title}}.{{language}}'
         create: true
-        file: content/solucio_tec/
+        file: content/solucio_tec/{{slug}}.md
         #preview_path: "{{slug}}"
         summary: '{{title}} -- {{language}}'
         fields:
