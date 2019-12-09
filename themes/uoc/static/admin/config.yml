@@ -119,8 +119,8 @@ collections: # A list of collections the CMS should be able to edit
     folder: "content/solucio_tec"
     #preview_path: "{{slug}}"
     #filter: {field: "language", value: "{{language}}"}
-    slug: '{{title}}.{{language}}'
     summary: '{{title}} -- {{language}}'
+    slug: '{{title}}.{{language}}'
     extension: 'md'
     create: true
     fields:
@@ -152,7 +152,7 @@ collections: # A list of collections the CMS should be able to edit
         name: {{language}}
         slug: '{{title}}.{{language}}'
         create: true
-        file: content/solucio_tec/{{slug}}.md
+        file: content/solucio_tec/{{title}}.{{language}}
         #preview_path: "{{slug}}"
         summary: '{{title}} -- {{language}}'
         fields:
