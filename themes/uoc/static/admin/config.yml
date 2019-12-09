@@ -114,10 +114,10 @@ collections: # A list of collections the CMS should be able to edit
           - label: "Albira Content2"
             name: "albiraContent2"
             widget: selector_custom
-  - name: "solucio_tec_{{language}}"
+  - name: "solucio_tec"
     label: "sol_tec_{{language}}"
     folder: "content/solucio_tec"
-    preview_path: "{{slug}}"
+    #preview_path: "{{slug}}"
     filter: {field: "language", value: "{{language}}"}
     slug: '{{title}}.{{language}}'
     #summary: '{{title}} -- {{year}}/{{month}}/{{day}}'
@@ -142,7 +142,7 @@ collections: # A list of collections the CMS should be able to edit
             widget: list
             fields:
               - {label: path, name: path, widget: string}
-  - name: "solucio_tec_{{language}}"
+  - name: "solucio_tec"
     label: "solucio_tecnologica 2"
     #folder: "content/solucio_tec"
     #preview_path: "{{slug}}"
