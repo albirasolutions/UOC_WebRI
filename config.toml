@@ -11,8 +11,12 @@ DefaultContentLanguageInSubdir = "true"
 disableKinds = ["home", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"]
 
 [permalinks]
-  grup = "/:filename"
+  grup = "grup/:filename"
   principal = "/index"
+  solucio_tec = "/solucio_tec/:filename"
+  patent = "/patent/:filename"
+  servei = "/servei/:filename"
+  spin_off = "/spin_off/:filename"
   
 [languages]
   [languages.ca]
