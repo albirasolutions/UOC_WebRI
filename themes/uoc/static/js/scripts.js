@@ -17,23 +17,32 @@ jQuery(document).ready(function ($) {
     //collapse
     function collapse(){
 
+        $('[class*=js-collapseClick]').click(function(e) {
+            console.log('jump prevented');
+            e.preventDefault();   //prevent the click from jumping esp on hashes
+            e.stopPropagation();  //prevent from any parent click handlers that didn't prevent the jump
+        
+        
+            return false;         //the natural way to prevent the jump
+        });
+        
         $('.js-collapseClick').on('click', function () {
             console.log('clicking collapseClick ... ',$('.js-collapseClick'));
-            console.log('has class .js-sub ? ... ',$(this).closest('.js-collapse').hasClass('js-sub'));
-            if ($(this).closest('.js-collapse').hasClass('js-sub')){
+            console.log('has class .subCollapse ? ... ',$(this).closest('.js-collapse').hasClass('subCollapse'));
+            if ($(this).closest('.js-collapse').hasClass('subCollapse')){
                 
-                if ($(this).closest('.js-collapse').siblings().hasClass('show')) {
+                if ($(this).closest('.js-collapse').next().hasClass('show')) {
                     console.log('already showing sub tab ... ',$(this).closest('.js-collapse').siblings().hasClass('show'));
                     console.log('siblings ... ',$(this).closest('.js-collapse').siblings());
-                    $(this).closest('.js-collapse').siblings().removeClass('show');
+                    $(this).closest('.js-collapse').next().removeClass('show');
                     $(this).attr('aria-expanded', 'false');
 
 
                 } else {
-                    console.log('hidden sub tab ... ',$(this).closest('.js-collapse').siblings().hasClass('show'));
-                    $('.js-sub .js-collapseClick').attr('aria-expanded', 'false');
-                    $('.js-sub').siblings().removeClass('show');
-                    $(this).closest('.js-sub').siblings().addClass('show');
+                    console.log('hidden sub tab ... ',$(this).closest('.js-collapse').next().hasClass('show'));
+                    /*$('.subCollapse .js-collapseClick').attr('aria-expanded', 'false');
+                    $('.subCollapse').siblings().removeClass('show');*/
+                    $(this).closest('.subCollapse').next().addClass('show');
                     $(this).attr('aria-expanded', 'true');
                 }
 
