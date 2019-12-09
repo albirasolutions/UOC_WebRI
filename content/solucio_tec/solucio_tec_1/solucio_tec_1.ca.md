@@ -9,7 +9,10 @@ general:
     sector: e-Learning
     centre: UOC
     logo: /img/speakAppLogo.png
-    keywords (array): keyword_1, keyword_2, keyword_3
+    keywords: 
+      -value: keyword_1
+      -value: keyword_2
+      -value: keyword_3
     xarxes:
       - xarxa: facebook
         address: www.facebook.com/user/4566135789
