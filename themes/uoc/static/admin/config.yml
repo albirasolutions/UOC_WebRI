@@ -148,12 +148,12 @@ collections: # A list of collections the CMS should be able to edit
     #preview_path: "{{slug}}"
     create: true
     files:
-      - label: '{{language}}'
+      - label: {{language}}
         name: {{language}}
         slug: '{{title}}.{{language}}'
         create: true
-        file: content/solucio_tec/
-        preview_path: "{{slug}}"
+        file: content/solucio_tec/{{slug}}
+        #preview_path: "{{slug}}"
         summary: '{{title}} -- {{language}}'
         fields:
           - {label: Title, name: title, widget : string}
