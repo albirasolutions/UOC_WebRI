@@ -152,7 +152,7 @@ collections: # A list of collections the CMS should be able to edit
         name: {{language}}
         slug: '{{title}}.{{language}}'
         create: true
-        file: content/solucio_tec/{{slug}}
+        file: content/solucio_tec/
         #preview_path: "{{slug}}"
         summary: '{{title}} -- {{language}}'
         fields:
