@@ -115,10 +115,10 @@ collections: # A list of collections the CMS should be able to edit
             name: "albiraContent2"
             widget: selector_custom
   - name: "solucio_tec"
-    label: "sol_tec"
+    label: '{{language}}'
     folder: "content/solucio_tec"
     #preview_path: "{{slug}}"
-    #filter: {field: "language", value: "{{language}}"}
+    filter: {field: "language", value: "{{language}}"}
     summary: '{{title}} -- {{language}}'
     slug: '{{title}}.{{language}}'
     extension: 'md'
@@ -150,9 +150,9 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - label: '{{title}}'
         name: {{language}}
+        file: content/solucio_tec/
         slug: '{{title}}.{{language}}'
         create: true
-        file: content/solucio_tec/{{title}}.{{language}}.md
         #preview_path: "{{slug}}"
         summary: '{{title}} -- {{language}}'
         fields:
