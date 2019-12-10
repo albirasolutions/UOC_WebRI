@@ -126,7 +126,7 @@ collections: # A list of collections the CMS should be able to edit
     #preview_path: "{{slug}}"
     #filter: {field: "language", value: "{{language}}"}
     summary: '{{slug}}'
-    identifier_field: '{{title}} --- {{language}}'
+    identifier_field: language
     extension: 'md'
     create: true
     fields:
@@ -149,7 +149,7 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: path, name: path, widget: string}
       - label: Aspectes Innovadors
-        name: aspectes_innov      
+        name: aspectes_innovadors     
         widget: list
         fields:
           - {label: titol, name: titol, widget: string}
@@ -160,7 +160,7 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: path, name: path, widget: string}
       - label: Aplicacions
-        name: apps      
+        name: aplicacions      
         widget: list
         fields:
           - {label: titol, name: titol, widget: string}

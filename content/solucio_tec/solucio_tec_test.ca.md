@@ -5,9 +5,9 @@ general:
   - nom_solucio: general solucio tec
 sobre_tecnologia:
   - titol: sobre tecnologia
-aspectes_innov:
+aspectes_innovadors:
   - titol: Aspected innovadors
-apps:
+aplicacions:
   - titol: Aplicacions
 grups_recerca:
   - {}
