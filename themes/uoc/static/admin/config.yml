@@ -150,8 +150,8 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - label: 'CA'
         name: ca
-        file: content/solucio_tec/
         slug: '{{title}}.{{language}}'
+        file: content/solucio_tec/{{slug}}
         create: true
         #preview_path: "{{slug}}"
         filter: {field: "language", value: "ca"}
