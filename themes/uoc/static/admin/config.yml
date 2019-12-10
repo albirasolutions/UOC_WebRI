@@ -158,6 +158,7 @@ collections: # A list of collections the CMS should be able to edit
         summary: '{{title}} -- {{language}}'
         fields:
           - {label: Title, name: title, widget : string}
+          - {label: language, name: language, widget : string}
           - label: General
             name: general
             widget: list
