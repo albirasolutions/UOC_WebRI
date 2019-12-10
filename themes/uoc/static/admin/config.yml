@@ -146,16 +146,43 @@ collections: # A list of collections the CMS should be able to edit
     label: "solucio_tecnologica 2"
     #folder: "content/solucio_tec"
     #preview_path: "{{slug}}"
-    create: true
+    #create: true
     files:
       - label: 'CA'
         name: ca
         slug: '{{title}}.{{language}}'
-        file: content/solucio_tec/{{slug}}
         create: true
         #preview_path: "{{slug}}"
         filter: {field: "language", value: "ca"}
         summary: '{{title}} -- {{language}}'
+        file: content/solucio_tec/{{title}}.{{language}}.md
+        fields:
+          - {label: Title, name: title, widget : string}
+          - {label: language, name: language, widget : string}
+          - label: General
+            name: general
+            widget: list
+            fields: 
+              - {label: Nom Solucio, name: nom_solucio, widget: string}
+          - label: Sobre la Tecnologia
+            name: sobre_tecnologia      
+            widget: list
+            fields:
+              - {label: titol, name: titol, widget: string}
+              - {label: descripcio, name: descripcio, widget: markdown}
+              - label: Docs Relacionats
+                name: docs_rels
+                widget: list
+                fields:
+                  - {label: path, name: path, widget: string}
+      - label: 'ES'
+        name: es
+        slug: '{{title}}.{{language}}'
+        create: true
+        #preview_path: "{{slug}}"
+        filter: {field: "language", value: "es"}
+        summary: '{{title}} -- {{language}}'
+        file: content/solucio_tec/{{title}}.{{language}}.md
         fields:
           - {label: Title, name: title, widget : string}
           - {label: language, name: language, widget : string}
