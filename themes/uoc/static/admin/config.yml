@@ -154,7 +154,7 @@ collections: # A list of collections the CMS should be able to edit
         create: true
         #preview_path: "{{slug}}"
         summary: '{{title}} --- {{language}}'
-        file: content/solucio_tec/{{title}}.ca.md
+        file: content/solucio_tec/
         extension: 'md'
         filter: {field: "language", value: "ca"}
         fields:
@@ -218,7 +218,7 @@ collections: # A list of collections the CMS should be able to edit
         create: true
         #preview_path: "{{slug}}"
         summary: '{{title}} --- {{language}}'
-        file: content/solucio_tec/{{title}}.es.md
+        file: content/solucio_tec/
         extension: 'md'
         filter: {field: "language", value: "es"}
         fields:
