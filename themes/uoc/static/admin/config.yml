@@ -155,7 +155,7 @@ collections: # A list of collections the CMS should be able to edit
         #preview_path: "{{slug}}"
         filter: {field: "language", value: "ca"}
         summary: '{{title}} -- {{language}}'
-        file: content/solucio_tec/{{title}}.{{language}}.md
+        file: content/solucio_tec
         fields:
           - {label: Title, name: title, widget : string}
           - {label: language, name: language, widget : string}
@@ -182,7 +182,7 @@ collections: # A list of collections the CMS should be able to edit
         #preview_path: "{{slug}}"
         filter: {field: "language", value: "es"}
         summary: '{{title}} -- {{language}}'
-        file: content/solucio_tec/{{title}}.{{language}}.md
+        file: content/solucio_tec
         fields:
           - {label: Title, name: title, widget : string}
           - {label: language, name: language, widget : string}
