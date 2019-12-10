@@ -120,7 +120,8 @@ collections: # A list of collections the CMS should be able to edit
     slug: '{{title}}.{{language}}'
     #preview_path: "{{slug}}"
     #filter: {field: "language", value: "{{language}}"}
-    summary: '{{title}} --- {{language}}'
+    summary: '{{slug}}'
+    identifier_field: '{{title}} --- {{language}}'
     extension: 'md'
     create: true
     fields:
