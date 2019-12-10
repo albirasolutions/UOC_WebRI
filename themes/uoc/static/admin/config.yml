@@ -253,7 +253,7 @@ collections: # A list of collections the CMS should be able to edit
             widget: list
             fields:
               - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
-                label: "Url", name: address, widget: string
+              - {label: "Url", name: address, widget: string}
       - label: Sobre la Patent
         name: sobre_patent  
         required: false    
@@ -281,6 +281,9 @@ collections: # A list of collections the CMS should be able to edit
             widget: list
             fields:
               - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
       - label: Aplicacions
         name: aplicacions    
         required: false  
@@ -293,6 +296,9 @@ collections: # A list of collections the CMS should be able to edit
             widget: list
             fields:
               - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
       - label: Grups de Recerca
         name: grups_recerca
         required: false      
@@ -343,7 +349,7 @@ collections: # A list of collections the CMS should be able to edit
             widget: list
             fields:
               - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
-                label: "Url", name: address, widget: string
+              - {label: "Url", name: address, widget: string}
       - label: Sobre el Servei
         name: sobre_servei  
         required: false    
@@ -418,7 +424,7 @@ collections: # A list of collections the CMS should be able to edit
             widget: list
             fields:
               - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
-                label: "Url", name: address, widget: string
+              - {label: "Url", name: address, widget: string}
       - label: Sobre la Spin-Off
         name: sobre_servei  
         required: false    
