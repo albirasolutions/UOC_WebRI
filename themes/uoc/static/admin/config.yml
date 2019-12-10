@@ -144,14 +144,14 @@ collections: # A list of collections the CMS should be able to edit
               - {label: path, name: path, widget: string}
   - name: "solucio_tec_2"
     label: "solucio_tecnologica 2"
-    folder: "content/solucio_tec"
+    #folder: "content/solucio_tec"
     #preview_path: "/solucio_tec"
     #create: true
     files:
       - label: 'CA'
         name: ca
         slug: '{{title}}.{{language}}'
-        file: {{slug}}.md
+        file: content/solucio_tec/{{slug}}.md
         create: true
         #preview_path: "{{slug}}"
         summary: '{{title}} --- {{language}}'
