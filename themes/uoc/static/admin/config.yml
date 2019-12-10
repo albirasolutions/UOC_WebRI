@@ -150,8 +150,8 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - label: 'CA'
         name: ca
-        file: {{slug}}.md
         slug: '{{title}}.{{language}}'
+        file: {{slug}}.md
         create: true
         #preview_path: "{{slug}}"
         summary: '{{title}} --- {{language}}'
@@ -215,10 +215,10 @@ collections: # A list of collections the CMS should be able to edit
       - label: 'ES'
         name: es
         slug: '{{title}}.{{language}}'
+        file: content/solucio_tec/{{title}}.es
         create: true
         #preview_path: "{{slug}}"
         summary: '{{title}} --- {{language}}'
-        folder: content/solucio_tec/{{title}}.es
         extension: 'md'
         filter: {field: "language", value: "es"}
         fields:
