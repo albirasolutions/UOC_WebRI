@@ -1,10 +1,10 @@
  
 backend:
   name: github
-  branch: victor
+  branch: master
   repo: albirasolutions/UOC_WebRI
-  #base_url: https://eh7d3mcjpg.execute-api.eu-west-1.amazonaws.com # Path to ext auth provider
-  #auth_endpoint: /prod/auth
+  base_url: https://eh7d3mcjpg.execute-api.eu-west-1.amazonaws.com # Path to ext auth provider
+  auth_endpoint: /prod/auth
 media_folder: "static/img" # Media files will be stored in the repo under static/img/
 public_folder: "/img"
 #publish_mode: editorial_workflow
@@ -153,7 +153,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: 'CA'
         name: ca
         #slug: '{{title}}.{{language}}'
-        file: content/solucio_tec/{{title}}.{{language}}
+        file: content/solucio_tec/
         create: true
         #preview_path: "{{slug}}"
         #summary: '{{title}} --- {{language}}'
