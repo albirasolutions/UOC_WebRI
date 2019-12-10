@@ -153,9 +153,9 @@ collections: # A list of collections the CMS should be able to edit
         slug: '{{title}}.{{language}}'
         create: true
         #preview_path: "{{slug}}"
-        filter: {field: "language", value: "ca"}
         summary: '{{title}} -- {{language}}'
-        file: content/solucio_tec/{{slug}}.md
+        file: content/solucio_tec/
+        filter: {field: "language", value: "ca"}
         fields:
           - {label: Title, name: title, widget : string}
           - {label: language, name: language, widget : string}
@@ -216,9 +216,9 @@ collections: # A list of collections the CMS should be able to edit
         slug: '{{title}}.{{language}}'
         create: true
         #preview_path: "{{slug}}"
-        filter: {field: "language", value: "es"}
         summary: '{{title}} -- {{language}}'
-        file: content/solucio_tec
+        file: content/solucio_tec/
+        filter: {field: "language", value: "es"}
         fields:
           - {label: Title, name: title, widget : string}
           - {label: language, name: language, widget : string}
