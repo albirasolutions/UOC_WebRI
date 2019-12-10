@@ -89,6 +89,7 @@
 
 [uoc_ri_menuitem_explore] other = "Explora R&I en la UOC"
 [uoc_ri_menuitem_researchmap] other = "Mapa de investigación por ámbitos"
+[uoc_ri_menuitem_broadcast] other = "Difusión"
 [uoc_ri_menuitem_contact] other = "Contacto"
 
 [uoc_ri_cercadortab_filtres] other = "¿Quieres saber qué y quién investiga en la UOC?"
