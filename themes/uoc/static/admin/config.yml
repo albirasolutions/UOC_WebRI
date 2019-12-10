@@ -158,7 +158,7 @@ collections: # A list of collections the CMS should be able to edit
         filter: {field: "language", value: "ca"}
         fields:
           - {label: Title, name: title, widget : string}
-          - {label: language, name: language, widget : string}
+          - {label: Language, name: language, widget : string}
           - label: General
             name: general
             widget: list
@@ -213,11 +213,11 @@ collections: # A list of collections the CMS should be able to edit
               - {label: E-mail, name: email, widget: string}
       - label: 'ES'
         name: es
-        slug: '{{title}}.es'
+        slug: '{{title}}.{{language}}'
         create: true
         #preview_path: "{{slug}}"
         summary: '{{title}} -- {{language}}'
-        file: content/solucio_tec/{{slug}}
+        file: content/solucio_tec/{{slug}}.md
         filter: {field: "language", value: "es"}
         fields:
           - {label: Title, name: title, widget : string}
