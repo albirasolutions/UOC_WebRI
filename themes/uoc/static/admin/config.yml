@@ -116,11 +116,11 @@ collections: # A list of collections the CMS should be able to edit
             widget: selector_custom
   - name: "solucio_tec"
     label: 'solucio_tec'
-    folder: "content/solucio_tec"
+    slug: '{{title}}.{{language}}'
     #preview_path: "{{slug}}"
     #filter: {field: "language", value: "{{language}}"}
     summary: '{{title}} -- {{language}}'
-    slug: '{{title}}.{{language}}'
+    folder: "content/solucio_tec"
     extension: 'md'
     create: true
     fields:
@@ -155,7 +155,7 @@ collections: # A list of collections the CMS should be able to edit
         #preview_path: "{{slug}}"
         filter: {field: "language", value: "ca"}
         summary: '{{title}} -- {{language}}'
-        file: content/solucio_tec
+        file: content/solucio_tec/{{slug}}.md
         fields:
           - {label: Title, name: title, widget : string}
           - {label: language, name: language, widget : string}
