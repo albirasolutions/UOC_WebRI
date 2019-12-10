@@ -151,7 +151,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: 'CA'
         name: ca
         slug: '{{title}}.{{language}}'
-        file: content/solucio_tec/{{slug}}.md
+        file: content/solucio_tec/{{title}}.{{language}}.md
         create: true
         #preview_path: "{{slug}}"
         summary: '{{title}} --- {{language}}'
