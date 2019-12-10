@@ -120,25 +120,45 @@ collections: # A list of collections the CMS should be able to edit
             name: "albiraContent2"
             widget: selector_custom
   - name: "solucio_tec"
-    label: 'solucio_tec'
+    label: 'Solucions Tecnologiques'
     folder: "content/solucio_tec/"
     slug: '{{title}}.{{language}}'
     #preview_path: "{{slug}}"
     #filter: {field: "language", value: "{{language}}"}
-    summary: '{{slug}}'
-    identifier_field: language
+    summary: {{slug}}
+    identifier_field: {{slug}}
     extension: 'md'
     create: true
     fields:
-      - {label: Title, name: title, widget : string}
-      - {label: Language, name: language, widget : string}
+      - {label: Title, name: title, widget : string, required: true}
+      - {label: Language, name: language, widget : select, options: ["ca","es","en"], required: true}
       - label: General
         name: general
         widget: list
         fields: 
-          - {label: Nom Solucio, name: nom_solucio, widget: string}
+          - {label: "Nom Solucio", name: nom_solucio, widget: string, required: true}
+          - {label: "Text", name: text_breu, widget: string}
+          - {label: "Eslogan", name: slogan, widget: string}
+          - {label: "Img Background", name: "img_background", widget: image, required: true}
+          - {label: "Tipología", name: tipologia, widget: string, required: true}
+          - {label: "Sector", name: sector, widget: string, required: true}
+          - {label: "Centre", name: centre, widget: string, required: true}
+          - {label: "Logo", name: "logo", widget: image}
+          - label: "Keywords"
+            name: keywords
+            widget: list
+            required: true
+            field:
+              - {label: "Value", name: value, widget: string}
+          - label: "Social"
+            name: xarxes
+            widget: list
+            fields:
+              - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
+                label: "Url", name: address, widget: string
       - label: Sobre la Tecnologia
-        name: sobre_tecnologia      
+        name: sobre_tecnologia 
+        required: false     
         widget: list
         fields:
           - {label: titol, name: titol, widget: string}
@@ -148,8 +168,110 @@ collections: # A list of collections the CMS should be able to edit
             widget: list
             fields:
               - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
       - label: Aspectes Innovadors
-        name: aspectes_innovadors     
+        name: aspectes_innovadors  
+        required: false   
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
+      - label: Aplicacions
+        name: aplicacions   
+        required: false   
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
+      - label: Grups de Recerca
+        name: grups_recerca  
+        required: false    
+        widget: list
+        fields:
+          - {label: Grups, name: grups, widget: string}
+          - {label: Investigadors, name: investigadors, widget: string}
+      - label: Contacte
+        name: contacte
+        required: false
+        widget: list
+        fields:
+          - {label: Name, name: text, widget: string}
+          - {label: Adreça, name: address, widget: string}
+          - {label: Telèfon, name: telefon, widget: string}
+          - {label: E-mail, name: email, widget: string}
+  - name: "patent"
+    label: 'Patents'
+    folder: "content/patent/"
+    slug: '{{title}}.{{language}}'
+    #preview_path: "{{slug}}"
+    #filter: {field: "language", value: "{{language}}"}
+    summary: {{slug}}
+    identifier_field: {{slug}}
+    extension: 'md'
+    create: true
+    fields:
+      - {label: Title, name: title, widget : string, required: true}
+      - {label: Language, name: language, widget : string, required: true}
+      - label: General
+        name: general
+        widget: list
+        fields: 
+          - {label: "Nom Patent", name: nom_patent, widget: string, required: true}
+          - {label: "Text", name: text_breu, widget: string}
+          - {label: "Eslogan", name: slogan, widget: string}
+          - {label: "Img Background", name: "img_background", widget: image, required: true}
+          - {label: "Tipología", name: tipologia, widget: string, required: true}
+          - {label: "Sector", name: sector, widget: string, required: true}
+          - {label: "Centre", name: centre, widget: string, required: true}
+          - {label: "Logo", name: "logo", widget: image}
+          - label: "Keywords"
+            name: keywords
+            widget: list
+            required: true
+            field:
+              - {label: "Value", name: value, widget: string}
+          - label: "Social"
+            name: xarxes
+            widget: list
+            fields:
+              - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
+                label: "Url", name: address, widget: string
+      - label: Sobre la Patent
+        name: sobre_patent  
+        required: false    
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
+      - label: Aspectes Innovadors
+        name: aspectes_innovadors    
+        required: false 
         widget: list
         fields:
           - {label: titol, name: titol, widget: string}
@@ -160,7 +282,8 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: path, name: path, widget: string}
       - label: Aplicacions
-        name: aplicacions      
+        name: aplicacions    
+        required: false  
         widget: list
         fields:
           - {label: titol, name: titol, widget: string}
@@ -171,301 +294,397 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: path, name: path, widget: string}
       - label: Grups de Recerca
-        name: grups_recerca      
+        name: grups_recerca
+        required: false      
         widget: list
         fields:
           - {label: Grups, name: grups, widget: string}
           - {label: Investigadors, name: investigadors, widget: string}
       - label: Contacte
         name: contacte
+        required: false
         widget: list
         fields:
           - {label: Name, name: text, widget: string}
           - {label: Adreça, name: address, widget: string}
           - {label: Telèfon, name: telefon, widget: string}
           - {label: E-mail, name: email, widget: string}
-  # - name: "solucio_tec_3"
-  #   label: "solucio_tecnologica 3"
-  #   #folder: "content/solucio_tec/"
-  #   #preview_path: "{{slug}}"
-  #   #summary: "{{language}}"
-  #   #create: true
-  #   files:
-  #     - label: "CA"
-  #       name: ca
-  #       file: content/solucio_tec/
-  #       create: true
-  #       #format: markdown
-  #       #extension: frontmatter
-  #       preview_path: {{slug}}
-  #       fields:
-  #         - {label: Title, name: title, widget : string}
-  #         - label: General
-  #           name: general
-  #           widget: list
-  #           fields: 
-  #             - {label: Nom Solucio, name: nom_solucio, widget: string}
-  #         - label: Sobre la Tecnologia
-  #           name: sobre_tecnologia      
-  #           widget: list
-  #           fields:
-  #             - {label: titol, name: titol, widget: string}
-  #             - {label: descripcio, name: descripcio, widget: markdown}
-  #             - label: Docs Relacionats
-  #               name: docs_rels
-  #               widget: list
-  #               fields:
-  #                 - {label: path, name: path, widget: string}
-          # files:
-          #   - label: "CA"
-          #     name: "ca"
-          #     #slug: "{{slug_key}}"
-          #     #identifier_field: slug_key
-          #     #slug: "{{slug}}"
-          #     folder: content/solucio_tec/{{title}}/{{title}}.ca.md
-          #     #folder: "content/solucio_tec"
-          #     create: true
-          #     #preview_path: content/solucio_tec/{{fields.slug_key}}/{{fields.slug_key}}
-          #     fields:
-          #       - {label: Title, name: title, widget : string}
-          #       - label: General
-          #         name: general
-          #         widget: list
-          #         fields: 
-          #           - {label: Nom Solucio, name: nom_solucio, widget: string}
-          #       - label: Sobre la Tecnologia
-          #         name: sobre_tecnologia      
-          #         widget: list
-          #         fields:
-          #           - {label: titol, name: titol, widget: string}
-          #           - {label: descripcio, name: descripcio, widget: markdown}
-          #           - label: Docs Relacionats
-          #             name: docs_rels
-          #             widget: list
-          #             fields:
-          #               - {label: path, name: path, widget: string}
-          #       - label: Sobre la Tecnologia
-          #         name: sobre_tecnologia      
-          #         widget: list
-          #         fields:
-          #           - {label: titol, name: titol, widget: string}
-          #           - {label: descripcio, name: descripcio, widget: markdown}
-          #           - label: Docs Relacionats
-          #             name: docs_rels
-          #             widget: list
-          #             fields:
-          #               - {label: path, name: path, widget: string}
-          #       - label: Sobre la Tecnologia
-          #         name: sobre_tecnologia      
-          #         widget: list
-          #         fields:
-          #           - {label: titol, name: titol, widget: string}
-          #           - {label: descripcio, name: descripcio, widget: markdown}
-          #           - label: Docs Relacionats
-          #             name: docs_rels
-          #             widget: list
-          #             fields:
-          #               - {label: path, name: path, widget: string}
-          #       - label: Sobre la Tecnologia
-          #         name: sobre_tecnologia      
-          #         widget: list
-          #         fields:
-          #           - {label: titol, name: titol, widget: string}
-          #           - {label: descripcio, name: descripcio, widget: markdown}
-          #           - label: Docs Relacionats
-          #             name: docs_rels
-          #             widget: list
-          #             fields:
-          #               - {label: path, name: path, widget: string}
-      # - label: "ES"
-      #   name: "es"
-      #   slug: "{{slug}}"
-      #   file: content/solucio_tec/{{slug}}/{{slug}}.es.md
-      #   #folder: "content/solucio_tec"
-      #   create: true
-      #   #preview_path: content/solucio_tec/{{title}}
-      #   fields:
-      #     - {label: Title, name: title, widget : string}
-      #     - {label: Slug, name: slug, widget : string}
-      #     - label: General
-      #       name: general
-      #       widget: list
-      #       fields: 
-      #         - {label: Nom Solucio, name: nom_solucio, widget: string}
-      #     - label: Sobre la Tecnologia
-      #       name: sobre_tecnologia      
-      #       widget: list
-      #       fields:
-      #         - {label: titol, name: titol, widget: string}
-      #         - {label: descripcio, name: descripcio, widget: markdown}
-      #         - label: Docs Relacionats
-      #           name: docs_rels
-      #           widget: list
-      #           fields:
-      #             - {label: path, name: path, widget: string}
-      #     - label: Sobre la Tecnologia
-      #       name: sobre_tecnologia      
-      #       widget: list
-      #       fields:
-      #         - {label: titol, name: titol, widget: string}
-      #         - {label: descripcio, name: descripcio, widget: markdown}
-      #         - label: Docs Relacionats
-      #           name: docs_rels
-      #           widget: list
-      #           fields:
-      #             - {label: path, name: path, widget: string}
-      #     - label: Sobre la Tecnologia
-      #       name: sobre_tecnologia      
-      #       widget: list
-      #       fields:
-      #         - {label: titol, name: titol, widget: string}
-      #         - {label: descripcio, name: descripcio, widget: markdown}
-      #         - label: Docs Relacionats
-      #           name: docs_rels
-      #           widget: list
-      #           fields:
-      #             - {label: path, name: path, widget: string}
-      #     - label: Sobre la Tecnologia
-      #       name: sobre_tecnologia      
-      #       widget: list
-      #       fields:
-      #         - {label: titol, name: titol, widget: string}
-      #         - {label: descripcio, name: descripcio, widget: markdown}
-      #         - label: Docs Relacionats
-      #           name: docs_rels
-      #           widget: list
-      #           fields:
-      #             - {label: path, name: path, widget: string}  
-      # - label: "EN"
-      #   name: "en"
-      #   slug: "{{slug}}"
-      #   file: content/solucio_tec/{{slug}}/{{slug}}.en.md
-      #   #folder: "content/solucio_tec"
-      #   create: true
-      #   #preview_path: content/solucio_tec/{{title}}
-      #   fields:
-      #     - {label: Title, name: title, widget : string}
-      #     - {label: Slug, name: slug, widget : string}
-      #     - label: General
-      #       name: general
-      #       widget: list
-      #       fields: 
-      #         - {label: Nom Solucio, name: nom_solucio, widget: string}
-      #     - label: Sobre la Tecnologia
-      #       name: sobre_tecnologia      
-      #       widget: list
-      #       fields:
-      #         - {label: titol, name: titol, widget: string}
-      #         - {label: descripcio, name: descripcio, widget: markdown}
-      #         - label: Docs Relacionats
-      #           name: docs_rels
-      #           widget: list
-      #           fields:
-      #             - {label: path, name: path, widget: string}
-      #     - label: Sobre la Tecnologia
-      #       name: sobre_tecnologia      
-      #       widget: list
-      #       fields:
-      #         - {label: titol, name: titol, widget: string}
-      #         - {label: descripcio, name: descripcio, widget: markdown}
-      #         - label: Docs Relacionats
-      #           name: docs_rels
-      #           widget: list
-      #           fields:
-      #             - {label: path, name: path, widget: string}
-      #     - label: Sobre la Tecnologia
-      #       name: sobre_tecnologia      
-      #       widget: list
-      #       fields:
-      #         - {label: titol, name: titol, widget: string}
-      #         - {label: descripcio, name: descripcio, widget: markdown}
-      #         - label: Docs Relacionats
-      #           name: docs_rels
-      #           widget: list
-      #           fields:
-      #             - {label: path, name: path, widget: string}
-      #     - label: Sobre la Tecnologia
-      #       name: sobre_tecnologia      
-      #       widget: list
-      #       fields:
-      #         - {label: titol, name: titol, widget: string}
-      #         - {label: descripcio, name: descripcio, widget: markdown}
-      #         - label: Docs Relacionats
-      #           name: docs_rels
-      #           widget: list
-      #           fields:
-      #             - {label: path, name: path, widget: string}
+  - name: "servei"
+    label: 'Serveis'
+    folder: "content/servei/"
+    slug: '{{title}}.{{language}}'
+    #preview_path: "{{slug}}"
+    #filter: {field: "language", value: "{{language}}"}
+    summary: {{slug}}
+    identifier_field: {{slug}}
+    extension: 'md'
+    create: true
+    fields:
+      - {label: Title, name: title, widget : string, required: true}
+      - {label: Language, name: language, widget : string, required: true}
+      - label: General
+        name: general
+        widget: list
+        fields: 
+          - {label: "Nom Servei", name: nom_servei, widget: string, required: true}
+          - {label: "Text", name: text_breu, widget: string}
+          - {label: "Img Background", name: "img_background", widget: image, required: true}
+          - {label: "Tipología", name: tipologia, widget: string, required: true}
+          - {label: "Sector", name: sector, widget: string, required: true}
+          - {label: "Centre", name: centre, widget: string, required: true}
+          - label: "Keywords"
+            name: keywords
+            widget: list
+            required: true
+            field:
+              - {label: "Value", name: value, widget: string}
+          - label: "Social"
+            name: xarxes
+            widget: list
+            fields:
+              - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
+                label: "Url", name: address, widget: string
+      - label: Sobre el Servei
+        name: sobre_servei  
+        required: false    
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
+      - label: Casos d'Exit
+        name: casos_exit    
+        widget: list
+        fields:
+          - {label: "Imatge", name: "img", widget: image, required: false}
+          - {label: titol, name: titol, widget: string, required: true}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - {label: Url Cas d'Èxit, name: url_success, widget: string}
+      - label: Grups de Recerca
+        name: grups_recerca
+        required: false      
+        widget: list
+        fields:
+          - {label: Grups, name: grups, widget: string}
+          - {label: Investigadors, name: investigadors, widget: string}
+      - label: Contacte
+        name: contacte
+        required: false
+        widget: list
+        fields:
+          - {label: Name, name: text, widget: string}
+          - {label: Adreça, name: address, widget: string}
+          - {label: Telèfon, name: telefon, widget: string}
+          - {label: E-mail, name: email, widget: string}
+  - name: "spin_off"
+    label: 'Spin-Offs'
+    folder: "content/spin_off/"
+    slug: '{{title}}.{{language}}'
+    #preview_path: "{{slug}}"
+    #filter: {field: "language", value: "{{language}}"}
+    summary: {{slug}}
+    identifier_field: {{slug}}
+    extension: 'md'
+    create: true
+    fields:
+      - {label: Title, name: title, widget : string, required: true}
+      - {label: Language, name: language, widget : string, required: true}
+      - label: General
+        name: general
+        widget: list
+        fields: 
+          - {label: "Nom Servei", name: nom_servei, widget: string, required: true}
+          - {label: "Text", name: text_breu, widget: string}
+          - {label: "Eslogan", name: slogan, widget: string}
+          - {label: "Img Background", name: "img_background", widget: image, required: true}
+          - {label: "Tipología", name: tipologia, widget: string, required: true}
+          - {label: "Sector", name: sector, widget: string, required: true}
+          - {label: "Logo", name: "logo", widget: image}
+          - label: "Keywords"
+            name: keywords
+            widget: list
+            required: true
+            field:
+              - {label: "Value", name: value, widget: string}
+          - label: "Social"
+            name: xarxes
+            widget: list
+            fields:
+              - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
+                label: "Url", name: address, widget: string
+      - label: Sobre la Spin-Off
+        name: sobre_servei  
+        required: false    
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
+      - label: Productes/Serveis
+        name: productes_serveis  
+        required: false    
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
+      - label: Clients
+        name: clients  
+        required: false    
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
+      - label: Casos d'Exit
+        name: casos_exit    
+        widget: list
+        fields:
+          - {label: "Imatge", name: "img", widget: image, required: false}
+          - {label: titol, name: titol, widget: string, required: true}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - {label: Url Cas d'Èxit, name: url_success, widget: string}
+      - label: Grups de Recerca
+        name: grups_recerca
+        required: false      
+        widget: list
+        fields:
+          - {label: Grups, name: grups, widget: string}
+          - {label: Investigadors, name: investigadors, widget: string}
+      - label: Contacte
+        name: contacte
+        required: false
+        widget: list
+        fields:
+          - {label: Name, name: text, widget: string}
+          - {label: Adreça, name: address, widget: string}
+          - {label: Telèfon, name: telefon, widget: string}
+          - {label: E-mail, name: email, widget: string}
   - name: "cercador"
     label: "Cercador"
-    folder: "content/cercador"
-    format: "json-frontmatter"
-    #extension : "json"
-    #filter: {field: "contenttype", value: "section"}    
-    #create: true
-    #slug: "cercador.{{language}}"
-    fields:
-      - {label: title, name: title, widget: string}
-      - label: ambits_especialitzacio
-        name : ambits_especialitzacio
-        widget : list
-        fields : 
-          - {label: display_name, name: display_name, widget: string }
-          - {label: value, name: value, widget: string }
-      - label: ods
-        name : ods 
-        widget: list 
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-          - { label : color, name : color, widget : string }
-      - label: centre
-        name : centre 
-        widget: list
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-      - label: sector_productiu
-        name : sector_productiu 
-        widget: list
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-      - label: solucions_tecnologiques
-        name : solucions_tecnologiques 
-        widget: list
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-          - { label : img_background, name : img_background, widget : image }
-      - label: patents
-        name : patents 
-        widget: list
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-          - { label : img_background, name : img_background, widget : image }
-      - label: serveis
-        name : serveis 
-        widget: list
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-          - { label : img_background, name : img_background, widget : image }
-      - label: spin_offs
-        name : spin_offs 
-        widget: list
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-          - { label : img_background, name : img_background, widget : image }
+    files:
+      - label: "CA"
+        name: ca
+        file: "content/cercador/cercador.ca.md"
+        extension : "md"
+        #filter: {field: "contenttype", value: "section"}    
+        #create: true
+        #slug: "cercador.{{language}}"
+        fields:
+          - {label: title, name: title, widget: string}
+          - label: ambits_especialitzacio
+            name : ambits_especialitzacio
+            widget : list
+            fields : 
+              - {label: display_name, name: display_name, widget: string }
+              - {label: value, name: value, widget: string }
+          - label: ods
+            name : ods 
+            widget: list 
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : color, name : color, widget : string }
+          - label: centre
+            name : centre 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+          - label: sector_productiu
+            name : sector_productiu 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+          - label: solucions_tecnologiques
+            name : solucions_tecnologiques 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+          - label: patents
+            name : patents 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+          - label: serveis
+            name : serveis 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+          - label: spin_offs
+            name : spin_offs 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+      - label: "ES"
+        name: es
+        file: "content/cercador/cercador.es.md"
+        extension : "md"
+        #filter: {field: "contenttype", value: "section"}    
+        #create: true
+        #slug: "cercador.{{language}}"
+        fields:
+          - {label: title, name: title, widget: string}
+          - label: ambits_especialitzacio
+            name : ambits_especialitzacio
+            widget : list
+            fields : 
+              - {label: display_name, name: display_name, widget: string }
+              - {label: value, name: value, widget: string }
+          - label: ods
+            name : ods 
+            widget: list 
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : color, name : color, widget : string }
+          - label: centre
+            name : centre 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+          - label: sector_productiu
+            name : sector_productiu 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+          - label: solucions_tecnologiques
+            name : solucions_tecnologiques 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+          - label: patents
+            name : patents 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+          - label: serveis
+            name : serveis 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+          - label: spin_offs
+            name : spin_offs 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+      - label: "EN"
+        name: en
+        file: "content/cercador/cercador.en.md"
+        extension : "md"
+        #filter: {field: "contenttype", value: "section"}    
+        #create: true
+        #slug: "cercador.{{language}}"
+        fields:
+          - {label: title, name: title, widget: string}
+          - label: ambits_especialitzacio
+            name : ambits_especialitzacio
+            widget : list
+            fields : 
+              - {label: display_name, name: display_name, widget: string }
+              - {label: value, name: value, widget: string }
+          - label: ods
+            name : ods 
+            widget: list 
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : color, name : color, widget : string }
+          - label: centre
+            name : centre 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+          - label: sector_productiu
+            name : sector_productiu 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+          - label: solucions_tecnologiques
+            name : solucions_tecnologiques 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+          - label: patents
+            name : patents 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+          - label: serveis
+            name : serveis 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+          - label: spin_offs
+            name : spin_offs 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
   - name: "mapa-ambits-recerca"
     label: "Mapa Ambits Recerca"
     folder: "content/mapa-ambits-recerca"
-    format: "json-frontmatter"
-    #extension : "json"
+    #format: "json-frontmatter"
+    extension : "md"
     #filter: {field: "contenttype", value: "section"}    
     #create: true
-    #slug: "mapa-ambits-recerca.{{language}}"
+    slug: "mapa-ambits-recerca.{{language}}"
     fields:
       - {label: title, name: title, widget: string}
       - label: ambits_especialitzacio
@@ -484,11 +703,11 @@ collections: # A list of collections the CMS should be able to edit
   - name: "contacte"
     label: "Contacte"
     folder: "content/contacte"
-    format: "json-frontmatter"
-    #extension : "json"
+    #format: "json-frontmatter"
+    extension : "md"
     #filter: {field: "contenttype", value: "section"}    
     #create: true
-    #slug: "mapa-ambits-recerca.{{language}}"
+    slug: "{{title}}.{{language}}"
     fields:
           - {label: title, name: title, widget: string}
           - label: section
