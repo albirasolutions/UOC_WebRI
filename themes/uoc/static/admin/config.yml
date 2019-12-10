@@ -145,7 +145,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: "solucio_tec_2"
     label: "solucio_tecnologica 2"
     folder: "content/solucio_tec"
-    preview_path: "/solucio_tec"
+    #preview_path: "/solucio_tec"
     #create: true
     files:
       - label: 'CA'
@@ -154,7 +154,7 @@ collections: # A list of collections the CMS should be able to edit
         create: true
         #preview_path: "{{slug}}"
         summary: '{{title}} -- {{language}}'
-        file: /solucio_tec/{{slug}}
+        file: content/solucio_tec/
         filter: {field: "language", value: "ca"}
         fields:
           - {label: Title, name: title, widget : string}
