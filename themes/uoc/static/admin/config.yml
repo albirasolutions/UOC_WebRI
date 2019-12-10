@@ -1,13 +1,18 @@
  
 backend:
   name: github
-  branch: master
+  branch: victor
   repo: albirasolutions/UOC_WebRI
-  base_url: https://eh7d3mcjpg.execute-api.eu-west-1.amazonaws.com # Path to ext auth provider
-  auth_endpoint: /prod/auth
+  #base_url: https://eh7d3mcjpg.execute-api.eu-west-1.amazonaws.com # Path to ext auth provider
+  #auth_endpoint: /prod/auth
 media_folder: "static/img" # Media files will be stored in the repo under static/img/
 public_folder: "/img"
 #publish_mode: editorial_workflow
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
 collections: # A list of collections the CMS should be able to edit
   - name: "principal"
     label: "Principal"
@@ -115,17 +120,18 @@ collections: # A list of collections the CMS should be able to edit
             name: "albiraContent2"
             widget: selector_custom
   - name: "solucio_tec"
-    label: "solucio_tecnologica"
-    folder: "content/solucio_tec"
-    preview_path: "{{slug}}"
-    #filter: {field: "language", value: "en"}
+    label: 'solucio_tec'
+    folder: "content/solucio_tec/"
     slug: '{{title}}.{{language}}'
-    #summary: '{{title}} -- {{year}}/{{month}}/{{day}}'
+    #preview_path: "{{slug}}"
+    #filter: {field: "language", value: "{{language}}"}
+    summary: '{{slug}}'
+    identifier_field: language
     extension: 'md'
     create: true
     fields:
       - {label: Title, name: title, widget : string}
-      - {label: language, name: language, widget : string}
+      - {label: Language, name: language, widget : string}
       - label: General
         name: general
         widget: list
@@ -142,68 +148,74 @@ collections: # A list of collections the CMS should be able to edit
             widget: list
             fields:
               - {label: path, name: path, widget: string}
-  - name: "solucio_tec_2"
-    label: "solucio_tecnologica 2"
-    #folder: "content/solucio_tec"
-    #preview_path: "{{slug}}"
-    create: true
-    files:
-      - label: 'ES'
-        name: es
-        slug: "{{title}}.es.md"
-        create: true
-        file: content/solucio_tec/{{slug}}
-        preview_path: "{{slug}}"
+      - label: Aspectes Innovadors
+        name: aspectes_innovadors     
+        widget: list
         fields:
-          - {label: Title, name: title, widget : string}
-          - label: General
-            name: general
-            widget: list
-            fields: 
-              - {label: Nom Solucio, name: nom_solucio, widget: string}
-          - label: Sobre la Tecnologia
-            name: sobre_tecnologia      
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
             widget: list
             fields:
-              - {label: titol, name: titol, widget: string}
-              - {label: descripcio, name: descripcio, widget: markdown}
-              - label: Docs Relacionats
-                name: docs_rels
-                widget: list
-                fields:
-                  - {label: path, name: path, widget: string}
-  - name: "solucio_tec_3"
-    label: "solucio_tecnologica 3"
-    #folder: "content/solucio_tec/"
-    #preview_path: "{{slug}}"
-    #summary: "{{language}}"
-    #create: true
-    files:
-      - label: "CA"
-        name: ca
-        file: content/solucio_tec/
-        create: true
-        #format: markdown
-        #extension: frontmatter
-        preview_path: {{slug}}
+              - {label: path, name: path, widget: string}
+      - label: Aplicacions
+        name: aplicacions      
+        widget: list
         fields:
-          - {label: Title, name: title, widget : string}
-          - label: General
-            name: general
-            widget: list
-            fields: 
-              - {label: Nom Solucio, name: nom_solucio, widget: string}
-          - label: Sobre la Tecnologia
-            name: sobre_tecnologia      
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
             widget: list
             fields:
-              - {label: titol, name: titol, widget: string}
-              - {label: descripcio, name: descripcio, widget: markdown}
-              - label: Docs Relacionats
-                name: docs_rels
-                widget: list
-                fields:
-                  - {label: path, name: path, widget: string}
+              - {label: path, name: path, widget: string}
+      - label: Grups de Recerca
+        name: grups_recerca      
+        widget: list
+        fields:
+          - {label: Grups, name: grups, widget: string}
+          - {label: Investigadors, name: investigadors, widget: string}
+      - label: Contacte
+        name: contacte
+        widget: list
+        fields:
+          - {label: Name, name: text, widget: string}
+          - {label: Adreça, name: address, widget: string}
+          - {label: Telèfon, name: telefon, widget: string}
+          - {label: E-mail, name: email, widget: string}
+  # - name: "solucio_tec_3"
+  #   label: "solucio_tecnologica 3"
+  #   #folder: "content/solucio_tec/"
+  #   #preview_path: "{{slug}}"
+  #   #summary: "{{language}}"
+  #   #create: true
+  #   files:
+  #     - label: "CA"
+  #       name: ca
+  #       file: content/solucio_tec/
+  #       create: true
+  #       #format: markdown
+  #       #extension: frontmatter
+  #       preview_path: {{slug}}
+  #       fields:
+  #         - {label: Title, name: title, widget : string}
+  #         - label: General
+  #           name: general
+  #           widget: list
+  #           fields: 
+  #             - {label: Nom Solucio, name: nom_solucio, widget: string}
+  #         - label: Sobre la Tecnologia
+  #           name: sobre_tecnologia      
+  #           widget: list
+  #           fields:
+  #             - {label: titol, name: titol, widget: string}
+  #             - {label: descripcio, name: descripcio, widget: markdown}
+  #             - label: Docs Relacionats
+  #               name: docs_rels
+  #               widget: list
+  #               fields:
+  #                 - {label: path, name: path, widget: string}
           # files:
           #   - label: "CA"
           #     name: "ca"
