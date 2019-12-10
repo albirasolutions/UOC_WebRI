@@ -175,6 +175,42 @@ collections: # A list of collections the CMS should be able to edit
                 widget: list
                 fields:
                   - {label: path, name: path, widget: string}
+          - label: Aspectes Innovadors
+            name: aspectes_innov      
+            widget: list
+            fields:
+              - {label: titol, name: titol, widget: string}
+              - {label: descripcio, name: descripcio, widget: markdown}
+              - label: Docs Relacionats
+                name: docs_rels
+                widget: list
+                fields:
+                  - {label: path, name: path, widget: string}
+          - label: Aplicacions
+            name: apps      
+            widget: list
+            fields:
+              - {label: titol, name: titol, widget: string}
+              - {label: descripcio, name: descripcio, widget: markdown}
+              - label: Docs Relacionats
+                name: docs_rels
+                widget: list
+                fields:
+                  - {label: path, name: path, widget: string}
+          - label: Grups de Recerca
+            name: grups_recerca      
+            widget: list
+            fields:
+              - {label: Grups, name: grups, widget: string}
+              - {label: Investigadors, name: investigadors, widget: string}
+          - label: Contacte
+            name: contacte
+            widget: list
+            fields:
+              - {label: Name, name: text, widget: string}
+              - {label: Adreça, name: address, widget: string}
+              - {label: Telèfon, name: telefon, widget: string}
+              - {label: E-mail, name: email, widget: string}
       - label: 'ES'
         name: es
         slug: '{{title}}.{{language}}'
@@ -202,6 +238,42 @@ collections: # A list of collections the CMS should be able to edit
                 widget: list
                 fields:
                   - {label: path, name: path, widget: string}
+          - label: Aspectes Innovadors
+            name: aspectes_innov      
+            widget: list
+            fields:
+              - {label: titol, name: titol, widget: string}
+              - {label: descripcio, name: descripcio, widget: markdown}
+              - label: Docs Relacionats
+                name: docs_rels
+                widget: list
+                fields:
+                  - {label: path, name: path, widget: string}
+          - label: Aplicacions
+            name: apps      
+            widget: list
+            fields:
+              - {label: titol, name: titol, widget: string}
+              - {label: descripcio, name: descripcio, widget: markdown}
+              - label: Docs Relacionats
+                name: docs_rels
+                widget: list
+                fields:
+                  - {label: path, name: path, widget: string}
+          - label: Grups de Recerca
+            name: grups_recerca      
+            widget: list
+            fields:
+              - {label: Grups, name: grups, widget: string}
+              - {label: Investigadors, name: investigadors, widget: string}
+          - label: Contacte
+            name: contacte
+            widget: list
+            fields:
+              - {label: Name, name: text, widget: string}
+              - {label: Adreça, name: address, widget: string}
+              - {label: Telèfon, name: telefon, widget: string}
+              - {label: E-mail, name: email, widget: string}
   # - name: "solucio_tec_3"
   #   label: "solucio_tecnologica 3"
   #   #folder: "content/solucio_tec/"
