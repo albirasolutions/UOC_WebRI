@@ -8,6 +8,11 @@ backend:
 media_folder: "static/img" # Media files will be stored in the repo under static/img/
 public_folder: "/img"
 #publish_mode: editorial_workflow
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
 collections: # A list of collections the CMS should be able to edit
   - name: "principal"
     label: "Principal"
