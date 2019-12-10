@@ -155,7 +155,7 @@ collections: # A list of collections the CMS should be able to edit
             widget: list
             fields:
               - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
-                label: "Url", name: address, widget: string
+              - {label: "Url", name: address, widget: string}
       - label: Sobre la Tecnologia
         name: sobre_tecnologia 
         required: false     
