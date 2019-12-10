@@ -150,7 +150,7 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - label: 'CA'
         name: ca
-        file: {{slug}}
+        file: {{slug}}.md
         slug: '{{title}}.{{language}}'
         create: true
         #preview_path: "{{slug}}"
