@@ -1,4 +1,4 @@
-service: webri-cloudsearch-upload
+service: webri-cloudsearch
 
 provider:
   name: aws
