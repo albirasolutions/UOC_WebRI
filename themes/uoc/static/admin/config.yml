@@ -136,7 +136,14 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Eslogan", name: slogan, widget: string}
           - {label: "Img Background", name: "img_background", widget: image, required: true}
           - {label: "Tipología", name: tipologia, widget: string, required: true}
-          - {label: "Sector", name: sector, widget: string, required: true}
+          - label: "Sector"
+            name: sector
+            widget: relation
+            collection: "sectors"
+            searchFields: ["name","value"]
+            valueField: "value"
+            displayFields: ["name"]
+            required: true
           - {label: "Centre", name: centre, widget: string, required: true}
           - {label: "Logo", name: "logo", widget: image}
           - label: "Keywords"
@@ -212,6 +219,10 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Adreça, name: address, widget: string}
           - {label: Telèfon, name: telefon, widget: string}
           - {label: E-mail, name: email, widget: string}
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
   - name: "patent"
     label: 'Patents'
     folder: "content/patent/"
@@ -310,6 +321,10 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Adreça, name: address, widget: string}
           - {label: Telèfon, name: telefon, widget: string}
           - {label: E-mail, name: email, widget: string}
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
   - name: "servei"
     label: 'Serveis'
     folder: "content/servei/"
@@ -384,6 +399,10 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Adreça, name: address, widget: string}
           - {label: Telèfon, name: telefon, widget: string}
           - {label: E-mail, name: email, widget: string}
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
   - name: "spin_off"
     label: 'Spin-Offs'
     folder: "content/spin_off/"
@@ -489,6 +508,10 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Adreça, name: address, widget: string}
           - {label: Telèfon, name: telefon, widget: string}
           - {label: E-mail, name: email, widget: string}
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
   - name: "cercador"
     label: "Cercador"
     files:
@@ -554,6 +577,10 @@ collections: # A list of collections the CMS should be able to edit
               - { label : display_name, name: display_name, widget: string }
               - { label : value, name: value, widget: string }
               - { label : img_background, name : img_background, widget : image }
+        meta:
+          - {label: "Date", name: "date", widget: "datetime"}
+        editor:
+          - preview: false
       - label: "ES"
         name: es
         file: "content/cercador/cercador.es.md"
@@ -616,6 +643,10 @@ collections: # A list of collections the CMS should be able to edit
               - { label : display_name, name: display_name, widget: string }
               - { label : value, name: value, widget: string }
               - { label : img_background, name : img_background, widget : image }
+        meta:
+          - {label: "Date", name: "date", widget: "datetime"}
+        editor:
+          - preview: false
       - label: "EN"
         name: en
         file: "content/cercador/cercador.en.md"
@@ -678,6 +709,10 @@ collections: # A list of collections the CMS should be able to edit
               - { label : display_name, name: display_name, widget: string }
               - { label : value, name: value, widget: string }
               - { label : img_background, name : img_background, widget : image }
+        meta:
+          - {label: "Date", name: "date", widget: "datetime"}
+        editor:
+          - preview: false
   - name: "mapa-ambits-recerca"
     label: "Mapa Ambits Recerca"
     folder: "content/mapa-ambits-recerca"
@@ -700,6 +735,10 @@ collections: # A list of collections the CMS should be able to edit
           - { label : display_name, name: display_name, widget: string }
           - { label : value, name: value, widget: string }
           - { label : color, name : color, widget : string }
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
   - name: "contacte"
     label: "Contacte"
     folder: "content/contacte"
@@ -742,4 +781,20 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Date", name: "date", widget: "datetime"}
     editor:
       - preview: false
+  - name: "sectors"
+    label: "Sectors"
+    folder: "content/sectors"
+    extension : "md"  
+    create: true
+    slug: "{{title}}.{{language}}"
+    fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Name, name: name, widget: string}
+          - {label: Value, name: value, widget: string}
+          - {label: Language, name: language, widget: select, options: ["ca","es","en"]}       
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
+    
       
