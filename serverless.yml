@@ -39,6 +39,3 @@ functions:
          existing: true
 custom:
   defaultStage: dev
-
-package:
-  individually: true
