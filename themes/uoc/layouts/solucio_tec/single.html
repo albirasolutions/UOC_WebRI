@@ -25,7 +25,7 @@
     
     for(var i = 0; i<menus.length;i++){
       $(menus[i].children[0].getAttribute("href")).css("max-height","0px").css("visibility","hidden");
-      if(i==0) {
+      if(menus[i].children[0].hash == '#sobre_tecnologia') {
         $(menus[i].children[0].getAttribute("href")).css("visibility","visible").css("height","100%");
       } 
     }
@@ -45,6 +45,7 @@
       $(menus[i].children[0].getAttribute("href")).css("max-height","0px").css("visibility","hidden");
       if(menus[i].children[0].getAttribute("href")==$(this).find('a').attr("href")) {
         $(menus[i].children[0].getAttribute("href")).css("visibility","visible").css("height","100%");
+        //$(this).classList.add() si el css + html del javi funciona bé, aixo fora.
       } 
     }
 
