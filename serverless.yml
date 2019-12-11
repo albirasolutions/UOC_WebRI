@@ -40,9 +40,5 @@ functions:
 custom:
   defaultStage: dev
 
-plugins:
-  - serverless-plugin-optimize
-  - serverless-offline
-
 package:
   individually: true
