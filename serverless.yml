@@ -1,4 +1,4 @@
-service: web-ri
+service: webri-cloudsearch-upload
 
 provider:
   name: aws
@@ -8,7 +8,6 @@ provider:
   stage: ${opt:stage, self:custom.defaultStage}  
   environment:
     CLOUDSEARCH_DOMAIN: "/uoc-web-ri/cloudsearch-upload/${opt:stage, self:provider.stage}/CLOUDSEARCH_DOMAIN"
-    BUCKET: "/uoc-web-ri/cloudsearch-upload/${opt:stage, self:provider.stage}/BUCKET"
 
   iamRoleStatements:
     - Effect: 'Allow'

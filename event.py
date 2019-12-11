@@ -8,7 +8,7 @@ s3_client = boto3.client('s3')
 
 def upload_document(event, context):
 
-    cloudsearch_client = boto3.client("cloudsearchdomain", endpoint_url=os.environ['CLOUDSEARCHDOMAIN'])
+    cloudsearch_client = boto3.client("cloudsearchdomain", endpoint_url=os.environ['CLOUDSEARCH_DOMAIN'])
     
     for record in event['Records']:
         bucket = record['s3']['bucket']['name']
