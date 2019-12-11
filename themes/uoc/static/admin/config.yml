@@ -141,8 +141,8 @@ collections: # A list of collections the CMS should be able to edit
             widget: relation
             collection: "sectors"
             searchFields: ["name","value","language"]
-            condition: {type: fieldValue, field: language, equals: {{language}}}
-            filter: {field: "language", value: {{language}}}
+            condition: {type: fieldValue, field: language, equals: "ca"}
+            filter: {field: "language", value: "ca"}
             valueField: "value"
             displayFields: ["name","language"]
             required: true
