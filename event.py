@@ -6,7 +6,7 @@ from urllib.parse import unquote_plus
 
 s3_client = boto3.client('s3')
 
-def upload_document(event, context):
+def upload(event, context):
 
     cloudsearch_client = boto3.client("cloudsearchdomain", endpoint_url=os.environ['CLOUDSEARCH_DOMAIN'])
     

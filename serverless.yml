@@ -4,11 +4,9 @@ provider:
   name: aws
   runtime: python3.6
   region: eu-west-1
-  memorySize: 512
   stage: ${opt:stage, self:custom.defaultStage}  
   environment:
     CLOUDSEARCH_DOMAIN: "/uoc-web-ri/cloudsearch-upload/${opt:stage, self:provider.stage}/CLOUDSEARCH_DOMAIN"
-
   iamRoleStatements:
     - Effect: 'Allow'
       Action:
@@ -29,8 +27,9 @@ provider:
             - '/*'
 
 functions:
-  create:
-    handler: event.upload_document
+  upload:
+    handler: event.upload
+    memorySize: 128
     events:
       - s3:
          bucket: uocwebrisupport
