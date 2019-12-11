@@ -120,7 +120,7 @@ collections: # A list of collections the CMS should be able to edit
     label: 'Solucions Tecnologiques'
     folder: "content/solucio_tec/"
     slug: '{{slug}}.{{language}}'
-    identifier_field: '{{slug}}'
+    identifier_field: {{slug}}
     #filter: {field: "language", value: "{{language}}"}
     extension: 'md'
     create: true
@@ -140,7 +140,8 @@ collections: # A list of collections the CMS should be able to edit
             name: sector
             widget: relation
             collection: "sectors"
-            searchFields: ["name","value"]
+            filter: {field: "language", value: {{language}}}
+            searchFields: ["name","value","language"]
             valueField: "value"
             displayFields: ["name","language"]
             required: true
@@ -787,6 +788,7 @@ collections: # A list of collections the CMS should be able to edit
     extension : "md"  
     create: true
     slug: "{{title}}.{{language}}"
+    identifier_field: {{slug}}
     fields:
       - {label: Title, name: title, widget: string}
       - {label: Name, name: name, widget: string}
