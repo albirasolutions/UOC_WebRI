@@ -1,10 +1,10 @@
  
 backend:
   name: github
-  branch: victor
+  branch: master
   repo: albirasolutions/UOC_WebRI
-  #base_url: https://eh7d3mcjpg.execute-api.eu-west-1.amazonaws.com # Path to ext auth provider
-  #auth_endpoint: /prod/auth
+  base_url: https://eh7d3mcjpg.execute-api.eu-west-1.amazonaws.com # Path to ext auth provider
+  auth_endpoint: /prod/auth
 media_folder: "static/img" # Media files will be stored in the repo under static/img/
 public_folder: "/img"
 #publish_mode: editorial_workflow
@@ -122,11 +122,8 @@ collections: # A list of collections the CMS should be able to edit
   - name: "solucio_tec"
     label: 'Solucions Tecnologiques'
     folder: "content/solucio_tec/"
-    slug: '{{title}}.{{language}}'
-    #preview_path: "{{slug}}"
+    slug: '{{slug}}.{{language}}'
     #filter: {field: "language", value: "{{language}}"}
-    summary: {{slug}}
-    identifier_field: {{slug}}
     extension: 'md'
     create: true
     fields:
@@ -148,7 +145,7 @@ collections: # A list of collections the CMS should be able to edit
             name: keywords
             widget: list
             required: true
-            field:
+            fields:
               - {label: "Value", name: value, widget: string}
           - label: "Social"
             name: xarxes
@@ -686,10 +683,9 @@ collections: # A list of collections the CMS should be able to edit
   - name: "mapa-ambits-recerca"
     label: "Mapa Ambits Recerca"
     folder: "content/mapa-ambits-recerca"
-    #format: "json-frontmatter"
-    extension : "md"
-    #filter: {field: "contenttype", value: "section"}    
-    #create: true
+    delete: true
+    extension : "md"   
+    create: true
     slug: "mapa-ambits-recerca.{{language}}"
     fields:
       - {label: title, name: title, widget: string}

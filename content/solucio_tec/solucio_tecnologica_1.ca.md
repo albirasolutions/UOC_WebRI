@@ -19,5 +19,9 @@ aspectes_innovadors:
   - titol: Aspectes Innovadors CA
 aplicacions:
   - {}
+grups_recerca:
+  - {}
+contacte:
+  - {}
 ---
 
