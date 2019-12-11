@@ -1,5 +1,5 @@
 ---
-title: Solucion Tecnologica de Prueba
+title: Solucio Tecnologica de Proba ca
 language: es
 general:
   - centre: Centro 1
