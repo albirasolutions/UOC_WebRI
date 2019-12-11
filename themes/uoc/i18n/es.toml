@@ -156,4 +156,8 @@
 [uoc_ri_aspect_innov] other = 'Aspectes Innovadores'
 [uoc_ri_apps] other = 'Aplicaciones'
 [uoc_ri_research_groups] other = 'Grupos de Recerca'
+[uoc_ri_researchers] other = 'Investigadores'
 [uoc_ri_contacte] other = 'Contacto'
+
+[uoc_ri_docs] other = "Documentos Relacionados"
+[uoc_ri_detail_social_media] other = "En la red"
