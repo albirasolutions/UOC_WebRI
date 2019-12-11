@@ -116,13 +116,11 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: "Key", name: "display_name", widget: string}
               - {label: "Value", name: "value", widget: string}
-          - label: "Albira Content2"
-            name: "albiraContent2"
-            widget: selector_custom
   - name: "solucio_tec"
     label: 'Solucions Tecnologiques'
     folder: "content/solucio_tec/"
     slug: '{{slug}}.{{language}}'
+    identifier_field: '{{slug}}.{{language}}'
     #filter: {field: "language", value: "{{language}}"}
     extension: 'md'
     create: true
@@ -203,7 +201,7 @@ collections: # A list of collections the CMS should be able to edit
         required: false    
         widget: list
         fields:
-          - {label: Grups, name: grups, widget: string}
+          - {label: Grups, name: grups, widget: selector_custom}
           - {label: Investigadors, name: investigadors, widget: string}
       - label: Contacte
         name: contacte
@@ -220,8 +218,8 @@ collections: # A list of collections the CMS should be able to edit
     slug: '{{title}}.{{language}}'
     #preview_path: "{{slug}}"
     #filter: {field: "language", value: "{{language}}"}
-    summary: {{slug}}
-    identifier_field: {{slug}}
+    #summary: {{slug}}
+    identifier_field: '{{slug}}.{{language}}'
     extension: 'md'
     create: true
     fields:
@@ -301,7 +299,7 @@ collections: # A list of collections the CMS should be able to edit
         required: false      
         widget: list
         fields:
-          - {label: Grups, name: grups, widget: string}
+          - {label: Grups, name: grups, widget: selector_custom}
           - {label: Investigadors, name: investigadors, widget: string}
       - label: Contacte
         name: contacte
@@ -375,7 +373,7 @@ collections: # A list of collections the CMS should be able to edit
         required: false      
         widget: list
         fields:
-          - {label: Grups, name: grups, widget: string}
+          - {label: Grups, name: grups, widget: selector_custom}
           - {label: Investigadors, name: investigadors, widget: string}
       - label: Contacte
         name: contacte
@@ -480,7 +478,7 @@ collections: # A list of collections the CMS should be able to edit
         required: false      
         widget: list
         fields:
-          - {label: Grups, name: grups, widget: string}
+          - {label: Grups, name: grups, widget: selector_custom}
           - {label: Investigadors, name: investigadors, widget: string}
       - label: Contacte
         name: contacte

@@ -155,4 +155,8 @@
 [uoc_ri_aspect_innov] other = 'Aspectes Innovadors'
 [uoc_ri_apps] other = 'Aplicacions'
 [uoc_ri_research_groups] other = 'Grups de Recerca'
+[uoc_ri_researchers] other = 'Investigadors'
 [uoc_ri_contacte] other = 'Contacte'
+
+[uoc_ri_docs] other = "Documents Relacionats"
+[uoc_ri_detail_social_media] other = "A la xarxa"
