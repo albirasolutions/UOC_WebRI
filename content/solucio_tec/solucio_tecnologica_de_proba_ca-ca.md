@@ -7,7 +7,7 @@ general:
       - value: Keyword1
       - value: Keyword2
     nom_solucio: 'Solucio Tecnologica #1'
-    sector: Sector 1
+    sector: sector_1
     slogan: Aqui hi va un eslogan de la solució
     text_breu: Text Breu de la solució Tecnologica
     tipologia: Tipologia 1
