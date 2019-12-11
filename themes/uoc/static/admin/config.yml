@@ -120,6 +120,7 @@ collections: # A list of collections the CMS should be able to edit
     label: 'Solucions Tecnologiques'
     folder: "content/solucio_tec/"
     slug: '{{slug}}.{{language}}'
+    identifier_field: '{{slug}}.{{language}}'
     #filter: {field: "language", value: "{{language}}"}
     extension: 'md'
     create: true
