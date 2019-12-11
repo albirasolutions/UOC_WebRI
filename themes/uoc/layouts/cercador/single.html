@@ -278,104 +278,104 @@
 										<div class="head-collapse js-collapse">
 											<p><a href="#collapse_solucions" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions"}}<span class="icon icon--arrow-down"></span></a></p>
 										</div>
-										
-										<div class="head-collapse subCollapse js-collapse">
-											<p><a href="#collapse_solucions_tec" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_tec"}}<span class="icon icon--arrow-down"></span></a></p>
-										</div>
-										<div id="collapse_solucions_tec" class="contentCollapse show ajaxLoading solucionsTecResults">
-											<div class="card-in-acordeon js-changeVist">
-												<div class="row">
-													{{ range $i, $solTec := .Params.solucions_tecnologiques }}
-													{{ if isset $solTec "value" }}
-													<div class="col-xs-12 col-md-4">
-                            <a href="/{{ $lang }}/solucio_tec/solucio_tec_1/solucio_tec_1.html" class="card-absolute-link"></a>
-														<div class="uoc_card_placeholder">
-															<img src="{{$solTec.img_background}}"/>
-															<div class="title">{{$solTec.display_name}}</div>
-															<div class="line-long"></div>
-															<div class="line-short"></div>
-															<div class="line-medium"></div>
-														</div>
-													</div>
-													{{ end }}
-													{{ end }}
-												</div>
+										<div id="collapse_solucions" class="contentCollapse show">
+											<div class="head-collapse subCollapse js-collapse">
+												<p><a href="#collapse_solucions_tec" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_tec"}}<span class="icon icon--arrow-down"></span></a></p>
 											</div>
-										</div>
-										
-										
-										<div class="head-collapse subCollapse js-collapse">
-											<p><a href="#collapse_solucions_patents" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_patents"}}<span class="icon icon--arrow-down"></span></a></p>
-										</div>
-										<div id="collapse_solucions_patents" class="contentCollapse show ajaxLoading solucionsPatentsResults">
-											<div class="card-in-acordeon js-changeVist">
-												<div class="row">
-													{{ range $i, $pat :=  $patents }}
-													{{ if isset $pat "value" }}
-													<div class="col-xs-12 col-md-4">
-                            <a href="/{{ $lang }}/patent/patent_1/patent_1.html" class="card-absolute-link"></a>
-														<div class="uoc_card_placeholder">
-															<img src="{{$pat.img_background}}"/>
-															<div class="title">{{$pat.display_name}}</div>
-															<div class="line-long"></div>
-															<div class="line-short"></div>
-															<div class="line-medium"></div>
+											<div id="collapse_solucions_tec" class="contentCollapse show ajaxLoading solucionsTecResults">
+												<div class="card-in-acordeon js-changeVist">
+													<div class="row">
+														{{ range $i, $solTec := .Params.solucions_tecnologiques }}
+														{{ if isset $solTec "value" }}
+														<div class="col-xs-12 col-md-4">
+								<a href="{{ "solucio_tec/solucio_tec_1.html" | relLangURL }}" class="card-absolute-link"></a>
+															<div class="uoc_card_placeholder">
+																<img src="{{$solTec.img_background}}"/>
+																<div class="title">{{$solTec.display_name}}</div>
+																<div class="line-long"></div>
+																<div class="line-short"></div>
+																<div class="line-medium"></div>
+															</div>
 														</div>
+														{{ end }}
+														{{ end }}
 													</div>
-													{{ end }}
-													{{ end }}
 												</div>
 											</div>
 											
-											<ul role="navigation" class="pagination">
-												<li class="col-md-1 pagination__item is-active">
-													<span title="Pagina 1" aria-label="Pagina 1" aria-selected="true" class="pagination__link">01</span>
-												</li>
-												<li class="col-md-1 pagination__item">
-													<a href="#" title="Pagina 2" aria-label="Pagina 2" aria-selected="false" class="pagination__link">02</a>
-												</li>
-												<li class="col-md-1 pagination__item">
-													<a href="#" title="Pagina 3" aria-label="Pagina 3" aria-selected="false"  class="pagination__link">03</a>
-												</li>
-												<li class="col-md-1 pagination__item">
-													<a href="#" title="Pagina 4" aria-label="Pagina 4" aria-selected="false" class="pagination__link">04</a>
-												</li>
-												<li class="col-md-5 pagination__item">
-													<a href="#" title="Pagina 5" aria-label="Pagina 5" aria-selected="false" class="pagination__link">05</a>
-												</li>
-												<li class="col-xs-12 col-md-3 pagination__item pagination__item--next">
-													<a href="#" title="Enlace siguiente" aria-label="Enlace siguiente" rel="next" class="btn btn--primary">Siguiente</a>
-												</li>
-											</ul>
 											
-										</div>
-										
-										
-										<div class="head-collapse subCollapse js-collapse">
-											<p><a href="#collapse_solucions_serveis" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_serveis"}}<span class="icon icon--arrow-down"></span></a></p>
-										</div>
-										<div id="collapse_solucions_serveis" class="contentCollapse show ajaxLoading solucionsServeissResults">
-											<div class="card-in-acordeon js-changeVist">
-												<div class="row">
-													{{ range $i, $serv :=  $serveis }}
-													{{ if isset $serv "value" }}
-													<div class="col-xs-12 col-md-4">
-														<a href="/{{ $lang }}/servei/servei_1/servei_1.html" class="card-absolute-link"></a>
-														<div class="uoc_card_placeholder">
-															<img src="{{$serv.img_background}}"/>
-															<div class="title">{{$serv.display_name}}</div>
-															<div class="line-long"></div>
-															<div class="line-short"></div>
-															<div class="line-medium"></div>
+											<div class="head-collapse subCollapse js-collapse">
+												<p><a href="#collapse_solucions_patents" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_patents"}}<span class="icon icon--arrow-down"></span></a></p>
+											</div>
+											<div id="collapse_solucions_patents" class="contentCollapse show ajaxLoading solucionsPatentsResults">
+												<div class="card-in-acordeon js-changeVist">
+													<div class="row">
+														{{ range $i, $pat :=  $patents }}
+														{{ if isset $pat "value" }}
+														<div class="col-xs-12 col-md-4">
+								<a href="{{ "/patent/" | relLangURL }}{{ . | urlize }}" class="card-absolute-link">{{.}}</a>
+															<div class="uoc_card_placeholder">
+																<img src="{{$pat.img_background}}"/>
+																<div class="title">{{$pat.display_name}}</div>
+																<div class="line-long"></div>
+																<div class="line-short"></div>
+																<div class="line-medium"></div>
+															</div>
 														</div>
+														{{ end }}
+														{{ end }}
 													</div>
-													{{ end }}
-													{{ end }}
 												</div>
+												
+												<ul role="navigation" class="pagination">
+													<li class="col-md-1 pagination__item is-active">
+														<span title="Pagina 1" aria-label="Pagina 1" aria-selected="true" class="pagination__link">01</span>
+													</li>
+													<li class="col-md-1 pagination__item">
+														<a href="#" title="Pagina 2" aria-label="Pagina 2" aria-selected="false" class="pagination__link">02</a>
+													</li>
+													<li class="col-md-1 pagination__item">
+														<a href="#" title="Pagina 3" aria-label="Pagina 3" aria-selected="false"  class="pagination__link">03</a>
+													</li>
+													<li class="col-md-1 pagination__item">
+														<a href="#" title="Pagina 4" aria-label="Pagina 4" aria-selected="false" class="pagination__link">04</a>
+													</li>
+													<li class="col-md-5 pagination__item">
+														<a href="#" title="Pagina 5" aria-label="Pagina 5" aria-selected="false" class="pagination__link">05</a>
+													</li>
+													<li class="col-xs-12 col-md-3 pagination__item pagination__item--next">
+														<a href="#" title="Enlace siguiente" aria-label="Enlace siguiente" rel="next" class="btn btn--primary">Siguiente</a>
+													</li>
+												</ul>
+												
 											</div>
 											
+											
+											<div class="head-collapse subCollapse js-collapse">
+												<p><a href="#collapse_solucions_serveis" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_serveis"}}<span class="icon icon--arrow-down"></span></a></p>
+											</div>
+											<div id="collapse_solucions_serveis" class="contentCollapse show ajaxLoading solucionsServeissResults">
+												<div class="card-in-acordeon js-changeVist">
+													<div class="row">
+														{{ range $i, $serv :=  $serveis }}
+														{{ if isset $serv "value" }}
+														<div class="col-xs-12 col-md-4">
+															<a href="/servei/{{ "/servei/" | relLangURL }}{{ . | urlize }}" class="card-absolute-link">{{.}}</a>
+															<div class="uoc_card_placeholder">
+																<img src="{{$serv.img_background}}"/>
+																<div class="title">{{$serv.display_name}}</div>
+																<div class="line-long"></div>
+																<div class="line-short"></div>
+																<div class="line-medium"></div>
+															</div>
+														</div>
+														{{ end }}
+														{{ end }}
+													</div>
+												</div>
+												
+											</div>
 										</div>
-										
 									</div>
 
 									<div class="collapse spin results">
@@ -389,7 +389,7 @@
 													{{ range $i, $spin :=  $spin_offs }}
 													{{ if isset $spin "value" }}
 													<div class="col-xs-12 col-md-4">
-                            <a href="/{{ $lang }}/spin_off/spin_off_1/spin_off_1.html" class="card-absolute-link"></a>
+                            <a href="{{ "/spin_off/" | relLangURL }}{{ . | urlize }}" class="card-absolute-link">{{.}}</a>
 														<div class="uoc_card_placeholder">
 															<div class="title">{{$spin.display_name}}</div>
 															<div class="line-long"></div>
@@ -533,82 +533,84 @@
 							<div class="collapse solucions results">
 								<div class="head-collapse js-collapse">
 									<p><a href="#collapse_sol" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions"}}<span class="icon icon--arrow-down"></span></a></p>
+									<p class="result"></p>
 								</div>
-								
-								<div class="head-collapse subCollapse js-collapse">
-									<p><a href="#collapse_sol_tec" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_tec"}}<span class="icon icon--arrow-down"></span></a></p>
-								</div>
-								<div id="collapse_sol_tec" class="contentCollapse show ajaxLoading solucionsTecResults">
-									<div class="card-in-acordeon js-changeVist">
-										<div class="row">
-											{{ range $i, $solTec := .Params.solucions_tecnologiques }}
-											{{ if isset $solTec "value" }}
-											<div class="col-xs-12 col-md-4">
-												<div class="uoc_card_placeholder">
-													<img src="{{$solTec.img_background}}"/>
-													<div class="title">{{$solTec.display_name}}</div>
-													<div class="line-long"></div>
-													<div class="line-short"></div>
-													<div class="line-medium"></div>
+								<div id="collapse_sol" class="contentCollapse show">
+									<div class="head-collapse subCollapse js-collapse">
+										<p><a href="#collapse_sol_tec" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_tec"}}<span class="icon icon--arrow-down"></span></a></p>
+									</div>
+									<div id="collapse_sol_tec" class="contentCollapse show ajaxLoading solucionsTecResults">
+										<div class="card-in-acordeon js-changeVist">
+											<div class="row">
+												{{ range $i, $solTec := .Params.solucions_tecnologiques }}
+												{{ if isset $solTec "value" }}
+												<div class="col-xs-12 col-md-4">
+													<div class="uoc_card_placeholder">
+														<img src="{{$solTec.img_background}}"/>
+														<div class="title">{{$solTec.display_name}}</div>
+														<div class="line-long"></div>
+														<div class="line-short"></div>
+														<div class="line-medium"></div>
+													</div>
 												</div>
+												{{ end }}
+												{{ end }}
 											</div>
-											{{ end }}
-											{{ end }}
 										</div>
 									</div>
-								</div>
-								
-								
-								<div class="head-collapse subCollapse js-collapse">
-									<p><a href="#collapse_sol_pat" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_patents"}}<span class="icon icon--arrow-down"></span></a></p>
-								</div>
-								<div id="collapse_sol_pat" class="contentCollapse show ajaxLoading solucionsPatentsResults">
-									<div class="card-in-acordeon js-changeVist">
-										<div class="row">
-											{{ range $i, $pat :=  $patents }}
-											{{ if isset $pat "value" }}
-											<div class="col-xs-12 col-md-4">
-												<div class="uoc_card_placeholder">
-													<img src="{{$pat.img_background}}"/>
-													<div class="title">{{$pat.display_name}}</div>
-													<div class="line-long"></div>
-													<div class="line-short"></div>
-													<div class="line-medium"></div>
+									
+									
+									<div class="head-collapse subCollapse js-collapse">
+										<p><a href="#collapse_sol_pat" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_patents"}}<span class="icon icon--arrow-down"></span></a></p>
+									</div>
+									<div id="collapse_sol_pat" class="contentCollapse show ajaxLoading solucionsPatentsResults">
+										<div class="card-in-acordeon js-changeVist">
+											<div class="row">
+												{{ range $i, $pat :=  $patents }}
+												{{ if isset $pat "value" }}
+												<div class="col-xs-12 col-md-4">
+													<div class="uoc_card_placeholder">
+														<img src="{{$pat.img_background}}"/>
+														<div class="title">{{$pat.display_name}}</div>
+														<div class="line-long"></div>
+														<div class="line-short"></div>
+														<div class="line-medium"></div>
+													</div>
 												</div>
+												{{ end }}
+												{{ end }}
 											</div>
-											{{ end }}
-											{{ end }}
 										</div>
 									</div>
-								</div>
-								
-								
-								<div class="head-collapse subCollapse js-collapse">
-									<p><a href="#collapse_sol_serv" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_serveis"}}<span class="icon icon--arrow-down"></span></a></p>
-								</div>
-								<div id="collapse_sol_serv" class="contentCollapse show ajaxLoading solucionsServeissResults">
-									<div class="card-in-acordeon js-changeVist">
-										<div class="row">
-											{{ range $i, $serv :=  $serveis }}
-											{{ if isset $serv "value" }}
-											<div class="col-xs-12 col-md-4">
-												<a href="" onclick="" class="card-absolute-link"></a>
-												<div class="uoc_card_placeholder">
-													<img src="{{$serv.img_background}}"/>
-													<div class="title">{{$serv.display_name}}</div>
-													<div class="line-long"></div>
-													<div class="line-short"></div>
-													<div class="line-medium"></div>
+									
+									
+									<div class="head-collapse subCollapse js-collapse">
+										<p><a href="#collapse_sol_serv" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_solucions_serveis"}}<span class="icon icon--arrow-down"></span></a></p>
+									</div>
+									<div id="collapse_sol_serv" class="contentCollapse show ajaxLoading solucionsServeissResults">
+										<div class="card-in-acordeon js-changeVist">
+											<div class="row">
+												{{ range $i, $serv :=  $serveis }}
+												{{ if isset $serv "value" }}
+												<div class="col-xs-12 col-md-4">
+													<a href="" onclick="" class="card-absolute-link"></a>
+													<div class="uoc_card_placeholder">
+														<img src="{{$serv.img_background}}"/>
+														<div class="title">{{$serv.display_name}}</div>
+														<div class="line-long"></div>
+														<div class="line-short"></div>
+														<div class="line-medium"></div>
+													</div>
 												</div>
+												{{ end }}
+												{{ end }}
 											</div>
-											{{ end }}
-											{{ end }}
 										</div>
 									</div>
+									
 								</div>
-								
+
 							</div>
-							
 							<div class="collapse spin results">
 								<div class="head-collapse js-collapse">
 									<p><a href="#collapse_spins" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_spin_off"}}<span class="icon icon--arrow-down"></span></a></p>
@@ -645,19 +647,5 @@
 </div>
 {{ partial "ri_js_imports.html" . }}
 <script src="/js/search.js"></script>
-<script type="text/javascript">
-	console.log('init!!!');
-	console.log('window.location.pathname',window.location.pathname);
-	console.log('window.location.hostname',window.location.hostname);
-	console.log('window.location.href',window.location.href);
-	langs = $("a[lang]");
-	for(var l = 0; l < langs.length; l++){
-		console.log('l--->',langs[l]);
-		//var langAttr = lang[l].getAttribute("lang");
-		//var newUrlByLang = window.location.pathname
-		//lang[l].setAttribute("href",window.location.href)
-	}
-	//console.log('langs---> ',langs);
-</script>
 </body>
 </html>

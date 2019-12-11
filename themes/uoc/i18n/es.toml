@@ -18,8 +18,8 @@
 [uoc_social_more] other = "Veure més xarxes"
 [uoc_social] other = "A la xarxa"
 
-[uoc_lang] other = "(en)"
-[uoc_lang_button] other = "EN"
+[uoc_lang] other = "(es)"
+[uoc_lang_button] other = "ES"
 
 [uoc_lang_catalan] other = "Català"
 [uoc_lang_spanish] other = "Castellà"
@@ -89,6 +89,7 @@
 
 [uoc_ri_menuitem_explore] other = "Explora R&I en la UOC"
 [uoc_ri_menuitem_researchmap] other = "Mapa de investigación por ámbitos"
+[uoc_ri_menuitem_broadcast] other = "Difusión"
 [uoc_ri_menuitem_contact] other = "Contacto"
 
 [uoc_ri_cercadortab_filtres] other = "¿Quieres saber qué y quién investiga en la UOC?"

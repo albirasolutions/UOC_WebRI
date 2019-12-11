@@ -3,17 +3,22 @@ version: 0.2
 env:
   variables:
     s3_output: "uocwebrisupport"
-    hugo_version: "0.49"
+    hugo_version: "0.59.1"
 
 phases:
   install:
     runtime-versions:
-      golang: 1.12
+      nodejs: 10
     commands:
       - wget "https://github.com/gohugoio/hugo/releases/download/v${hugo_version}/hugo_${hugo_version}_Linux-64bit.deb"
       - dpkg -i hugo_${hugo_version}_Linux-64bit.deb
     finally:
       - hugo version
+  pre_build:
+    commands:
+      - node ./bin/rename-languages.js
+    finally:
+      - echo "Finished renaming language files"
   build:
     commands:
       - hugo

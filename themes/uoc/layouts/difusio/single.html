@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="{{.Site.Language.Lang}}">
+
+<head>
+    {{ partial "head.html" . }}
+    
+</head>
+
+<body>
+    {{ partial "header.html" . }}
+    <div class="site-wrapper">
+        <section class="titol-pagina">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="page-title title-border-green">
+                        <h2>title</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="col-md-9 col-xs-9 card" role="region">
+                    <div class="card__contents img-wpr img-wpr--horizontal img--tint">
+                        <img src=""  class="img-wpr__cover">
+                        <div class="img-wpr__contents">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <p class="h1 inverse"></p>
+                                    <br/><br/>
+                                    <p class="inverse"></p><br/><br/><br/><br/><br/><br/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href="#" class="btn btn--call-to-action col-xs-6">Call to action</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card col-md-3 col-xs-3" role="region">
+                    <div class="card__contents">
+                        
+                        
+                        <div class="img--y col-xs-12" style="margin-bottom:10px;">
+                            <div class="img-wpr img-wpr--horizontal">
+                                <img class="img-wpr__cover" src="" alt="Texto alternativo" />
+                            </div>
+                        </div>
+                        
+                        <div style="height: 40px;margin-bottom:20px;">
+                            <p class="h5" style="font-weight: bold;"></p>
+                            <a href="#"><p class="text-small"><u></u></p></a> 
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="text-align-center text-small" style="margin-top:50px;margin-bottom:50px;">
+                            <h4><strong>Consulta les darreres novetats, notícies i casos d'èxit de l'R&I a la UOC</strong></h3>
+                                <p><a id="st1" href="" class="text-align-center text-small">
+                                    <div class="icon icon--arrow-down"></div>
+                                </a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+                
+                <div class="row">
+                    <div class="col-xs-12 col-md-12 col-lg-12" >
+                        
+                        <!-- Llistat de totes les noticies/esdeveniments (els 8 primers) -->
+                        <!-- Element de paginacio que ens actualitzará aquesta llista-->
+                        {{ range $i, $sequence :=  (seq 8) }}
+                        <div class="card col-xs-6 col-md-3" role="article"style="background-color: lightgrey; ">
+                            <a href="" class="card-absolute-link"></a>
+                            <div class="card-contents">
+                                <img src="/img/detalle-noticia.jpg"/>
+                                <div class="title">CARD</div>
+                                <div class="line-long">CARD</div>
+                                <div class="line-short">CARD</div>
+                                <div class="line-medium">CARD</div>
+                            </div>
+                        </div>
+                        {{end}}
+                    </div>
+                </div>
+                
+                
+                
+                <!-- <div class="">
+                    <div></div>
+                </div>
+                <div role="article" class="" data-video="">
+                    <a href="" aria-hidden="true" class="" target="_self" aria-labelledby="card-title-1575976596265">&nbsp;</a>
+                    <div class="card__image img--tint">
+                        <img data-set-id="3cols" data-src="" data-srcset="" data-sizes="(max-width: 767px) 100vw, (max-width: 1200px) 25vw, 300px" class="" alt="" data-lazy-load="" sizes="(max-width: 767px) 100vw, (max-width: 1200px) 25vw, 300px" srcset="" src="" data-was-processed="true">
+                        <a href="#modal-1575976596275" data-modal-trigger="" data-video-play="" class="" title="Visualització del video modal">&nbsp;</a>
+                        <div data-modal="" id="modal-1575976596275" class="">
+                            <div role="document" data-modal-dialog="" class="">
+                                <button accesskey="e" class="" data-modal-close="">
+                                    <span class="icon icon--close"></span>
+                                </button>
+                                <div class="modal__content">
+                                    <div class="">
+                                        <div class="">
+                                            <div class="" id="ytplayermodal-modal-1575976596275" data-video-id="B45q34vwH5s" data-video-autoplay="1" data-video-time="0">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=""><h3 id="card-title-1575976596265" class=""><a href="" target="_self">La UOC, protagonista d'un vídeo de la BBC Storyworks i la IAU</a></h3><div class="card__footer">
+                        <div class="float-left" role="complementary" aria-label="tags">#AimingHigher</div><div class="float-right" role="complementary" aria-label="tags">UOC News</div>
+                    </div>
+                </div> 
+            </div>   -->
+            
+                {{ partial "footer.html" . }}
+            </div>    
+        {{ partial "ri_js_imports.html" . }}
+        </section>
+    </div>
+</body>
+</html>
+

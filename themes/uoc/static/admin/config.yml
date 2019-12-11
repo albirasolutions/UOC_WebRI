@@ -8,6 +8,11 @@ backend:
 media_folder: "static/img" # Media files will be stored in the repo under static/img/
 public_folder: "/img"
 #publish_mode: editorial_workflow
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
 collections: # A list of collections the CMS should be able to edit
   - name: "principal"
     label: "Principal"
@@ -45,12 +50,6 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: "Camp", name: "display_name", widget: string}
               - {label: "valor", name: "value", widget: string}   
-          - label: "Albira Content"
-            name: "albiraContent"
-            widget: list
-            fields:
-              - {label: "Camp", name: "display_name", widget: string}
-              - {label: "valor", name: "value", widget: string}
       - label: "ES"
         name: "es"
         file: "content/principal/principal.es.md"
@@ -83,12 +82,6 @@ collections: # A list of collections the CMS should be able to edit
             widget: list
             fields:
               - {label: "Campo", name: "display_name", widget: string}
-              - {label: "valor", name: "value", widget: string}
-          - label: "Albira Content"
-            name: "albiraContent"
-            widget: list
-            fields:
-              - {label: "Camp", name: "display_name", widget: string}
               - {label: "valor", name: "value", widget: string}
       - label: "EN"
         name: "en"
@@ -123,87 +116,577 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: "Key", name: "display_name", widget: string}
               - {label: "Value", name: "value", widget: string}
-          - label: "Albira Content"
-            name: "albiraContent"
-            widget: list
-            fields:
-              - {label: "Key", name: "display_name", widget: string}
-              - {label: "Value", name: "value", widget: string}
-              - {label: "Selector custom", name: "selector", widget: "selector_custom"}
           - label: "Albira Content2"
             name: "albiraContent2"
             widget: selector_custom
+  - name: "solucio_tec"
+    label: 'Solucions Tecnologiques'
+    folder: "content/solucio_tec/"
+    slug: '{{slug}}.{{language}}'
+    #filter: {field: "language", value: "{{language}}"}
+    extension: 'md'
+    create: true
+    fields:
+      - {label: Title, name: title, widget : string, required: true}
+      - {label: Language, name: language, widget : select, options: ["ca","es","en"], required: true}
+      - label: General
+        name: general
+        widget: list
+        fields: 
+          - {label: "Nom Solucio", name: nom_solucio, widget: string, required: true}
+          - {label: "Text", name: text_breu, widget: string}
+          - {label: "Eslogan", name: slogan, widget: string}
+          - {label: "Img Background", name: "img_background", widget: image, required: true}
+          - {label: "Tipología", name: tipologia, widget: string, required: true}
+          - {label: "Sector", name: sector, widget: string, required: true}
+          - {label: "Centre", name: centre, widget: string, required: true}
+          - {label: "Logo", name: "logo", widget: image}
+          - label: "Keywords"
+            name: keywords
+            widget: list
+            required: true
+            fields:
+              - {label: "Value", name: value, widget: string}
+          - label: "Social"
+            name: xarxes
+            widget: list
+            fields:
+              - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
+              - {label: "Url", name: address, widget: string}
+      - label: Sobre la Tecnologia
+        name: sobre_tecnologia 
+        required: false     
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
+      - label: Aspectes Innovadors
+        name: aspectes_innovadors  
+        required: false   
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
+      - label: Aplicacions
+        name: aplicacions   
+        required: false   
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
+      - label: Grups de Recerca
+        name: grups_recerca  
+        required: false    
+        widget: list
+        fields:
+          - {label: Grups, name: grups, widget: string}
+          - {label: Investigadors, name: investigadors, widget: string}
+      - label: Contacte
+        name: contacte
+        required: false
+        widget: list
+        fields:
+          - {label: Name, name: text, widget: string}
+          - {label: Adreça, name: address, widget: string}
+          - {label: Telèfon, name: telefon, widget: string}
+          - {label: E-mail, name: email, widget: string}
+  - name: "patent"
+    label: 'Patents'
+    folder: "content/patent/"
+    slug: '{{title}}.{{language}}'
+    #preview_path: "{{slug}}"
+    #filter: {field: "language", value: "{{language}}"}
+    summary: {{slug}}
+    identifier_field: {{slug}}
+    extension: 'md'
+    create: true
+    fields:
+      - {label: Title, name: title, widget : string, required: true}
+      - {label: Language, name: language, widget : string, required: true}
+      - label: General
+        name: general
+        widget: list
+        fields: 
+          - {label: "Nom Patent", name: nom_patent, widget: string, required: true}
+          - {label: "Text", name: text_breu, widget: string}
+          - {label: "Eslogan", name: slogan, widget: string}
+          - {label: "Img Background", name: "img_background", widget: image, required: true}
+          - {label: "Tipología", name: tipologia, widget: string, required: true}
+          - {label: "Sector", name: sector, widget: string, required: true}
+          - {label: "Centre", name: centre, widget: string, required: true}
+          - {label: "Logo", name: "logo", widget: image}
+          - label: "Keywords"
+            name: keywords
+            widget: list
+            required: true
+            field:
+              - {label: "Value", name: value, widget: string}
+          - label: "Social"
+            name: xarxes
+            widget: list
+            fields:
+              - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
+              - {label: "Url", name: address, widget: string}
+      - label: Sobre la Patent
+        name: sobre_patent  
+        required: false    
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
+      - label: Aspectes Innovadors
+        name: aspectes_innovadors    
+        required: false 
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
+      - label: Aplicacions
+        name: aplicacions    
+        required: false  
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
+      - label: Grups de Recerca
+        name: grups_recerca
+        required: false      
+        widget: list
+        fields:
+          - {label: Grups, name: grups, widget: string}
+          - {label: Investigadors, name: investigadors, widget: string}
+      - label: Contacte
+        name: contacte
+        required: false
+        widget: list
+        fields:
+          - {label: Name, name: text, widget: string}
+          - {label: Adreça, name: address, widget: string}
+          - {label: Telèfon, name: telefon, widget: string}
+          - {label: E-mail, name: email, widget: string}
+  - name: "servei"
+    label: 'Serveis'
+    folder: "content/servei/"
+    slug: '{{title}}.{{language}}'
+    #preview_path: "{{slug}}"
+    #filter: {field: "language", value: "{{language}}"}
+    summary: {{slug}}
+    identifier_field: {{slug}}
+    extension: 'md'
+    create: true
+    fields:
+      - {label: Title, name: title, widget : string, required: true}
+      - {label: Language, name: language, widget : string, required: true}
+      - label: General
+        name: general
+        widget: list
+        fields: 
+          - {label: "Nom Servei", name: nom_servei, widget: string, required: true}
+          - {label: "Text", name: text_breu, widget: string}
+          - {label: "Img Background", name: "img_background", widget: image, required: true}
+          - {label: "Tipología", name: tipologia, widget: string, required: true}
+          - {label: "Sector", name: sector, widget: string, required: true}
+          - {label: "Centre", name: centre, widget: string, required: true}
+          - label: "Keywords"
+            name: keywords
+            widget: list
+            required: true
+            field:
+              - {label: "Value", name: value, widget: string}
+          - label: "Social"
+            name: xarxes
+            widget: list
+            fields:
+              - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
+              - {label: "Url", name: address, widget: string}
+      - label: Sobre el Servei
+        name: sobre_servei  
+        required: false    
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
+      - label: Casos d'Exit
+        name: casos_exit    
+        widget: list
+        fields:
+          - {label: "Imatge", name: "img", widget: image, required: false}
+          - {label: titol, name: titol, widget: string, required: true}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - {label: Url Cas d'Èxit, name: url_success, widget: string}
+      - label: Grups de Recerca
+        name: grups_recerca
+        required: false      
+        widget: list
+        fields:
+          - {label: Grups, name: grups, widget: string}
+          - {label: Investigadors, name: investigadors, widget: string}
+      - label: Contacte
+        name: contacte
+        required: false
+        widget: list
+        fields:
+          - {label: Name, name: text, widget: string}
+          - {label: Adreça, name: address, widget: string}
+          - {label: Telèfon, name: telefon, widget: string}
+          - {label: E-mail, name: email, widget: string}
+  - name: "spin_off"
+    label: 'Spin-Offs'
+    folder: "content/spin_off/"
+    slug: '{{title}}.{{language}}'
+    #preview_path: "{{slug}}"
+    #filter: {field: "language", value: "{{language}}"}
+    summary: {{slug}}
+    identifier_field: {{slug}}
+    extension: 'md'
+    create: true
+    fields:
+      - {label: Title, name: title, widget : string, required: true}
+      - {label: Language, name: language, widget : string, required: true}
+      - label: General
+        name: general
+        widget: list
+        fields: 
+          - {label: "Nom Servei", name: nom_servei, widget: string, required: true}
+          - {label: "Text", name: text_breu, widget: string}
+          - {label: "Eslogan", name: slogan, widget: string}
+          - {label: "Img Background", name: "img_background", widget: image, required: true}
+          - {label: "Tipología", name: tipologia, widget: string, required: true}
+          - {label: "Sector", name: sector, widget: string, required: true}
+          - {label: "Logo", name: "logo", widget: image}
+          - label: "Keywords"
+            name: keywords
+            widget: list
+            required: true
+            field:
+              - {label: "Value", name: value, widget: string}
+          - label: "Social"
+            name: xarxes
+            widget: list
+            fields:
+              - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
+              - {label: "Url", name: address, widget: string}
+      - label: Sobre la Spin-Off
+        name: sobre_servei  
+        required: false    
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
+      - label: Productes/Serveis
+        name: productes_serveis  
+        required: false    
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
+      - label: Clients
+        name: clients  
+        required: false    
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
+      - label: Casos d'Exit
+        name: casos_exit    
+        widget: list
+        fields:
+          - {label: "Imatge", name: "img", widget: image, required: false}
+          - {label: titol, name: titol, widget: string, required: true}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - {label: Url Cas d'Èxit, name: url_success, widget: string}
+      - label: Grups de Recerca
+        name: grups_recerca
+        required: false      
+        widget: list
+        fields:
+          - {label: Grups, name: grups, widget: string}
+          - {label: Investigadors, name: investigadors, widget: string}
+      - label: Contacte
+        name: contacte
+        required: false
+        widget: list
+        fields:
+          - {label: Name, name: text, widget: string}
+          - {label: Adreça, name: address, widget: string}
+          - {label: Telèfon, name: telefon, widget: string}
+          - {label: E-mail, name: email, widget: string}
   - name: "cercador"
     label: "Cercador"
-    folder: "content/cercador"
-    format: "json-frontmatter"
-    #extension : "json"
-    #filter: {field: "contenttype", value: "section"}    
-    #create: true
-    #slug: "cercador.{{language}}"
-    fields:
-      - {label: title, name: title, widget: string}
-      - label: ambits_especialitzacio
-        name : ambits_especialitzacio
-        widget : list
-        fields : 
-          - {label: display_name, name: display_name, widget: string }
-          - {label: value, name: value, widget: string }
-      - label: ods
-        name : ods 
-        widget: list 
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-          - { label : color, name : color, widget : string }
-      - label: centre
-        name : centre 
-        widget: list
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-      - label: sector_productiu
-        name : sector_productiu 
-        widget: list
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-      - label: solucions_tecnologiques
-        name : solucions_tecnologiques 
-        widget: list
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-          - { label : img_background, name : img_background, widget : image }
-      - label: patents
-        name : patents 
-        widget: list
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-          - { label : img_background, name : img_background, widget : image }
-      - label: serveis
-        name : serveis 
-        widget: list
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-          - { label : img_background, name : img_background, widget : image }
-      - label: spin_offs
-        name : spin_offs 
-        widget: list
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-          - { label : img_background, name : img_background, widget : image }
+    files:
+      - label: "CA"
+        name: ca
+        file: "content/cercador/cercador.ca.md"
+        extension : "md"
+        #filter: {field: "contenttype", value: "section"}    
+        #create: true
+        #slug: "cercador.{{language}}"
+        fields:
+          - {label: title, name: title, widget: string}
+          - label: ambits_especialitzacio
+            name : ambits_especialitzacio
+            widget : list
+            fields : 
+              - {label: display_name, name: display_name, widget: string }
+              - {label: value, name: value, widget: string }
+          - label: ods
+            name : ods 
+            widget: list 
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : color, name : color, widget : string }
+          - label: centre
+            name : centre 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+          - label: sector_productiu
+            name : sector_productiu 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+          - label: solucions_tecnologiques
+            name : solucions_tecnologiques 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+          - label: patents
+            name : patents 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+          - label: serveis
+            name : serveis 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+          - label: spin_offs
+            name : spin_offs 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+      - label: "ES"
+        name: es
+        file: "content/cercador/cercador.es.md"
+        extension : "md"
+        #filter: {field: "contenttype", value: "section"}    
+        #create: true
+        #slug: "cercador.{{language}}"
+        fields:
+          - {label: title, name: title, widget: string}
+          - label: ambits_especialitzacio
+            name : ambits_especialitzacio
+            widget : list
+            fields : 
+              - {label: display_name, name: display_name, widget: string }
+              - {label: value, name: value, widget: string }
+          - label: ods
+            name : ods 
+            widget: list 
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : color, name : color, widget : string }
+          - label: centre
+            name : centre 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+          - label: sector_productiu
+            name : sector_productiu 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+          - label: solucions_tecnologiques
+            name : solucions_tecnologiques 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+          - label: patents
+            name : patents 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+          - label: serveis
+            name : serveis 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+          - label: spin_offs
+            name : spin_offs 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+      - label: "EN"
+        name: en
+        file: "content/cercador/cercador.en.md"
+        extension : "md"
+        #filter: {field: "contenttype", value: "section"}    
+        #create: true
+        #slug: "cercador.{{language}}"
+        fields:
+          - {label: title, name: title, widget: string}
+          - label: ambits_especialitzacio
+            name : ambits_especialitzacio
+            widget : list
+            fields : 
+              - {label: display_name, name: display_name, widget: string }
+              - {label: value, name: value, widget: string }
+          - label: ods
+            name : ods 
+            widget: list 
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : color, name : color, widget : string }
+          - label: centre
+            name : centre 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+          - label: sector_productiu
+            name : sector_productiu 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+          - label: solucions_tecnologiques
+            name : solucions_tecnologiques 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+          - label: patents
+            name : patents 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+          - label: serveis
+            name : serveis 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
+          - label: spin_offs
+            name : spin_offs 
+            widget: list
+            fields : 
+              - { label : display_name, name: display_name, widget: string }
+              - { label : value, name: value, widget: string }
+              - { label : img_background, name : img_background, widget : image }
   - name: "mapa-ambits-recerca"
     label: "Mapa Ambits Recerca"
     folder: "content/mapa-ambits-recerca"
-    format: "json-frontmatter"
-    #extension : "json"
-    #filter: {field: "contenttype", value: "section"}    
-    #create: true
-    #slug: "mapa-ambits-recerca.{{language}}"
+    delete: true
+    extension : "md"   
+    create: true
+    slug: "mapa-ambits-recerca.{{language}}"
     fields:
       - {label: title, name: title, widget: string}
       - label: ambits_especialitzacio
@@ -222,11 +705,11 @@ collections: # A list of collections the CMS should be able to edit
   - name: "contacte"
     label: "Contacte"
     folder: "content/contacte"
-    format: "json-frontmatter"
-    #extension : "json"
+    #format: "json-frontmatter"
+    extension : "md"
     #filter: {field: "contenttype", value: "section"}    
     #create: true
-    #slug: "mapa-ambits-recerca.{{language}}"
+    slug: "{{title}}.{{language}}"
     fields:
           - {label: title, name: title, widget: string}
           - label: section
@@ -256,151 +739,7 @@ collections: # A list of collections the CMS should be able to edit
             widget: list 
             fields:
               - {label: display_name, name : display_name, widget: string}
-              - {label: value, name: value, widget: string}
-  - name: "solucions"
-    label: "Solucions"
-    files:
-      - label : "CA"
-        name: "ca"
-        file: "content/solucions/solucions.ca.md"
-        create: true
-        fields:
-          - {label: title, name: title, widget: string}
-          - label: sectors_productius
-            name : sector_productiu
-            widget : list
-            fields : 
-              - {label: display_name, name: display_name, widget: string }
-              - {label: value, name: value, widget: string }
-          - label: centre
-            name : centre
-            widget : list
-            fields : 
-              - {label: display_name, name: display_name, widget: string }
-              - {label: value, name: value, widget: string }
-          - label: solucions_tecnologiques
-            name : solucions_tecnologiques
-            widget : list
-            fields : 
-              - {label: display_name, name: display_name, widget: string }
-              - {label: value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
-          - label: patents
-            name : patents 
-            widget: list 
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : color, name : color, widget : string }
-              - { label : img_background, name : img_background, widget : image }
-          - label: serveis
-            name : serveis 
-            widget: list
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
-          - label: spin_offs
-            name : spin_offs 
-            widget: list
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
-      - label : "ES"
-        name: "es"
-        file: "content/solucions/solucions.es.md"
-        create: true
-        fields:
-          - {label: title, name: title, widget: string}
-          - label: sectors_productius
-            name : sector_productiu
-            widget : list
-            fields : 
-              - {label: display_name, name: display_name, widget: string }
-              - {label: value, name: value, widget: string }
-          - label: centre
-            name : centre
-            widget : list
-            fields : 
-              - {label: display_name, name: display_name, widget: string }
-              - {label: value, name: value, widget: string }
-          - label: solucions_tecnologiques
-            name : solucions_tecnologiques
-            widget : list
-            fields : 
-              - {label: display_name, name: display_name, widget: string }
-              - {label: value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
-          - label: patents
-            name : patents 
-            widget: list 
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : color, name : color, widget : string }
-              - { label : img_background, name : img_background, widget : image }
-          - label: serveis
-            name : serveis 
-            widget: list
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
-          - label: spin_offs
-            name : spin_offs 
-            widget: list
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
-      - label : "EN"
-        name: "en"
-        file: "content/solucions/solucions.en.md"
-        create: true
-        fields:
-          - {label: title, name: title, widget: string}
-          - label: sectors_productius
-            name : sector_productiu
-            widget : list
-            fields : 
-              - {label: display_name, name: display_name, widget: string }
-              - {label: value, name: value, widget: string }
-          - label: centre
-            name : centre
-            widget : list
-            fields : 
-              - {label: display_name, name: display_name, widget: string }
-              - {label: value, name: value, widget: string }
-          - label: solucions_tecnologiques
-            name : solucions_tecnologiques
-            widget : list
-            fields : 
-              - {label: display_name, name: display_name, widget: string }
-              - {label: value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
-          - label: patents
-            name : patents 
-            widget: list 
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : color, name : color, widget : string }
-              - { label : img_background, name : img_background, widget : image }
-          - label: serveis
-            name : serveis 
-            widget: list
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
-          - label: spin_offs
-            name : spin_offs 
-            widget: list
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
+              - {label: value, name: value, widget: string}            
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
     editor:
