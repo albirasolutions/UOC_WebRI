@@ -1,0 +1,50 @@
+service: web-ri
+
+provider:
+  name: aws
+  runtime: python3.6
+  region: eu-west-1
+  memorySize: 512
+  stage: ${opt:stage, self:custom.defaultStage}  
+  environment:
+    CLOUDSEARCH_DOMAIN: "/uoc-web-ri/cloudsearch-upload/${opt:stage, self:provider.stage}/CLOUDSEARCH_DOMAIN"
+    BUCKET: "/uoc-web-ri/cloudsearch-upload/${opt:stage, self:provider.stage}/BUCKET"
+
+  iamRoleStatements:
+    - Effect: 'Allow'
+      Action:
+        - 's3:ListBucket'
+      Resource:
+        Fn::Join:
+          - ''
+          - - 'arn:aws:s3:::'
+            - Ref: ServerlessDeploymentBucket
+    - Effect: 'Allow'
+      Action:
+        - 's3:PutObject'
+      Resource:
+        Fn::Join:
+          - ''
+          - - 'arn:aws:s3:::'
+            - Ref: ServerlessDeploymentBucket
+            - '/*'
+
+functions:
+  create:
+    handler: event.upload_document
+    events:
+      - s3:
+         bucket: uocwebrisupport
+         event: s3:ObjectCreated:*
+         rules:
+            - suffix: .json
+         existing: true
+custom:
+  defaultStage: dev
+
+plugins:
+  - serverless-plugin-optimize
+  - serverless-offline
+
+package:
+  individually: true
