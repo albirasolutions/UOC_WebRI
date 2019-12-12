@@ -56,7 +56,7 @@
           results.innerHTML = "";
           return;
         }
-        console.log('sending request to... https://api.idescat.cat/pob/v1/sug.txt?p=q/',document.getElementById("text_query").value);
+        console.log('sending request to... https://transfer-research.am.pre.uoc.es/api/search?idioma=ca&q='+document.getElementById("text_query").value+'&tipus=grup');
         fetch('https://transfer-research.am.pre.uoc.es/api/search?idioma=ca&q='+document.getElementById("text_query").value+'&tipus=grup',
             { 
               method: 'GET',
@@ -64,7 +64,7 @@
             }
         )
         .then(function(response) {
-          console.log('getting response from ajax request--->',response.text());
+          console.log('getting response from ajax request--->',response);
           return response.text()
         })
         .then(function(text){
