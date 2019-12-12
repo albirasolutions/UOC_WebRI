@@ -68,7 +68,7 @@ function buildURL(searchParams,target){
 	if(searchParams!=null){
 		var queryString = "?";
 		for (var key in searchParams) {
-			queryString+=key+"="+searchParams[key]+"&";
+			queryString+=key+"="+encodeURIComponent(searchParams[key])+"&";
 		}
 		queryString+="target="+target.trim()+"&";
 		queryString = queryString.substring(0,queryString.length-1);		
