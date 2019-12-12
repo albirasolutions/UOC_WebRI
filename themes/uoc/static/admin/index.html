@@ -63,7 +63,7 @@
             }
         )
         .then(function(response) {
-          console.log('getting response from ajax request--->',response);
+          console.log('getting response from ajax request--->',response.text());
           return response.text()
         })
         .then(function(text){
@@ -77,7 +77,7 @@
       render: function() {
         var value = this.props.value;
         console.log('rendering...value-->',value);
-        console.log('returning h function -->',h);
+        console.log('returning h function -->',h());
         return h('div', 
                 {
                   _style : {border:"1px solid red"}
