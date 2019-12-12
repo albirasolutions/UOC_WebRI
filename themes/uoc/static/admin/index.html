@@ -57,7 +57,7 @@
           return;
         }
         console.log('sending request to... https://transfer-research.am.pre.uoc.es/api/search?idioma=ca&q='+document.getElementById("text_query").value+'&tipus=grup');
-        fetch('https://transfer-research.am.pre.uoc.es/api/search?idioma=ca&q='+document.getElementById("text_query").value+'&tipus=grup',
+        fetch('https://transfer-research.am.pre.uoc.es/api/search?idioma=ca&q='+encodeURIComponent(document.getElementById("text_query").value)+'&tipus=grup',
             { 
               method: 'GET',
               mode: 'cors'
