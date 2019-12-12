@@ -46,6 +46,7 @@
 
       handleChange: function(e) {
         let items = document.getElementById("query_selected").innerHTML.replace(/<label class=\"selector_tag\">/ig,"").replace(/<\/label>/ig,",");
+        console.log('retrieving change items...',items);
         this.props.onChange(items.slice(0,items.length-1));
       },
 
@@ -55,18 +56,21 @@
           results.innerHTML = "";
           return;
         }
-        fetch('https://api.idescat.cat/pob/v1/sug.txt?p=q/'+document.getElementById("text_query").value,
+        console.log('sending request to... https://transfer-research.am.pre.uoc.es/api/search?idioma=ca&q='+document.getElementById("text_query").value+'&tipus=grup');
+        fetch('https://transfer-research.am.pre.uoc.es/api/search?idioma=ca&q='+encodeURIComponent(document.getElementById("text_query").value)+'&tipus=grup',
             { 
               method: 'GET',
               mode: 'cors'
             }
         )
         .then(function(response) {
+          console.log('getting response from ajax request--->',response);
           return response.text()
         })
         .then(function(text){
           results.innerHTML="";
           text.split("\n").map(function(item){
+            console.log('each item on response..',item);
             results.innerHTML += "<input type='checkbox' value='query_"+encodeURIComponent(item)+"' onclick=\"document.getElementById('query_selected').innerHTML+='<label class=selector_tag>"+item+"</label>';document.getElementById('trigger').click()\"> " + item + "<br />";
           });
         });      
@@ -74,6 +78,8 @@
 
       render: function() {
         var value = this.props.value;
+        console.log('rendering...value-->',value);
+        console.log('returning h function -->',h());
         return h('div', 
                 {
                   _style : {border:"1px solid red"}
