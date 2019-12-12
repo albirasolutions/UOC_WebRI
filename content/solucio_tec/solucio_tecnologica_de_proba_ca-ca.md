@@ -16,7 +16,7 @@ general:
         xarxa: facebook
 sobre_tecnologia:
   - descripcio: 'Descripció sobre la tecnologia #1 CA'
-    titol: 'Sobre la Tecnologia #1 CA -- 12345'
+    titol: 'Sobre la Tecnologia #1 CA -- 123456'
 aspectes_innovadors:
   - descripcio: 'Descripció aspectes innovadors sobre la tecnologia #1 CA'
     titol: 'Aspectes Innovadors Solucio Tecnologica #1'
