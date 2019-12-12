@@ -7,7 +7,7 @@ general:
       - value: Keyword1
       - value: Keyword2
     nom_solucio: 'Solucio Tecnologica #1'
-    sector: sector_1
+    sector: Sector 1
     slogan: Aqui hi va un eslogan de la solució
     text_breu: Text Breu de la solució Tecnologica
     tipologia: Tipologia 1
@@ -16,7 +16,7 @@ general:
         xarxa: facebook
 sobre_tecnologia:
   - descripcio: 'Descripció sobre la tecnologia #1 CA'
-    titol: 'Sobre la Tecnologia #1 CA -- 12'
+    titol: 'Sobre la Tecnologia #1 CA -- 123456'
 aspectes_innovadors:
   - descripcio: 'Descripció aspectes innovadors sobre la tecnologia #1 CA'
     titol: 'Aspectes Innovadors Solucio Tecnologica #1'
