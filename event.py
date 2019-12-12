@@ -21,10 +21,14 @@ def upload(event, context):
     for record in event['Records']:
         bucket = record['s3']['bucket']['name']
         key = unquote_plus(record['s3']['object']['key'])
-        download_path = '/tmp/{}/{}'.format(uuid.uuid4(), key)
+        download_path = '/tmp/{}.json'.format(uuid.uuid4())
         logger.info('## DOWNLOAD PATH')
         logger.info(download_path)
         s3_client.download_file(bucket, key, download_path)
-        logger.info('## DOWNLOAD PATH')
-        logger.info(download_path)
+        f=open(download_path, "r")
+        if f.mode == 'r':
+           contents = f.read()
+           logger.info('## JSON CONTENT')
+           logger.info(contents)
+        f.close()
         cloudsearch_client.upload_documents(documents=download_path, contentType='application/json')
