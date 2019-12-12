@@ -2,7 +2,7 @@
 title: SOLUCIÓ_ALFA
 language: ca
 general:
-  - centre: UAB
+  - centre: UOC
     keywords:
       - value: Clau
     nom_solucio: Alfa
