@@ -22,5 +22,9 @@ def upload(event, context):
         bucket = record['s3']['bucket']['name']
         key = unquote_plus(record['s3']['object']['key'])
         download_path = '/tmp/{}/{}'.format(uuid.uuid4(), key)
+        logger.info('## DOWNLOAD PATH')
+        logger.info(download_path)
         s3_client.download_file(bucket, key, download_path)
+        logger.info('## DOWNLOAD PATH')
+        logger.info(download_path)
         cloudsearch_client.upload_documents(documents=download_path, contentType='application/json')
