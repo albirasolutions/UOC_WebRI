@@ -465,7 +465,6 @@ collections: # A list of collections the CMS should be able to edit
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
     filter: {field: "language", value: "ca"}
-    identifier_field: '{{slug}}.{{language}}'
     extension: 'md'
     create: true
     fields:
@@ -566,7 +565,6 @@ collections: # A list of collections the CMS should be able to edit
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
     filter: {field: "language", value: "es"}
-    identifier_field: '{{slug}}.{{language}}'
     extension: 'md'
     create: true
     fields:
@@ -667,7 +665,6 @@ collections: # A list of collections the CMS should be able to edit
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
     filter: {field: "language", value: "en"}
-    identifier_field: '{{slug}}.{{language}}'
     extension: 'md'
     create: true
     fields:
