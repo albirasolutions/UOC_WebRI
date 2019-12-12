@@ -463,13 +463,13 @@ collections: # A list of collections the CMS should be able to edit
     label: 'Patents'
     folder: "content/patent/"
     slug: '{{slug}}.{{language}}'
-    #identifier_field: {{slug}}
+    identifier_field: {{slug}}
     filter: {field: "language", value: "ca"}
     extension: 'md'
     create: true
     fields:
       - {label: Títol, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : string, required: true}
+      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"], required: true}
       - label: General
         name: general
         widget: list
@@ -479,8 +479,22 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - {label: "Tipologia", name: tipologia, widget: string, required: true}
-          - {label: "Sector", name: sector, widget: string, required: true}
-          - {label: "Centre", name: centre, widget: string, required: true}
+          - label: "Sector"
+            name: sector
+            widget: relation
+            collection: "sectors_ca"
+            searchFields: ["name","value","language"]
+            valueField: "name"
+            displayFields: ["name","language"]
+            required: true
+          - label: "Centre"
+            name: centre
+            widget: relation
+            collection: "centers_ca"
+            searchFields: ["title","language"]
+            valueField: "title"
+            displayFields: ["title","language"]
+            required: true
           - {label: "Logo", name: "logo", widget: image}
           - label: "Keywords"
             name: keywords
@@ -488,11 +502,11 @@ collections: # A list of collections the CMS should be able to edit
             required: true
             field:
               - {label: "Keyword", name: value, widget: string}
-          - label: "Social"
+          - label: "Xarxes"
             name: xarxes
             widget: list
             fields:
-              - {label: "Nom", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
+              - {label: "Xarxa", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
               - {label: "Url", name: address, widget: string}
       - label: Sobre la Patent
         name: sobre_patent  
@@ -569,7 +583,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Título, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : string, required: true}
+      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"], required: true}
       - label: General
         name: general
         widget: list
@@ -579,8 +593,22 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Eslogan", name: slogan, widget: string}
           - {label: "Img Fondo", name: "img_background", widget: image, required: true}
           - {label: "Tipología", name: tipologia, widget: string, required: true}
-          - {label: "Sector", name: sector, widget: string, required: true}
-          - {label: "Centro", name: centre, widget: string, required: true}
+          - label: "Sector"
+            name: sector
+            widget: relation
+            collection: "sectors_es"
+            searchFields: ["name","value","language"]
+            valueField: "name"
+            displayFields: ["name","language"]
+            required: true
+          - label: "Centre"
+            name: centre
+            widget: relation
+            collection: "centers_es"
+            searchFields: ["title","language"]
+            valueField: "title"
+            displayFields: ["title","language"]
+            required: true
           - {label: "Logo", name: "logo", widget: image}
           - label: "Keywords"
             name: keywords
@@ -669,7 +697,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Title, name: title, widget : string, required: true}
-      - {label: Language, name: language, widget : string, required: true}
+      - {label: Language, name: language, widget : select, options: ["ca","es","en"], required: true}
       - label: General
         name: general
         widget: list
@@ -679,8 +707,22 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Slogan", name: slogan, widget: string}
           - {label: "Img Background", name: "img_background", widget: image, required: true}
           - {label: "Typology", name: tipologia, widget: string, required: true}
-          - {label: "Sector", name: sector, widget: string, required: true}
-          - {label: "Center", name: centre, widget: string, required: true}
+          - label: "Sector"
+            name: sector
+            widget: relation
+            collection: "sectors_en"
+            searchFields: ["name","value","language"]
+            valueField: "name"
+            displayFields: ["name","language"]
+            required: true
+          - label: "Center"
+            name: centre
+            widget: relation
+            collection: "centers_en"
+            searchFields: ["title","language"]
+            valueField: "title"
+            displayFields: ["title","language"]
+            required: true
           - {label: "Logo", name: "logo", widget: image}
           - label: "Keywords"
             name: keywords
@@ -769,7 +811,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Títol, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : string, required: true}
+      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"], required: true}
       - label: General
         name: general
         widget: list
@@ -778,8 +820,22 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - {label: "Tipologia", name: tipologia, widget: string, required: true}
-          - {label: "Sector", name: sector, widget: string, required: true}
-          - {label: "Centre", name: centre, widget: string, required: true}
+          - label: "Sector"
+            name: sector
+            widget: relation
+            collection: "sectors_ca"
+            searchFields: ["name","value","language"]
+            valueField: "name"
+            displayFields: ["name","language"]
+            required: true
+          - label: "Centre"
+            name: centre
+            widget: relation
+            collection: "centers_ca"
+            searchFields: ["title","language"]
+            valueField: "title"
+            displayFields: ["title","language"]
+            required: true
           - label: "Keywords"
             name: keywords
             widget: list
@@ -845,7 +901,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Título, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : string, required: true}
+      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"], required: true}
       - label: General
         name: general
         widget: list
@@ -854,8 +910,22 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Texto", name: text_breu, widget: string}
           - {label: "Img Fondo", name: "img_background", widget: image, required: true}
           - {label: "Tipología", name: tipologia, widget: string, required: true}
-          - {label: "Sector", name: sector, widget: string, required: true}
-          - {label: "Centro", name: centre, widget: string, required: true}
+          - label: "Sector"
+            name: sector
+            widget: relation
+            collection: "sectors_es"
+            searchFields: ["name","value","language"]
+            valueField: "name"
+            displayFields: ["name","language"]
+            required: true
+          - label: "Centro"
+            name: centre
+            widget: relation
+            collection: "centers_es"
+            searchFields: ["title","language"]
+            valueField: "title"
+            displayFields: ["title","language"]
+            required: true
           - label: "Keywords"
             name: keywords
             widget: list
@@ -921,7 +991,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Title, name: title, widget : string, required: true}
-      - {label: Language, name: language, widget : string, required: true}
+      - {label: Language, name: language, widget : select, options: ["ca","es","en"], required: true}
       - label: General
         name: general
         widget: list
@@ -930,8 +1000,22 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Background Img", name: "img_background", widget: image, required: true}
           - {label: "Typology", name: tipologia, widget: string, required: true}
-          - {label: "Sector", name: sector, widget: string, required: true}
-          - {label: "Center", name: centre, widget: string, required: true}
+          - label: "Sector"
+            name: sector
+            widget: relation
+            collection: "sectors_en"
+            searchFields: ["name","value","language"]
+            valueField: "name"
+            displayFields: ["name","language"]
+            required: true
+          - label: "Center"
+            name: centre
+            widget: relation
+            collection: "centers_en"
+            searchFields: ["title","language"]
+            valueField: "title"
+            displayFields: ["title","language"]
+            required: true
           - label: "Keywords"
             name: keywords
             widget: list
@@ -997,7 +1081,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Títol, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : string, required: true}
+      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"], required: true}
       - label: General
         name: general
         widget: list
@@ -1007,7 +1091,14 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - {label: "Tipologia", name: tipologia, widget: string, required: true}
-          - {label: "Sector", name: sector, widget: string, required: true}
+          - label: "Sector"
+            name: sector
+            widget: relation
+            collection: "sectors_ca"
+            searchFields: ["name","value","language"]
+            valueField: "name"
+            displayFields: ["name","language"]
+            required: true
           - {label: "Logo", name: "logo", widget: image}
           - label: "Keywords"
             name: keywords
@@ -1104,7 +1195,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Título, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : string, required: true}
+      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"], required: true}
       - label: General
         name: general
         widget: list
@@ -1114,7 +1205,14 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Eslógan", name: slogan, widget: string}
           - {label: "Img Fondo", name: "img_background", widget: image, required: true}
           - {label: "Tipología", name: tipologia, widget: string, required: true}
-          - {label: "Sector", name: sector, widget: string, required: true}
+          - label: "Sector"
+            name: sector
+            widget: relation
+            collection: "sectors_es"
+            searchFields: ["name","value","language"]
+            valueField: "name"
+            displayFields: ["name","language"]
+            required: true
           - {label: "Logo", name: "logo", widget: image}
           - label: "Keywords"
             name: keywords
@@ -1211,7 +1309,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Title, name: title, widget : string, required: true}
-      - {label: Language, name: language, widget : string, required: true}
+      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"], required: true}
       - label: General
         name: general
         widget: list
@@ -1221,7 +1319,14 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Slogan", name: slogan, widget: string}
           - {label: "Background Img", name: "img_background", widget: image, required: true}
           - {label: "Typology", name: tipologia, widget: string, required: true}
-          - {label: "Sector", name: sector, widget: string, required: true}
+          - label: "Sector"
+            name: sector
+            widget: relation
+            collection: "sectors_en"
+            searchFields: ["name","value","language"]
+            valueField: "name"
+            displayFields: ["name","language"]
+            required: true
           - {label: "Logo", name: "logo", widget: image}
           - label: "Keywords"
             name: keywords
