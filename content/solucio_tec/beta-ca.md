@@ -29,7 +29,7 @@ sobre_tecnologia:
       et netus.
 
 
-      ![](/img/0a5e3d8399408516a201716607daee9dc776694d.png)
+      ![null](/img/0a5e3d8399408516a201716607daee9dc776694d.png)
     titol: Sobre la solució tecnológica BETA
 aspectes_innovadors:
   - descripcio: >-
@@ -57,5 +57,10 @@ aplicacions:
       tristique senectus et netus Ellentesque habitant morbi tristique senectus
       et netus.
     titol: Aplicacions de la solució tecnológica Beta
+grups_recerca:
+  - investigadors: Investigadors 1
+contacte:
+  - address: Av. Sant Esteve 36 3r 1a
+    text: Josep Artur
 ---
 
