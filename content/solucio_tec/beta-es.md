@@ -81,5 +81,11 @@ aplicacions:
       habitant morbi tristique senectus et netus Ellentesque habitant morbi
       tristique senectus et netus.
     titol: Aplicaciones sobre la solución tecnológica Beta
+grups_recerca:
+  - investigadors: Investigadores 1
+contacte:
+  - address: Parc Audiovisual de Catalunya km 1.5 E22
+    telefon: '666666555'
+    text: Jesús Arturo
 ---
 
