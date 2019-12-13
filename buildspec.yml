@@ -23,6 +23,8 @@ phases:
     commands:
       - hugo
       - cd public && aws s3 sync . s3://${s3_output} --delete --acl public-read
-      - cd ca && aws cloudsearchdomain --endpoint-url http://doc-webri-2dz3yckt2f5cjq7hcsbois6nw4.eu-west-1.cloudsearch.amazonaws.com upload-documents --content-type application/json --documents index.json
+      - aws cloudsearchdomain --endpoint-url http://doc-webri-2dz3yckt2f5cjq7hcsbois6nw4.eu-west-1.cloudsearch.amazonaws.com upload-documents --content-type application/json --documents ./ca/index.json
+      - aws cloudsearchdomain --endpoint-url http://doc-webri-2dz3yckt2f5cjq7hcsbois6nw4.eu-west-1.cloudsearch.amazonaws.com upload-documents --content-type application/json --documents ./es/index.json
+      - aws cloudsearchdomain --endpoint-url http://doc-webri-2dz3yckt2f5cjq7hcsbois6nw4.eu-west-1.cloudsearch.amazonaws.com upload-documents --content-type application/json --documents ./en/index.json
     finally:
       - echo "Script finished running"
