@@ -22,6 +22,7 @@ phases:
   build:
     commands:
       - hugo
+      - aws cloudsearchdomain upload-documents --endpoint-url http://doc-webri-2dz3yckt2f5cjq7hcsbois6nw4.eu-west-1.cloudsearch.amazonaws.com --content-type application/json --documents document-batch.json
       - cd public && aws s3 sync . s3://${s3_output} --delete --acl public-read
     finally:
       - echo "Script finished running"
