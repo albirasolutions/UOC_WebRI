@@ -89,5 +89,10 @@ aplicacions:
       et netus, Ellentesque habitant morbi tristique senectus et netus
       Ellentesque habitant morbi tristique senectus et netus.
     titol: Applications for technical solution Beta
+grups_recerca:
+  - investigadors: Researchers 1
+contacte:
+  - address: ''
+    text: James Arthur
 ---
 
