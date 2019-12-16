@@ -1,60 +1,16 @@
-[	
-	{{ range $i, $s := .Site.AllPages }}
-	*****************************************************
-	{{- if eq $s.Type "solucio_tec"}}
-		"page.Permalink": {{$s.Permalink}},
-		"page.Content": {{$s.Content}},
-		"page.Data": {{$s.Data}},
-		"page.Date": {{$s.Date}},
-		"page.Description": {{$s.Description}},
-		"page.Dir": {{$s.Dir}},
-		"page.Draft": {{$s.Draft}},
-		"page.ExpiryDate": {{$s.ExpiryDate}},
-		"page.File": {{$s.File}},
-		"page.FuzzyWordCount": {{$s.FuzzyWordCount}},
-		"page.Hugo": {{$s.Hugo}},
-		"page.IsHome": {{$s.IsHome}},
-		"page.IsPage": {{$s.IsPage}},
-		"page.IsTranslated": {{$s.IsTranslated}},
-		"page.IsNode": {{$s.IsNode}},
-		"page.Keywords": {{$s.Keywords}},
-		"page.Kind": {{$s.Kind}},
-		"page.Language": {{$s.Language}},
-		"page.Lastmod": {{$s.Lastmod}},
-		"page.LinkTitle": {{$s.LinkTitle}},
-		"page.Next": {{$s.Next}},
-		"page.NextInSection": {{$s.NextInSection}},
-		"page.OutputFormats": {{$s.OutputFormats}},
-		"page.Pages": {{$s.Pages}},
-		"page.Plain": {{$s.Plain}},
-		"page.PlainWords": {{$s.PlainWords}},
-		"page.Prev": {{$s.Prev}},
-		"page.PrevInSection": {{$s.PrevInSection}},
-		"page.PublishDate": {{$s.PublishDate}},
-		"page.RawContent": {{$s.RawContent}},
-		"page.ReadingTime": {{$s.ReadingTime}},
-		"page.Resources": {{$s.Resources}},
-		"page.Ref": "",
-		"page.RelPermalink": {{$s.RelPermalink}},
-		"page.RelRef": "",
-		"page.Site": {{$s.Site}},
-		"page.Sites": {{$s.Sites}},
-		"page.Sites.first": "",
-		"page.Summary": {{$s.Summary}},
-		"page.TableOfContents": {{$s.TableOfContents}},
-		"page.Title": {{$s.Title}},
-		"page.Translations": {{$s.Translations}},
-		"page.TranslationKey": {{$s.TranslationKey}},
-		"page.Truncated": {{$s.Truncated}},
-		"page.Type": {{$s.Type}},
-		"page.UniqueID": {{$s.UniqueID}},
-		"page.Weight": {{$s.Weight}},
-		"page.WordCount": {{$s.WordCount}}
-		/////
-		{{$file := $s.File}}
-		"test": {{ $.Site.GetPage $s.RelPermalink}}
-		***************************************************
-		{{end}}
-	{{end}}
-	
-]
+[{{$numberOfPages:= len (.Site.AllPages)}}{{ range $i, $s := .Site.AllPages }}{{- if eq $s.Type "solucio_tec"}}{
+	"type" : "add",
+	"id" : {{ $s.UniqueID | jsonify }},
+	"fields" : {
+		{{- if and (isset $s.Params "language") (ne $s.Params.language nil) }}
+			"idioma": {{$s.Params.language | jsonify}},{{- end }}
+		{{- if and (isset $s.Params "general") (gt (len $s.Params.general) 0) }}{{$general := index ($s.Params.general) 0 }}
+			"nom_solucio": {{$general.nom_solucio | jsonify}},{{- end }}
+			"content": "",
+			"content_encoding": "utf-8",
+			"content_type": {{ $s.Type | jsonify }},
+			"resourcename": {{ $s.Params.title | jsonify }},
+			"url": {{ $s.Permalink | jsonify }}
+	}
+}{{ if ne 11 $i}},{{end}}{{end}}{{end}}]
+
