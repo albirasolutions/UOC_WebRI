@@ -2,13 +2,13 @@
 title: Beta
 language: es
 general:
-  - centre: centro 2
+  - centre: Estuids
     img_background: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     keywords:
       - value: '#netlifyCMS'
     logo: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     nom_solucio: Solución Tecnológica Beta
-    sector: Sector 1
+    sector: Derecho y gobernanza
     slogan: Eslogan para la solución Tecnologica Beta
     text_breu: Texto breve para la solución tecnológica Beta
     tipologia: solucio_tecnologica
