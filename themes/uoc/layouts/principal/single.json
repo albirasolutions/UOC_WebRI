@@ -12,5 +12,5 @@
 			"resourcename": {{ $s.Params.title | jsonify }},
 			"url": {{ $s.Permalink | jsonify }}
 	}
-}{{ if ne 11 $i}},{{end}}{{end}}{{end}}]
+}{{ if ne 41 $i}},{{end}}{{end}}{{end}}]
 
