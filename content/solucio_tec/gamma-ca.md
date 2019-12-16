@@ -2,13 +2,13 @@
 title: Gamma
 language: ca
 general:
-  - centre: centre 1
+  - centre: Estuids
     img_background: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     keywords:
       - value: ' #tecnologia'
     logo: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     nom_solucio: Gamma
-    sector: Sector 1
+    sector: Dret i governança
     slogan: Eslogan per a la solució tecnològica Beta
     text_breu: Text breu introductori sobre la solució tecnológica Gamma
     tipologia: solucio_tecnologica
