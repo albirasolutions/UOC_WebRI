@@ -2,11 +2,11 @@
 title: Alfa
 language: en
 general:
-  - centre: UOC
+  - centre: Estuids
     keywords:
       - value: Key
     nom_solucio: Alfa
-    sector: sector 1
+    sector: Law and governance
     slogan: '#Afla'
     text_breu: Alfa solution text in english
     tipologia: Type A
