@@ -2,13 +2,13 @@
 title: Alfa
 language: ca
 general:
-  - centre: centre 3
+  - centre: IN3
     img_background: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     keywords:
       - null
     logo: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     nom_patent: Patent Alfa
-    sector: Sector 1
+    sector: Indústria 4.0
     slogan: Eslògan patent Alfa
     text_breu: Text introdutori patent Alfa
     tipologia: patent
