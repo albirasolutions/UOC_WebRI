@@ -7,7 +7,7 @@ general:
       - null
     logo: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     nom_spinoff: Spin-Off Alfa
-    sector: sector 1
+    sector: eHealth
     slogan: Slogan from Spin-Off Alfa
     text_breu: Briefing text for Spin-Off Alfa
     tipologia: spin_off
