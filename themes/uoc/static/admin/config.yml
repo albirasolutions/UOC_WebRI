@@ -505,7 +505,7 @@ collections: # A list of collections the CMS should be able to edit
             name: keywords
             widget: list
             required: true
-            field:
+            fields:
               - {label: "Keyword", name: value, widget: string}
           - label: "Xarxes"
             name: xarxes
@@ -619,7 +619,7 @@ collections: # A list of collections the CMS should be able to edit
             name: keywords
             widget: list
             required: true
-            field:
+            fields:
               - {label: "Keyword", name: value, widget: string}
           - label: "Social"
             name: xarxes
@@ -733,7 +733,7 @@ collections: # A list of collections the CMS should be able to edit
             name: keywords
             widget: list
             required: true
-            field:
+            fields:
               - {label: "Keyword", name: value, widget: string}
           - label: "Social"
             name: xarxes
@@ -845,7 +845,7 @@ collections: # A list of collections the CMS should be able to edit
             name: keywords
             widget: list
             required: true
-            field:
+            fields:
               - {label: "Keyword", name: value, widget: string}
           - label: "Social"
             name: xarxes
@@ -935,7 +935,7 @@ collections: # A list of collections the CMS should be able to edit
             name: keywords
             widget: list
             required: true
-            field:
+            fields:
               - {label: "Keyword", name: value, widget: string}
           - label: "Social"
             name: xarxes
@@ -1025,7 +1025,7 @@ collections: # A list of collections the CMS should be able to edit
             name: keywords
             widget: list
             required: true
-            field:
+            fields:
               - {label: "Keyword", name: value, widget: string}
           - label: "Social"
             name: xarxes
@@ -1109,7 +1109,7 @@ collections: # A list of collections the CMS should be able to edit
             name: keywords
             widget: list
             required: true
-            field:
+            fields:
               - {label: "Keyword", name: value, widget: string}
           - label: "Social"
             name: xarxes
@@ -1223,7 +1223,7 @@ collections: # A list of collections the CMS should be able to edit
             name: keywords
             widget: list
             required: true
-            field:
+            fields:
               - {label: "Keyword", name: value, widget: string}
           - label: "Social"
             name: xarxes
@@ -1337,7 +1337,7 @@ collections: # A list of collections the CMS should be able to edit
             name: keywords
             widget: list
             required: true
-            field:
+            fields:
               - {label: "Keyword", name: value, widget: string}
           - label: "Social"
             name: xarxes
