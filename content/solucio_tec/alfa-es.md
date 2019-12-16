@@ -2,11 +2,11 @@
 title: Alfa
 language: es
 general:
-  - centre: UOC
+  - centre: Estuids
     keywords:
       - value: Clave
     nom_solucio: Alfa
-    sector: Internet
+    sector: Derecho y gobernanza
     slogan: '#Alfa'
     text_breu: Texto solución alfa en español
     tipologia: Tipo 1
@@ -16,8 +16,7 @@ general:
 sobre_tecnologia:
   - descripcio: Descripción solución Alfa en español
     docs_rels:
-      - path: ''
-        url: 'https://www.netlifycms.org/docs/intro/'
+      - url: 'https://www.netlifycms.org/docs/intro/'
     titol: Título Alfa
 aspectes_innovadors:
   - descripcio: Descripción aspecto innovador solución Alfa
