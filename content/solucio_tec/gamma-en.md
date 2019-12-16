@@ -27,7 +27,7 @@ sobre_tecnologia:
       et netus.
 
 
-      ![](/img/0a5e3d8399408516a201716607daee9dc776694d.png)
+      ![null](/img/0a5e3d8399408516a201716607daee9dc776694d.png)
     titol: About techonolgy of technical solution Gamma
 aspectes_innovadors:
   - descripcio: >-
