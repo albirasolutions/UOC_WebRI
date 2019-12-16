@@ -2,13 +2,13 @@
 title: Gamma
 language: es
 general:
-  - centre: centro 1
+  - centre: Estuids
     img_background: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     keywords:
       - value: '#netlify'
     logo: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     nom_solucio: Gamma
-    sector: Sector 1
+    sector: Derecho y gobernanza
     slogan: Eslógan para la solución tecnológica Gamma
     text_breu: Texo breve introductorio sobre la solución tecnológica Gamma
     tipologia: solucio_tecnologica
