@@ -29,7 +29,7 @@ sobre_servei:
 
 
       ![null](/img/0a5e3d8399408516a201716607daee9dc776694d.png)
-    titol: About patent Alfa
+    titol: About service Alfa
 casos_exit:
   - descripcio: >-
       ## Ellentesque habitant morbi tristique senectus et netus.
