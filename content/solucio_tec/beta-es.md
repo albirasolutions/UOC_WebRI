@@ -37,7 +37,7 @@ sobre_tecnologia:
       tristique senectus et netus.Ellentesque habitant morbi tristique senectus
       et netus, Ellentesque habitant morbi tristique senectus et netus
       Ellentesque habitant morbi tristique senectus et netus.
-    titol: Sobre la soluciçon tecnológica Beta
+    titol: Sobre la solución tecnológica Beta
 aspectes_innovadors:
   - descripcio: >-
       # Ellentesque habitant morbi tristique senectus et netus. 
