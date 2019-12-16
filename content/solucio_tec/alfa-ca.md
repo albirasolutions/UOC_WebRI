@@ -6,7 +6,7 @@ general:
     keywords:
       - value: Clau
     nom_solucio: Alfa
-    sector: Sector 1
+    sector: Dret i governança
     slogan: '#Alfa'
     text_breu: Text solució Alfa en català
     tipologia: Tipus A
