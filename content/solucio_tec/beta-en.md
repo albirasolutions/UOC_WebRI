@@ -2,12 +2,12 @@
 title: Beta
 language: en
 general:
-  - centre: centro 3
+  - centre: Estuids
     img_background: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     keywords:
       - value: '#hugo'
     nom_solucio: Technical Solution Beta
-    sector: 'sector 1 '
+    sector: Law and governance
     slogan: Slogan for technical solution Beta
     text_breu: Briefing text for technical solution Beta
     tipologia: solucio_tecnologica
