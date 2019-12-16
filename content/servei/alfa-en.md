@@ -2,12 +2,12 @@
 title: Alfa
 language: en
 general:
-  - centre: center 3
+  - centre: e-Learn Center
     img_background: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     keywords:
       - null
     nom_servei: Service alfa
-    sector: sector 1
+    sector: Education - eLearning
     text_breu: Briefing text for service Alfa
     tipologia: servei
 sobre_servei:
