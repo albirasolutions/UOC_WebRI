@@ -3,8 +3,7 @@ title: Alfa
 language: ca
 general:
   - img_background: /img/0a5e3d8399408516a201716607daee9dc776694d.png
-    keywords:
-      - null
+    keywords: []
     logo: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     nom_spinoff: Spin-Off Alfa
     sector: Sector 1
@@ -66,6 +65,7 @@ casos_exit:
       3. Ellentesque habitant morbi tristique senectus et netus, Ellentesque
       habitant morbi tristique senectus et netus Ellentesque habitant morbi
       tristique senectus et netus.
+    img: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     titol: Cas d'èxit Spin-Offs Alfa
     url_success: 'https://www.uoc.edu/portal/en/index.html'
 grups_recerca:
