@@ -3,7 +3,7 @@ title: Gamma
 language: ca
 general:
   - centre: Estuids
-    img_background: /img/0a5e3d8399408516a201716607daee9dc776694d.png
+    img_background: /img/detall_solucions_principal.png
     keywords:
       - value: ' #tecnologia'
     logo: /img/0a5e3d8399408516a201716607daee9dc776694d.png
