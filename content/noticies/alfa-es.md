@@ -1,11 +1,11 @@
 ---
 title: Alfa
-language: en
+language: es
 general:
   - autor: Javi
-    data: '2019-12-17T13:37:23+01:00'
+    data: '2019-12-17T13:41:06+01:00'
     destacat: true
-    img: /img/detall_solucions_principal.png
+    img: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     titol: Alfa
 descripcio:
   - descripcio: >-
@@ -16,6 +16,6 @@ descripcio:
       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum.
-    entrada: Brief entry for Alfa
+    entrada: Entrada breve notici
 ---
 
