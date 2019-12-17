@@ -29,8 +29,7 @@ sobre_tecnologia:
       et netus.
 
 
-      ![Habitant morbi
-      tristique](/img/0a5e3d8399408516a201716607daee9dc776694d.png)
+      ![](/img/0a5e3d8399408516a201716607daee9dc776694d.png)
     docs_rels: []
     titol: Sobre la solució tecnológica GAMMA
 aspectes_innovadors:
