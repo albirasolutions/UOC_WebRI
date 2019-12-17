@@ -1,6 +1,6 @@
 ---
 title: Alfa
-language: es
+language: en
 general:
   - autor: Javi
     data: '2019-12-17T13:37:23+01:00'
@@ -16,6 +16,6 @@ descripcio:
       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum.
-    entrada: Entrada breve para noticia Alfa
+    entrada: Brief entry for Alfa
 ---
 
