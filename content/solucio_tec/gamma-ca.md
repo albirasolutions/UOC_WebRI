@@ -22,12 +22,14 @@ sobre_tecnologia:
       tristique senectus et netus Ellentesque habitant morbi tristique senectus
       et netus.
 
-      2. Ellentesque habitant morbi tristique senectus et netus. Ellentesque
+
+      1. Ellentesque habitant morbi tristique senectus et netus. Ellentesque
       habitant morbi tristique senectus et netus, Ellentesque habitant morbi
       tristique senectus et netus Ellentesque habitant morbi tristique senectus
       et netus.
 
-      3. Ellentesque habitant morbi tristique senectus et netus. Ellentesque
+
+      \-Ellentesque habitant morbi tristique senectus et netus. Ellentesque
       habitant morbi tristique senectus et netus, Ellentesque habitant morbi
       tristique senectus et netus Ellentesque habitant morbi tristique senectus
       et netus.
