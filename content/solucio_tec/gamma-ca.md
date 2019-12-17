@@ -17,13 +17,17 @@ general:
         xarxa: facebook
 sobre_tecnologia:
   - descripcio: >-
-      # Ellentesque habitant morbi tristique senectus et netus
+      1. Ellentesque habitant morbi tristique senectus et netus. Ellentesque
+      habitant morbi tristique senectus et netus, Ellentesque habitant morbi
+      tristique senectus et netus Ellentesque habitant morbi tristique senectus
+      et netus.
 
+      2. Ellentesque habitant morbi tristique senectus et netus. Ellentesque
+      habitant morbi tristique senectus et netus, Ellentesque habitant morbi
+      tristique senectus et netus Ellentesque habitant morbi tristique senectus
+      et netus.
 
-      * Ellentesque habitant morbi tristique senectus et netus,Ellentesque
-      habitant morbi tristique senectus et netus
-
-      * Ellentesque habitant morbi tristique senectus et netus. Ellentesque
+      3. Ellentesque habitant morbi tristique senectus et netus. Ellentesque
       habitant morbi tristique senectus et netus, Ellentesque habitant morbi
       tristique senectus et netus Ellentesque habitant morbi tristique senectus
       et netus.
