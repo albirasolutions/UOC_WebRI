@@ -12,15 +12,18 @@
                 <h2>{{ $generalInfo.nom_solucio }}</h2>
             </div>
         </div>
+        
         <div class="col-xs-12 col-md-9">
-            <section style="background-image: linear-gradient(to right, rgba(56, 255, 144, 1), rgba(56, 255, 144, 0.20)),  url('img/detall_solucions_principal2.png');  "
-            class="bg-secondary">
-                <div class="container">
+            <section class="bg-main" style="background-image: url({{$generalInfo.img_background}});">
+                <div class="container apiling">
                     <div class="row">
-                        <div class="col-md-4 col-lg-6">
+                        <div class="col-md-6 col-lg-6 col-xs-6">
                             <h2>{{ $generalInfo.text_breu}}</h2>
                         </div>
-                        <div class="col-md-6"></div>
+                        <div class="col-md-12"></div>
+                        <div class="col-md-8 col-lg-8 col-xs-8">
+                            <h5>{{ $generalInfo.slogan}}</h5>
+                        </div>
                         <div data-dropdown="" class="dropdown">
                             <button data-dropdown-trigger="" aria-label="Texto descriptivo"
                             aria-expanded="false" aria-controls="dropdown__content1"
@@ -29,8 +32,10 @@
                         </div>
                     </div>
                 </div>
+                <div class="img--tint"></div>
             </section>
         </div>
+
         <div class="col-xs-12 col-md-3">
             <div class="ficha-detail">
                 <div class="box">
@@ -92,8 +97,8 @@
                     class="tab"><span>{{ T "uoc_ri_research_groups" }}</span></a>
                 </li>       
                 <li role="presentation">
-                    <a id="tab-15" href="#tab-content-15" role="tab"
-                    aria-controls="tab-content-15" aria-selected="false" data-tab-trigger=""
+                    <a id="tab-14" href="#tab-content-14" role="tab"
+                    aria-controls="tab-content-14" aria-selected="false" data-tab-trigger=""
                     class="tab"><span>{{ T "uoc_ri_contacte" }}</span></a>
                 </li>
             </ul>
@@ -222,7 +227,7 @@
                     </div>
                 </div>
             </div>       
-            <div id="tab-content-15" data-tab-content="" role="tabpanel" aria-labelledby="tab-15"
+            <div id="tab-content-14" data-tab-content="" role="tabpanel" aria-labelledby="tab-14"
             aria-hidden="false" class="tab-content">
                 <div class="collapse">
                     <div class="head-collapse js-collapse">

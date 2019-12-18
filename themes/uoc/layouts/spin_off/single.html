@@ -13,38 +13,6 @@
     </div>    
 {{ partial "ri_js_imports.html" . }}
 <!--script src="/js/search.js"></script-->
-<script type="text/javascript">
-  $(function(){
-    var menus = $('li[class="list-group__item"]');
-    
-    for(var i = 0; i<menus.length;i++){
-      $(menus[i].children[0].getAttribute("href")).css("max-height","0px").css("visibility","hidden");
-      if(i==0) {
-        $(menus[i].children[0].getAttribute("href")).css("visibility","visible").css("height","100%");
-      } 
-    }
-
-    //console.log('default selected option -->',selected_option);
-    console.log('menus---',menus);
-  });
-
-  $('li[class="list-group__item"]').on('click',function(){
-    console.log('this--->',$(this))
-    console.log('finding a with id attr ',$(this).find('a').attr("href"));
-    //var viewId = $(this).attr("href");
-    //$(viewId).show().siblings("div").hide();
-    var menus = $('li[class="list-group__item"]');
-    
-    for(var i = 0; i<menus.length;i++){
-      $(menus[i].children[0].getAttribute("href")).css("max-height","0px").css("visibility","hidden");
-      if(menus[i].children[0].getAttribute("href")==$(this).find('a').attr("href")) {
-        $(menus[i].children[0].getAttribute("href")).css("visibility","visible").css("height","100%");
-      } 
-    }
-
-  });
-
-</script>
 </body>
 </html>
 
