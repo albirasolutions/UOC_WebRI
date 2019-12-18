@@ -3,13 +3,6 @@
     "id" : {{ $s.File.UniqueID | jsonify }},
     "fields" : {
         {{- if and (isset $s.Params "language") (ne $s.Params.language nil) }}
-            "idioma": {{$s.Params.language | jsonify}},{{- end }}
-        {{- if and (isset $s.Params "general") (gt (len $s.Params.general) 0) }}{{$general := index ($s.Params.general) 0 }}
-            "name": {{$general.nom_solucio | jsonify}},{{- end }}
-            "content": "",
-            "content_encoding": "utf-8",
-            "content_type": {{ $s.Type | jsonify }},
-            "resourcename": {{ $s.Params.title | jsonify }},
-            "url": {{ $s.Permalink | jsonify }}
+            "idioma": {{$s.Params.language | jsonify}}{{- end }}
     }
 }{{ if ne 41 $i}},{{end}}{{end}}{{end}}]
