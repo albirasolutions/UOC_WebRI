@@ -2038,7 +2038,7 @@ collections: # A list of collections the CMS should be able to edit
     filter: {field: language , value: "en"}
     fields:
       - {label: Title, name: title, widget: string}
-      - {label: Language, name: language, widget: select, options: ["ca","es","en"],default: "es"}     
+      - {label: Language, name: language, widget: select, options: ["ca","es","en"],default: "en"}     
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
     editor:
