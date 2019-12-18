@@ -2,10 +2,6 @@
     "type" : "add",
     "id" : {{ $s.File.UniqueID | jsonify }},
     "fields" : {
-        {{- if and (isset $s.Params "language") (ne $s.Params.language nil) }}
-            "idioma": {{$s.Params.language | jsonify}},{{- end }}
-            "content_type": {{ $s.Type | jsonify }},
-            "resourcename": {{ $s.Params.title | jsonify }},
-            "url": {{ $s.Permalink | jsonify }}
+        
     }
 }{{ if ne 41 $i}},{{end}}{{end}}{{end}}]
