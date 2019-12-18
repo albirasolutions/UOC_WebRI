@@ -1,13 +1,9 @@
-[{{$numberOfPages:= len (.Site.AllPages)}}{{ range $i, $s := .Site.AllPages }}{{- if eq $s.Type "solucio_tec"}}{
+[{{ range $i, $s := .Site.AllPages }}{{- if eq $s.Type "solucio_tec"}}{
     "type" : "add",
     "id" : {{ $s.UniqueID | jsonify }},
     "fields" : {
         {{- if and (isset $s.Params "language") (ne $s.Params.language nil) }}
             "idioma": {{$s.Params.language | jsonify}},{{- end }}
-        {{- if and (isset $s.Params "general") (gt (len $s.Params.general) 0) }}{{$general := index ($s.Params.general) 0 }}
-            "name": {{$general.nom_solucio | jsonify}},{{- end }}
-            "content": "",
-            "content_encoding": "utf-8",
             "content_type": {{ $s.Type | jsonify }},
             "resourcename": {{ $s.Params.title | jsonify }},
             "url": {{ $s.Permalink | jsonify }}
