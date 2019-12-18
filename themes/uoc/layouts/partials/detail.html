@@ -45,7 +45,7 @@
                         <p><strong>{{ T "uoc_ri_centre" }} :</strong><a href="#"><u>{{ $generalInfo.centre}}</u></a></p>
                         <p>
                             <div class="img-wpr img-wpr--horizontal">
-                                <img class="img-wpr__cover" src="/img/speakAppLogo.png" alt="{{ $generalInfo.nom_solucio }}" />
+                                <img class="img-wpr__cover" src="{{$generalInfo.logo}}" alt="{{ $generalInfo.nom_solucio }}" />
                             </div>
                         </p>
                         <p>
@@ -71,8 +71,15 @@
         </div>
     </div>
 </section>
-
+        
 <section data-tab-system="" class="ficha-detail mT60">
+        <div class="row" style="margin-bottom:25px;">
+            <div class="col-xs-12">
+                <h2>
+                    <span class="icon icon--material-pdf icon--header float-right" aria-hidden="true"></span>
+                </h2>
+            </div>
+        </div>
     <div class="row">
         <div class="col-xs-12 col-md-3">
             <ul role="tablalist" data-sticky="data-sticky" class="list-group borderTopGrey toStick">               

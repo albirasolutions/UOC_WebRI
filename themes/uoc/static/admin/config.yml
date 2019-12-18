@@ -166,35 +166,19 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
               - {label: "Url", name: address, widget: string}
       - label: Sobre la Tecnología
-        name: sobre_tecnologia 
+        name: body 
         required: false     
-        widget: list
-        fields:
-          - {label: titol, name: titol, widget: string}
-          - {label: descripcio, name: descripcio, widget: markdown}
-          - label: Docs Relacionats
-            name: docs_rels
-            widget: list
-            fields:
-              - {label: path, name: path, widget: string}
-              - {label: url, name: url, widget: string}
-              - {label: size, name: size, widget: string}
-              - {label: type, name: type, widget: string}
+        widget: markdown
+      - label: Docs Relacionats
+        name: docs_rels
+        widget: file
+        media_library:
+          config:
+            multiple: true
       - label: Aspectes Innovadors
-        name: aspectes_innovadors  
+        name: body  
         required: false   
-        widget: list
-        fields:
-          - {label: titol, name: titol, widget: string}
-          - {label: descripcio, name: descripcio, widget: markdown}
-          - label: Docs Relacionats
-            name: docs_rels
-            widget: list
-            fields:
-              - {label: path, name: path, widget: string}
-              - {label: url, name: url, widget: string}
-              - {label: size, name: size, widget: string}
-              - {label: type, name: type, widget: string}
+        widget: markdown
       - label: Aplicacions
         name: aplicacions   
         required: false   
