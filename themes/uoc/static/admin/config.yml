@@ -180,20 +180,9 @@ collections: # A list of collections the CMS should be able to edit
         required: false   
         widget: markdown
       - label: Aplicacions
-        name: aplicacions   
+        name: body   
         required: false   
-        widget: list
-        fields:
-          - {label: titol, name: titol, widget: string}
-          - {label: descripcio, name: descripcio, widget: markdown}
-          - label: Docs Relacionats
-            name: docs_rels
-            widget: list
-            fields:
-              - {label: path, name: path, widget: string}
-              - {label: url, name: url, widget: string}
-              - {label: size, name: size, widget: string}
-              - {label: type, name: type, widget: string}
+        widget: markdown
       - label: Grups de Recerca
         name: grups_recerca  
         required: false    
