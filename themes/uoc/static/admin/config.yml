@@ -19,7 +19,7 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - label: "CA"
         name: "ca"
-        file: "content/principal/principal.ca.md"
+        file: "content/principal/principal-ca.md"
         #format: "json"
         #extension: "json"
         create: true
@@ -52,7 +52,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "valor", name: "value", widget: string}   
       - label: "ES"
         name: "es"
-        file: "content/principal/principal.es.md"
+        file: "content/principal/principal-es.md"
         #format: "json"
         #extension: "json"
         create: true
@@ -85,7 +85,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "valor", name: "value", widget: string}
       - label: "EN"
         name: "en"
-        file: "content/principal/principal.en.md"
+        file: "content/principal/principal-en.md"
         #format: "json"
         #extension: "json"
         create: true
@@ -166,23 +166,50 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
               - {label: "Url", name: address, widget: string}
       - label: Sobre la Tecnología
-        name: body 
+        name: sobre_tecnologia 
         required: false     
-        widget: markdown
-      - label: Docs Relacionats
-        name: docs_rels
-        widget: file
-        media_library:
-          config:
-            multiple: true
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
       - label: Aspectes Innovadors
-        name: body  
+        name: aspectes_innovadors  
         required: false   
-        widget: markdown
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
       - label: Aplicacions
-        name: body   
+        name: aplicacions   
         required: false   
-        widget: markdown
+        widget: list
+        fields:
+          - {label: titol, name: titol, widget: string}
+          - {label: descripcio, name: descripcio, widget: markdown}
+          - label: Docs Relacionats
+            name: docs_rels
+            widget: list
+            fields:
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
       - label: Grups de Recerca
         name: grups_recerca  
         required: false    
@@ -1964,54 +1991,6 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
               - {label: "Url", name: address, widget: string}
-    meta:
-      - {label: "Date", name: "date", widget: "datetime"}
-    editor:
-      - preview: false
-  
-  - name: "difusions_ca"
-    label: "Difusions"
-    folder: "content/difusions"
-    extension : "md"  
-    create: true
-    slug: "{{title}}.{{language}}"
-    identifier_field: {{slug}}
-    filter: {field: language , value: "ca"}
-    fields:
-      - {label: Títol, name: title, widget: string}
-      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}     
-    meta:
-      - {label: "Date", name: "date", widget: "datetime"}
-    editor:
-      - preview: false
-
-  - name: "difusions_es"
-    label: "Difusiones"
-    folder: "content/difusions"
-    extension : "md"  
-    create: true
-    slug: "{{title}}.{{language}}"
-    identifier_field: {{slug}}
-    filter: {field: language , value: "es"}
-    fields:
-      - {label: Título, name: title, widget: string}
-      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "es"}     
-    meta:
-      - {label: "Date", name: "date", widget: "datetime"}
-    editor:
-      - preview: false
-
-  - name: "difusions_en"
-    label: "Broadcast"
-    folder: "content/difusions"
-    extension : "md"  
-    create: true
-    slug: "{{title}}.{{language}}"
-    identifier_field: {{slug}}
-    filter: {field: language , value: "en"}
-    fields:
-      - {label: Title, name: title, widget: string}
-      - {label: Language, name: language, widget: select, options: ["ca","es","en"],default: "en"}     
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
     editor:
