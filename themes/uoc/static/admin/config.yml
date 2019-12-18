@@ -1979,3 +1979,51 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Date", name: "date", widget: "datetime"}
     editor:
       - preview: false
+  
+  - name: "difusions_ca"
+    label: "Difusions"
+    folder: "content/difusions"
+    extension : "md"  
+    create: true
+    slug: "{{title}}.{{language}}"
+    identifier_field: {{slug}}
+    filter: {field: language , value: "ca"}
+    fields:
+      - {label: Títol, name: title, widget: string}
+      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}     
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
+
+  - name: "difusions_es"
+    label: "Difusiones"
+    folder: "content/difusions"
+    extension : "md"  
+    create: true
+    slug: "{{title}}.{{language}}"
+    identifier_field: {{slug}}
+    filter: {field: language , value: "es"}
+    fields:
+      - {label: Título, name: title, widget: string}
+      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "es"}     
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
+
+  - name: "difusions_en"
+    label: "Broadcast"
+    folder: "content/difusions"
+    extension : "md"  
+    create: true
+    slug: "{{title}}.{{language}}"
+    identifier_field: {{slug}}
+    filter: {field: language , value: "en"}
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Language, name: language, widget: select, options: ["ca","es","en"],default: "en"}     
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
