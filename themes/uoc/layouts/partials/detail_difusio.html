@@ -1,35 +1,59 @@
+{{ $generalInfo := index (.Params.general) 0 }}
+{{ $descripcio := index (.Params.descripcio) 0 }}
+
 <section>
     <div class="row">
         <div class="col-xs-12 col-md-3">
-            <div class="page-title title-border-green">
-                <h2>Notícies</h2>
+            <div class="page-title title-border-green ">
+                <h3 class="col-xs-12 col-md-3"><strong>Esdeveniments / Noticies</strong></h3>
             </div>
         </div>
         <div class="col-xs-12 col-md-9">
             <div class="page-title title-border-green">
-                <h1>TÍTOL</h1>
+                <h1>{{ $generalInfo.titol}}</h1>
             </div>
         </div>
         <div class="col-xs-12 col-md-3">
             
         </div>
         <div class="col-xs-12 col-md-9">
-            <img src="/img/detalle-noticia.jpg" >
+            <figure class="img-figure">
+                <img src="/img/detalle-noticia.jpg" >
+                <figcaption class="img-figcaption">
+                    <div class="float-left" id="img-figcaption1">
+                        <em class="text-extra-small">Foto: {{$generalInfo.img_autor}}</em>
+                        <br><br>
+                        {{dateFormat "02/01/2006" $generalInfo.data}} <br>  {{$generalInfo.autor}}
+                    </div>
+                    <div class="float-right" style="vertical-align: bottom;" id="img-figcaption2">
+                        
+                        <div class="social-links unstyled">
+                            <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Facebook']);" href="http://www.facebook.com/UOC.universitat" target="_blank"
+                                    title='Facebook {{ T "uoc_grup_footer_links_new_window"}}' aria-label='Facebook {{ T "uoc_grup_footer_links_new_window"}}'><span class="icon icon--social-facebook"> </span></a>
+                            <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Twitter']);"	href="http://twitter.com/UOCuniversitat" target="_blank"
+                                    title='Twitter {{ T "uoc_grup_footer_links_new_window"}}' aria-label='Twitter {{ T "uoc_grup_footer_links_new_window"}}'><span class="icon icon--social-twitter"> </span></a>
+                            <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'LinkedIn']);" href="https://www.linkedin.com/school/uoc/" target="_blank"	
+                                    title='LinkedIn {{ T "uoc_grup_footer_links_new_window"}}' aria-label='LinkedIn {{ T "uoc_grup_footer_links_new_window"}}'><span class="icon icon--social-linkedin"> </span></a>
+                            <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'WhatsApp]']);" href="//www.uoc.edu/portal/ca/universitat/contacte-seus/xarxes-socials/index.html" target="_blank" 
+                                    title='WhatsApp {{ T "uoc_grup_footer_social_more"}}' aria-label='WhatsApp {{ T "uoc_grup_footer_links_new_window"}}'><span class="icon icon--social-whatsapp"></span></a>
+                        </div>
+
+                    </div>
+                </figcaption>
+            </figure>
         </div>
     </div>
 </section>
-<hr style="border-top: 3px solid lightgray"/>
+<div class="row">
+    <div class="ruler ruler--thin"></div><br>
+</div>
 <section>
     <div class="row">
         <div class="col-xs-12 col-md-3">
-            <h4>Investigadors alerten awda awdawdds ssdas</h3>
+            <blockquote class="pullquote">{{$descripcio.entrada}}</blockquote>
         </div>
         <div class="col-xs-12 col-md-9">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>{{$descripcio.descripcio}}</p>
         </div>
     </div>             
 </section>
