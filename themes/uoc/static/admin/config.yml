@@ -126,7 +126,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Títol, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"], required: true}
+      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "ca", required: true}
       - label: General
         name: general
         widget: list
@@ -240,7 +240,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Título, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"], required: true}
+      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "es", required: true}
       - label: General
         name: general
         widget: list
@@ -359,7 +359,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Title, name: title, widget : string, required: true}
-      - {label: Language, name: language, widget : select, options: ["ca","es","en"], required: true}
+      - {label: Language, name: language, widget : select, options: ["ca","es","en"],default: "en", required: true}
       - label: General
         name: general
         widget: list
@@ -474,7 +474,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Títol, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"], required: true}
+      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "ca", required: true}
       - label: General
         name: general
         widget: list
@@ -588,7 +588,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Título, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"], required: true}
+      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "es", required: true}
       - label: General
         name: general
         widget: list
@@ -702,7 +702,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Title, name: title, widget : string, required: true}
-      - {label: Language, name: language, widget : select, options: ["ca","es","en"], required: true}
+      - {label: Language, name: language, widget : select, options: ["ca","es","en"],default: "en", required: true}
       - label: General
         name: general
         widget: list
@@ -816,7 +816,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Títol, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"], required: true}
+      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "ca", required: true}
       - label: General
         name: general
         widget: list
@@ -906,7 +906,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Título, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"], required: true}
+      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "es", required: true}
       - label: General
         name: general
         widget: list
@@ -996,7 +996,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Title, name: title, widget : string, required: true}
-      - {label: Language, name: language, widget : select, options: ["ca","es","en"], required: true}
+      - {label: Language, name: language, widget : select, options: ["ca","es","en"],default: "en", required: true}
       - label: General
         name: general
         widget: list
@@ -1086,7 +1086,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Títol, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"], required: true}
+      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "ca", required: true}
       - label: General
         name: general
         widget: list
@@ -1200,7 +1200,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Título, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"], required: true}
+      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "es", required: true}
       - label: General
         name: general
         widget: list
@@ -1314,7 +1314,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Title, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"], required: true}
+      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "en", required: true}
       - label: General
         name: general
         widget: list
@@ -1699,7 +1699,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Títol, name: title, widget: string}
       - {label: Nom, name: name, widget: string}
       - {label: Valor, name: value, widget: string}
-      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"]}       
+      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
     editor:
@@ -1716,7 +1716,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Título, name: title, widget: string}
       - {label: Nombre, name: name, widget: string}
       - {label: Valor, name: value, widget: string}
-      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"]}       
+      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "es"}       
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
     editor:
@@ -1733,7 +1733,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Title, name: title, widget: string}
       - {label: Name, name: name, widget: string}
       - {label: Value, name: value, widget: string}
-      - {label: Language, name: language, widget: select, options: ["ca","es","en"]}       
+      - {label: Language, name: language, widget: select, options: ["ca","es","en"],default: "en"}       
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
     editor:
@@ -1748,7 +1748,7 @@ collections: # A list of collections the CMS should be able to edit
     filter: {field: language , value: "ca"}
     fields:
       - {label: Títol, name: title, widget: string}
-      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"]}       
+      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
     editor:
@@ -1763,7 +1763,7 @@ collections: # A list of collections the CMS should be able to edit
     filter: {field: language , value: "es"}
     fields:
       - {label: Título, name: title, widget: string}
-      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"]}       
+      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "es"}       
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
     editor:
@@ -1778,10 +1778,222 @@ collections: # A list of collections the CMS should be able to edit
     filter: {field: language , value: "en"}
     fields:
       - {label: Title, name: title, widget: string}
-      - {label: Language, name: language, widget: select, options: ["ca","es","en"]}       
+      - {label: Language, name: language, widget: select, options: ["ca","es","en"],default: "en"}       
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
     editor:
       - preview: false
+
+  - name: "noticia_ca"
+    label: "Notícies"
+    folder: "content/noticies"
+    extension : "md"  
+    create: true
+    slug: "{{title}}.{{language}}"
+    identifier_field: {{slug}}
+    filter: {field: language , value: "ca"}
+    fields:
+      - {label: Títol, name: title, widget: string}
+      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
+      - label: General
+        name: general
+        widget: list
+        fields: 
+          - {label: "Títol", name: titol, widget: string, required: true}
+          - {label: "Imatge", name: "img", widget: image}
+          - {label: "Data", name: "data", widget: datetime, required: true}
+          - {label: "Autor", name: autor, widget: string}
+          - {label: "Foto autor", name: "img_autor", widget: string}
+          - label: "Social"
+            name: xarxes
+            widget: list
+            fields:
+              - {label: "Nom", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
+              - {label: "Url", name: address, widget: string}
+          - {label: "Link extern", name: link_extern, widget: string}
+          - {label: "Destacat", name: "destacat", widget: "boolean", default: false, required: true}
     
-      
+      - label: Descripció
+        name: descripcio 
+        required: false    
+        widget: list
+        fields:
+          - {label: Entrada Breu, name: entrada, widget: string}
+          - {label: Descripció, name: descripcio, widget: markdown}
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
+  - name: "noticia_es"
+    label: "Noticias"
+    folder: "content/noticies"
+    extension : "md"  
+    create: true
+    slug: "{{title}}.{{language}}"
+    identifier_field: {{slug}}
+    filter: {field: language , value: "es"}
+    fields:
+      - {label: Título, name: title, widget: string}
+      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "es"}       
+      - label: General
+        name: general
+        widget: list
+        fields: 
+          - {label: "Título", name: titol, widget: string, required: true}
+          - {label: "Imagen", name: "img", widget: image}
+          - {label: "Fecha", name: "data", widget: datetime, required: true}
+          - {label: "Autor", name: autor, widget: string}
+          - {label: "Foto autor", name: "img_autor", widget: string}
+          - label: "Social"
+            name: xarxes
+            widget: list
+            fields:
+              - {label: "Nombre", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
+              - {label: "Url", name: address, widget: string}
+          - {label: "Link externo", name: link_extern, widget: string}
+          - {label: "Destacado", name: "destacat", widget: "boolean", default: false, required: true}
+    
+      - label: Descripción
+        name: descripcio 
+        required: false    
+        widget: list
+        fields:
+          - {label: Entrada Breve, name: entrada, widget: string}
+          - {label: Descripción, name: descripcio, widget: markdown}
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
+  - name: "noticia_en"
+    label: "News"
+    folder: "content/noticies"
+    extension : "md"  
+    create: true
+    slug: "{{title}}.{{language}}"
+    identifier_field: {{slug}}
+    filter: {field: language , value: "en"}
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Language, name: language, widget: select, options: ["ca","es","en"],default: "en"}       
+      - label: General
+        name: general
+        widget: list
+        fields: 
+          - {label: "Title", name: titol, widget: string, required: true}
+          - {label: "Image", name: "img", widget: image}
+          - {label: "Date", name: "data", widget: datetime, required: true}
+          - {label: "Author", name: autor, widget: string}
+          - {label: "Author image", name: "img_autor", widget: string}
+          - label: "Social"
+            name: xarxes
+            widget: list
+            fields:
+              - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
+              - {label: "Url", name: address, widget: string}
+          - {label: "External link", name: link_extern, widget: string}
+          - {label: "Highlighted", name: "destacat", widget: "boolean", default: false, required: true}
+    
+      - label: Description
+        name: descripcio 
+        required: false    
+        widget: list
+        fields:
+          - {label: Brief entry, name: entrada, widget: string}
+          - {label: Description, name: descripcio, widget: markdown}
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
+
+  - name: "esdeveniment_ca"
+    label: "Esdeveniments"
+    folder: "content/esdeveniments"
+    extension : "md"  
+    create: true
+    slug: "{{title}}.{{language}}"
+    identifier_field: {{slug}}
+    filter: {field: language , value: "ca"}
+    fields:
+      - {label: Títol, name: title, widget: string}
+      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
+      - label: General
+        name: general
+        widget: list
+        fields: 
+          - {label: "Títol", name: titol, widget: string, required: true}
+          - {label: Descripció, name: descripcio, widget: markdown, required: true}
+          - {label: "Lloc", name: lloc, widget: string, required: true}
+          - {label: "Quan", name: "data", widget: datetime, required: true}
+          - {label: "Imatge", name: "img", widget: image}
+          - label: "Social"
+            name: xarxes
+            widget: list
+            fields:
+              - {label: "Nom", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
+              - {label: "Url", name: address, widget: string}
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
+
+  - name: "esdeveniment_es"
+    label: "Acontecimiento"
+    folder: "content/esdeveniments"
+    extension : "md"  
+    create: true
+    slug: "{{title}}.{{language}}"
+    identifier_field: {{slug}}
+    filter: {field: language , value: "es"}
+    fields:
+      - {label: Título, name: title, widget: string}
+      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "es"}       
+      - label: General
+        name: general
+        widget: list
+        fields: 
+          - {label: "Título", name: titol, widget: string, required: true}
+          - {label: "Descripción", name: descripcio, widget: markdown, required: true}
+          - {label: "Lugar", name: lloc, widget: string, required: true}
+          - {label: "Quando", name: "data", widget: datetime, required: true}
+          - {label: "Imagen", name: "img", widget: image}
+          - label: "Social"
+            name: xarxes
+            widget: list
+            fields:
+              - {label: "Nombre", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
+              - {label: "Url", name: address, widget: string}
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
+
+  - name: "esdeveniment_en"
+    label: "Event"
+    folder: "content/esdeveniments"
+    extension : "md"  
+    create: true
+    slug: "{{title}}.{{language}}"
+    identifier_field: {{slug}}
+    filter: {field: language , value: "en"}
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Language, name: language, widget: select, options: ["ca","es","en"],default: "en"}       
+      - label: General
+        name: general
+        widget: list
+        fields: 
+          - {label: "Title", name: titol, widget: string, required: true}
+          - {label: Description, name: descripcio, widget: markdown, required: true}
+          - {label: "Place", name: lloc, widget: string, required: true}
+          - {label: "When", name: "data", widget: datetime, required: true}
+          - {label: "Image", name: "img", widget: image}
+          - label: "Social"
+            name: xarxes
+            widget: list
+            fields:
+              - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
+              - {label: "Url", name: address, widget: string}
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false

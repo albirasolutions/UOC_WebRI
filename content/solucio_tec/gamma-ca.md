@@ -3,7 +3,7 @@ title: Gamma
 language: ca
 general:
   - centre: Estuids
-    img_background: /img/0a5e3d8399408516a201716607daee9dc776694d.png
+    img_background: /img/detall_solucions_principal.png
     keywords:
       - value: ' #tecnologia'
     logo: /img/0a5e3d8399408516a201716607daee9dc776694d.png
@@ -17,20 +17,22 @@ general:
         xarxa: facebook
 sobre_tecnologia:
   - descripcio: >-
-      # Ellentesque habitant morbi tristique senectus et netus
-
-
-      * Ellentesque habitant morbi tristique senectus et netus,Ellentesque
-      habitant morbi tristique senectus et netus
-
-      * Ellentesque habitant morbi tristique senectus et netus. Ellentesque
+      1. Ellentesque habitant morbi tristique senectus et netus. Ellentesque
       habitant morbi tristique senectus et netus, Ellentesque habitant morbi
       tristique senectus et netus Ellentesque habitant morbi tristique senectus
       et netus.
 
 
-      ![Habitant morbi
-      tristique](/img/0a5e3d8399408516a201716607daee9dc776694d.png)
+      1. Ellentesque habitant morbi tristique senectus et netus. Ellentesque
+      habitant morbi tristique senectus et netus, Ellentesque habitant morbi
+      tristique senectus et netus Ellentesque habitant morbi tristique senectus
+      et netus.
+
+
+      \-Ellentesque habitant morbi tristique senectus et netus. Ellentesque
+      habitant morbi tristique senectus et netus, Ellentesque habitant morbi
+      tristique senectus et netus Ellentesque habitant morbi tristique senectus
+      et netus.
     docs_rels: []
     titol: Sobre la solució tecnológica GAMMA
 aspectes_innovadors:
