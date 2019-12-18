@@ -5,7 +5,7 @@
         {{- if and (isset $s.Params "language") (ne $s.Params.language nil) }}
             "idioma": {{$s.Params.language | jsonify}},{{- end }}
         {{- if and (isset $s.Params "general") (gt (len $s.Params.general) 0) }}{{$general := index ($s.Params.general) 0 }}
-            "nom_solucio": {{$general.nom_solucio | jsonify}},{{- end }}
+            "name": {{$general.nom_solucio | jsonify}},{{- end }}
             "content": "",
             "content_encoding": "utf-8",
             "content_type": {{ $s.Type | jsonify }},
