@@ -2035,7 +2035,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     slug: "{{title}}.{{language}}"
     identifier_field: {{slug}}
-    filter: {field: language , value: "es"}
+    filter: {field: language , value: "en"}
     fields:
       - {label: Title, name: title, widget: string}
       - {label: Language, name: language, widget: select, options: ["ca","es","en"],default: "es"}     
