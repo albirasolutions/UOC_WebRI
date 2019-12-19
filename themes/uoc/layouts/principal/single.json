@@ -5,4 +5,4 @@
         {{- if and (isset $s.Params "language") (ne $s.Params.language nil) }}
             "idioma": {{$s.Params.language | jsonify}}{{- end }}
     }
-}{{ if ne 48 $i}},{{end}}{{end}}{{end}}]
+}{{ if ne 44 $i}},{{end}}{{end}}{{end}}]

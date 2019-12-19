@@ -8,7 +8,7 @@ uglyurls = true
 DefaultContentLanguage = "ca"
 DefaultContentLanguageInSubdir = "true"
 
-disableKinds = ["home", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"]
+disableKinds = ["home","section","taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"]
 
 [permalinks]
   grup = "grup/:filename"
