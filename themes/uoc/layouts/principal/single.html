@@ -55,7 +55,7 @@
 								<div class="collapse-content">
 									<ul class="tag-list ambits_especialitzacio">
 										{{ range $index, $element := .Params.ambits_especialitzacio }}
-											<li data-ambit="{{ $element.value}}">{{ $element.display_name }}</li>
+										<li data-ambit="{{ $element.value}}">{{ $element.display_name }}</li>
 										{{ end }}
 									</ul>
 								</div>
@@ -67,9 +67,9 @@
 									<style>.tag-icons li {vertical-align: bottom;}</style>
 									<ul class="tag-icons ods">
 										{{ range $index, $element := .Params.ods }}
-											<li class="tag-icons-{{$element.color}}">
-												<p> <span class="number">{{add $index 1}}</span><span class="title">{{$element.display_name}}</span></p><span class="icon icon--group"></span>
-											</li>
+										<li class="tag-icons-{{$element.color}}">
+											<p> <span class="number">{{add $index 1}}</span><span class="title">{{$element.display_name}}</span></p><span class="icon icon--group"></span>
+										</li>
 										{{ end }}
 									</ul>
 								</div>
@@ -90,7 +90,7 @@
 								<h4>{{ T "uoc_ri_cercador_filtres_centre" }}</h4>
 								<ul class="tag-list centre">
 									{{ range $index, $element := .Params.centre }}
-										<li>{{$element.display_name}}</li>
+									<li>{{$element.display_name}}</li>
 									{{ end }}
 								</ul>
 								<div class="filter-btn">
@@ -101,26 +101,26 @@
 					</div>
 					<div id="tab-content-3" data-tab-content="" role="tabpanel" aria-labelledby="tab-3" aria-hidden="true" class="filters-main__content tab-content cercaSectors">
 						<form action="" class="radio-accordeon search-form-container">
-								<div class="more-filter-options">
-									<h4>{{ T "uoc_ri_cercador_cercapersector" }}</h4>
-									<ul class="tag-list sector_productiu">
-										{{ range $i, $el := .Params.sector_productiu }}
-											<li>{{$el.display_name}}</li>
-										{{ end }}
-									</ul>
+							<div class="more-filter-options">
+								<h4>{{ T "uoc_ri_cercador_cercapersector" }}</h4>
+								<ul class="tag-list sector_productiu">
+									{{ range $i, $el := .Params.sector_productiu }}
+									<li>{{$el.display_name}}</li>
+									{{ end }}
+								</ul>
+							</div>
+							<div class="more-filter-options">
+								<h4>{{ T "uoc_ri_cercador_filtres_centre" }}</h4>
+								<ul class="tag-list centre">
+									{{ range $index, $element := .Params.centre }}
+									<li>{{$element.display_name}}</li>
+									{{ end }}
+								</ul>
+								<div class="filter-btn">
+									<button class="btn btn--primary">{{ T "uoc_ri_home_search_aplicafiltres" }}</button>
 								</div>
-								<div class="more-filter-options">
-									<h4>{{ T "uoc_ri_cercador_filtres_centre" }}</h4>
-									<ul class="tag-list centre">
-										{{ range $index, $element := .Params.centre }}
-											<li>{{$element.display_name}}</li>
-										{{ end }}
-									</ul>
-									<div class="filter-btn">
-										<button class="btn btn--primary">{{ T "uoc_ri_home_search_aplicafiltres" }}</button>
-									</div>
-								</div>
-							</form>
+							</div>
+						</form>
 					</div>
 					<div id="tab-content-2" data-tab-content="" role="tabpanel" aria-labelledby="tab-2" aria-hidden="false" class="filters-main__content tab-content cercaTextual">
 						<form action="" class="search-form-container filters-main-search">
@@ -153,15 +153,15 @@
 										<section class="card-home">
 											<div class="row">
 												{{ range $i, $c :=  .Params.centre }}
-													<div class="col-xs-12 col-md-3">
-														<div class="card card--brand-corporate">
-															<div class="card__contents">
-																<h3>{{$c.display_name}}</h3>
-																<p>Centre de recerca especialitzat el’estudi d’internet i dels efectes de la interacció de les tecnologies digitals amb l’activitat humana.</p>
-																<a href="/centre/{{ . | urlize }}" class="card-link"><span class="icon icon--external-link"></span></a>
-															</div>
+												<div class="col-xs-12 col-md-3">
+													<div class="card card--brand-corporate">
+														<div class="card__contents">
+															<h3>{{$c.display_name}}</h3>
+															<p>Centre de recerca especialitzat el’estudi d’internet i dels efectes de la interacció de les tecnologies digitals amb l’activitat humana.</p>
+															<a href="/centre/{{ . | urlize }}" class="card-link"><span class="icon icon--external-link"></span></a>
 														</div>
 													</div>
+												</div>
 												{{ end }}
 											</div>
 										</section>
@@ -169,9 +169,45 @@
 								</div>
 							</div>
 						</div>
+						
 					</div>
 				</div>
 			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div id="tab-content-10" data-tab-content="" role="tabpanel" aria-labelledby="tab-content-10" aria-hidden="false" class="tab-content is-active">
+						<div class="js-collapse-group">
+							<div class="collapse">
+								<div class="head-collapse js-collapse">
+									<p><a href="#collapse3" aria-expanded="false" class="js-collapseClick">{{ T "uoc_ri_home_centres" }}<span class="icon icon--arrow-down"></span></a></p>
+								</div>
+								<div id="collapse2" class="contentCollapse show">
+									{{ range $i, $sequence :=  (seq 4) }}
+									<div class="col-xs-6 col-md-3" role="article">
+										
+										<a href="/ca/noticies/alfa.html" class="card-absolute-link"></a>
+										<div class="card" role="region" aria-label="Texto descriptivo" >
+											<div class="card__image">
+												<img src="/img/detall_solucions_principal2.png" alt="Texto alternativo">
+											</div>
+											<div class="card__contents" >
+												<p class="text-big text font-alternate">El treballador fluid, un nou tipus d'empleat difícil de retenir a l'empresa</p>
+											</div>
+											<div class="card__footer">
+												<div class="float-left p-left-x  icon icon--external-link"></div>
+												<div class="float-right p-right-x">Esdeveniment</div>
+											</div>
+										</div>
+									</div>
+									{{end}}
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			
 		</section>
 		{{ partial "footer.html" . }}
 	</div>
@@ -180,7 +216,7 @@
 	<script src="/js/search_home.js"></script>
 	<script type="text/javascript">
 		var cercadorURL = '{{ "cercador/cercador.html" | relLangURL }}';
-        //var cercadorSectorURL = '{{ "solucions/solucions.html" | relLangURL }}';
+		//var cercadorSectorURL = '{{ "solucions/solucions.html" | relLangURL }}';
 	</script>
 </body>
 
