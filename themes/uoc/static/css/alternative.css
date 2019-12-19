@@ -7,6 +7,10 @@
     padding: 10px 0; 
     position: relative;
 }
+.bg-simple{ /* ADDED BY ALBIRA */
+    min-height: 488px;
+    padding: 20px;
+}
 
 .apiling:after{ /* ADDED BY ALBIRA */
     z-index:1000;
@@ -17,6 +21,10 @@
     .info-general .bg-main {
         padding: 34px;
         background-position: 101%;
+    }
+    .bg-simple{
+        min-height: 488px;
+        padding: 20px;
     }
 }
 
