@@ -33,19 +33,21 @@
                    
                 </div>
                 
-                <div class="card col-md-3 col-xs-3" role="article">
-                        <a href="" class="card-absolute-link"></a>
+                <div class="col-xs-6 col-md-3" role="article">
                             
-                        <div class="card" role="region" aria-label="Texto descriptivo" style="background-color: lightgrey; ">
-                            <div class="card__image">
-                                <img src="/img/detalle-noticia.jpg" alt="Texto alternativo">
-                            </div>
-                            <div class="card__contents">
-                                <p class="h3">Ellentesque habitant morbi tristique senectus et netus</p>
-                                
-                            </div>
-                            <div><p class="card__footer float-right">Esdeveniment</p></div>
+                    <a href="/ca/noticies/alfa.html" class="card-absolute-link"></a>
+                    <div class="card" role="region" aria-label="Texto descriptivo" style="background-color: f5f5f5;">
+                        <div class="card__image">
+                            <img src="/img/detalle-noticia.jpg" alt="Texto alternativo">
                         </div>
+                        <div class="card__contents" >
+                            <p class="text-big text font-alternate">El treballador fluid, un nou tipus d'empleat difícil de retenir a l'empresa</p>
+                        </div>
+                        <div class="card__footer">
+                            <div class="float-left p-left-x  icon icon--external-link"></div>
+                            <div class="float-right p-right-x">Esdeveniment</div>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="row">
@@ -69,19 +71,20 @@
                         <!-- Llistat de totes les noticies/esdeveniments (els 8 primers) -->
                         <!-- Element de paginacio que ens actualitzará aquesta llista-->
                         {{ range $i, $sequence :=  (seq 8) }}
-                        <div class="card col-xs-6 col-md-3" role="article">
+                        <div class="col-xs-6 col-md-3" role="article">
                             
-                            <a href="/difusio/difusio_1.html" class="card-absolute-link"></a>
-                            
-                            <div class="card" role="region" aria-label="Texto descriptivo" style="background-color: lightgrey; ">
+                            <a href="/ca/noticies/alfa.html" class="card-absolute-link"></a>
+                            <div class="card" role="region" aria-label="Texto descriptivo" style="background-color: f5f5f5;">
                                 <div class="card__image">
                                     <img src="/img/detalle-noticia.jpg" alt="Texto alternativo">
                                 </div>
-                                <div class="card__contents">
-                                    <p class="h3">Ellentesque habitant morbi tristique senectus et netus</p>
-                                    
+                                <div class="card__contents" >
+                                    <p class="text-big text font-alternate">El treballador fluid, un nou tipus d'empleat difícil de retenir a l'empresa</p>
                                 </div>
-                                <div><p class="card__footer float-right">Esdeveniment</p></div>
+                                <div class="card__footer">
+                                    <div class="float-left p-left-x  icon icon--external-link"></div>
+                                    <div class="float-right p-right-x">Esdeveniment</div>
+                                </div>
                             </div>
                         </div>
                         {{end}}
