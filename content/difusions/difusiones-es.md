@@ -1,5 +1,5 @@
 ---
-title: Difusiones
+title: Difusions
 language: es
 ---
 
