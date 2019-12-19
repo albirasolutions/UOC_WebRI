@@ -8,9 +8,9 @@
     position: relative;
 }
 
-.apiling{ /* ADDED BY ALBIRA */
+.apiling:after{ /* ADDED BY ALBIRA */
     z-index:1000;
-    position: relative;
+    
 }
 
 @media (min-width: 768px) {  
