@@ -135,7 +135,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Eslogan", name: slogan, widget: string}
           - {label: "Img Background", name: "img_background", widget: image, required: true}
-          - {label: "Tipologia", name: tipologia, widget: string, required: true}
+          - {label: "Tipologia", name: tipologia, widget: select, options: ["Solució Tecnològica","Patent", "Servei a l'empresa","Spin-Off"], default: "Solució Tecnològica"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -249,7 +249,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Texto", name: text_breu, widget: string}
           - {label: "Eslogan", name: slogan, widget: string}
           - {label: "Imagen", name: "img_background", widget: image, required: true}
-          - {label: "Tipología", name: tipologia, widget: string, required: true}
+          - {label: "Tipología", name: tipologia, widget: select, options: ["Solución Tecnologica","Patente", "Servicio a la Empresa","Spin-Off"], default: "Solución Tecnologica"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -368,7 +368,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Slogan", name: slogan, widget: string}
           - {label: "Img Background", name: "img_background", widget: image, required: true}
-          - {label: "Typology", name: tipologia, widget: string, required: true}
+          - {label: "Typology", name: tipologia, widget: select, options: ["Technical Solution","Patent", "Business Service","Spin-Off"], default: "Technical Solution"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -483,7 +483,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
-          - {label: "Tipologia", name: tipologia, widget: string, required: true}
+          - {label: "Tipologia", name: tipologia, widget: select, options: ["Solució Tecnològica","Patent", "Servei a l'empresa","Spin-Off"], default: "Patent"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -597,7 +597,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Texto", name: text_breu, widget: string}
           - {label: "Eslogan", name: slogan, widget: string}
           - {label: "Img Fondo", name: "img_background", widget: image, required: true}
-          - {label: "Tipología", name: tipologia, widget: string, required: true}
+          - {label: "Tipología", name: tipologia, widget: select, options: ["Solución Tecnologica","Patente", "Servicio a la Empresa","Spin-Off"], default: "Patente"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -711,7 +711,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Slogan", name: slogan, widget: string}
           - {label: "Img Background", name: "img_background", widget: image, required: true}
-          - {label: "Typology", name: tipologia, widget: string, required: true}
+          - {label: "Typology", name: tipologia, widget: select, options: ["Technical Solution","Patent", "Business Service","Spin-Off"], default: "Patent"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -824,7 +824,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Nom Servei", name: nom_servei, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
-          - {label: "Tipologia", name: tipologia, widget: string, required: true}
+          - {label: "Tipologia", name: tipologia, widget: select, options: ["Solució Tecnològica","Patent", "Servei a l'empresa","Spin-Off"], default: "Servei a l'empresa"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -914,7 +914,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Nombre Servicio", name: nom_servei, widget: string, required: true}
           - {label: "Texto", name: text_breu, widget: string}
           - {label: "Img Fondo", name: "img_background", widget: image, required: true}
-          - {label: "Tipología", name: tipologia, widget: string, required: true}
+          - {label: "Tipología", name: tipologia, widget: select, options: ["Solución Tecnologica","Patente", "Servicio a la empresa","Spin-Off"], default: "Servicio a la empresa"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -1004,7 +1004,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Service Name", name: nom_servei, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Background Img", name: "img_background", widget: image, required: true}
-          - {label: "Typology", name: tipologia, widget: string, required: true}
+          - {label: "Typology", name: tipologia, widget: select, options: ["Technical Solution","Patent", "Business Service","Spin-Off"], default: "Business Service"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -1095,7 +1095,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
-          - {label: "Tipologia", name: tipologia, widget: string, required: true}
+          - {label: "Tipologia", name: tipologia, widget: select, options: ["Solució Tecnològica","Patent", "Servei a l'empresa","Spin-Off"], default: "Spin-Off"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -1209,7 +1209,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Texto", name: text_breu, widget: string}
           - {label: "Eslógan", name: slogan, widget: string}
           - {label: "Img Fondo", name: "img_background", widget: image, required: true}
-          - {label: "Tipología", name: tipologia, widget: string, required: true}
+          - {label: "Tipología", name: tipologia, widget: select, options: ["Solución Tecnologica","Patente", "Servicio a la empresa","Spin-Off"], default: "Spin-Off"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -1323,7 +1323,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Slogan", name: slogan, widget: string}
           - {label: "Background Img", name: "img_background", widget: image, required: true}
-          - {label: "Typology", name: tipologia, widget: string, required: true}
+          - {label: "Typology", name: tipologia, widget: select, options: ["Technical Solution","Patent", "Business Service","Spin-Off"], default: "Spin-Off"}
           - label: "Sector"
             name: sector
             widget: relation

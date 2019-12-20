@@ -1,10 +1,19 @@
 <!-- Aqui tendremos la comprobación del campo que nos dira que html cargar según el contenido a mostrar-->
+{{$type := .Type}}
+{{$.Scratch.Add "solTecContent" (slice "sobre_tecnologia" "aspectes_innovadors" "aplicacions" "grups_recerca" "contacte") }}
+{{$.Scratch.Add "patentContent" (slice "sobre_patent" "aspectes_innovadors" "aplicacions" "grups_recerca" "contacte") }}
+{{$.Scratch.Add "serveiContent" (slice "sobre_servei" "casos_exit" "grups_recerca" "contacte") }}
+{{$.Scratch.Add "spinContent" (slice "sobre_spinoff" "productes_serveis" "clients" "casos_exit" "grups_recerca" "contacte") }}
+
 {{ $generalInfo := index (.Params.general) 0 }}
+
 {{ $sobreTec := index (.Params.sobre_tecnologia) 0 }}
 {{ $aspectesInnova := index (.Params.aspectes_innovadors) 0 }}
 {{ $apps := index (.Params.aplicacions) 0 }}
 {{ $grupsRecerca := index (.Params.grups_recerca) 0 }}
 {{ $contacte := index (.Params.contacte) 0 }}
+
+
 <section class="info-general">
     <div class="row">
         <div class="col-xs-12">
@@ -12,10 +21,11 @@
                 <h2>{{ $generalInfo.nom_solucio }}</h2>
             </div>
         </div>
-        
+
         <div class="col-xs-12 col-md-9">
-            <section class="bg-main" style="background-image: url({{$generalInfo.img_background}});">
-                <div class="container apiling">
+            <section class="bg-main " style="background-image: url({{$generalInfo.img_background}});">
+                <div class="img--tint"></div>
+                <div class="container">
                     <div class="row">
                         <div class="col-md-6 col-lg-6 col-xs-6">
                             <h2>{{ $generalInfo.text_breu}}</h2>
@@ -29,10 +39,18 @@
                             aria-expanded="false" aria-controls="dropdown__content1"
                             class="btn btn--primary dropdown__trigger">{{ T "uoc_ri_detail_social_media" }}<span aria-hidden="true"
                             class="icon icon--share"></span></button>
+                            <ul role="menu" id="dropdown__content1" data-dropdown-content="" class="dropdown__content dropdown__list">
+                                
+                                <li role="menuitem" data-dropdown-content="" class="dropdown__item">
+                                    <p class="text-small">
+                                        
+                                    </p>
+                                </li>
+                                
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="img--tint"></div>
             </section>
         </div>
 
@@ -44,29 +62,47 @@
                         <p><strong>{{ T "uoc_ri_sector" }} :</strong>{{ $generalInfo.sector}}</p>
                         <p><strong>{{ T "uoc_ri_centre" }} :</strong><a href="#"><u>{{ $generalInfo.centre}}</u></a></p>
                         <p>
-                            <div class="img-wpr img-wpr--horizontal">
-                                <img class="img-wpr__cover" src="{{$generalInfo.logo}}" alt="{{ $generalInfo.nom_solucio }}" />
+                            <div class="row">
+                                
+                                <div class="img--y col-xs-12 col-md-12">
+                                    <div class="img-wpr img-wpr--horizontal">
+                                        <img class="img-wpr__cover" src="{{$generalInfo.logo}}" alt="{{ $generalInfo.nom_solucio }}" />
+                                    </div>
+                                </div>
+                                
                             </div>
+                            
                         </p>
                         <p>
-                            <div data-dropdown="" role="navigation" aria-label="" class="dropdown">
-                                <h5 data-dropdown-trigger="" class="dropdown-trigger" aria-expanded="false" aria-controls="dropdown__content1">{{ T "uoc_ri_keywords" }}
-                                    <span aria-hidden="true" class="icon icon--arrow-down icon--after is-active-hidden float-right"></span>
-                                    <span aria-hidden="true" class="icon icon--arrow-up icon--after is-active-visible float-right"></span>
-                                </h5>
-                                <ul role="menu" id="dropdown__content1" data-dropdown-secondary-content="" class="dropdown__content dropdown__list">
-                                    {{ range $k := $generalInfo.keywords }}
-                                    <li role="menuitem" data-dropdown-secondary="" class="dropdown__item">
-                                        <p class="text-small">
-                                            {{$k.value}}
-                                        </p>
-                                    </li>
-                                    {{end}}
-                                </ul>
+                            <div class="row">
+
+                                <div class="col-xs-12">
+
+                                    <div data-dropdown="" aria-label="" class="dropdown">
+                                        <h5 data-dropdown-trigger="" class="dropdown-trigger" aria-expanded="false" aria-controls="dropdown__content1">{{ T "uoc_ri_keywords" }}
+                                            <span aria-hidden="true" class="icon icon--arrow-down icon--after is-active-hidden float-right"></span>
+                                            <span aria-hidden="true" class="icon icon--arrow-up icon--after is-active-visible float-right"></span>
+                                        </h5>
+                                        <ul role="menu" id="dropdown__content1" data-dropdown-content="" class="dropdown__content dropdown__list">
+                                            {{ range $k := $generalInfo.keywords }}
+                                            <li role="menuitem" data-dropdown-content="" class="dropdown__item">
+                                                <p class="text-small">
+                                                    {{$k.value}}
+                                                </p>
+                                            </li>
+                                            {{end}}
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                  
+
                             </div>
+                                                      
                         </p>
                     </div>	
                 </div>
+                
             </div>
         </div>
     </div>
@@ -131,9 +167,9 @@
                             </div>
                             <div class="card-in-acordeon">
                                 <h4>{{ T "uoc_ri_docs" }}</h4>
-                                <div class="wrap-richText">
-                                    <p></p>
-                                </div>
+
+                                <ul class="list--unstyled">
+                                <li>Lorem ipsum dolor sit amet</li>
                             </div>
                         </div>
                     </div> 
