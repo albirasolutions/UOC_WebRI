@@ -1,11 +1,14 @@
-{{ $generalInfo := index (.Params.general) 0 }}
-{{ $descripcio := index (.Params.descripcio) 0 }}
-
+{{$type := .Type }}
+{{$generalInfo := index (.Params.general) 0 }}
 <section>
     <div class="row">
         <div class="col-xs-12 col-md-3">
             <div class="page-title title-border-green ">
-                <h3 class="col-xs-12 col-md-3"><strong>Esdeveniments / Noticies</strong></h3>
+                {{if eq $type "noticies"}}
+                <h3 class="col-xs-12 col-md-3"><strong>{{ T "uoc_ri_difusio_noticia"}}</strong></h3>
+                {{else}}
+                <h3 class="col-xs-12 col-md-3"><strong>{{ T "uoc_ri_difusio_esdeveniment"}}</strong></h3>
+                {{end}}
             </div>
         </div>
         <div class="col-xs-12 col-md-9">
@@ -18,14 +21,14 @@
         </div>
         <div class="col-xs-12 col-md-9">
             <figure class="img-figure">
-                <img src="/img/detalle-noticia.jpg" >
+                <img src="/img/detalle-noticia.jpg">
                 <figcaption class="img-figcaption">
                     <div class="float-left" id="img-figcaption1">
                         <em class="text-extra-small">Foto: {{$generalInfo.img_autor}}</em>
                         <br><br>
                         {{dateFormat "02/01/2006" $generalInfo.data}} <br>  {{$generalInfo.autor}}
                     </div>
-                    <div class="float-right" style="vertical-align: bottom;" id="img-figcaption2">
+                    <div class="float-right" role="complementary" id="img-figcaption2">
                         
                         <div class="social-links unstyled">
                             <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Facebook']);" href="http://www.facebook.com/UOC.universitat" target="_blank"
@@ -50,10 +53,86 @@
 <section>
     <div class="row">
         <div class="col-xs-12 col-md-3">
-            <blockquote class="pullquote">{{$descripcio.entrada}}</blockquote>
+            {{if eq $type "noticies"}}
+                {{$descMap := (index (index .Params.descripcio) 0) 0}}
+                <blockquote class="pullquote">{{$descMap.entrada}}</blockquote>
+            {{end}}
         </div>
         <div class="col-xs-12 col-md-9">
-            <p>{{$descripcio.descripcio}}</p>
+            {{if eq $type "noticies"}}
+                {{$descMap := (index (index .Params.descripcio) 0) 0}}
+                <p>{{safeHTML (markdownify $descMap.descripcio)}}</p>
+            {{else}}
+                <p>{{$generalInfo.descripcio}}</p>
+                
+                    <div class="card card--image-horizontal card--info col-xs-12 card--2y col-clear-right">
+                        <div class="card__contents col-xs-12 col-md-6">
+                            <h3 class="h4">Dirección</h3>
+                            <p>Rambla del Poblenou, 156<br>08018 Barcelona</p>
+                            <h3 class="h4">Contacto</h3>
+                                <div class="col-xs-12 row">
+                                    <span class="col-xs-1 col-md-1">
+                                        <span aria-hidden="true" class="icon icon--small icon--phone"></span>
+                                    </span>
+                                    <span class="col-xs-10 col-md-11">
+                                        <span class="m-left-x">934 817 272<br></span>
+                                    </span>
+                                </div>
+                                <div class="col-xs-12 row">
+                                    <span class="col-xs-1 col-md-1">
+                                        <span aria-hidden="true" class="icon icon--small icon--contact"></span>
+                                    </span>
+                                    <span class="col-xs-10 col-md-11">
+                                        <a class="m-left-x break-all" href="mailto:uocbarcelona@uoc.edu" target="_blank">uocbarcelona@uoc.edu</a>
+                                    </span>
+                                </div>
+                            <h3 class="h4 clear-both">Horario</h3>
+                            <p>
+        Lunes a jueves: 9 - 14 h y 15 - 18.30 h<br>
+        Viernes: 9 - 14 h</p>
+    <p>
+        &nbsp;</p>
+    
+                        </div>
+                            <div class="card__image col-xs-12 col-md-6">
+                                <div id="mapa" class="leaflet-container leaflet-fade-anim leaflet-grab leaflet-touch-drag" tabindex="0" style="position: relative; outline: none;"> <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 16; transform: translate3d(83px, 46px, 0px) scale(0.25);"></div><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(69px, 61px, 0px) scale(1);"><img alt="" role="presentation" src="https://b.tile.openstreetmap.org/15/16583/12236.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-120px, -36px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://c.tile.openstreetmap.org/15/16584/12236.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(136px, -36px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://c.tile.openstreetmap.org/15/16583/12237.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-120px, 220px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://a.tile.openstreetmap.org/15/16584/12237.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(136px, 220px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://a.tile.openstreetmap.org/15/16583/12235.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-120px, -292px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://b.tile.openstreetmap.org/15/16584/12235.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(136px, -292px, 0px); opacity: 1;"></div></div><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(103px, 91px, 0px) scale(0.5);"></div><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 19; transform: translate3d(69px, 61px, 0px) scale(1);"><img alt="" role="presentation" src="https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/15/12236/16583" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-120px, -36px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/15/12236/16584" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(136px, -36px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/15/12237/16583" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-120px, 220px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/15/12237/16584" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(136px, 220px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/15/12235/16583" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-120px, -292px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/15/12235/16584" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(136px, -292px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-shadow-pane"><img src="https://unpkg.com/leaflet@1.6.0/dist/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(138px, 130px, 0px);"></div><div class="leaflet-pane leaflet-overlay-pane"></div><div class="leaflet-pane leaflet-marker-pane"><img src="https://unpkg.com/leaflet@1.6.0/dist/images/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(138px, 130px, 0px); z-index: 130;"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(4.24545e+06px, 3.13262e+06px, 0px) scale(16384);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out">−</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control esri-truncated-attribution:hover esri-truncated-attribution"><a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> | Powered by <a href="https://www.esri.com">Esri</a> | © <a href="//osm.org/copyright">OpenStreetMap</a> contributors, <span class="esri-dynamic-attribution" style="max-width: 238px;">ICGC Catalunya, CC BY 4.0 ign.es, INE, Esri, HERE, Garmin, INCREMENT P, Intermap, USGS, METI/NASA</span></div></div></div></div>
+                
+            <!-- Load Leaflet from CDN -->
+            <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+            
+            <!-- Load Esri Leaflet from CDN -->
+            <script src="https://unpkg.com/esri-leaflet/dist/esri-leaflet.js"></script>
+                        
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet.esri.geocoder/2.1.0/esri-leaflet-geocoder.css">
+            <script src="https://cdn.jsdelivr.net/leaflet.esri.geocoder/2.1.0/esri-leaflet-geocoder.js"></script>
+                    
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    var address = '"Rambla del Poblenou, 156 08018 Barcelona","08018 Barcelona","Barcelona",';
+                                                                
+                    var geocoder = L.esri.Geocoding.geocodeService();
+                    
+                    var map = L.map('mapa');
+                    
+                    var results = L.layerGroup().addTo(map);
+                    
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; <a href="//osm.org/copyright">OpenStreetMap</a> contributors'
+                    }).addTo(map);
+                    
+                    geocoder.geocode().text(address).run(function (error, response) {		                    						  
+                        map.fitBounds(response.results[0].bounds);
+                        results.addLayer(L.marker(response.results[0].latlng));
+                    });	  
+                    
+                    L.esri.basemapLayer("Topographic").addTo(map);
+                });
+            </script>
+                            </div>
+                    </div>                
+                
+            {{end}}
         </div>
     </div>             
 </section>

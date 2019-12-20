@@ -161,4 +161,6 @@
 [uoc_ri_docs] other = "Related Documents"
 [uoc_ri_detail_social_media] other = "Social media"
 
-[uoc_ri_difusio_novetats] other = "Consulta las últimas novedades, noticias y casos de éxito de la R&I en la UOC"
+[uoc_ri_difusio_novetats] other = "Check out the last novelties, news and cases of success of the R&I at UOC"
+[uoc_ri_difusio_noticia] other = "Report"
+[uoc_ri_difusio_esdeveniment] other = "Event"

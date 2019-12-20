@@ -162,3 +162,5 @@
 [uoc_ri_detail_social_media] other = "A la xarxa"
 
 [uoc_ri_difusio_novetats] other = "Consulta les darreres novetats, notícies i casos d'èxit de l'R&I a la UOC"
+[uoc_ri_difusio_noticia] other = "Noticia"
+[uoc_ri_difusio_esdeveniment] other = "Esdeveniment"
