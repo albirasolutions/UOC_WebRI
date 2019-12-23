@@ -43,9 +43,10 @@
   <script>
 
     var SelectorControl = createClass({
-
       handleChange: function(e) {
-        let items = document.getElementById("query_selected").innerHTML.replace(/<label class=\"selector_tag\">/ig,"").replace(/<\/label>/ig,",");
+        console.log('event-->',e);
+        console.log('query_selected-->',document.getElementById('query_selected'));
+        let items = document.getElementById("query_selected").innerHTML.replace(/<label class=\"selector_tag\">/ig,"").replace(/<\/label>/ig,",").split(",");
         console.log('retrieving change items...',items);
         this.props.onChange(items.slice(0,items.length-1));
       },
@@ -64,33 +65,77 @@
             }
         )
         .then(function(response) {
-          console.log('getting response from ajax request--->',response);
+          //console.log('getting response from ajax request--->',response);
           return response.text()
         })
         .then(function(text){
           results.innerHTML="";
-          text.split("\n").map(function(item){
-            console.log('each item on response..',item);
-            results.innerHTML += "<input type='checkbox' value='query_"+encodeURIComponent(item)+"' onclick=\"document.getElementById('query_selected').innerHTML+='<label class=selector_tag>"+item+"</label>';document.getElementById('trigger').click()\"> " + item + "<br />";
+          text.split("\n").map(function(searchResponse){
+            //console.log('each item on response..',searchResponse);
+            let resObj = JSON.parse(searchResponse);
+            //console.log('jsonRes-->',resObj);
+            var grups = resObj.hits["hit"]
+            console.log('GRUPS___> ',grups);
+            for(var i = 0; i<=grups.length - 1;i++){
+              results.innerHTML += "<input type='checkbox' value='query_"+encodeURIComponent(grups[i].id)+"' onclick=\"document.getElementById('query_selected').innerHTML+='<label class=selector_tag>" + grups[i].fields["nom_grup"] + "</label>';document.getElementById('trigger').click()\"> " + grups[i].fields["nom_grup"] + "<br />";
+            }
+            //results.innerHTML += "<input type='checkbox' value='query_"+encodeURIComponent(item)+"' onclick=\"document.getElementById('query_selected').innerHTML+='<label class=selector_tag>"+item+"</label>';document.getElementById('trigger').click()\"> " + item + "<br />";
           });
         });      
       },
+      createGrupList: function(items){
+        var values = items.toString().split(",");
+        var entries = [];
+        for(var k=0;k<=values.length -1;k++){
+          var grObj = values[k].split("____"); 
+          let obj = {
+            name: grObj[0],
+            id:grObj[1]
+          }
+          console.log('grObj-->',grObj);
+          console.log('obj-->',obj);
+          entries.push(grObj[0]);
+          //entries+="<input type='checkbox' value='query_"+encodeURIComponent(obj.id)+"' onclick=\"document.getElementById('query_selected').innerHTML+='<label class=selector_tag>" + encodeURIComponent(obj.name) + "</label>';document.getElementById('trigger').click()\"> " + encodeURIComponent(obj.name) + "<br />";
+        }
+        //console.log('values--->',values);
+        console.log('entries--->',entries);
+        return entries.toString();
+      },
+      generateGrupsObjView:function(items){
 
+        var values = items.toString().split(",");
+        var entries = [];
+        var innerHtml = "";
+        for(var k=0;k<=values.length -1;k++){
+          var grObj = values[k].split("____"); 
+          console.log('grObj-->',grObj);
+          innerHtml+= "<label class=selector_tag>" + encodeURIComponent(grObj[0]) + "</label>';document.getElementById('trigger').click()\"> "+ encodeURIComponent(grObj[0]) + "<br />";
+          entries.push(grObj[0]);
+          //entries+="<input type='checkbox' value='query_"+encodeURIComponent(obj.id)+"' onclick=\"document.getElementById('query_selected').innerHTML+='<label class=selector_tag>" + encodeURIComponent(obj.name) + "</label>';document.getElementById('trigger').click()\"> " + encodeURIComponent(obj.name) + "<br />";
+        }
+        //console.log('values--->',values);
+        console.log('entries--->',entries);
+
+        let viewObj = {
+          id:'query_selected',
+          value: entries,
+          class: "tags",
+          innerHTML: innerHtml
+        }
+        console.log('listViewObj-->',viewObj);
+        return viewObj;
+
+      },
       render: function() {
         var value = this.props.value;
-        console.log('rendering...value-->',value);
+        console.log('rendering...value-->',this.props);
         console.log('returning h function -->',h());
+        var initGrupsObj = this.generateGrupsObjView(value);
         return h('div', 
-                {
-                  _style : {border:"1px solid red"}
+                { 
+                  _style : {border: "1px solid #bbb", backgroundColor:"grey"}
                 },
-                value,
-                  h('div', {
-                      id : "query_selected", 
-                      class : "tags", 
-                      _style : {border: "1px solid #bbb", backgroundColor:"grey"},
-                    }
-                  ),
+                  h('div',initGrupsObj),
                   h('input', {
                       id : "text_query", 
                       style : {border: "1px solid #bbb", backgroundColor:"grey"},
