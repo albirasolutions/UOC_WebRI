@@ -32,7 +32,8 @@ aplicacions:
         url: 'https://www.netlifycms.org/docs/intro/'
     titol: Aplicació solució Alfa
 grups_recerca:
-  - investigadors: Investigador Javi
+  - grups: 'GAME____1902,DigiBiz____2902'
+    investigadors: Investigador Javi
 contacte:
   - address: adreça
     email: e@mail.com
