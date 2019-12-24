@@ -215,8 +215,8 @@ collections: # A list of collections the CMS should be able to edit
         required: false    
         widget: list
         fields:
-          - {label: Grups, name: grups, widget: selector_custom}
-          - {label: Investigadors, name: investigadors, widget: string}
+          - {label: Grups, name: grups, widget: grups}
+          - {label: Investigadors, name: investigadors, widget: investigadors}
       - label: Contacte
         name: contacte
         required: false
@@ -334,8 +334,8 @@ collections: # A list of collections the CMS should be able to edit
         required: false    
         widget: list
         fields:
-          - {label: Grupos, name: grups, widget: selector_custom}
-          - {label: Investigadores, name: investigadors, widget: string}
+          - {label: Grupos, name: grups, widget: grups}
+          - {label: Investigadores, name: investigadors, widget: investigadors}
       - label: Contacto
         name: contacte
         required: false
@@ -449,8 +449,8 @@ collections: # A list of collections the CMS should be able to edit
         required: false    
         widget: list
         fields:
-          - {label: Groups, name: grups, widget: selector_custom}
-          - {label: Researchers, name: investigadors, widget: string}
+          - {label: Groups, name: grups, widget: grups}
+          - {label: Researchers, name: investigadors, widget: investigadors}
       - label: Contact
         name: contacte
         required: false
@@ -563,8 +563,8 @@ collections: # A list of collections the CMS should be able to edit
         required: false      
         widget: list
         fields:
-          - {label: Grups, name: grups, widget: selector_custom}
-          - {label: Investigadors, name: investigadors, widget: string}
+          - {label: Grups, name: grups, widget: grups}
+          - {label: Investigadors, name: investigadors, widget: investigadors}
       - label: Contacte
         name: contacte
         required: false
@@ -677,8 +677,8 @@ collections: # A list of collections the CMS should be able to edit
         required: false      
         widget: list
         fields:
-          - {label: Grupos, name: grups, widget: selector_custom}
-          - {label: Investigadores, name: investigadors, widget: string}
+          - {label: Grupos, name: grups, widget: grups}
+          - {label: Investigadores, name: investigadors, widget: investigadors}
       - label: Contacto
         name: contacte
         required: false
@@ -791,8 +791,8 @@ collections: # A list of collections the CMS should be able to edit
         required: false      
         widget: list
         fields:
-          - {label: Groups, name: grups, widget: selector_custom}
-          - {label: Investigators, name: investigadors, widget: string}
+          - {label: Groups, name: grups, widget: grups}
+          - {label: Investigators, name: investigadors, widget: investigadors}
       - label: Contact
         name: contacte
         required: false
@@ -881,8 +881,8 @@ collections: # A list of collections the CMS should be able to edit
         required: false      
         widget: list
         fields:
-          - {label: Grups, name: grups, widget: selector_custom}
-          - {label: Investigadors, name: investigadors, widget: string}
+          - {label: Grups, name: grups, widget: grups}
+          - {label: Investigadors, name: investigadors, widget: investigadors}
       - label: Contacte
         name: contacte
         required: false
@@ -971,8 +971,8 @@ collections: # A list of collections the CMS should be able to edit
         required: false      
         widget: list
         fields:
-          - {label: Grupos, name: grups, widget: selector_custom}
-          - {label: Investigadores, name: investigadors, widget: string}
+          - {label: Grupos, name: grups, widget: grups}
+          - {label: Investigadores, name: investigadors, widget: investigadors}
       - label: Contacto
         name: contacte
         required: false
@@ -1061,8 +1061,8 @@ collections: # A list of collections the CMS should be able to edit
         required: false      
         widget: list
         fields:
-          - {label: Groups, name: grups, widget: selector_custom}
-          - {label: Investigators, name: investigadors, widget: string}
+          - {label: Groups, name: grups, widget: grups}
+          - {label: Investigators, name: investigadors, widget: investigadors}
       - label: Contact
         name: contacte
         required: false
@@ -1175,8 +1175,8 @@ collections: # A list of collections the CMS should be able to edit
         required: false      
         widget: list
         fields:
-          - {label: Grups, name: grups, widget: selector_custom}
-          - {label: Investigadors, name: investigadors, widget: string}
+          - {label: Grups, name: grups, widget: grups}
+          - {label: Investigadors, name: investigadors, widget: investigadors}
       - label: Contacte
         name: contacte
         required: false
@@ -1289,8 +1289,8 @@ collections: # A list of collections the CMS should be able to edit
         required: false      
         widget: list
         fields:
-          - {label: Grupos, name: grups, widget: selector_custom}
-          - {label: Investigadores, name: investigadors, widget: string}
+          - {label: Grupos, name: grups, widget: grups}
+          - {label: Investigadores, name: investigadors, widget: investigadors}
       - label: Contacto
         name: contacte
         required: false
@@ -1403,8 +1403,8 @@ collections: # A list of collections the CMS should be able to edit
         required: false      
         widget: list
         fields:
-          - {label: Groups, name: grups, widget: selector_custom}
-          - {label: Investigators, name: investigadors, widget: string}
+          - {label: Groups, name: grups, widget: grups}
+          - {label: Investigators, name: investigadors, widget: investigadors}
       - label: Contact
         name: contacte
         required: false
