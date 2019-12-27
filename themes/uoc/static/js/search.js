@@ -98,10 +98,11 @@ jQuery(document).ready(function ($) {
 		
 	});
 	searchParams=parseQueryString(location.search);
-	querySearchEngine(searchParams);				//All results in first load
 	console.log('incoming Params :: ',searchParams);
 	searchParams["target"] = sessionStorage.getItem("target");
 	loadTab2Search(searchParams["target"] ? searchParams["target"] : 1);
+	querySearchEngine(searchParams);				//All results in first load
+	console.log('incoming Params after SS :: ',searchParams);
 	$(document).on('click', ".pagination__item", function(e){
 		$(".pagination__item").unbind();
 		e.stopImmediatePropagation();
@@ -244,8 +245,8 @@ function getSearchFormValues(){
 /***********************************************************************
 							SEARCH METHODS								
 ***********************************************************************/
-function buildQuery(searchParams){
-	var endpointURI = "/api/search";
+function buildQuery(endpointUrl,searchParams){
+	var endpointURI =  endpointUrl; //"/api/search";
 	var queryString = "?idioma="+getCurrentLanguage();									//Mandatory
 	for (var key in searchParams) {
 		if(searchParams.hasOwnProperty(key)) {
@@ -255,30 +256,25 @@ function buildQuery(searchParams){
 	}
 	return  endpointURI+queryString;
 }
-function querySearchEngine(searchParams,target){
-	var fitxaResults = $(".fitxaResults .row");
-	var grupResults = $(".grupResults .row");
-	var fitxaURL = buildQuery(searchParams)+"&tipus=fitxa";
-	var grupURL = buildQuery(searchParams)+"&tipus=grup";
-	var searchWordsHelperText = "";
-	$(".cercadorFiltres .search").text("");
-	// Content_type: fitxa
+
+function buildAjaxQueryCalloutAndProcessResultsFromCloudSearch(queryUrl,results, type){
 	$.ajax({
-		url: fitxaURL,
+		url: queryUrl,
 	}).done(
 		function(data, returnCode, request){
+			console.log('returning data----->',data);
 			if(data.hits.found == 0){
-				fitxaResults.html("<p style='font-style:italic'>"+literals.results.noresults[getCurrentLanguage()]+"</p>");
+				results.html("<p style='font-style:italic'>"+literals.results.noresults[getCurrentLanguage()]+"</p>");
 			} else {
 				var items=data.hits.hit;
 				var result="";
 				for (var i = 0; i < items.length; i++) {
-					result+=getResultMarkup(items[i], "fitxa", i);
+					result+=getResultMarkup(items[i], type, i);
 				}
-				result+=getPaginationMarkup(data.hits.found, "fitxa");
-				fitxaResults.html(result);
-				navigateToPage(1, "fitxa");
-				initPagination("fitxa");
+				result+=getPaginationMarkup(data.hits.found, type);
+				results.html(result);
+				navigateToPage(1, type);
+				initPagination(type);
 				//var searchWordsHelper = $(".cercadorFiltres .search");							//Show filters as text helper
 				var lang = getCurrentLanguage();
 				//searchWordsHelperText = literals.query.showing[lang] + data.hits.found + literals.query.results[lang];
@@ -300,31 +296,125 @@ function querySearchEngine(searchParams,target){
 			}
 		}
 	).fail(function(xhr, textStatus, errorThrown){
-		fitxaResults.html("<p style='font-style:italic'>"+literals.results.connectionError[getCurrentLanguage()]+"</p>");
+		results.html("<p style='font-style:italic'>"+literals.results.connectionError[getCurrentLanguage()]+"</p>");
 	});
+}
 
-	// Content_type: grup
-	$.ajax({
-		url: grupURL,
-	}).done(
-		function(data){
-			if(data.hits.found == 0){
-				grupResults.html("<p style='font-style:italic'>"+literals.results.noresults[getCurrentLanguage()]+"</p>");
-			} else {
-				var items=data.hits.hit;
-				var result="";
-				for (var i = 0; i < items.length; i++) {
-					result+=getResultMarkup(items[i], "grup",i);
-				}
-				result+=getPaginationMarkup(data.hits.found, "grup");
-				grupResults.html(result);
-				navigateToPage(1, "grup");
-				initPagination("grup");
-			}
-		}
-	).fail(function(xhr, textStatus, errorThrown){
-		grupResults.html("<p style='font-style:italic'>"+literals.results.connectionError[getCurrentLanguage()]+"</p>");
-	});
+function querySearchEngine(searchParams){
+	
+	var searchWordsHelperText = "";
+	$(".cercadorFiltres .search").text("");
+	// Content_type: fitxa
+	console.log('switching ... || searchParams[target] = ',searchParams["target"], '|| ');
+	switch(searchParams["target"]){
+		case '1' :
+			console.log('calling fitxa or grup results...');
+			var fitxaResults = $(".fitxaResults .row");
+			var grupResults = $(".grupResults .row");
+			var endpointUrl = "https://transfer-research.am.pre.uoc.es/api/search";
+			var fitxaURL = buildQuery(endpointUrl,searchParams)+"&tipus=fitxa";
+			var grupURL = buildQuery(endpointUrl,searchParams)+"&tipus=grup";
+			buildAjaxQueryCalloutAndProcessResultsFromCloudSearch(fitxaURL,fitxaResults, "fitxa");
+			buildAjaxQueryCalloutAndProcessResultsFromCloudSearch(grupURL,grupResults, "grup");
+			break;
+		case '2' :
+			console.log('calling transfer results...');
+			var solucionsTecResults = $(".solucionsTecResults .row");
+			var patentsResults = $(".patentsResults .row");
+			var serveisResults = $(" .serveisResults .row");
+			var spinResults = $(" .spinResults .row");
+			var endpointUrl = "http://search-webri-2dz3yckt2f5cjq7hcsbois6nw4.eu-west-1.cloudsearch.amazonaws.com/api/search";
+			var transferURL = buildQuery(endpointUrl,searchParams)+"&tipus=transfer";
+			buildAjaxQueryCalloutAndProcessResultsFromCloudSearch(transferURL,solucionsTecResults, "sol_tec");
+			buildAjaxQueryCalloutAndProcessResultsFromCloudSearch(transferURL,patentsResults, "patent");
+			buildAjaxQueryCalloutAndProcessResultsFromCloudSearch(transferURL,serveisResults, "servei");
+			buildAjaxQueryCalloutAndProcessResultsFromCloudSearch(transferURL, spinResults, "spin");
+			break;
+		case '3' :
+			console.log('calling text results...');
+			var fitxaResults = $(".fitxaResults .row");
+			var grupResults = $(".grupResults .row");
+			var solucionsTecResults = $(".solucionsTecResults .row");
+			var patentsResults = $(".patentsResults .row");
+			var serveisResults = $(" .serveisResults .row");
+			var spinResults = $(" .spinResults .row");
+			var endpointUrlAl = "search-webri-2dz3yckt2f5cjq7hcsbois6nw4.eu-west-1.cloudsearch.amazonaws.com";
+			var endpointUrlUoc = "https://transfer-research.am.pre.uoc.es/api/search";
+			var fitxaURL = buildQuery(endpointUrlUoc,searchParams)+"&tipus=fitxa";
+			var grupURL = buildQuery(endpointUrlOuc,searchParams)+"&tipus=grup";
+			var transferURL = buildQuery(endpointUrlAl,searchParams)+"&tipus=transfer";
+			buildAjaxQueryCalloutAndProcessResultsFromCloudSearch(fitxaURL,fitxaResults, "fitxa");
+			buildAjaxQueryCalloutAndProcessResultsFromCloudSearch(grupURL,grupResults, "grup");
+			buildAjaxQueryCalloutAndProcessResultsFromCloudSearch(transferURL,solucionsTecResults, "sol_tec");
+			buildAjaxQueryCalloutAndProcessResultsFromCloudSearch(transferURL,patentsResults, "patent");
+			buildAjaxQueryCalloutAndProcessResultsFromCloudSearch(transferURL,serveisResults, "servei");
+			buildAjaxQueryCalloutAndProcessResultsFromCloudSearch(transferURL, spinResults, "spin");
+			break;
+		default:
+			break;
+	}
+	// $.ajax({
+	// 	url: fitxaURL,
+	// }).done(
+	// 	function(data, returnCode, request){
+	// 		if(data.hits.found == 0){
+	// 			fitxaResults.html("<p style='font-style:italic'>"+literals.results.noresults[getCurrentLanguage()]+"</p>");
+	// 		} else {
+	// 			var items=data.hits.hit;
+	// 			var result="";
+	// 			for (var i = 0; i < items.length; i++) {
+	// 				result+=getResultMarkup(items[i], "fitxa", i);
+	// 			}
+	// 			result+=getPaginationMarkup(data.hits.found, "fitxa");
+	// 			fitxaResults.html(result);
+	// 			navigateToPage(1, "fitxa");
+	// 			initPagination("fitxa");
+	// 			//var searchWordsHelper = $(".cercadorFiltres .search");							//Show filters as text helper
+	// 			var lang = getCurrentLanguage();
+	// 			//searchWordsHelperText = literals.query.showing[lang] + data.hits.found + literals.query.results[lang];
+				
+	// 			/*if(Object.keys(searchParams).length){
+	// 				searchWordsHelperText += literals.query.matching[lang];	
+	// 				for (var key in searchParams) {
+	// 					if(searchParams.hasOwnProperty(key) && key != "visualitzacio") {
+	// 						literalAux = literals.fields[key];
+	// 						searchWordsHelperText += literalAux[lang];
+	// 						searchWordsHelperText += searchParams[key];
+	// 						searchWordsHelperText += "; ";
+	// 					}	
+						
+	// 				}
+	// 			}*/
+				
+	// 			//searchWordsHelper.text(searchWordsHelperText);
+	// 		}
+	// 	}
+	// ).fail(function(xhr, textStatus, errorThrown){
+	// 	fitxaResults.html("<p style='font-style:italic'>"+literals.results.connectionError[getCurrentLanguage()]+"</p>");
+	// });
+
+	// // Content_type: grup
+	// $.ajax({
+	// 	url: grupURL,
+	// }).done(
+	// 	function(data){
+	// 		if(data.hits.found == 0){
+	// 			grupResults.html("<p style='font-style:italic'>"+literals.results.noresults[getCurrentLanguage()]+"</p>");
+	// 		} else {
+	// 			var items=data.hits.hit;
+	// 			var result="";
+	// 			for (var i = 0; i < items.length; i++) {
+	// 				result+=getResultMarkup(items[i], "grup",i);
+	// 			}
+	// 			result+=getPaginationMarkup(data.hits.found, "grup");
+	// 			grupResults.html(result);
+	// 			navigateToPage(1, "grup");
+	// 			initPagination("grup");
+	// 		}
+	// 	}
+	// ).fail(function(xhr, textStatus, errorThrown){
+	// 	grupResults.html("<p style='font-style:italic'>"+literals.results.connectionError[getCurrentLanguage()]+"</p>");
+	// });
 }
 function getResultMarkup(item, content_type, idx){
 	var markup='<div class="col-xs-12 col-md-4" id="'+content_type+'Result_'+idx+'">';
