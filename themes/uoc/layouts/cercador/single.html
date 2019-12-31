@@ -64,8 +64,8 @@
 													{{ range $index, $element := .Params.ambits_especialitzacio }}
 													<div class="wrap-input">
 														<fieldset>
-															<input role="group" aria-label="input{{$index}}" type="checkbox" id="ambit_especialitzacio_{{$index}}" value="{{$element.value}}">
-															<label aria-label="label{{$index}}" for="ambit_especialitzacio_{{$index}}">{{$element.display_name}}</label>
+															<input role="group" aria-label="input{{$index}}" type="checkbox" id="{{$element.value}}" value="{{$element.value}}">
+															<label aria-label="label{{$index}}" for="{{$element.value}}">{{$element.display_name}}</label>
 														</fieldset>
 													</div>
 													{{ end }}
@@ -84,8 +84,8 @@
 														{{ range $index, $element := .Params.ods }}
 														<div class="wrap-input">
 															<fieldset>
-																<input role="group" aria-label="{{$element.display_name}}" type="checkbox" id="ods_{{$index}}" value="{{$element.value}}">
-																<label aria-label="{{$element.display_name}}" role="group" for="ods_{{$index}}"><span class="sr-only">{{$element.display_name}}</span><img src="{{$element.img}}" alt=""></label>
+																<input role="group" aria-label="{{$element.display_name}}" type="checkbox" id="{{$element.value}}" value="{{$element.value}}">
+																<label aria-label="{{$element.display_name}}" role="group" for="{{$element.value}}"><span class="sr-only">{{$element.display_name}}</span><img src="{{$element.img}}" alt=""></label>
 															</fieldset>
 														</div>
 														{{ end }}
@@ -125,8 +125,8 @@
 												{{ range $index, $element := .Params.centre }}
 												<div class="wrap-input">
 													<fieldset>
-														<input role="group" aria-label="{{$element.display_name}}" type="checkbox" id="center_{{$index}}" value="{{$element.value}}">
-														<label aria-label="{{$element.display_name}}" for="center_{{$index}}">{{$element.display_name}}</label>
+														<input role="group" aria-label="{{$element.display_name}}" type="checkbox" id="{{$element.value}}" value="{{$element.value}}">
+														<label aria-label="{{$element.display_name}}" for="{{$element.value}}">{{$element.display_name}}</label>
 													</fieldset>
 												</div>
 												{{ end }}
@@ -137,14 +137,14 @@
 												<p>{{ T "uoc_ri_cercador_filtres_visualitzacio"}}</p>
 												<div class="wrap-input">
 													<fieldset>
-														<input role="group" aria-label="Grups de recerca" type="checkbox" id="visual_1" value="grup">
-														<label aria-label="Grups de recerca" for="visual_1">{{ T "uoc_ri_cercador_grups"}}</label>
+														<input role="group" aria-label="Grups de recerca" type="checkbox" id="visual_grup" value="grup">
+														<label aria-label="Grups de recerca" for="visual_grup">{{ T "uoc_ri_cercador_grups"}}</label>
 													</fieldset>
 												</div>
 												<div class="wrap-input">
 													<fieldset>
-														<input role="group" aria-label="Investigadors" type="checkbox" id="visual_2" value="fitxa">
-														<label aria-label="Investigadors" for="visual_2">{{ T "uoc_ri_cercador_investigadors"}}</label>
+														<input role="group" aria-label="Investigadors" type="checkbox" id="visual_investigador" value="fitxa">
+														<label aria-label="Investigadors" for="visual_investigador">{{ T "uoc_ri_cercador_investigadors"}}</label>
 													</fieldset>
 												</div>
 											</form>
@@ -184,7 +184,7 @@
 						</section>
 					</div>
 					
-					<div id="tab-content-2" data-tab-content="" role="tabpanel" aria-labelledby="tab-1" aria-hidden="true" class="tab-content is-active cercadorSectors">
+					<div id="tab-content-2" data-tab-content="" role="tabpanel" aria-labelledby="tab-2" aria-hidden="true" class="tab-content is-active cercadorSectors">
 						<section data-tab-system="" class="filters-list-cercador mT60">
 							<div class="row">
 								<div class="col-xs-6">
@@ -214,8 +214,8 @@
 													{{ range $index, $el := .Params.sector_productiu }}
 													<div class="wrap-input">
 														<fieldset>
-															<input role="group" aria-label="input{{$index}}" type="checkbox" id="sector_productiu_{{$index}}" value="{{$el.value}}">
-															<label aria-label="label{{$index}}" for="sector_productiu_{{$index}}">{{$el.display_name}}</label>
+															<input role="group" aria-label="input{{$index}}" type="checkbox" id="{{$el.value}}" value="{{$el.value}}">
+															<label aria-label="label{{$index}}" for="{{$el.value}}">{{$el.display_name}}</label>
 														</fieldset>
 													</div>
 													{{ end }}
@@ -228,8 +228,8 @@
 												{{ range $index, $element := .Params.centre }}
 												<div class="wrap-input">
 													<fieldset>
-														<input role="group" aria-label="{{$element.display_name}}" type="checkbox" id="center_{{$index}}" value="{{$element.value}}">
-														<label aria-label="{{$element.display_name}}" for="center_{{$index}}">{{$element.display_name}}</label>
+														<input role="group" aria-label="{{$element.display_name}}" type="checkbox" id="{{$element.value}}" value="{{$element.value}}">
+														<label aria-label="{{$element.display_name}}" for="{{$element.value}}">{{$element.display_name}}</label>
 													</fieldset>
 												</div>
 												{{ end }}
@@ -240,14 +240,14 @@
 												<p>{{ T "uoc_ri_cercador_filtres_visualitzacio"}}</p>
 												<div class="wrap-input">
 													<fieldset>
-														<input role="sols_innov" aria-label='{{ T "uoc_ri_cercador_solucions" }}' type="checkbox" id="visual_1" value="sols_innov">
-														<label aria-label='{{ T "uoc_ri_cercador_solucions" }}' for="visual_1">{{ T "uoc_ri_cercador_solucions"}}</label>
+														<input role="sols_innov" aria-label='{{ T "uoc_ri_cercador_solucions" }}' type="checkbox" id="visual_sols_innov_2" value="sols_innov">
+														<label aria-label='{{ T "uoc_ri_cercador_solucions" }}' for="visual_sols_innov_2">{{ T "uoc_ri_cercador_solucions"}}</label>
 													</fieldset>
 												</div>
 												<div class="wrap-input">
 													<fieldset>
-														<input role="spin_offs" aria-label='{{ T "uoc_ri_cercador_spin_off"}}' type="checkbox" id="visual_2" value="spin_offs">
-														<label aria-label='{{ T "uoc_ri_cercador_spin_off"}}' for="visual_2">{{ T "uoc_ri_cercador_spin_off"}}</label>
+														<input role="spin_offs" aria-label='{{ T "uoc_ri_cercador_spin_off"}}' type="checkbox" id="visual_spin_off_2" value="spin_offs">
+														<label aria-label='{{ T "uoc_ri_cercador_spin_off"}}' for="visual_spin_off_2">{{ T "uoc_ri_cercador_spin_off"}}</label>
 													</fieldset>
 												</div>
 											</form>
@@ -354,26 +354,26 @@
 										<p>{{ T "uoc_ri_cercador_filtres_visualitzacio"}}</p>
 										<div class="wrap-input">
 											<fieldset>
-												<input role="group" aria-label="Grups de recerca" type="checkbox" id="visual_1" value="grup">
-												<label aria-label="Grups de recerca" for="visual_1">{{ T "uoc_ri_cercador_grups"}}</label>
+												<input role="group" aria-label="Grups de recerca" type="checkbox" id="visual_grup_3" value="grup">
+												<label aria-label="Grups de recerca" for="visual_grup_3">{{ T "uoc_ri_cercador_grups"}}</label>
 											</fieldset>
 										</div>
 										<div class="wrap-input">
 											<fieldset>
-												<input role="group" aria-label="Investigadors" type="checkbox" id="visual_2" value="fitxa">
-												<label aria-label="Investigadors" for="visual_2">{{ T "uoc_ri_cercador_investigadors"}}</label>
+												<input role="group" aria-label="Investigadors" type="checkbox" id="visual_investigador_3" value="fitxa">
+												<label aria-label="Investigadors" for="visual_investigador_3">{{ T "uoc_ri_cercador_investigadors"}}</label>
 											</fieldset>
 										</div>
 										<div class="wrap-input">
 											<fieldset>
-												<input role="sols_innov" aria-label='{{ T "uoc_ri_cercador_solucions" }}' type="checkbox" id="visual_3" value="sols_innov">
-												<label aria-label='{{ T "uoc_ri_cercador_solucions" }}' for="visual_3">{{ T "uoc_ri_cercador_solucions"}}</label>
+												<input role="sols_innov" aria-label='{{ T "uoc_ri_cercador_solucions" }}' type="checkbox" id="visual_sols_innov_3" value="sols_innov">
+												<label aria-label='{{ T "uoc_ri_cercador_solucions" }}' for="visual_sols_innov_3">{{ T "uoc_ri_cercador_solucions"}}</label>
 											</fieldset>
 										</div>
 										<div class="wrap-input">
 											<fieldset>
-												<input role="spin_offs" aria-label='{{ T "uoc_ri_cercador_spin_off"}}' type="checkbox" id="visual_4" value="spin_offs">
-												<label aria-label='{{ T "uoc_ri_cercador_spin_off"}}' for="visual_4">{{ T "uoc_ri_cercador_spin_off"}}</label>
+												<input role="spin_offs" aria-label='{{ T "uoc_ri_cercador_spin_off"}}' type="checkbox" id="visual_spin_off_3" value="spin_offs">
+												<label aria-label='{{ T "uoc_ri_cercador_spin_off"}}' for="visual_spin_off_3">{{ T "uoc_ri_cercador_spin_off"}}</label>
 											</fieldset>
 										</div>
 									</form>

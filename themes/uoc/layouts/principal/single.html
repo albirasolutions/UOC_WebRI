@@ -6,11 +6,12 @@
 </head>
 
 <body>
-	{{ partial "header.html" . }}
 	<section class="hero-section" style="z-index:-1;">
 		<div class="hero-section__img">
+			{{ partial "header.html" . }}
 			<img src="https://via.placeholder.com/1200x500" alt="Hero imagen" class="img-responsive w100 hidden-xs hidden-sm">
 			<img src="https://via.placeholder.com/800x1000" alt="Hero imagen" class="img-responsive w100 visible-xs visible-sm">
+			
 		</div>
 		<div class="hero-section__icons">
 			<div class="container">

@@ -125,7 +125,7 @@ jQuery(document).ready(function ($) {
 
     $('.filters-main__box').on('click', '.tab', function() {
         var $this = $(this).closest('.filters-main__box');
-        console.log('this...',$(this)[0].getAttribute("href"));
+        //console.log('this...',$(this)[0].getAttribute("href"));
         if(!$this.hasClass('box-green-selected')) {
             $this.addClass('box-green-selected');
             $this.siblings().removeClass('box-green-selected');
@@ -136,10 +136,12 @@ jQuery(document).ready(function ($) {
             $this.siblings().removeClass('box-green-selected');
             $('.filters-main__content').addClass('hidde-content');
         }
-        var ref = $(this)[0].getAttribute("href");
-        var x = ref.split("-");
+        var ref = $(this)[0];
+        console.log('ref-->',ref);
+        var x = ref.getAttribute("href").split("-");
         console.log('x--->',x);
         sessionStorage.setItem("target",x[2]);
+
     });
 
     if($('.sticky-sidebar').length > 0) {
