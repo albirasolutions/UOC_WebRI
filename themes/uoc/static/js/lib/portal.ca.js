@@ -16393,6 +16393,7 @@ function loadJsonResourcesListCards(f, a, b, d, e, c) {
 }
 
 function loadJsonResourcesListCards(b, d, f, h, a, j, g) {
+    
     if (g == undefined) {
         var g = "3"
     }
