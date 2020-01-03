@@ -110,8 +110,6 @@ jQuery(document).ready(function ($) {
 		console.log('$(".pagination__item").unbind() ',$(".pagination__item").unbind());
 		$(".pagination__item").unbind();
 		e.stopImmediatePropagation();
-		e.stopPropagation();  //prevent from any parent click handlers that didn't prevent the jump
-		console.log("PAGINATION")
 		e.preventDefault();
 		
 	});
@@ -119,8 +117,6 @@ jQuery(document).ready(function ($) {
 		console.log('$(".pagination__item a").unbind(); ',$(".pagination__item a").unbind());
 		$(".pagination__item a").unbind();
 		e.stopImmediatePropagation();
-		e.stopPropagation();  //prevent from any parent click handlers that didn't prevent the jump
-		console.log("PAGINATION A")
 		e.preventDefault();
 
 	});
