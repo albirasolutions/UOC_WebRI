@@ -688,7 +688,16 @@ function previousPage(selector){
 }
 function navigateToPage(pageNumber, selector){
 	console.log('selector for html elements---> ',selector);
+	$('[class*=pagination__item]').click(function(e) {
+		console.log('jump prevented');
+		e.preventDefault();   //prevent the click from jumping esp on hashes
+		e.stopPropagation();  //prevent from any parent click handlers that didn't prevent the jump
+	
+	
+		return false;         //the natural way to prevent the jump
+	});
 	if($("."+selector+"Pagination .is-active").length > 0){
+		
 		var currentPage = $("."+selector+"Pagination .is-active")[0].id.replace("Page_"+selector+"_", "");
 		var paginationItems = $("."+selector+"Pagination li");
 		var pageCount = paginationItems.length - 2;
@@ -719,6 +728,14 @@ function navigateToPage(pageNumber, selector){
 }
 function initPagination(content_type){
 	if($("."+content_type+"Pagination")){
+		$('[class*=pagination__item]').click(function(e) {
+			console.log('jump prevented');
+			e.preventDefault();   //prevent the click from jumping esp on hashes
+			e.stopPropagation();  //prevent from any parent click handlers that didn't prevent the jump
+		
+		
+			return false;         //the natural way to prevent the jump
+		});
 		var pages = $("."+content_type+"Pagination li");
 		for (var i = $("."+content_type+"Pagination li").length - 1; i >= 0; i--) {
 			if(i == $("."+content_type+"Pagination li").length-1){								//Next button
