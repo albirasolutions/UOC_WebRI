@@ -464,12 +464,6 @@ function buildQuery(endpointUrl,searchParams, type){
 function buildAjaxQueryCallout2GrupOrFitxaAndProcessResultsFromCloudSearch(queryUrl,results, type){
 	console.log('querying...',queryUrl);
 	$.ajax({
-		// headers:{
-		// 	 "Access-Control-Allow-Origin": "*",
-		// 	 "Access-Control-Allow-Methods" : "GET, OPTIONS",
-		// 	 "Access-Control-Allow-Headers" : 'Origin, Content-Type',
-		// 	 "Accept" : "*/*"
-		// }, 
 		url: queryUrl
 	}).done(
 		function(data, returnCode, request){
@@ -525,12 +519,6 @@ function buildAjaxQueryCallout2TransfersAndProcessResultsFromCloudSearch(queryUr
 
 	console.log('querying...',queryUrl);
 	$.ajax({
-		// headers:{
-		// 	 "Access-Control-Allow-Origin": "*",
-		// 	 "Access-Control-Allow-Methods" : "GET, OPTIONS",
-		// 	 "Access-Control-Allow-Headers" : 'Origin, Content-Type',
-		// 	 "Accept" : "*/*"
-		// }, 
 		url: queryUrl
 	}).done(
 		function(data, returnCode, request){
