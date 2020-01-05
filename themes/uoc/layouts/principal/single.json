@@ -12,10 +12,10 @@
 			"eslogan": {{$general.slogan | jsonify}},
 			"imatge_alt": {{$s.Params.title | jsonify}},
 			"imatge_title": {{$s.Params.title | jsonify}},
-			"imatge_url": {{$general.img_background | jsonify}},
+			"imatge_url": {{if ne $general.img_background nil }}{{$general.img_background | jsonify}}{{else}}""{{end}},
 			"centre": {{$general.centre | jsonify}},
 			"sector": {{$general.sector | jsonify}},
-			"logo_url": {{$general.logo | jsonify}},{{$keywords := slice ""}}{{- range $k := $general.keywords}}{{$keywords := slice $k.value }}{{end}}{{- if ne $keywords nil }}
+			"logo_url": {{if ne $general.logo nil }}{{$general.logo | jsonify}}{{else}}""{{end}},{{$keywords := slice ""}}{{- range $k := $general.keywords}}{{$keywords := slice $k.value }}{{end}}{{- if ne $keywords nil }}
 			"keywords": {{$keywords | jsonify}},{{end}}{{$xarxesList := slice ""}}{{$xarxesAddress := slice ""}}{{- range $x := $general.xarxes}}{{$xarxesList := slice $x.xarxa }}{{$xarxesAddress := slice $x.address }}{{end}}{{- if ne $xarxesList nil }}
 			"xarxes_list": {{$xarxesList | jsonify}},{{end}}{{- if ne $xarxesAddress nil }}
 			"xarxes_address": {{$xarxesAddress | jsonify}}{{end}}{{- end }}			
