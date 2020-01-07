@@ -33,7 +33,7 @@
 		"casos_exit_descripcio":{{$casos_exit.descripcio | jsonify}},
 		"casos_exit_img":{{$casos_exit.img | jsonify}},
 		"casos_exit_url_success":{{$casos_exit.url_success | jsonify}},{{end}}{{if eq $s.Type "spin_off"}}{{- if and (isset $s.Params "productes_serveis") (ne $s.Params.productes_serveis nil) }}{{$productes_serveis := index ($s.Params.productes_serveis) 0 }}
-		"productes_serveis_title" : {{$productes_serveis.titol | jsonify }},
+		"productes_serveis_titol" : {{$productes_serveis.titol | jsonify }},
 		"productes_serveis_descripcio" : {{$productes_serveis.descripcio | jsonify }},{{end}}{{- if and (isset $s.Params "clients") (ne $s.Params.clients nil) }}{{$clients := index ($s.Params.clients) 0 }}
 		"clients_title" : {{$clients.titol | jsonify }},
 		"clients_descripcio" : {{$clients.descripcio | jsonify }},{{end}}{{end}}{{end}}{{- if and (isset $s.Params "grups_recerca") (ne $s.Params.grups_recerca nil) }}{{$grupsList := slice ""}}{{$invList := slice ""}}{{range $gr := $s.Params.grups_recerca }}{{$grupsList := $gr.grups }}{{$invList := $gr.investigadors }}{{end}}
