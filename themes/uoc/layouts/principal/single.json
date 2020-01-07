@@ -7,7 +7,7 @@
 		"title": {{$s.Params.title | jsonify}},{{- end }}{{- if and (isset $s.Params "general") (ne $s.Params.general nil) }}{{$general := index ($s.Params.general) 0 }}
 		"name": {{if eq $s.Type "solucio_tec" }}{{$general.nom_solucio | jsonify}}{{else if eq $s.Type "patent"}}{{$general.nom_patent | jsonify}}{{else if eq $s.Type "servei"}}{{$general.nom_servei | jsonify}}{{else}}{{$general.nom_spinoff | jsonify}}{{end}},
 		"text_breu": {{$general.text_breu | jsonify}},
-		"eslogan": {{$general.slogan | jsonify}},
+		"eslogan": {{- if ne $general.slogan nil}}{{ $general.slogan | jsonify }}{{else}}""{{end}},
 		"imatge_alt": {{$s.Params.title | jsonify}},
 		"imatge_title": {{$s.Params.title | jsonify}},
 		"imatge_url": {{if ne $general.img_background nil }}{{$general.img_background | jsonify}}{{else}}""{{end}},
@@ -44,7 +44,7 @@
 		"contacts_name" : {{- if ne $contacte.text nil}}{{ $contacte.text | jsonify }}{{else}}""{{end}},
 		"contacts_phone" : {{- if ne $contacte.telefon nil}}{{ $contacte.telefon | jsonify }}{{else}}""{{end}},{{end}}
 		"content" : "transfer",
-		"content-encoding": "utf-8",
+		"content_encoding": "utf-8",
 		"content_type" : {{$s.Type | jsonify}},
 		"resourcename" : {{$s.Params.title | jsonify}},
 		"url" : {{ $s.Permalink | jsonify }}
