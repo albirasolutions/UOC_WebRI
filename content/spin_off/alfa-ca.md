@@ -3,7 +3,8 @@ title: Alfa
 language: ca
 general:
   - img_background: /img/0a5e3d8399408516a201716607daee9dc776694d.png
-    keywords: []
+    keywords: 
+      - value: '#spin'
     logo: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     nom_spinoff: Spin-Off Alfa
     sector: Salut - eHealth

@@ -4,7 +4,7 @@ language: en
 general:
   - img_background: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     keywords:
-      - null
+      - value: '#spin'
     logo: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     nom_spinoff: Spin-Off Alfa
     sector: eHealth
