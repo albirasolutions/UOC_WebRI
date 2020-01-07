@@ -153,11 +153,17 @@
 [uoc_ri_centre] other = 'Centro'
 [uoc_ri_keywords] other = 'Keywords'
 [uoc_ri_about_tec] other = 'Sobre la tecnología'
+[uoc_ri_about_pat] other = 'Sobre la patente'
+[uoc_ri_about_serv] other = 'Sobre el servicio'
+[uoc_ri_about_spin] other = 'Sobre el spin-off'
 [uoc_ri_aspect_innov] other = 'Aspectes Innovadores'
 [uoc_ri_apps] other = 'Aplicaciones'
 [uoc_ri_research_groups] other = 'Grupos de Recerca'
 [uoc_ri_researchers] other = 'Investigadores'
 [uoc_ri_contacte] other = 'Contacto'
+[uoc_ri_casos_exit] other = "Casos de Éxito"
+[uoc_ri_productes_serveis] other = "Productos/Servicios"
+[uoc_ri_clients] other = "Clientes"
 
 [uoc_ri_docs] other = "Documentos Relacionados"
 [uoc_ri_detail_social_media] other = "En la red"

@@ -5,7 +5,7 @@ general:
   - centre: e-Learn Center
     img_background: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     keywords:
-      - null
+      - value: '#service'
     nom_servei: Service alfa
     sector: Education - eLearning
     text_breu: Briefing text for service Alfa

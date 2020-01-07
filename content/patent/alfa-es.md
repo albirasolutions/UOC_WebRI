@@ -4,7 +4,8 @@ language: es
 general:
   - centre: IN3
     img_background: /img/0a5e3d8399408516a201716607daee9dc776694d.png
-    keywords: []
+    keywords: 
+      - value: '#Patent'
     logo: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     nom_patent: Patente Alfa
     sector: industria 4.0

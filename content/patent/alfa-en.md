@@ -5,7 +5,7 @@ general:
   - centre: IN3
     img_background: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     keywords:
-      - null
+      - value: '#Patent'
     logo: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     nom_patent: Patent Alfa
     sector: Industry 4.0

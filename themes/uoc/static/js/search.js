@@ -594,7 +594,7 @@ function querySearchEngine(searchParams){
 			break;
 		case '2' :
 			console.log('calling transfer results...');
-			var endpointUrl = "https://search-webri-2dz3yckt2f5cjq7hcsbois6nw4.eu-west-1.cloudsearch.amazonaws.com/2013-01-01/search";
+			var endpointUrl = "http://search-webri-2dz3yckt2f5cjq7hcsbois6nw4.eu-west-1.cloudsearch.amazonaws.com/2013-01-01/search";
 			var transferURL = buildQuery(endpointUrl,searchParams,"transfer");
 			buildAjaxQueryCallout2TransfersAndProcessResultsFromCloudSearch(transferURL, "transfer");
 			break;
@@ -606,7 +606,7 @@ function querySearchEngine(searchParams){
 			var patentsResults = $(".patentsResults .row");
 			var serveisResults = $(" .serveisResults .row");
 			var spinResults = $(" .spinResults .row");
-			var endpointUrlAl = "https://search-webri-2dz3yckt2f5cjq7hcsbois6nw4.eu-west-1.cloudsearch.amazonaws.com/2013-01-01/search";
+			var endpointUrlAl = "http://search-webri-2dz3yckt2f5cjq7hcsbois6nw4.eu-west-1.cloudsearch.amazonaws.com/2013-01-01/search";
 			var endpointUrlUoc = "https://transfer-research.am.pre.uoc.es/api/search";
 			var fitxaURL = buildQuery(endpointUrlUoc,searchParams,'grup')+"&tipus=fitxa";
 			var grupURL = buildQuery(endpointUrlUoc,searchParams,'inv')+"&tipus=grup";
