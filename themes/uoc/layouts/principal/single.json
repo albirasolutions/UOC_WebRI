@@ -27,8 +27,8 @@
 		"sobre_spin_descripcio": {{$sobre_spinoff.descripcio | jsonify}},{{end}}{{end}}{{if or (eq $s.Type "solucio_tec") (eq $s.Type "pantent")}}{{- if and (isset $s.Params "aspectes_innovadors") (ne $s.Params.aspectes_innovadors nil) }}{{$aspectes_innovadors := index ($s.Params.aspectes_innovadors) 0 }}
 		"asp_innov_title": {{$aspectes_innovadors.titol | jsonify}},
 		"asp_innov_descripcio": {{$aspectes_innovadors.descripcio | jsonify}},{{end}}{{- if and (isset $s.Params "aplicacions") (ne $s.Params.aplicacions nil) }}{{$aplicacions := index ($s.Params.aplicacions) 0 }}
-		"app_title": {{$aplicacions.titol | jsonify}},
-		"app_descripcio": {{$aplicacions.descripcio | jsonify}},{{end}}{{end}}{{if or (eq $s.Type "servei") (eq $s.Type "spin_off")}}{{- if and (isset $s.Params "casos_exit") (ne $s.Params.casos_exit nil) }}{{$casos_exit := index ($s.Params.casos_exit) 0 }}
+		"app_title": {{- if ne $aplicacions.titol nil}}{{ $aplicacions.titol | jsonify }}{{else}}""{{end}},
+		"app_descripcio": {{- if ne $aplicacions.descripcio nil}}{{ $aplicacions.descripcio | jsonify }}{{else}}""{{end}},{{end}}{{end}}{{if or (eq $s.Type "servei") (eq $s.Type "spin_off")}}{{- if and (isset $s.Params "casos_exit") (ne $s.Params.casos_exit nil) }}{{$casos_exit := index ($s.Params.casos_exit) 0 }}
 		"casos_exit_title":{{$casos_exit.titol | jsonify}},
 		"casos_exit_descripcio":{{$casos_exit.descripcio | jsonify}},
 		"casos_exit_img":{{$casos_exit.img | jsonify}},
