@@ -36,13 +36,13 @@
 		"productes_serveis_titol" : {{$productes_serveis.titol | jsonify }},
 		"productes_serveis_descripcio" : {{$productes_serveis.descripcio | jsonify }},{{end}}{{- if and (isset $s.Params "clients") (ne $s.Params.clients nil) }}{{$clients := index ($s.Params.clients) 0 }}
 		"clients_title" : {{$clients.titol | jsonify }},
-		"clients_descripcio" : {{$clients.descripcio | jsonify }},{{end}}{{end}}{{end}}{{- if and (isset $s.Params "grups_recerca") (ne $s.Params.grups_recerca nil) }}{{$grupsList := slice ""}}{{$invList := slice ""}}{{range $gr := $s.Params.grups_recerca }}{{$grupsList := $gr.grups }}{{$invList := $gr.investigadors }}{{end}}
-		"grups": {{if ne $grupsList nil}}{{$grupsList | jsonify}}{{else}}""{{end}},
-		"investigadors": {{if ne $invList nil}}{{$invList | jsonify}}{{else}}""{{end}},{{end}}{{- if and (isset $s.Params "contacte") (ne $s.Params.contacte nil) }}{{$contacte := index $s.Params.contacte 0}}
-		"contacts_email" : {{- if ne $contacte.email nil}}{{ $contacte.email | jsonify }}{{else}}""{{end}},
-		"contacts_address" : {{- if ne $contacte.address nil}}{{ $contacte.address | jsonify }}{{else}}""{{end}},
-		"contacts_name" : {{- if ne $contacte.text nil}}{{ $contacte.text | jsonify }}{{else}}""{{end}},
-		"contacts_phone" : {{- if ne $contacte.telefon nil}}{{ $contacte.telefon | jsonify }}{{else}}""{{end}},{{end}}
+		"clients_descripcio" : {{$clients.descripcio | jsonify }},{{end}}{{end}}{{end}}{{- if and (isset $s.Params "grups_recerca") (ne $s.Params.grups_recerca nil) }}{{$grupsList := slice ""}}{{$invList := slice ""}}{{range $gr := $s.Params.grups_recerca }}{{$grupsList := $gr.grups }}{{$invList := $gr.investigadors }}{{end}}{{if ne $grupsList nil}}
+		"grups": {{$grupsList | jsonify}},{{end}}{{if ne $invList nil}}
+		"investigadors": {{$invList | jsonify}},{{end}}{{end}}{{- if and (isset $s.Params "contacte") (ne $s.Params.contacte nil) }}{{$contacte := index $s.Params.contacte 0}}{{- if ne $contacte.email nil}}
+		"contacts_email" : {{ $contacte.email | jsonify }},{{end}}{{- if ne $contacte.address nil}}
+		"contacts_address" : {{ $contacte.address | jsonify }},{{end}}{{- if ne $contacte.text nil}}
+		"contacts_name" : {{ $contacte.text | jsonify }},{{end}}{{- if ne $contacte.telefon nil}}
+		"contacts_phone" : {{ $contacte.telefon | jsonify }},{{end}}{{end}}
 		"content" : "transfer",
 		"content_encoding": "utf-8",
 		"content_type" : {{$s.Type | jsonify}},
