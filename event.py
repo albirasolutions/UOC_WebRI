@@ -1,9 +1,6 @@
 import boto3
-import os
-import sys
-import uuid
-import logging
-logger = logging.getLogger()
+import json
+"""logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 from urllib.parse import unquote_plus
 
@@ -32,3 +29,34 @@ def upload(event, context):
            logger.info(contents)
         f.close()
         cloudsearch_client.upload_documents(documents=download_path, contentType='application/json')
+"""
+def test(event,context):
+    body={
+        "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...",
+        #"input": event
+    }
+
+    response ={
+        "statusCode": 200,
+        "body": json.dumps(body)
+    }
+
+    return response
+
+def search(event,context):
+    client = boto3.client('cloudsearchdomain', endpoint_url='https://search-webri-2dz3yckt2f5cjq7hcsbois6nw4.eu-west-1.cloudsearch.amazonaws.com')
+    args= event['queryStringParameters']
+    simple=args['simple']
+    if simple:
+        response = client.search(
+        query= simple,
+        queryParser='simple')
+        ret={
+        "statusCode":200,
+        "body": json.dumps(response)}
+        return ret
+
+    ret={
+        "statusCode":200,
+        "body": "Treballant en consultes estructurades"}
+    return ret
