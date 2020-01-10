@@ -25,11 +25,6 @@ descripcio:
       finançat set projectes de recerca de la UOC.
 
 
-
-       
-
-
-
       ## 5G per a la digitalització de la indústria
 
 
@@ -50,11 +45,6 @@ descripcio:
       aplicacions en la robòtica. SPOTS espera que podrà demostrar amb prototips
       funcionals els resultats de la recerca, centrant-se també en la
       transferència industrial mitjançant una xarxa d'empreses del territori.
-
-
-
-       
-
 
 
       ## Internet autogestionat
@@ -80,11 +70,6 @@ descripcio:
       (AMICS), que té com a objectiu estudiar i proposar metodologies
       d'assignació de dades, aprofitant així els recursos que comparteixen els
       usuaris i millorant l'accés i l'ús d'aquestes xarxes compartides.
-
-
-
-       
-
 
 
       ## Resiliència urbana i riscos hidroclimàtics
@@ -120,11 +105,6 @@ descripcio:
       transformació socioambiental.
 
 
-
-       
-
-
-
       ## Xarxes socials per a estimular la participació ciutadana dels joves
 
 
@@ -145,11 +125,6 @@ descripcio:
       Un dels objectius principals del projecte és el desenvolupament de la
       capacitat crítica i analítica digital dels joves, estimulant la seva
       participació ciutadana.
-
-
-
-       
-
 
 
       ## Aprofitar el retorn que es rep per a fomentar l'aprenentatge
@@ -174,11 +149,6 @@ descripcio:
       partir d'aquest, fomentar la seva participació, reduir l'abandonament en
       l'àmbit universitari i facilitar una eina de decisió per als docents en
       relació amb aquest retorn en entorns virtuals.
-
-
-
-       
-
 
 
       ## Les correccions en l'estudi d'idiomes
@@ -210,11 +180,6 @@ descripcio:
       l'aprenentatge d'idiomes de manera virtual.
 
 
-
-       
-
-
-
       ## Estudi de la societat com a ecosistema en xarxa
 
 
@@ -238,11 +203,6 @@ descripcio:
       proposa dissenyar metodologies que facilitin la comprensió del
       funcionament en xarxa de la societat, i també l'estudi d'altres sistemes
       complexos que hi estan relacionats.
-
-
-
-       
-
 
 
       ## Marc legal en l'ús de la intel·ligència artificial
@@ -271,11 +231,6 @@ descripcio:
       des del punt de vista de la propietat intel·lectual, i també de la
       protecció de la privacitat, especialment en el cas de la presa de
       decisions automatitzades.
-
-
-
-       
-
 
 
       ## Millorar la classificació digital automàtica de les emocions
@@ -319,11 +274,6 @@ descripcio:
       intervenen en la percepció emocional», afegeix David Masip.
 
 
-
-       
-
-
-
       ## Ciberseguretat a l'internet de les coses
 
 
@@ -352,11 +302,6 @@ descripcio:
       segurs d'intercanvi de dades en aquest tipus de dispositius que permetin
       detectar atacs i anomalies gràcies a l'ús d'algorismes d'intel·ligència
       artificial i, alhora, garantir la privacitat dels usuaris.
-
-
-
-       
-
 
 
       ## El poder de la creació social d'històries
@@ -394,9 +339,7 @@ descripcio:
       digital.
 
 
-
-
-      ![](/img/241-projectes-estatals-recerca-logo.jpg)
+      ![null](/img/241-projectes-estatals-recerca-logo.jpg)
     entrada: >-
       Les temàtiques abasten des de l'ensenyament en línia, el 5G en la
       indústria i l'internet autogestionat fins a la resiliència urbana, la
