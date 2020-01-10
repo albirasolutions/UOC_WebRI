@@ -2101,7 +2101,7 @@ collections: # A list of collections the CMS should be able to edit
         fields: 
           - {label: "Títol", name: titol, widget: string, required: true}
           - {label: Descripció, name: descripcio, widget: markdown, required: true}
-          - {label: "Lloc", name: lloc, widget: string, required: true}
+          - {label: "Lloc", name: lloc, widget: map, required: true}
           - {label: "Quan", name: "data", widget: datetime, required: true}
           - {label: "Imatge", name: "img", widget: image}
           - label: "Social"
@@ -2131,8 +2131,8 @@ collections: # A list of collections the CMS should be able to edit
         fields: 
           - {label: "Título", name: titol, widget: string, required: true}
           - {label: "Descripción", name: descripcio, widget: markdown, required: true}
-          - {label: "Lugar", name: lloc, widget: string, required: true}
-          - {label: "Quando", name: "data", widget: datetime, required: true}
+          - {label: "Lugar", name: lloc, widget: map, required: true}
+          - {label: "Cuando", name: "data", widget: datetime, required: true}
           - {label: "Imagen", name: "img", widget: image}
           - label: "Social"
             name: xarxes
@@ -2161,7 +2161,7 @@ collections: # A list of collections the CMS should be able to edit
         fields: 
           - {label: "Title", name: titol, widget: string, required: true}
           - {label: Description, name: descripcio, widget: markdown, required: true}
-          - {label: "Place", name: lloc, widget: string, required: true}
+          - {label: "Place", name: lloc, widget: map, required: true}
           - {label: "When", name: "data", widget: datetime, required: true}
           - {label: "Image", name: "img", widget: image}
           - label: "Social"
