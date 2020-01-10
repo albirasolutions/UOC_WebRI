@@ -2101,7 +2101,11 @@ collections: # A list of collections the CMS should be able to edit
         fields: 
           - {label: "Títol", name: titol, widget: string, required: true}
           - {label: Descripció, name: descripcio, widget: markdown, required: true}
-          - {label: "Lloc", name: lloc, widget: map, required: true}
+          - {label: "Lloc", name: lloc, widget: string, required: true}
+          - label: "Mapa",
+            name: mapa
+            required: true
+            widget: map
           - {label: "Quan", name: "data", widget: datetime, required: true}
           - {label: "Imatge", name: "img", widget: image}
           - label: "Social"
