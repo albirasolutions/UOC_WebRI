@@ -32,7 +32,14 @@ aplicacions:
         url: 'https://www.netlifycms.org/docs/intro/'
     titol: Aplicació solució Alfa
 grups_recerca:
-  - grups: 'GAME____1902,DigiBiz____2902'
+  - grups:
+      value:
+        - id: '1902'
+          name: GAME
+        - id: '2902'
+          name: DigiBiz
+        - id: '3302'
+          name: EDUL@B
     investigadors: Investigador Javi
 contacte:
   - address: adreça
