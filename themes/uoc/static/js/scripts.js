@@ -1,5 +1,55 @@
 // Scripts UOC
+
 jQuery(document).ready(function ($) {
+    
+
+    var layer0 = new ol.layer.Tile({
+        source: new ol.source.OSM({
+            crossOrigin: null,
+            url: 'https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            //attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        })
+    });
+
+    //L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar', attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'}).addTo(map);  
+
+    //L.marker([51.5, -0.09]).addTo(map)
+     //   .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+      //  .openPopup()
+    var address = '"Rambla del Poblenou, 16 08018 Barcelona","08018 Barcelona","Barcelona",';
+    //map.setView([40.91, -96.63], 4);
+    /*L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);*/
+    L.esri.Geocoding.geocode().text(address).run(function (err, results, response) {
+        if (err) {
+          console.log(err);
+          return;
+        }//AJAX?
+        //console.log(response);
+        console.log(results.results[0].latlng.lat);
+        console.log(results.results[0].latlng.lng);
+    });
+    var map = new ol.Map({
+	
+        layers: [ layer0 ],
+        target: 'map',
+        view: new ol.View({
+          center:[50, 45],
+          zoom: 4
+        })
+      });
+    //console.log(res);
+    //console.log(L.latlng);
+    
+   
+                                                                
+    
+                    
+    /*geocoder.geocode().text(address).run(function (error, response) {		                    						  
+        map.fitBounds(response.results[0].bounds);
+        results.addLayer(L.marker(response.results[0].latlng));
+    });*/
 
     function calculoWidth() {
         $('.js-width').each(function () {

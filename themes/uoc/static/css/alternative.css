@@ -167,3 +167,10 @@
     bottom: -4px;
     right: 0;
 }
+
+
+#map {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
