@@ -43,7 +43,7 @@ jQuery(document).ready(function ($) {
         target: 'map',
         view: new ol.View({
           center: ol.proj.fromLonLat([lng, lat]),
-          zoom: 10
+          zoom: 12
         })
     });
     var features = [];
