@@ -16,29 +16,86 @@ jQuery(document).ready(function ($) {
     //L.marker([51.5, -0.09]).addTo(map)
      //   .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
       //  .openPopup()
-    var address = '"Rambla del Poblenou, 16 08018 Barcelona","08018 Barcelona","Barcelona",';
+    var address = "Rambla del Poblenou, 16 08018 Barcelona";
     //map.setView([40.91, -96.63], 4);
     /*L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);*/
+    var lat = 41.390205;
+    var lng = 2.154007;
     L.esri.Geocoding.geocode().text(address).run(function (err, results, response) {
         if (err) {
           console.log(err);
           return;
-        }//AJAX?
-        //console.log(response);
-        console.log(results.results[0].latlng.lat);
-        console.log(results.results[0].latlng.lng);
+        }//AJAX
+        lat= results.results[0].latlng.lat;
+        lng= results.results[0].latlng.lng;
+        console.log(lat);
+        console.log(lng);
     });
-    var map = new ol.Map({
+    var Markers = [
+        {lat: lat, lng: lng},
+    ];
+    console.log(lat);
+    var mapa = new ol.Map({
 	
         layers: [ layer0 ],
         target: 'map',
         view: new ol.View({
-          center:[50, 45],
-          zoom: 4
+          center: ol.proj.fromLonLat([lng, lat]),
+          zoom: 10
         })
-      });
+    });
+    var features = [];
+
+
+    for (var i = 0; i < Markers.length; i++) {
+        var item = Markers[i];
+        var longitude = item.lng;
+        var latitude = item.lat;
+
+        var iconFeature = new ol.Feature({
+            geometry: new ol.geom.Point(ol.proj.transform([longitude, latitude], 'EPSG:4326', 'EPSG:3857'))
+        });
+
+        var iconStyle = new ol.style.Style({
+            image: new ol.style.Icon(({
+                anchor: [0.5, 1],
+                src: "http://cdn.mapmarker.io/api/v1/pin?text=P&size=50&hoffset=1"
+            }))
+        });
+
+        iconFeature.setStyle(iconStyle);
+        features.push(iconFeature);
+
+    }
+
+    var vectorSource = new ol.source.Vector({
+        features: features
+    });
+
+    var vectorLayer = new ol.layer.Vector({
+        source: vectorSource
+    });
+    mapa.addLayer(vectorLayer);
+
+
+      /*var address = '"Rambla del Poblenou, 156 08018 Barcelona","08018 Barcelona","Barcelona",';
+                                                                
+      var geocoder = L.esri.Geocoding.geocodeService();
+      
+      var map = L.map('mapa');
+      
+      var results = L.layerGroup().addTo(map);
+      
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="//osm.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+      
+      geocoder.geocode().text(address).run(function (error, response) {		                    						  
+          map.fitBounds(response.results[0].bounds);
+          results.addLayer(L.marker(response.results[0].latlng));
+      });	*/ 
     //console.log(res);
     //console.log(L.latlng);
     
