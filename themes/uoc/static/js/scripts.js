@@ -21,8 +21,8 @@ jQuery(document).ready(function ($) {
     /*L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);*/
-    var lat = 41.390205;
-    var lng = 2.154007;
+    var lat = 41.4042145;
+    var lng = 2.1937639;
     L.esri.Geocoding.geocode().text(address).run(function (err, results, response) {
         if (err) {
           console.log(err);
