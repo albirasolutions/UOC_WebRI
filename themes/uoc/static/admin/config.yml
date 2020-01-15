@@ -1749,7 +1749,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
 
-    - name: "mapa-ambits-recerca_en"
+  - name: "mapa-ambits-recerca_en"
     label: "Fields of research map"
     folder: "content/mapa-ambits-recerca"
     slug: '{{slug}}.{{language}}'
