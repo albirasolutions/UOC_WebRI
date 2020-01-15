@@ -14,120 +14,159 @@ slug:
   sanitize_replacement: "_"
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "principal"
-    label: "Principal"
-    files:
-      - label: "CA"
-        name: "ca"
-        file: "content/principal/principal-ca.md"
-        #format: "json"
-        #extension: "json"
-        create: true
+  - name: "principal_ca"
+    label: "Principal [ca]"
+    folder: "content/principal/"
+    slug: 'principal.{{language}}'
+    identifier_field: {{slug}}
+    filter: {field: "language", value: "ca"}
+    extension: 'md'
+    create: true
+    fields:
+      - {label: "Títol", name: "title", widget: string}
+      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "ca", required: true}
+      - label: "Àmbits d'especialització"
+        name: "ambits_especialitzacio"
+        widget: list
         fields:
-          - {label: "Títol", name: "title", widget: string}
-          - label: "Àmbits d'especialització"
-            name: "ambits_especialitzacio"
+          - label: "Etiqueta"
+            name: "display_name"
+            widget: string
+          - label: "Valor"
+            name: "value"
             widget: relation
             collection: "ambits_ca"
-            searchFields: ["title","language"]
+            searchFields: ["title"]
             valueField: "title"
-            displayFields: ["title","language"]
-            required: true
-          - label: "ODS"
-            name: "ods"
+            displayFields: ["title"]
+        required: true
+      - label: "ODS"
+        name: "ods"
+        widget: list
+        fields:
+          - label: "Etiqueta"
+            name: "display_name"
+            widget: string
+          - label: "Valor"
+            name: "value"
             widget: relation
             collection: "ods_ca"
-            searchFields: ["title","language"]
+            searchFields: ["title"]
             valueField: "title"
-            displayFields: ["title","language"]
-            required: true
-          - label: "sector_productiu"
-            name: "sector_productiu"
-            widget: "list"
-            fields:
-              - {label: "Camp", name: "display_name", widget: string}
-              - {label: "Valor", name: "value", widget: string}
-          - label: "centre"
-            name: "centre"
-            widget: list
-            fields:
-              - {label: "Camp", name: "display_name", widget: string}
-              - {label: "valor", name: "value", widget: string}   
-      - label: "ES"
-        name: "es"
-        file: "content/principal/principal-es.md"
-        #format: "json"
-        #extension: "json"
-        create: true
+            displayFields: ["title"]
+      - label: "sector_productiu"
+        name: "sector_productiu"
+        widget: list
         fields:
-          - {label: "Título", name: "title", widget: string}
-          - label: "Ámbitos de especialitzación"
-            name: "ambits_especialitzacio"
+          - label: "Etiqueta"
+            name: "display_name"
+            widget: string
+          - label: "Valor"
+            name: "value"
             widget: relation
-            collection: "ambits_es"
-            searchFields: ["title","language"]
-            valueField: "title"
-            displayFields: ["title","language"]
-            required: true
-          - label: "ODS"
-            name: "ods"
-            widget: relation
-            collection: "ods_es"
-            searchFields: ["title","language"]
-            valueField: "title"
-            displayFields: ["title","language"]
-            required: true
-          - label: "sector_productiu"
-            name: "sector_productiu"
-            widget: "list"
-            fields:
-              - {label: "Campo", name: "display_name", widget: string}
-              - {label: "Valor", name: "value", widget: string}
-          - label: "centre"
-            name: "centre"
-            widget: list
-            fields:
-              - {label: "Campo", name: "display_name", widget: string}
-              - {label: "valor", name: "value", widget: string}
-      - label: "EN"
-        name: "en"
-        file: "content/principal/principal-en.md"
-        #format: "json"
-        #extension: "json"
-        create: true
+            collection: "sectors_ca"
+            searchFields: ["title"]
+            valueField: "name"
+            displayFields: ["title"]
+      - label: "Centre"
+        name: centre
+        widget: list
         fields:
-          - {label: "Title", name: "title", widget: string}
-          - label: "Fields of specialization"
-            name: "ambits_especialitzacio"
+          - label: "Etiqueta"
+            name: "display_name"
+            widget: string
+          - label: "Valor"
+            name: "value"
             widget: relation
-            collection: "ambits_en"
-            searchFields: ["title","language"]
+            collection: "centers_ca"
+            searchFields: ["title"]
             valueField: "title"
-            displayFields: ["title","language"]
-            required: true
-          - label: "ODS"
-            name: "ods"
-            widget: relation
-            collection: "ods_en"
-            searchFields: ["title","language"]
-            valueField: "title"
-            displayFields: ["title","language"]
-            required: true
-          - label: "sector_productiu"
-            name: "sector_productiu"
-            widget: "list"
-            fields:
-              - {label: "Key", name: "display_name", widget: string}
-              - {label: "Value", name: "value", widget: string}
-          - label: "centre"
-            name: "centre"
-            widget: list
-            fields:
-              - {label: "Key", name: "display_name", widget: string}
-              - {label: "Value", name: "value", widget: string}
+            displayFields: ["title"]
+  - name: "principal_es"
+    label: "Principal [es]"
+    folder: "content/principal/"
+    slug: '{{slug}}.{{language}}'
+    identifier_field: {{slug}}
+    filter: {field: "language", value: "es"}
+    extension: 'md'
+    create: true
+    fields: 
+      - {label: "Título", name: "title", widget: string}
+      - label: "Ámbitos de especialitzación"
+        name: "ambits_especialitzacio"
+        widget: relation
+        collection: "ambits_es"
+        searchFields: ["title","language"]
+        valueField: "title"
+        displayFields: ["title","language"]
+        required: true
+      - label: "ODS"
+        name: "ods"
+        widget: list
+        fields:
+          - {label: "Campo", name: "display_name", widget: string}
+          - {label: "valor", name: "value", widget: string}   
+        required: true
+      - label: "sector_productivo"
+        name: "sector_productiu"
+        widget: relation
+        collection: "sectors_es"
+        searchFields: ["name","value","language"]
+        valueField: "name"
+        displayFields: ["name","language"]
+        required: true
+      - label: "Centro"
+        name: centre
+        widget: relation
+        collection: "centers_es"
+        searchFields: ["title","language"]
+        valueField: "title"
+        displayFields: ["title","language"]
+        required: true
+  - name: "principal_en"
+    label: "Principal [en]"
+    folder: "content/principal/"
+    slug: '{{slug}}.{{language}}'
+    identifier_field: {{slug}}
+    filter: {field: "language", value: "en"}
+    extension: 'md'
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: string}
+      - label: "Fields of specialization"
+        name: "ambits_especialitzacio"
+        widget: relation
+        collection: "ambits_en"
+        searchFields: ["title","language"]
+        valueField: "title"
+        displayFields: ["title","language"]
+        required: true
+      - label: "SDG"
+        name: "ods"
+        widget: list
+        fields:
+          - {label: "Field", name: "display_name", widget: string}
+          - {label: "value", name: "value", widget: string}   
+        required: true
+      - label: "Sector"
+        name: "sector_productiu"
+        widget: relation
+        collection: "sectors_en"
+        searchFields: ["name","value","language"]
+        valueField: "name"
+        displayFields: ["name","language"]
+        required: true
+      - label: "Center"
+        name: centre
+        widget: relation
+        collection: "centers_en"
+        searchFields: ["title","language"]
+        valueField: "title"
+        displayFields: ["title","language"]
+        required: true
 
   - name: "solucio_tec_ca"
-    label: 'Solucions Tecnologiques'
+    label: 'Solucions Tecnologiques[ca]'
     folder: "content/solucio_tec/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -251,7 +290,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "solucio_tec_es"
-    label: 'Soluciones Tecnologicas'
+    label: 'Soluciones Tecnologicas [es]'
     folder: "content/solucio_tec/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -380,7 +419,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "solucio_tec_en"
-    label: 'Technical Solutions'
+    label: 'Technical Solutions [en]'
     folder: "content/solucio_tec/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -506,7 +545,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "patent_ca"
-    label: 'Patents'
+    label: 'Patents [ca]'
     folder: "content/patent/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -630,7 +669,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "patent_es"
-    label: 'Patentes'
+    label: 'Patentes [es]'
     folder: "content/patent/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -754,7 +793,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "patent_en"
-    label: 'Patents'
+    label: 'Patents [en]'
     folder: "content/patent/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -879,7 +918,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "servei_ca"
-    label: 'Serveis'
+    label: 'Serveis [ca]'
     folder: "content/servei/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -979,7 +1018,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "servei_es"
-    label: 'Servicios'
+    label: 'Servicios [es]'
     folder: "content/servei/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -1079,7 +1118,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "servei_en"
-    label: 'Services'
+    label: 'Services [en]'
     folder: "content/servei/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -1180,7 +1219,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "spin_off_ca"
-    label: 'Spin-Offs'
+    label: 'Spin-Offs [ca]'
     folder: "content/spin_off/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -1304,7 +1343,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "spin_off_es"
-    label: 'Spin-Offs'
+    label: 'Spin-Offs [es]'
     folder: "content/spin_off/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -1428,7 +1467,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "spin_off_en"
-    label: 'Spin-Offs'
+    label: 'Spin-Offs [en]'
     folder: "content/spin_off/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -1552,236 +1591,229 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
 
-  - name: "cercador"
-    label: "Cercador"
-    files:
-      - label: "CA"
-        name: ca
-        file: "content/cercador/cercador.ca.md"
-        extension : "md"
-        #filter: {field: "contenttype", value: "section"}    
-        #create: true
-        #slug: "cercador.{{language}}"
-        fields:
-          - {label: title, name: title, widget: string}
-          - label: "Àmbits d'especialització"
-            name: "ambits_especialitzacio"
-            widget: relation
-            collection: "ambits_ca"
-            searchFields: ["title","language"]
-            valueField: "title"
-            displayFields: ["title","language"]
-            required: true
-          - label: "ODS"
-            name: "ods"
-            widget: relation
-            collection: "ods_ca"
-            searchFields: ["title","language"]
-            valueField: "title"
-            displayFields: ["title","language"]
-            required: true
-          - label: "Sector"
-            name: sector
-            widget: relation
-            collection: "sectors_ca"
-            searchFields: ["name","value","language"]
-            valueField: "name"
-            displayFields: ["name","language"]
-            required: true
-          - label: "Centre"
-            name: centre
-            widget: relation
-            collection: "centers_ca"
-            searchFields: ["title","language"]
-            valueField: "title"
-            displayFields: ["title","language"]
-            required: true
-          - label: solucions_tecnologiques
-            name : solucions_tecnologiques 
-            widget: list
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
-          - label: patents
-            name : patents 
-            widget: list
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
-          - label: serveis
-            name : serveis 
-            widget: list
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
-          - label: spin_offs
-            name : spin_offs 
-            widget: list
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
-        meta:
-          - {label: "Date", name: "date", widget: "datetime"}
-        editor:
-          - preview: false
-      - label: "ES"
-        name: es
-        file: "content/cercador/cercador.es.md"
-        extension : "md"
-        #filter: {field: "contenttype", value: "section"}    
-        #create: true
-        #slug: "cercador.{{language}}"
-        fields:
-          - {label: title, name: title, widget: string}
-          - label: "Ámbitos de especialitzación"
-            name: "ambits_especialitzacio"
-            widget: relation
-            collection: "ambits_es"
-            searchFields: ["title","language"]
-            valueField: "title"
-            displayFields: ["title","language"]
-            required: true
-          - label: "ODS"
-            name: "ods"
-            widget: relation
-            collection: "ods_es"
-            searchFields: ["title","language"]
-            valueField: "title"
-            displayFields: ["title","language"]
-            required: true
-          - label: "Sector"
-            name: sector
-            widget: relation
-            collection: "sectors_es"
-            searchFields: ["name","value","language"]
-            valueField: "name"
-            displayFields: ["name","language"]
-            required: true
-          - label: "Centro"
-            name: centre
-            widget: relation
-            collection: "centers_es"
-            searchFields: ["title","language"]
-            valueField: "title"
-            displayFields: ["title","language"]
-            required: true
-          - label: solucions_tecnologiques
-            name : solucions_tecnologiques 
-            widget: list
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
-          - label: patents
-            name : patents 
-            widget: list
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
-          - label: serveis
-            name : serveis 
-            widget: list
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
-          - label: spin_offs
-            name : spin_offs 
-            widget: list
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
-        meta:
-          - {label: "Date", name: "date", widget: "datetime"}
-        editor:
-          - preview: false
-      - label: "EN"
-        name: en
-        file: "content/cercador/cercador.en.md"
-        extension : "md"
-        #filter: {field: "contenttype", value: "section"}    
-        #create: true
-        #slug: "cercador.{{language}}"
-        fields:
-          - {label: title, name: title, widget: string}
-          - label: "Fields of specialization"
-            name: "ambits_especialitzacio"
-            widget: relation
-            collection: "ambits_en"
-            searchFields: ["title","language"]
-            valueField: "title"
-            displayFields: ["title","language"]
-            required: true
-          - label: "ODS"
-            name: "ods"
-            widget: relation
-            collection: "ods_en"
-            searchFields: ["title","language"]
-            valueField: "title"
-            displayFields: ["title","language"]
-            required: true
-          - label: "Sector"
-            name: sector
-            widget: relation
-            collection: "sectors_en"
-            searchFields: ["name","value","language"]
-            valueField: "name"
-            displayFields: ["name","language"]
-            required: true
-          - label: "Center"
-            name: centre
-            widget: relation
-            collection: "centers_en"
-            searchFields: ["title","language"]
-            valueField: "title"
-            displayFields: ["title","language"]
-            required: true
-          - label: solucions_tecnologiques
-            name : solucions_tecnologiques 
-            widget: list
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
-          - label: patents
-            name : patents 
-            widget: list
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
-          - label: serveis
-            name : serveis 
-            widget: list
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
-          - label: spin_offs
-            name : spin_offs 
-            widget: list
-            fields : 
-              - { label : display_name, name: display_name, widget: string }
-              - { label : value, name: value, widget: string }
-              - { label : img_background, name : img_background, widget : image }
-        meta:
-          - {label: "Date", name: "date", widget: "datetime"}
-        editor:
-          - preview: false
-
-  - name: "mapa-ambits-recerca"
-    label: "Mapa Ambits Recerca"
-    folder: "content/mapa-ambits-recerca"
-    delete: true
-    extension : "md"   
+  - name: "cercador_ca"
+    label: "Cercador [ca]"
+    folder: "content/cercador/"
+    slug: '{{slug}}.{{language}}'
+    identifier_field: {{slug}}
+    filter: {field: "language", value: "ca"}
+    extension: 'md'
     create: true
-    slug: "mapa-ambits-recerca.{{language}}"
+    fields:
+      - {label: "Títol", name: "title", widget: string}
+      - label: "Àmbits d'especialització"
+        name: "ambits_especialitzacio"
+        widget: relation
+        collection: "ambits_ca"
+        searchFields: ["title","language"]
+        valueField: "title"
+        displayFields: ["title","language"]
+        required: true
+      - label: "ODS"
+        name: "ods"
+        widget: list
+        fields:
+          - {label: "Camp", name: "display_name", widget: string}
+          - {label: "valor", name: "value", widget: string}   
+        required: true
+      - label: "sector_productiu"
+        name: "sector_productiu"
+        widget: relation
+        collection: "sectors_ca"
+        searchFields: ["name","value","language"]
+        valueField: "name"
+        displayFields: ["name","language"]
+        required: true
+      - label: "Centre"
+        name: centre
+        widget: relation
+        collection: "centers_ca"
+        searchFields: ["title","language"]
+        valueField: "title"
+        displayFields: ["title","language"]
+        required: true
+  - name: "cercador_es"
+    label: "Buscador [es]"
+    folder: "content/cercador/"
+    slug: '{{slug}}.{{language}}'
+    identifier_field: {{slug}}
+    filter: {field: "language", value: "es"}
+    extension: 'md'
+    create: true
+    fields: 
+      - {label: "Título", name: "title", widget: string}
+      - label: "Ámbitos de especialitzación"
+        name: "ambits_especialitzacio"
+        widget: relation
+        collection: "ambits_es"
+        searchFields: ["title","language"]
+        valueField: "title"
+        displayFields: ["title","language"]
+        required: true
+      - label: "ODS"
+        name: "ods"
+        widget: list
+        fields:
+          - {label: "Campo", name: "display_name", widget: string}
+          - {label: "valor", name: "value", widget: string}   
+        required: true
+      - label: "sector_productivo"
+        name: "sector_productiu"
+        widget: relation
+        collection: "sectors_es"
+        searchFields: ["name","value","language"]
+        valueField: "name"
+        displayFields: ["name","language"]
+        required: true
+      - label: "Centro"
+        name: centre
+        widget: relation
+        collection: "centers_es"
+        searchFields: ["title","language"]
+        valueField: "title"
+        displayFields: ["title","language"]
+        required: true
+  - name: "cercador_en"
+    label: "Browser [en]"
+    folder: "content/cercador/"
+    slug: '{{slug}}.{{language}}'
+    identifier_field: {{slug}}
+    filter: {field: "language", value: "en"}
+    extension: 'md'
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: string}
+      - label: "Fields of specialization"
+        name: "ambits_especialitzacio"
+        widget: relation
+        collection: "ambits_en"
+        searchFields: ["title","language"]
+        valueField: "title"
+        displayFields: ["title","language"]
+        required: true
+      - label: "SDG"
+        name: "ods"
+        widget: list
+        fields:
+          - {label: "Field", name: "display_name", widget: string}
+          - {label: "value", name: "value", widget: string}   
+        required: true
+      - label: "Sector"
+        name: "sector_productiu"
+        widget: relation
+        collection: "sectors_en"
+        searchFields: ["name","value","language"]
+        valueField: "name"
+        displayFields: ["name","language"]
+        required: true
+      - label: "Center"
+        name: centre
+        widget: relation
+        collection: "centers_en"
+        searchFields: ["title","language"]
+        valueField: "title"
+        displayFields: ["title","language"]
+        required: true
+
+  - name: "mapa-ambits-recerca_ca"
+    label: "Mapa d'àmbits de recerca [ca]"
+    folder: "content/mapa-ambits-recerca"
+    slug: '{{slug}}.{{language}}'
+    identifier_field: {{slug}}
+    filter: {field: "language", value: "ca"}
+    extension: 'md'
+    create: true
+    fields:
+      - {label: title, name: title, widget: string}
+      - label: "Àmbits d'especialització"
+        name: "ambits_especialitzacio"
+        widget: relation
+        collection: "ambits_ca"
+        searchFields: ["title","language"]
+        valueField: "title"
+        displayFields: ["title","language"]
+        required: true
+      - label: "Àmbits generals"
+        name: "ambits_generals"
+        widget: relation
+        collection: "ambits_generals_ca"
+        searchFields: ["title","language"]
+        valueField: "title"
+        displayFields: ["title","language"]
+        required: true
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
+  - name: "mapa-ambits-recerca_es"
+    label: "Mapa de ámbitos de búsqueda [es]"
+    folder: "content/mapa-ambits-recerca"
+    slug: '{{slug}}.{{language}}'
+    identifier_field: {{slug}}
+    filter: {field: "language", value: "es"}
+    extension: 'md'
+    create: true
+    fields:
+      - {label: title, name: title, widget: string}
+      - label: "Ámbitos de especialización"
+        name: "ambits_especialitzacio"
+        widget: relation
+        collection: "ambits_es"
+        searchFields: ["title","language"]
+        valueField: "title"
+        displayFields: ["title","language"]
+        required: true
+      - label: "Ámbitos generales"
+        name: "ambits_generals"
+        widget: relation
+        collection: "ambits_generals_es"
+        searchFields: ["title","language"]
+        valueField: "title"
+        displayFields: ["title","language"]
+        required: true
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
+
+  - name: "mapa-ambits-recerca_en"
+    label: "Fields of research map [en]"
+    folder: "content/mapa-ambits-recerca"
+    slug: '{{slug}}.{{language}}'
+    identifier_field: {{slug}}
+    filter: {field: "language", value: "en"}
+    extension: 'md'
+    create: true
+    fields:
+      - {label: title, name: title, widget: string}
+      - label: "Fields of specialization"
+        name: "ambits_especialitzacio"
+        widget: relation
+        collection: "ambits_ca"
+        searchFields: ["title","language"]
+        valueField: "title"
+        displayFields: ["title","language"]
+        required: true
+      - label: "Àmbits generals"
+        name: "ambits_generals"
+        widget: relation
+        collection: "ambits_generals_ca"
+        searchFields: ["title","language"]
+        valueField: "title"
+        displayFields: ["title","language"]
+        required: true
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
+  - name: "mapa-ambits-recerca_en"
+    label: "Fields of research map [en]"
+    folder: "content/mapa-ambits-recerca"
+    slug: '{{slug}}.{{language}}'
+    identifier_field: {{slug}}
+    filter: {field: "language", value: "en"}
+    extension: 'md'
+    create: true
     fields:
       - {label: title, name: title, widget: string}
       - label: "Fields of specialization"
@@ -1792,63 +1824,148 @@ collections: # A list of collections the CMS should be able to edit
         valueField: "title"
         displayFields: ["title","language"]
         required: true
-      - label: ambit
-        name : ambit 
-        widget: list 
-        fields : 
-          - { label : display_name, name: display_name, widget: string }
-          - { label : value, name: value, widget: string }
-          - { label : color, name : color, widget : string }
+      - label: "General fields"
+        name: "ambits_generals"
+        widget: relation
+        collection: "ambits_generals_en"
+        searchFields: ["title","language"]
+        valueField: "title"
+        displayFields: ["title","language"]
+        required: true
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
     editor:
       - preview: false
 
-  - name: "contacte"
-    label: "Contacte"
+  - name: "contacte_ca"
+    label: "Contacte [ca]"
     folder: "content/contacte"
-    #format: "json-frontmatter"
-    extension : "md"
-    #filter: {field: "contenttype", value: "section"}    
-    #create: true
-    slug: "{{title}}.{{language}}"
+    slug: '{{slug}}.{{language}}'
+    identifier_field: {{slug}}
+    filter: {field: "language", value: "en"}
+    extension: 'md'
+    create: true
     fields:
-          - {label: title, name: title, widget: string}
-          - label: section
-            name: section
-            widget: list
-            fields :
-              - name: form
-                label: form
-                widget : object
-                fields :
-                  - {label: form, name: form, widget: boolean}
-                  - {label: name, name : name, widget: string}
-                  - {label: addr_1, name: addr_1, widget: string}
-                  - {label: addr_2, name: addr_2, widget: string}
-                  - label: phones
-                    name: phones
-                    widget: list 
-                    fields:
-                      - {label: phone, name : phone ,widget: string}
-                  - label: urls
-                    name: urls
-                    widget: list
-                    fields:
-                      - {label: url, name: url, widget: string}
-          - label: motius
-            name: motius
-            widget: list 
+      - {label: "Títol", name: title, widget: string}
+      - label: "Secció"
+        name: section
+        widget: list
+        fields:
+          - name: form
+            label: "Formulari"
+            widget: object
             fields:
-              - {label: display_name, name : display_name, widget: string}
-              - {label: value, name: value, widget: string}            
+              - {label: "Formulari", name: form, widget: boolean}
+              - {label: "Nom", name : name, widget: string}
+              - {label: "Adreça 1", name: addr_1, widget: string}
+              - {label: "Adreça 2", name: addr_2, widget: string}
+              - label: "Telèfons"
+                name: phones
+                widget: list 
+                fields:
+                  - {label: "Número", name : phone ,widget: string}
+              - label: "Urls"
+                name: urls
+                widget: list
+                fields:
+                  - {label: "Url", name: url, widget: string}
+      - label: "Motius"
+        name: motius
+        widget: list 
+        fields:
+          - {label: "Nom", name : display_name, widget: string}
+          - {label: "Valor", name: value, widget: string}            
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
+  - name: "contacte_es"
+    label: "Contacto [es]"
+    folder: "content/contacte"
+    slug: '{{slug}}.{{language}}'
+    identifier_field: {{slug}}
+    filter: {field: "language", value: "es"}
+    extension: 'md'
+    create: true
+    fields:
+      - {label: "Título", name: title, widget: string}
+      - label: "Sección"
+        name: section
+        widget: list
+        fields:
+          - name: form
+            label: "Formulario"
+            widget: object
+            fields:
+              - {label: "Formulario", name: form, widget: boolean}
+              - {label: "Nombre", name : name, widget: string}
+              - {label: "Dirección 1", name: addr_1, widget: string}
+              - {label: "Dirección 2", name: addr_2, widget: string}
+              - label: "Teléfonos"
+                name: phones
+                widget: list 
+                fields:
+                  - {label: "Número", name : phone ,widget: string}
+              - label: "Urls"
+                name: urls
+                widget: list
+                fields:
+                  - {label: "Url", name: url, widget: string}
+      - label: "Motivos"
+        name: motius
+        widget: list 
+        fields:
+          - {label: "Nombre", name : display_name, widget: string}
+          - {label: "Valor", name: value, widget: string}            
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
+  - name: "contacte_en"
+    label: "Contact [en]"
+    folder: "content/contacte"
+    slug: '{{slug}}.{{language}}'
+    identifier_field: {{slug}}
+    filter: {field: "language", value: "en"}
+    extension: 'md'
+    create: true
+    fields:
+      - {label: "Title", name: title, widget: string}
+      - label: "Section"
+        name: section
+        widget: list
+        fields:
+          - name: form
+            label: "Form"
+            widget: object
+            fields:
+              - {label: "Form", name: form, widget: boolean}
+              - {label: "Name", name : name, widget: string}
+              - {label: "Adress 1", name: addr_1, widget: string}
+              - {label: "Adress 2", name: addr_2, widget: string}
+              - label: "Phones"
+                name: phones
+                widget: list 
+                fields:
+                  - {label: "Phone", name : phone ,widget: string}
+              - label: "Urls"
+                name: urls
+                widget: list
+                fields:
+                  - {label: "Url", name: url, widget: string}
+      - label: "Subjects"
+        name: motius
+        widget: list 
+        fields:
+          - {label: "Name", name : display_name, widget: string}
+          - {label: "Value", name: value, widget: string}            
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
     editor:
       - preview: false
 
   - name: "sectors_ca"
-    label: "Sectors"
+    label: "Sectors [ca]"
     folder: "content/sectors"
     extension : "md"  
     create: true
@@ -1865,7 +1982,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "sectors_es"
-    label: "Sectores"
+    label: "Sectores [es]"
     folder: "content/sectors"
     extension : "md"  
     create: true
@@ -1882,7 +1999,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "sectors_en"
-    label: "Sectors"
+    label: "Sectors [en]"
     folder: "content/sectors"
     extension : "md"  
     create: true
@@ -1900,7 +2017,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "centers_ca"
-    label: "Centres"
+    label: "Centres [ca]"
     folder: "content/centres"
     extension : "md"  
     create: true
@@ -1915,7 +2032,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "centers_es"
-    label: "Centros"
+    label: "Centros [es]"
     folder: "content/centres"
     extension : "md"  
     create: true
@@ -1930,7 +2047,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "centers_en"
-    label: "Centers"
+    label: "Centers [en]"
     folder: "content/centres"
     extension : "md"  
     create: true
@@ -1946,7 +2063,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "ambits_ca"
-    label: "Àmbits d'especialització"
+    label: "Àmbits d'especialització [ca]"
     folder: "content/ambits"
     extension : "md"  
     create: true
@@ -1961,7 +2078,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "ambits_es"
-    label: "Ámbitos de especialización"
+    label: "Ámbitos de especialización [es]"
     folder: "content/ambits"
     extension : "md"  
     create: true
@@ -1976,7 +2093,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "ambits_en"
-    label: "Fields of specialization"
+    label: "Fields of specialization [en]"
     folder: "content/ambits"
     extension : "md"  
     create: true
@@ -1991,8 +2108,54 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
 
+  - name: "ambits_generals_ca"
+    label: "Àmbits generals [ca]"
+    folder: "content/ambits_generals"
+    extension : "md"  
+    create: true
+    slug: "{{title}}.{{language}}"
+    identifier_field: {{slug}}
+    filter: {field: language , value: "ca"}
+    fields:
+      - {label: Títol, name: title, widget: string}
+      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
+  - name: "ambits_generals_es"
+    label: "Ámbitos generales [es]"
+    folder: "content/ambits_generals"
+    extension : "md"  
+    create: true
+    slug: "{{title}}.{{language}}"
+    identifier_field: {{slug}}
+    filter: {field: language , value: "es"}
+    fields:
+      - {label: Título, name: title, widget: string}
+      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "es"}       
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
+  - name: "ambits_generals_en"
+    label: "General fields [en]"
+    folder: "content/ambits_generals"
+    extension : "md"  
+    create: true
+    slug: "{{title}}.{{language}}"
+    identifier_field: {{slug}}
+    filter: {field: language , value: "en"}
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Language, name: language, widget: select, options: ["ca","es","en"],default: "en"}       
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false
+
   - name: "ods_ca"
-    label: "ODS"
+    label: "ODS [ca]"
     folder: "content/ods"
     extension : "md"  
     create: true
@@ -2007,7 +2170,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "ods_es"
-    label: "ODS"
+    label: "ODS [es]"
     folder: "content/ods"
     extension : "md"  
     create: true
@@ -2022,7 +2185,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "ods_en"
-    label: "ODS"
+    label: "ODS [en]"
     folder: "content/ods"
     extension : "md"  
     create: true
@@ -2038,7 +2201,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "difusions_ca"
-    label: "Difusions"
+    label: "Difusions [ca]"
     folder: "content/difusions"
     extension : "md"  
     create: true
@@ -2053,7 +2216,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "difusions_es"
-    label: "Difusiones"
+    label: "Difusiones [es]"
     folder: "content/difusions"
     extension : "md"  
     create: true
@@ -2068,7 +2231,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "difusions_en"
-    label: "Broadcasts"
+    label: "Broadcasts [en]"
     folder: "content/difusions"
     extension : "md"  
     create: true
@@ -2084,7 +2247,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "noticia_ca"
-    label: "Notícies"
+    label: "Notícies [ca]"
     folder: "content/noticies"
     extension : "md"  
     create: true
@@ -2124,7 +2287,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "noticia_es"
-    label: "Noticias"
+    label: "Noticias [es]"
     folder: "content/noticies"
     extension : "md"  
     create: true
@@ -2164,7 +2327,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "noticia_en"
-    label: "News"
+    label: "News [en]"
     folder: "content/noticies"
     extension : "md"  
     create: true
@@ -2205,7 +2368,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "esdeveniment_ca"
-    label: "Esdeveniments"
+    label: "Esdeveniments [ca]"
     folder: "content/esdeveniments"
     extension : "md"  
     create: true
@@ -2221,7 +2384,7 @@ collections: # A list of collections the CMS should be able to edit
         fields: 
           - {label: "Títol", name: titol, widget: string, required: true}
           - {label: Descripció, name: descripcio, widget: markdown, required: true}
-          - {label: "Lloc", name: lloc, widget: string, required: true}
+          - {label: "Lloc", name: lloc, widget: string, required: true} 
           - {label: "Quan", name: "data", widget: datetime, required: true}
           - {label: "Imatge", name: "img", widget: image}
           - label: "Social"
@@ -2235,7 +2398,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "esdeveniment_es"
-    label: "Acontecimiento"
+    label: "Acontecimiento [es]"
     folder: "content/esdeveniments"
     extension : "md"  
     create: true
@@ -2251,8 +2414,8 @@ collections: # A list of collections the CMS should be able to edit
         fields: 
           - {label: "Título", name: titol, widget: string, required: true}
           - {label: "Descripción", name: descripcio, widget: markdown, required: true}
-          - {label: "Lugar", name: lloc, widget: string, required: true}
-          - {label: "Quando", name: "data", widget: datetime, required: true}
+          - {label: "Lugar", name: lloc, widget: string, required: true}           
+          - {label: "Cuando", name: "data", widget: datetime, required: true}
           - {label: "Imagen", name: "img", widget: image}
           - label: "Social"
             name: xarxes
@@ -2265,7 +2428,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "esdeveniment_en"
-    label: "Event"
+    label: "Event [en]"
     folder: "content/esdeveniments"
     extension : "md"  
     create: true
@@ -2281,7 +2444,7 @@ collections: # A list of collections the CMS should be able to edit
         fields: 
           - {label: "Title", name: titol, widget: string, required: true}
           - {label: Description, name: descripcio, widget: markdown, required: true}
-          - {label: "Place", name: lloc, widget: string, required: true}
+          - {label: "Place", name: lloc, widget: string, required: true}    
           - {label: "When", name: "data", widget: datetime, required: true}
           - {label: "Image", name: "img", widget: image}
           - label: "Social"

@@ -14,5 +14,8 @@ general:
     img: /img/0a5e3d8399408516a201716607daee9dc776694d.png
     lloc: Barcelona
     titol: Alfa
+    xarxes:
+      - address: 'https://www.facebook.com/'
+        xarxa: facebook
 ---
 

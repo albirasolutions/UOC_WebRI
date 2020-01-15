@@ -1,4 +1,5 @@
 // Scripts UOC
+
 jQuery(document).ready(function ($) {
 
     function calculoWidth() {
