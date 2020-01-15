@@ -15,7 +15,7 @@ slug:
 
 collections: # A list of collections the CMS should be able to edit
   - name: "principal_ca"
-    label: "Principal(ca)"
+    label: "Principal [ca]"
     folder: "content/principal/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -56,7 +56,7 @@ collections: # A list of collections the CMS should be able to edit
         displayFields: ["title","language"]
         required: true
   - name: "principal_es"
-    label: "Principal(es)"
+    label: "Principal [es]"
     folder: "content/principal/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -97,7 +97,7 @@ collections: # A list of collections the CMS should be able to edit
         displayFields: ["title","language"]
         required: true
   - name: "principal_en"
-    label: "Main"
+    label: "Principal [en]"
     folder: "content/principal/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -139,7 +139,7 @@ collections: # A list of collections the CMS should be able to edit
         required: true
 
   - name: "solucio_tec_ca"
-    label: 'Solucions Tecnologiques'
+    label: 'Solucions Tecnologiques[ca]'
     folder: "content/solucio_tec/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -263,7 +263,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "solucio_tec_es"
-    label: 'Soluciones Tecnologicas'
+    label: 'Soluciones Tecnologicas [es]'
     folder: "content/solucio_tec/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -392,7 +392,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "solucio_tec_en"
-    label: 'Technical Solutions'
+    label: 'Technical Solutions [en]'
     folder: "content/solucio_tec/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -642,7 +642,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "patent_es"
-    label: 'Patentes'
+    label: 'Patentes [es]'
     folder: "content/patent/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -766,7 +766,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "patent_en"
-    label: 'Patents'
+    label: 'Patents [en]'
     folder: "content/patent/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -891,7 +891,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "servei_ca"
-    label: 'Serveis'
+    label: 'Serveis [ca]'
     folder: "content/servei/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -991,7 +991,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "servei_es"
-    label: 'Servicios'
+    label: 'Servicios [es]'
     folder: "content/servei/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -1091,7 +1091,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "servei_en"
-    label: 'Services'
+    label: 'Services [en]'
     folder: "content/servei/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -1192,7 +1192,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "spin_off_ca"
-    label: 'Spin-Offs'
+    label: 'Spin-Offs [ca]'
     folder: "content/spin_off/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -1316,7 +1316,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "spin_off_es"
-    label: 'Spin-Offs'
+    label: 'Spin-Offs [es]'
     folder: "content/spin_off/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -1440,7 +1440,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "spin_off_en"
-    label: 'Spin-Offs'
+    label: 'Spin-Offs [en]'
     folder: "content/spin_off/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -1565,7 +1565,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "cercador_ca"
-    label: "Cercador"
+    label: "Cercador [ca]"
     folder: "content/cercador/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -1606,7 +1606,7 @@ collections: # A list of collections the CMS should be able to edit
         displayFields: ["title","language"]
         required: true
   - name: "cercador_es"
-    label: "Buscador"
+    label: "Buscador [es]"
     folder: "content/cercador/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -1647,7 +1647,7 @@ collections: # A list of collections the CMS should be able to edit
         displayFields: ["title","language"]
         required: true
   - name: "cercador_en"
-    label: "Browser"
+    label: "Browser [en]"
     folder: "content/cercador/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -1689,7 +1689,7 @@ collections: # A list of collections the CMS should be able to edit
         required: true
 
   - name: "mapa-ambits-recerca_ca"
-    label: "Mapa d'àmbits de recerca"
+    label: "Mapa d'àmbits de recerca [ca]"
     folder: "content/mapa-ambits-recerca"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -1719,7 +1719,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "mapa-ambits-recerca_es"
-    label: "Mapa de ámbitos de búsqueda"
+    label: "Mapa de ámbitos de búsqueda [es]"
     folder: "content/mapa-ambits-recerca"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -1750,7 +1750,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "mapa-ambits-recerca_en"
-    label: "Fields of research map"
+    label: "Fields of research map [en]"
     folder: "content/mapa-ambits-recerca"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -1780,7 +1780,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "mapa-ambits-recerca_en"
-    label: "Fields of research map"
+    label: "Fields of research map [en]"
     folder: "content/mapa-ambits-recerca"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -1812,7 +1812,7 @@ collections: # A list of collections the CMS should be able to edit
 
   - name: "contacte_ca"
     label: "Contacte"
-    folder: "content/contacte"
+    folder: "content/contacte [ca]"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
     filter: {field: "language", value: "en"}
@@ -1854,7 +1854,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
   - name: "contacte_es"
     label: "Contacto"
-    folder: "content/contacte"
+    folder: "content/contacte [es]"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
     filter: {field: "language", value: "es"}
@@ -1895,7 +1895,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "contacte_en"
-    label: "Contact"
+    label: "Contact [en]"
     folder: "content/contacte"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -1938,7 +1938,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "sectors_ca"
-    label: "Sectors"
+    label: "Sectors [ca]"
     folder: "content/sectors"
     extension : "md"  
     create: true
@@ -1955,7 +1955,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "sectors_es"
-    label: "Sectores"
+    label: "Sectores [es]"
     folder: "content/sectors"
     extension : "md"  
     create: true
@@ -1972,7 +1972,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "sectors_en"
-    label: "Sectors"
+    label: "Sectors [en]"
     folder: "content/sectors"
     extension : "md"  
     create: true
@@ -1990,7 +1990,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "centers_ca"
-    label: "Centres"
+    label: "Centres [ca]"
     folder: "content/centres"
     extension : "md"  
     create: true
@@ -2005,7 +2005,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "centers_es"
-    label: "Centros"
+    label: "Centros [es]"
     folder: "content/centres"
     extension : "md"  
     create: true
@@ -2020,7 +2020,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "centers_en"
-    label: "Centers"
+    label: "Centers [en]"
     folder: "content/centres"
     extension : "md"  
     create: true
@@ -2036,7 +2036,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "ambits_ca"
-    label: "Àmbits d'especialització"
+    label: "Àmbits d'especialització [ca]"
     folder: "content/ambits"
     extension : "md"  
     create: true
@@ -2051,7 +2051,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "ambits_es"
-    label: "Ámbitos de especialización"
+    label: "Ámbitos de especialización [es]"
     folder: "content/ambits"
     extension : "md"  
     create: true
@@ -2066,7 +2066,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "ambits_en"
-    label: "Fields of specialization"
+    label: "Fields of specialization [en]"
     folder: "content/ambits"
     extension : "md"  
     create: true
@@ -2082,7 +2082,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "ambits_generals_ca"
-    label: "Àmbits generals"
+    label: "Àmbits generals [ca]"
     folder: "content/ambits_generals"
     extension : "md"  
     create: true
@@ -2097,7 +2097,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "ambits_generals_es"
-    label: "Ámbitos generales"
+    label: "Ámbitos generales [es]"
     folder: "content/ambits_generals"
     extension : "md"  
     create: true
@@ -2112,7 +2112,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "ambits_generals_en"
-    label: "General fields"
+    label: "General fields [en]"
     folder: "content/ambits_generals"
     extension : "md"  
     create: true
@@ -2128,7 +2128,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "ods_ca"
-    label: "ODS"
+    label: "ODS [ca]"
     folder: "content/ods"
     extension : "md"  
     create: true
@@ -2143,7 +2143,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "ods_es"
-    label: "ODS"
+    label: "ODS [es]"
     folder: "content/ods"
     extension : "md"  
     create: true
@@ -2158,7 +2158,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "ods_en"
-    label: "ODS"
+    label: "ODS [en]"
     folder: "content/ods"
     extension : "md"  
     create: true
@@ -2174,7 +2174,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "difusions_ca"
-    label: "Difusions"
+    label: "Difusions [ca]"
     folder: "content/difusions"
     extension : "md"  
     create: true
@@ -2189,7 +2189,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "difusions_es"
-    label: "Difusiones"
+    label: "Difusiones [es]"
     folder: "content/difusions"
     extension : "md"  
     create: true
@@ -2204,7 +2204,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "difusions_en"
-    label: "Broadcasts"
+    label: "Broadcasts [en]"
     folder: "content/difusions"
     extension : "md"  
     create: true
@@ -2220,7 +2220,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "noticia_ca"
-    label: "Notícies"
+    label: "Notícies [ca]"
     folder: "content/noticies"
     extension : "md"  
     create: true
@@ -2260,7 +2260,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "noticia_es"
-    label: "Noticias"
+    label: "Noticias [es]"
     folder: "content/noticies"
     extension : "md"  
     create: true
@@ -2300,7 +2300,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "noticia_en"
-    label: "News"
+    label: "News [en]"
     folder: "content/noticies"
     extension : "md"  
     create: true
@@ -2341,7 +2341,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "esdeveniment_ca"
-    label: "Esdeveniments"
+    label: "Esdeveniments [ca]"
     folder: "content/esdeveniments"
     extension : "md"  
     create: true
@@ -2371,7 +2371,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "esdeveniment_es"
-    label: "Acontecimiento"
+    label: "Acontecimiento [es]"
     folder: "content/esdeveniments"
     extension : "md"  
     create: true
@@ -2401,7 +2401,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "esdeveniment_en"
-    label: "Event"
+    label: "Event [en]"
     folder: "content/esdeveniments"
     extension : "md"  
     create: true
