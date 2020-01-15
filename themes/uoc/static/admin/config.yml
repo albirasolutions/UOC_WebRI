@@ -26,11 +26,15 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Títol", name: "title", widget: string}
       - label: "Àmbits d'especialització"
         name: "ambits_especialitzacio"
-        widget: relation
-        collection: "ambits_ca"
-        searchFields: ["title","language"]
-        valueField: "title"
-        displayFields: ["title","language"]
+        widget: list
+        fields:
+          - label: "Nom"
+            name: "display_name"
+            widget: relation
+            collection: "ambits_ca"
+            searchFields: ["title"]
+            valueField: "title"
+            displayFields: ["title"]
         required: true
       - label: "ODS"
         name: "ods"
