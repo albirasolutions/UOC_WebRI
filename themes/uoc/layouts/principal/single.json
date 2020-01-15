@@ -55,6 +55,6 @@
 		"content_encoding": "utf-8",
 		"content_type" : {{$s.Type | jsonify}},
 		"resourcename" : {{$s.Params.title | jsonify}},
-		"url" : {{ $s.Permalink | jsonify }} {{$i}}
+		"url" : {{ $s.Permalink | jsonify }}
     }
 }{{ if ne ($.Scratch.Get "len") ($.Scratch.Get "counter")}},{{end}}{{end}}{{end}}]
