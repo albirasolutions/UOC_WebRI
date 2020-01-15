@@ -518,7 +518,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "patent_ca"
-    label: 'Patents'
+    label: 'Patents [ca]'
     folder: "content/patent/"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
@@ -1811,8 +1811,8 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false
 
   - name: "contacte_ca"
-    label: "Contacte"
-    folder: "content/contacte [ca]"
+    label: "Contacte [ca]"
+    folder: "content/contacte"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
     filter: {field: "language", value: "en"}
@@ -1853,8 +1853,8 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
   - name: "contacte_es"
-    label: "Contacto"
-    folder: "content/contacte [es]"
+    label: "Contacto [es]"
+    folder: "content/contacte"
     slug: '{{slug}}.{{language}}'
     identifier_field: {{slug}}
     filter: {field: "language", value: "es"}
