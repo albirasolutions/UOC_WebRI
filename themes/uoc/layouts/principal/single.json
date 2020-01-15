@@ -28,10 +28,10 @@
 			"name":{{$general.titol | jsonify }},
 			"imatge_alt": {{$s.Params.title | jsonify}},
 			"imatge_title": {{$s.Params.title | jsonify}},{{if ne $general.img nil }}
-			"imatge_url": {{$general.img | jsonify}}{{end}},{{if ne $general.lloc nil }}
-			"lloc" : {{$general.lloc | jsonify}}{{end}},{{if ne $general.data nil }}
-			"data_difusio" : {{$general.data | jsonify}}{{end}},{{if ne $general.descripcio nil }}
-			"difusio_desc" : {{$general.descripcio | jsonify}}{{end}},{{end}}{{- end }}{{if eq $s.Type "noticia"}}{{- if and (isset $s.Params "descripcio") (ne $s.Params.descripcio nil) }}{{$descripcio := index ($s.Params.descripcio) 0 }}{{if ne $descripcio.entrada nil }}
+			"imatge_url": {{$general.img | jsonify}},{{end}}{{if ne $general.lloc nil }}
+			"lloc" : {{$general.lloc | jsonify}},{{end}}{{if ne $general.data nil }}
+			"data_difusio" : {{$general.data | jsonify}},{{end}}{{if ne $general.descripcio nil }}
+			"difusio_desc" : {{$general.descripcio | jsonify}},{{end}}{{end}}{{- end }}{{if eq $s.Type "noticia"}}{{- if and (isset $s.Params "descripcio") (ne $s.Params.descripcio nil) }}{{$descripcio := index ($s.Params.descripcio) 0 }}{{if ne $descripcio.entrada nil }}
 			"text_breu" : {{$descripcio.entrada | jsonify }},{{end}}{{if ne $descripcio.descripcio nil }}
 			"noticia_desc": {{$descripcio.descripcio | jsonify }},{{end}}{{end}}{{end}}{{if eq $s.Type "solucio_tec" }}{{- if and (isset $s.Params "sobre_tecnologia") (ne $s.Params.sobre_tecnologia nil) }}{{$sobre_tecnologia := index ($s.Params.sobre_tecnologia) 0 }}
 			"sobre_tec_title": {{$sobre_tecnologia.titol | jsonify}},
