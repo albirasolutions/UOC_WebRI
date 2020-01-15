@@ -42,7 +42,6 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: "Camp", name: "display_name", widget: string}
           - {label: "valor", name: "value", widget: string}   
-        required: true
       - label: "sector_productiu"
         name: "sector_productiu"
         widget: relation
@@ -50,7 +49,6 @@ collections: # A list of collections the CMS should be able to edit
         searchFields: ["name","value","language"]
         valueField: "name"
         displayFields: ["name","language"]
-        required: true
       - label: "Centre"
         name: centre
         widget: relation
@@ -58,7 +56,6 @@ collections: # A list of collections the CMS should be able to edit
         searchFields: ["title","language"]
         valueField: "title"
         displayFields: ["title","language"]
-        required: true
   - name: "principal_es"
     label: "Principal [es]"
     folder: "content/principal/"
