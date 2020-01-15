@@ -44,18 +44,26 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "valor", name: "value", widget: string}   
       - label: "sector_productiu"
         name: "sector_productiu"
-        widget: relation
-        collection: "sectors_ca"
-        searchFields: ["name","value","language"]
-        valueField: "name"
-        displayFields: ["name","language"]
+        widget: list
+        fields:
+          - label: "Nom"
+            name: "display_name"
+            widget: relation
+            collection: "sectors_ca"
+            searchFields: ["name","value","language"]
+            valueField: "name"
+            displayFields: ["name","language"]
       - label: "Centre"
         name: centre
-        widget: relation
-        collection: "centers_ca"
-        searchFields: ["title","language"]
-        valueField: "title"
-        displayFields: ["title","language"]
+        widget: list
+        fields:
+          - label: "Nom"
+            name: "display_name"
+            widget: relation
+            collection: "centers_ca"
+            searchFields: ["title","language"]
+            valueField: "title"
+            displayFields: ["title","language"]
   - name: "principal_es"
     label: "Principal [es]"
     folder: "content/principal/"
