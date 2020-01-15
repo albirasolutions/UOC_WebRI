@@ -323,7 +323,16 @@ function submitSearch(caller){
 }
 function getSearchFormValues(){
 	var target = searchParams["target"];
-	//searchParams={};
+	console.log('searchParams--->',searchParams)
+	searchParams={
+		ambit_especialitzacio : "",
+		ods:"",
+		codi:"",
+		sector_productiu:"",
+		centre:"",
+		s:""
+	};
+
 	switch(target){
 		case '1':
 
@@ -331,58 +340,78 @@ function getSearchFormValues(){
 				//searchParams.ambit_especialitzacio = [];
 				var ambits = [];
 				$("#collapse-ambits_especialitzacio input:checked").each(function( index ) {
-					if(searchParams.ambit_especialitzacio && searchParams.ambit_especialitzacio.length > 1) searchParams.ambit_especialitzacio.push($(this).val());
-					else {
-						ambits.push($(this).val());
-						searchParams.ambit_especialitzacio = ambits;
+					if($(this).val()!=undefined){
+						if(searchParams.ambit_especialitzacio != "") searchParams.ambit_especialitzacio += ',' + $(this).val();
+						else searchParams.ambit_especialitzacio += $(this).val();
 					}
 				});	
 			} else {
-				searchParams.ambit_especialitzacio = [];
+				searchParams.ambit_especialitzacio = "";
 			}
 
 			if($("#collapse-ods input:checked").length>0){										//Ods checked
 				//searchParams.ods = [];
 				$("#collapse-ods input:checked").each(function( index ) {
-					searchParams.ods.push($(this).val());
+					//searchParams.ods.push($(this).val());
+					if($(this).val()!=undefined){
+						if(searchParams.ods != "") searchParams.ods += ',' + $(this).val();
+						else searchParams.ods += $(this).val();
+					}
+					
 				});	
 			} else {
-				searchParams.ods = [];
+				searchParams.ods = "";
 			}
 
 			var unescoFreeTextSearch = $("#collapse-codi input[name='searchWords']").val();		//UNESCO Free text search
 			if (unescoFreeTextSearch != null && unescoFreeTextSearch != ""){
 				searchParams.unesco = unescoFreeTextSearch;
 			} else {
-				searchParams.unesco = [];
+				searchParams.unesco = "";
 			}
 			
 			if($(".general-filter.centre input:checked").length>0){								//Centres checked
 				//searchParams.centre = [];
 				$(".general-filter.centre input:checked").each(function( index ) {
-					searchParams.centre.push($(this).val());
+					//searchParams.centre.push($(this).val());
+					if($(this).val()!=undefined){
+						if(searchParams.centre != "") searchParams.centre += ',' + $(this).val();
+						else searchParams.centre += $(this).val();
+					}
+					
 				});	
 			} else {
-				searchParams.centre = [];
+				searchParams.centre = "";
 			}
 			break;
 		case '2':
 			if($("#collapse-sector_productiu input:checked").length>0){								//sol_tec checked
 				//searchParams.solucions_tecnologiques = [];
 				$("#collapse-sector_productiu input:checked").each(function( index ) {
-					searchParams.sector_productiu.push($(this).val());
+					//searchParams.sector_productiu.push($(this).val());
+					console.log($(this).val())
+					if($(this).val()!= undefined){
+						if(searchParams.sector_productiu != "") searchParams.sector_productiu += ',' + $(this).val();
+						else searchParams.sector_productiu += $(this).val();
+					}
+					
 				});	
 			} else {
-				searchParams.sector_productiu = [];
+				searchParams.sector_productiu = "";
 			}
 
 			if($(".general-filter.centre input:checked").length>0){								//Centres checked
 				//searchParams.centre = [];
 				$(".general-filter.centre input:checked").each(function( index ) {
-					searchParams.centre.push($(this).val());
+					//searchParams.centre.push($(this).val());
+					if($(this).val()!=undefined){
+						if(searchParams.centre != "") searchParams.centre += ',' + $(this).val();
+						else searchParams.centre += $(this).val();
+					}
+					
 				});	
 			} else {
-				searchParams.centre = [];
+				searchParams.centre = "";
 			}
 		
 			break;
@@ -391,16 +420,18 @@ function getSearchFormValues(){
 	}
 	
 	if($(".general-filter.visualitzacio input:checked").length>0){						//Visualitza per checked
-		searchParams.visualitzacio = [];
+		searchParams.visualitzacio = "";
 		$(".general-filter.visualitzacio input:checked").each(function( index ) {
-			searchParams.visualitzacio.push($(this).val());
+			//searchParams.visualitzacio.push($(this).val());
+			console.log('checked')
+			if(index<4){
+				if(searchParams.visualitzacio != "") searchParams.visualitzacio += ',' + $(this).val();
+				else searchParams.visualitzacio += $(this).val();
+			}
+			
 		});	
 	} else {
-		searchParams.visualitzacio = [];
-		searchParams.visualitzacio.includes("grup")? '' : searchParams.visualitzacio.push("grup");
-		searchParams.visualitzacio.includes("fitxa")? '' : searchParams.visualitzacio.push("fitxa");
-		searchParams.visualitzacio.includes("sol_innov")? '' : searchParams.visualitzacio.push("sol_innov");
-		searchParams.visualitzacio.includes("spin_offs")? '' : searchParams.visualitzacio.push("spin_offs");
+		searchParams.visualitzacio = "grup,fitxa,sol_innov,spin_offs";
 	}
 
 	console.log('searchParams created for search ::', searchParams);
@@ -410,12 +441,17 @@ function getSearchFormValues(){
 /***********************************************************************
 							SEARCH METHODS								
 ***********************************************************************/
-function buildQuery(endpointUrl,searchParams, type){
+function buildQuery(endpointUrl,searchParams){
 	var endpointURI =  endpointUrl; //"/api/search";
-	
-	if(type=='transfer'){
-		var queryString = "?q=\'ca\'", parenthesisInit = '(', parenthesisFinish = '', conditionalClause = 'or', space = '+',
-		fieldsCount = 0,returnFields = '&return=_all_fields',parsedStructure = '&q.parser=structured', fieldsLength = Object.keys(searchParams).length;
+	// *********************************************************************
+	//
+	//					PARTE A COPIAR POR JORGE EN EVENT.PY
+	// 
+	//
+	//*********************************************************************** */
+	//if(type=='transfer'){
+	//	var queryString = "?q=\'ca\'", parenthesisInit = '(', parenthesisFinish = '', conditionalClause = 'or', space = '+',
+	//	fieldsCount = 0,returnFields = '&return=_all_fields',parsedStructure = '&q.parser=structured', fieldsLength = Object.keys(searchParams).length;
 		// for (var key in searchParams) {
 		// 	console.log('searchParams[',key,']---->',searchParams[key]);
 		// 	console.log('searchParams[',key,'].length---->',searchParams[key].length);
@@ -441,23 +477,22 @@ function buildQuery(endpointUrl,searchParams, type){
 		// 			queryString += parenthesisFinish;
 		// 		}
 		// 	}	
-			
 		// }
-		console.log('query to cs--->',queryString);
-		return  endpointURI+queryString + returnFields + parsedStructure;
+	//	console.log('query to cs--->',queryString);
+	//	return  endpointURI+queryString + returnFields + parsedStructure;
 
-	} else {
+	//} else {
 
-		var queryString = "?idioma="+getCurrentLanguage();									//Mandatory
-		for (var key in searchParams) {
-			if(searchParams.hasOwnProperty(key) && (key != "target") && (searchParams[key]!="")) {
-				queryString += "&" + key + "=" +searchParams[key];
-			}	
-			
-		}
-		return  endpointURI+queryString;
-
+	var queryString = "?idioma="+getCurrentLanguage();									//Mandatory
+	for (var key in searchParams) {
+		if(searchParams.hasOwnProperty(key) && (key != "target") && (searchParams[key]!="")) {
+			queryString += "&" + key + "=" +encodeURIComponent(searchParams[key]);
+		}	
+		
 	}
+	return  endpointURI+queryString;
+
+	//}
 	
 }
 
@@ -519,13 +554,16 @@ function buildAjaxQueryCallout2TransfersAndProcessResultsFromCloudSearch(queryUr
 
 	console.log('querying...',queryUrl);
 	$.ajax({
+		headers:{
+			'Acces-Control-Allow-Origin':'*'
+		},
 		url: queryUrl
 	}).done(
 		function(data, returnCode, request){
 			console.log('returning code----->',returnCode);
 			console.log('returning request----->',request);
 			console.log('returning data----->',data);
-			// var contentTypes = ['grup','fitxa','sol_tec','patent','servei','spin_off'];
+			// var contentTypes = ['grup','fitxa','solucio_tec','patent','servei','spin_off'];
 			// if(data.hits.found == 0){
 			// 	for(var r=0;r<res.length-1;r++){
 			// 		res[r].html("<p style='font-style:italic'>"+literals.results.noresults[getCurrentLanguage()]+"</p>");
@@ -587,33 +625,31 @@ function querySearchEngine(searchParams){
 			var fitxaResults = $(".fitxaResults .row");
 			var grupResults = $(".grupResults .row");
 			var endpointUrl = "https://transfer-research.am.pre.uoc.es/api/search";
-			var fitxaURL = buildQuery(endpointUrl,searchParams,'grup')+"&tipus=fitxa";
-			var grupURL = buildQuery(endpointUrl,searchParams,'inv')+"&tipus=grup";
+			var fitxaURL = buildQuery(endpointUrl,searchParams)+"&tipus=fitxa";
+			var grupURL = buildQuery(endpointUrl,searchParams)+"&tipus=grup";
 			buildAjaxQueryCallout2GrupOrFitxaAndProcessResultsFromCloudSearch(fitxaURL,fitxaResults, "fitxa");
 			buildAjaxQueryCallout2GrupOrFitxaAndProcessResultsFromCloudSearch(grupURL,grupResults, "grup");
 			break;
 		case '2' :
 			console.log('calling transfer results...');
-			var endpointUrl = "http://search-webri-2dz3yckt2f5cjq7hcsbois6nw4.eu-west-1.cloudsearch.amazonaws.com/2013-01-01/search";
-			var transferURL = buildQuery(endpointUrl,searchParams,"transfer");
-			buildAjaxQueryCallout2TransfersAndProcessResultsFromCloudSearch(transferURL, "transfer");
+			//var endpointUrl = "http://search-webri-2dz3yckt2f5cjq7hcsbois6nw4.eu-west-1.cloudsearch.amazonaws.com/2013-01-01/search";
+			var endpointUrl = "https://hhbr3knf8j.execute-api.eu-west-1.amazonaws.com/dev/user/search";
+			var transferURL = buildQuery(endpointUrl,searchParams);
+			buildAjaxQueryCallout2TransfersAndProcessResultsFromCloudSearch(transferURL);
 			break;
 		case '3' :
 			console.log('calling text results...');
 			var fitxaResults = $(".fitxaResults .row");
 			var grupResults = $(".grupResults .row");
-			var solucionsTecResults = $(".solucionsTecResults .row");
-			var patentsResults = $(".patentsResults .row");
-			var serveisResults = $(" .serveisResults .row");
-			var spinResults = $(" .spinResults .row");
-			var endpointUrlAl = "http://search-webri-2dz3yckt2f5cjq7hcsbois6nw4.eu-west-1.cloudsearch.amazonaws.com/2013-01-01/search";
+			//var endpointUrlAl = "http://search-webri-2dz3yckt2f5cjq7hcsbois6nw4.eu-west-1.cloudsearch.amazonaws.com/2013-01-01/search";
+			var endpointUrlAl = "https://hhbr3knf8j.execute-api.eu-west-1.amazonaws.com/dev/user/search";
 			var endpointUrlUoc = "https://transfer-research.am.pre.uoc.es/api/search";
-			var fitxaURL = buildQuery(endpointUrlUoc,searchParams,'grup')+"&tipus=fitxa";
-			var grupURL = buildQuery(endpointUrlUoc,searchParams,'inv')+"&tipus=grup";
-			var transferURL = buildQuery(endpointUrlAl,searchParams,'transfer');
+			var fitxaURL = buildQuery(endpointUrlUoc,searchParams)+"&tipus=fitxa";
+			var grupURL = buildQuery(endpointUrlUoc,searchParams)+"&tipus=grup";
+			var transferURL = buildQuery(endpointUrlAl,searchParams)+"&tipus=transfer";
 			buildAjaxQueryCallout2GrupOrFitxaAndProcessResultsFromCloudSearch(fitxaURL,fitxaResults, "fitxa");
 			buildAjaxQueryCallout2GrupOrFitxaAndProcessResultsFromCloudSearch(grupURL,grupResults, "grup");
-			buildAjaxQueryCallout2TransfersAndProcessResultsFromCloudSearch(transferURL,solucionsTecResults, "transfer");
+			buildAjaxQueryCallout2TransfersAndProcessResultsFromCloudSearch(transferURL);
 			break;
 		default:
 			break;
