@@ -31,7 +31,7 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - label: "Etiqueta"
             name: "display_name"
-            widget: "String"
+            widget: string
           - label: "Valor"
             name: "value"
             widget: relation
@@ -46,7 +46,7 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - label: "Etiqueta"
             name: "display_name"
-            widget: "String"
+            widget: string
           - label: "Valor"
             name: "value"
             widget: relation
@@ -60,7 +60,7 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - label: "Etiqueta"
             name: "display_name"
-            widget: "String"
+            widget: string
           - label: "Valor"
             name: "value"
             widget: relation
@@ -74,7 +74,7 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - label: "Etiqueta"
             name: "display_name"
-            widget: "String"
+            widget: string
           - label: "Valor"
             name: "value"
             widget: relation
