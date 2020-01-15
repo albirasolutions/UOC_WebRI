@@ -344,12 +344,6 @@ function getSearchFormValues(){
 						if(searchParams.ambit_especialitzacio != "") searchParams.ambit_especialitzacio += ',' + $(this).val();
 						else searchParams.ambit_especialitzacio += $(this).val();
 					}
-					
-					// if(searchParams.ambit_especialitzacio && searchParams.ambit_especialitzacio.length > 1) searchParams.ambit_especialitzacio+=$(this).val());
-					// else {
-					// 	ambits.push($(this).val());
-					// 	searchParams.ambit_especialitzacio = ambits;
-					// }
 				});	
 			} else {
 				searchParams.ambit_especialitzacio = "";
@@ -449,7 +443,12 @@ function getSearchFormValues(){
 ***********************************************************************/
 function buildQuery(endpointUrl,searchParams){
 	var endpointURI =  endpointUrl; //"/api/search";
-	
+	// *********************************************************************
+	//
+	//					PARTE A COPIAR POR JORGE EN EVENT.PY
+	// 
+	//
+	//*********************************************************************** */
 	//if(type=='transfer'){
 	//	var queryString = "?q=\'ca\'", parenthesisInit = '(', parenthesisFinish = '', conditionalClause = 'or', space = '+',
 	//	fieldsCount = 0,returnFields = '&return=_all_fields',parsedStructure = '&q.parser=structured', fieldsLength = Object.keys(searchParams).length;
@@ -556,7 +555,7 @@ function buildAjaxQueryCallout2TransfersAndProcessResultsFromCloudSearch(queryUr
 	console.log('querying...',queryUrl);
 	$.ajax({
 		headers:{
-			'Acces-Control-Allow-Origin':'http://localhost:1313'
+			'Acces-Control-Allow-Origin':'*'
 		},
 		url: queryUrl
 	}).done(
