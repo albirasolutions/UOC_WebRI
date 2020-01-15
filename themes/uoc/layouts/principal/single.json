@@ -58,4 +58,4 @@
 		"resourcename" : {{$s.Params.title | jsonify}},
 		"url" : {{ $s.Permalink | jsonify }}
     }
-},{{end}}{{end}}{"type" : "add","id":"null"}]
+},{{end}}{{end}}{"type" : "add","id":"null","fields":{}}]
