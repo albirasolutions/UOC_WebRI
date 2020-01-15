@@ -29,100 +29,64 @@ collections: # A list of collections the CMS should be able to edit
         name: "ambits_especialitzacio"
         widget: list
         fields:
-          - label: "Etiqueta"
-            name: "display_name"
-            widget: string
-          - label: "Valor"
-            name: "value"
-            widget: relation
-            collection: "ambits_ca"
-            searchFields: ["title"]
-            valueField: "title"
-            displayFields: ["title"]
-        required: true
+          - {label: "Camp", name: "display_name", widget: string}
+          - {label: "Valor", name: "value", widget: string}   
       - label: "ODS"
         name: "ods"
         widget: list
         fields:
-          - label: "Etiqueta"
-            name: "display_name"
-            widget: string
-          - label: "Valor"
-            name: "value"
-            widget: relation
-            collection: "ods_ca"
-            searchFields: ["title"]
-            valueField: "title"
-            displayFields: ["title"]
+          - {label: "Camp", name: "display_name", widget: string}
+          - {label: "Valor", name: "value", widget: string}   
+          - {label: "Color", name: "color", widget: string}   
       - label: "sector_productiu"
         name: "sector_productiu"
         widget: list
         fields:
-          - label: "Etiqueta"
-            name: "display_name"
-            widget: string
-          - label: "Valor"
-            name: "value"
-            widget: relation
-            collection: "sectors_ca"
-            searchFields: ["title"]
-            valueField: "name"
-            displayFields: ["title"]
+          - {label: "Camp", name: "display_name", widget: string}
+          - {label: "Valor", name: "value", widget: string}   
       - label: "Centre"
         name: centre
         widget: list
         fields:
-          - label: "Etiqueta"
-            name: "display_name"
-            widget: string
-          - label: "Valor"
-            name: "value"
-            widget: relation
-            collection: "centers_ca"
-            searchFields: ["title"]
-            valueField: "title"
-            displayFields: ["title"]
+          - {label: "Camp", name: "display_name", widget: string}
+          - {label: "Valor", name: "value", widget: string}   
   - name: "principal_es"
     label: "Principal [es]"
     folder: "content/principal/"
-    slug: '{{slug}}.{{language}}'
+    slug: 'principal.{{language}}'
     identifier_field: {{slug}}
     filter: {field: "language", value: "es"}
     extension: 'md'
     create: true
     fields: 
       - {label: "Título", name: "title", widget: string}
+      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "es", required: true}
       - label: "Ámbitos de especialitzación"
         name: "ambits_especialitzacio"
-        widget: relation
-        collection: "ambits_es"
-        searchFields: ["title","language"]
-        valueField: "title"
-        displayFields: ["title","language"]
-        required: true
+        widget: list
+        fields:
+          - {label: "Campo", name: "display_name", widget: string}
+          - {label: "Valor", name: "value", widget: string}   
       - label: "ODS"
         name: "ods"
         widget: list
         fields:
           - {label: "Campo", name: "display_name", widget: string}
           - {label: "valor", name: "value", widget: string}   
+          - {label: "Imagen", name: "img", widget: string}             
         required: true
       - label: "sector_productivo"
         name: "sector_productiu"
-        widget: relation
-        collection: "sectors_es"
-        searchFields: ["name","value","language"]
-        valueField: "name"
-        displayFields: ["name","language"]
-        required: true
+        widget: list
+        fields:
+          - {label: "Campo", name: "display_name", widget: string}
+          - {label: "Valor", name: "value", widget: string}   
       - label: "Centro"
         name: centre
-        widget: relation
-        collection: "centers_es"
-        searchFields: ["title","language"]
-        valueField: "title"
-        displayFields: ["title","language"]
-        required: true
+        widget: list
+        fields:
+          - {label: "Campo", name: "display_name", widget: string}
+          - {label: "Valor", name: "value", widget: string}   
   - name: "principal_en"
     label: "Principal [en]"
     folder: "content/principal/"
@@ -133,38 +97,33 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: "Title", name: "title", widget: string}
+      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "en", required: true}
       - label: "Fields of specialization"
         name: "ambits_especialitzacio"
-        widget: relation
-        collection: "ambits_en"
-        searchFields: ["title","language"]
-        valueField: "title"
-        displayFields: ["title","language"]
-        required: true
+        widget: list
+        fields:
+          - {label: "Field", name: "display_name", widget: string}
+          - {label: "value", name: "value", widget: string}   
       - label: "SDG"
         name: "ods"
         widget: list
         fields:
           - {label: "Field", name: "display_name", widget: string}
           - {label: "value", name: "value", widget: string}   
+          - {label: "Image", name: "img", widget: string}   
         required: true
       - label: "Sector"
         name: "sector_productiu"
-        widget: relation
-        collection: "sectors_en"
-        searchFields: ["name","value","language"]
-        valueField: "name"
-        displayFields: ["name","language"]
-        required: true
+        widget: list
+        fields:
+          - {label: "Field", name: "display_name", widget: string}
+          - {label: "value", name: "value", widget: string}   
       - label: "Center"
         name: centre
-        widget: relation
-        collection: "centers_en"
-        searchFields: ["title","language"]
-        valueField: "title"
-        displayFields: ["title","language"]
-        required: true
-
+        widget: list
+        fields:
+          - {label: "Field", name: "display_name", widget: string}
+          - {label: "value", name: "value", widget: string}   
   - name: "solucio_tec_ca"
     label: 'Solucions Tecnologiques[ca]'
     folder: "content/solucio_tec/"
@@ -2164,6 +2123,9 @@ collections: # A list of collections the CMS should be able to edit
     filter: {field: language , value: "ca"}
     fields:
       - {label: Títol, name: title, widget: string}
+      - {label: Color, name: color, widget: string}
+      - {label: Etiqueta, name: display_name, widget: string}
+      - {label: Valor, name: value, widget: string}      
       - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
     meta:
       - {label: "Date", name: "date", widget: "datetime"}

@@ -1,5 +1,6 @@
 ---
 title: R&I a la UOC
+language: ca
 ambits_especialitzacio:
   - display_name: Tots
     value: ''
