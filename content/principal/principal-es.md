@@ -1,5 +1,6 @@
 ---
 title: R&I en la UOC
+language: es
 ambits_especialitzacio:
   - display_name: Todos
     value: ''

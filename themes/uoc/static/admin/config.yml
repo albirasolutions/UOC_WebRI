@@ -27,61 +27,28 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "ca", required: true}
       - label: "Àmbits d'especialització"
         name: "ambits_especialitzacio"
-        widget: list
         fields:
-          - label: "Etiqueta"
-            name: "display_name"
-            widget: string
-          - label: "Valor"
-            name: "value"
-            widget: relation
-            collection: "ambits_ca"
-            searchFields: ["title"]
-            valueField: "title"
-            displayFields: ["title"]
-        required: true
+          - {label: "Camp", name: "display_name", widget: string}
+          - {label: "Valor", name: "value", widget: string}   
       - label: "ODS"
         name: "ods"
         widget: list
         fields:
-          - label: "Etiqueta"
-            name: "display_name"
-            widget: string
-          - label: "Valor"
-            name: "value"
-            widget: relation
-            collection: "ods_ca"
-            searchFields: ["title"]
-            valueField: "title"
-            displayFields: ["title"]
+          - {label: "Camp", name: "display_name", widget: string}
+          - {label: "Valor", name: "value", widget: string}   
+          - {label: "Color", name: "color", widget: string}   
       - label: "sector_productiu"
         name: "sector_productiu"
         widget: list
         fields:
-          - label: "Etiqueta"
-            name: "display_name"
-            widget: string
-          - label: "Valor"
-            name: "value"
-            widget: relation
-            collection: "sectors_ca"
-            searchFields: ["title"]
-            valueField: "name"
-            displayFields: ["title"]
+          - {label: "Camp", name: "display_name", widget: string}
+          - {label: "Valor", name: "value", widget: string}   
       - label: "Centre"
         name: centre
         widget: list
         fields:
-          - label: "Etiqueta"
-            name: "display_name"
-            widget: string
-          - label: "Valor"
-            name: "value"
-            widget: relation
-            collection: "centers_ca"
-            searchFields: ["title"]
-            valueField: "title"
-            displayFields: ["title"]
+          - {label: "Camp", name: "display_name", widget: string}
+          - {label: "Valor", name: "value", widget: string}   
   - name: "principal_es"
     label: "Principal [es]"
     folder: "content/principal/"
@@ -2164,6 +2131,9 @@ collections: # A list of collections the CMS should be able to edit
     filter: {field: language , value: "ca"}
     fields:
       - {label: Títol, name: title, widget: string}
+      - {label: Color, name: color, widget: string}
+      - {label: Etiqueta, name: display_name, widget: string}
+      - {label: Valor, name: value, widget: string}      
       - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
