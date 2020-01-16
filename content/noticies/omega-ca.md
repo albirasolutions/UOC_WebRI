@@ -10,7 +10,6 @@ general:
     titol: >-
       El Ministeri de Ciència, Innovació i Universitats finança onze noves
       recerques de la UOC sobre la digitalització de la societat
-  - data: '2020-01-16T10:57:32+01:00'
     xarxes:
       - address: 'https://www.facebook.com/UOC.universitat'
         xarxa: facebook
