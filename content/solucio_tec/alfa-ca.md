@@ -17,8 +17,7 @@ general:
         xarxa: twitter
 sobre_tecnologia:
   - descripcio: Descripció solució Alfa en català
-    docs_rels:
-      - url: 'https://www.netlifycms.org/docs/intro/'
+    doc1: /img/informe_disseny_web_r_i.pdf
     titol: Títol Alfa
 aspectes_innovadors:
   - descripcio: Descripció aspecte innovador solució Alfa
@@ -32,14 +31,7 @@ aplicacions:
         url: 'https://www.netlifycms.org/docs/intro/'
     titol: Aplicació solució Alfa
 grups_recerca:
-  - grups:
-      value:
-        - id: '1902'
-          name: GAME
-        - id: '2902'
-          name: DigiBiz
-        - id: '902'
-          name: MEDIACCIONS
+  - grups: {}
     investigadors: Investigador Javi
 contacte:
   - address: adreça
