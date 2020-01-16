@@ -183,14 +183,18 @@ collections: # A list of collections the CMS should be able to edit
           - {label: descripcio, name: descripcio, widget: markdown}
           - label: Docs Relacionats
             name: docs_rels
-            widget: object
-            fields:
-            - label: Pes
-              name: size
-              widget: string
-            - label: Doc
-              name: doc
-              widget: "file"
+            widget: list
+            field:
+            - label: Docs
+              name: docs
+              widget: object
+              fields:
+              - label: Pes
+                name: size
+                widget: string
+              - label: Doc
+                name: doc
+                widget: file
 
       - label: Aspectes Innovadors
         name: aspectes_innovadors  
