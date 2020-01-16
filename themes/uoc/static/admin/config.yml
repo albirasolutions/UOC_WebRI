@@ -226,13 +226,13 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - label: Grups
             name: grups
-            widget: list,
+            widget: object
             fields: 
               - {label: Grup, name: name, widget: string}
               - {label: Id, name: id, widget: hidden}
           - label: Investigadors
             name: investigadors
-            widget: list
+            widget: object
             fields: 
               - {label: Investigador, name: name, widget: string}
               - {label: Id, name: id, widget: hidden}
