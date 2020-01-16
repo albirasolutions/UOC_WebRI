@@ -80,9 +80,14 @@ var literals = {
 };
 jQuery(document).ready(function ($) {
 	searchParams =	{};
+
 	$(".uoc_submitSearch").click(function(e){	
 		console.log('submitSearch for all filter...')	
 		submitSearch(e);
+	});
+	$(".search-text-principal").click(function(e){
+		console.log('submitSearch for all filter...')
+		cerca(e);
 	});
 	$("#collapse-codi input[name='search_sbm']").click(function(e){	
 		console.log('submitSearch for codi...')	
@@ -784,3 +789,26 @@ function initPagination(content_type){
 		}
 	}
 }
+
+function cerca(caller){
+	if(caller != null){
+		caller.preventDefault();
+	}
+	var url = 'https://hhbr3knf8j.execute-api.eu-west-1.amazonaws.com/dev/user/search';
+	var simple= $(".cercador-paraula-clau input#search").val();
+	console.log(simple);
+	if (simple != null){
+		url = url + '&simple='+ simple;
+	}
+	console.log(url);
+	$.ajax({
+		url: url
+	}).done(
+		function(data, returnCode, request){
+			console.log('returning code----->',returnCode);
+			console.log('returning request----->',request);
+			console.log('returning data----->',data);
+		}
+		)
+}
+
