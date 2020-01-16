@@ -189,6 +189,9 @@ collections: # A list of collections the CMS should be able to edit
                 name: docs
                 widget: object
                 field:
+                - label: "Nom"
+                  name: nom
+                  widget: string
                 - label: Docs Relacionats
                   name: doc
                   widget: file
