@@ -185,11 +185,15 @@ collections: # A list of collections the CMS should be able to edit
             name: docs_rels
             widget: list
             field:
-              - label: Docs Relacionats
-                name: doc
-                widget: file
-                default: "static/docs"
-                media_library:
+              - label: Docs
+                name: docs
+                widget: object
+                field:
+                - label: Docs Relacionats
+                  name: doc
+                  widget: file
+                  default: "static/docs"
+                  media_library:
                   config:
                     multiple: true
       - label: Aspectes Innovadors
