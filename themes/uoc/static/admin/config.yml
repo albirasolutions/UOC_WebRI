@@ -182,12 +182,16 @@ collections: # A list of collections the CMS should be able to edit
           - {label: titol, name: titol, widget: string}
           - {label: descripcio, name: descripcio, widget: markdown}
           - label: Docs Relacionats
-            name: "doc1"
-            widget: "file"
-            default: "/static/docs"
-            media_library:
-              config:
-                multiple: true
+            name: docs_rels
+            widget: list
+            field:
+              - label: Docs Relacionats
+                name: doc
+                widget: file
+                default: "static/docs"
+                media_library:
+                  config:
+                    multiple: true
       - label: Aspectes Innovadors
         name: aspectes_innovadors  
         required: false   
@@ -198,11 +202,14 @@ collections: # A list of collections the CMS should be able to edit
           - label: Docs Relacionats
             name: docs_rels
             widget: list
-            fields:
-              - {label: path, name: path, widget: string}
-              - {label: url, name: url, widget: string}
-              - {label: size, name: size, widget: string}
-              - {label: type, name: type, widget: string}
+            field:
+              - label: Docs Relacionats
+                name: doc
+                widget: file
+                default: "static/docs"
+                media_library:
+                  config:
+                    multiple: true
       - label: Aplicacions
         name: aplicacions   
         required: false   
@@ -212,12 +219,11 @@ collections: # A list of collections the CMS should be able to edit
           - {label: descripcio, name: descripcio, widget: markdown}
           - label: Docs Relacionats
             name: docs_rels
-            widget: list
-            fields:
-              - {label: path, name: path, widget: string}
-              - {label: url, name: url, widget: string}
-              - {label: size, name: size, widget: string}
-              - {label: type, name: type, widget: string}
+            widget: "file"
+            default: "static/docs"
+            media_library:
+              config:
+                multiple: true
       - label: Grups de Recerca
         name: grups_recerca  
         required: false    
