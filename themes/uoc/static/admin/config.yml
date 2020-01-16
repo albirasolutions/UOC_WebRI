@@ -185,11 +185,10 @@ collections: # A list of collections the CMS should be able to edit
             name: docs_rels
             widget: list
             fields:
-              label: "Document"
-              name: "doc_rel"
-              widget: "file"
-              default: "/static/docs"
-
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
       - label: Aspectes Innovadors
         name: aspectes_innovadors  
         required: false   
@@ -201,10 +200,10 @@ collections: # A list of collections the CMS should be able to edit
             name: docs_rels
             widget: list
             fields:
-              label: "Document"
-              name: "doc_rel"
-              widget: "file"
-              default: "/static/docs"
+              - {label: path, name: path, widget: string}
+              - {label: url, name: url, widget: string}
+              - {label: size, name: size, widget: string}
+              - {label: type, name: type, widget: string}
       - label: Aplicacions
         name: aplicacions   
         required: false   
@@ -227,13 +226,13 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - label: Grups
             name: grups
-            widget: grups,
+            widget: list,
             fields: 
               - {label: Grup, name: name, widget: string}
               - {label: Id, name: id, widget: hidden}
           - label: Investigadors
             name: investigadors
-            widget: investigadors
+            widget: list
             fields: 
               - {label: Investigador, name: name, widget: string}
               - {label: Id, name: id, widget: hidden}
