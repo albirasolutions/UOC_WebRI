@@ -184,17 +184,13 @@ collections: # A list of collections the CMS should be able to edit
           - label: Docs Relacionats
             name: docs_rels
             widget: object
-            field:
-            - label: Docs
-              name: docs
-              widget: list
-              fields:
-              - label: Pes
-                name: size
-                widget: string
-              - label: Doc
-                name: doc
-                widget: file
+            fields:
+            - label: "Pes"
+              name: size
+              widget: string
+            - label: Doc"
+              name: doc
+              widget: "file"
 
       - label: Aspectes Innovadors
         name: aspectes_innovadors  
@@ -205,11 +201,14 @@ collections: # A list of collections the CMS should be able to edit
           - {label: descripcio, name: descripcio, widget: markdown}
           - label: Docs Relacionats
             name: docs_rels
-            widget: "file"
-            default: "static/docs"
-            media_library:
-              config:
-                multiple: true
+            widget: object
+            fields:
+            - label: Pes
+              name: size
+              widget: string
+            - label: Doc
+              name: doc
+              widget: "file"
       - label: Aplicacions
         name: aplicacions   
         required: false   
@@ -219,11 +218,14 @@ collections: # A list of collections the CMS should be able to edit
           - {label: descripcio, name: descripcio, widget: markdown}
           - label: Docs Relacionats
             name: docs_rels
-            widget: "file"
-            default: "static/docs"
-            media_library:
-              config:
-                multiple: true
+            widget: object
+            fields:
+            - label: Pes
+              name: size
+              widget: string
+            - label: Doc
+              name: doc
+              widget: "file"
       - label: Grups de Recerca
         name: grups_recerca  
         required: false    
