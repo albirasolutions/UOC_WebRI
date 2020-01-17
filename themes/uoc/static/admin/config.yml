@@ -449,14 +449,17 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Title, name: titol, widget: string}
           - {label: description, name: descripcio, widget: markdown}
-          - label: Related Documents
+          - label: Documentos Relacionados
             name: docs_rels
             widget: list
             fields:
-              - {label: path, name: path, widget: string}
-              - {label: url, name: url, widget: string}
+              - label: File
+                name: file
+                widget: file
+                media_library:
+                  config:
+                    multiple: true
               - {label: size, name: size, widget: string}
-              - {label: type, name: type, widget: string}
       - label: Innovative aspects
         name: aspectes_innovadors  
         required: false   
