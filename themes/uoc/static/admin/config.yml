@@ -322,9 +322,7 @@ collections: # A list of collections the CMS should be able to edit
                 media_library:
                   config:
                     multiple: true
-              - {label: url, name: url, widget: string}
               - {label: size, name: size, widget: string}
-              - {label: type, name: type, widget: string}
       - label: Aspectos Innovadores
         name: aspectes_innovadors  
         required: false   
