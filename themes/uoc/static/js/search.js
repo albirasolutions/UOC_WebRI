@@ -80,6 +80,7 @@ var literals = {
 };
 jQuery(document).ready(function ($) {
 	searchParams =	{};
+
 	$(".uoc_submitSearch").click(function(e){	
 		console.log('submitSearch for all filter...')	
 		submitSearch(e);
@@ -612,6 +613,28 @@ function buildAjaxQueryCallout2TransfersAndProcessResultsFromCloudSearch(queryUr
 	});
 }
 
+function buildAjaxQueryCallout2SearchInnovativeSolutions(queryUrl){
+
+	console.log('querying...',queryUrl);
+	$.ajax({
+		headers:{
+			'Acces-Control-Allow-Origin':'*'
+		},
+		url: queryUrl
+	}).done(
+		function(data, returnCode, request){
+			console.log('returning code----->',returnCode);
+			console.log('returning request----->',request);
+			console.log('returning data----->',data);
+		}
+	).fail(function(xhr, textStatus, errorThrown){
+		console.log(xhr);
+		console.log(textStatus);
+		console.log(errorThrown)
+		//results.html("<p style='font-style:italic'>"+literals.results.connectionError[getCurrentLanguage()]+"</p>");
+	});
+}
+
 function querySearchEngine(searchParams){
 	
 	var searchWordsHelperText = "";
@@ -644,12 +667,15 @@ function querySearchEngine(searchParams){
 			//var endpointUrlAl = "http://search-webri-2dz3yckt2f5cjq7hcsbois6nw4.eu-west-1.cloudsearch.amazonaws.com/2013-01-01/search";
 			var endpointUrlAl = "https://hhbr3knf8j.execute-api.eu-west-1.amazonaws.com/dev/user/search";
 			var endpointUrlUoc = "https://transfer-research.am.pre.uoc.es/api/search";
+			var endpointUrlUocInnovSol = 'https://hhbr3knf8j.execute-api.eu-west-1.amazonaws.com/dev/user/search';
 			var fitxaURL = buildQuery(endpointUrlUoc,searchParams)+"&tipus=fitxa";
 			var grupURL = buildQuery(endpointUrlUoc,searchParams)+"&tipus=grup";
 			var transferURL = buildQuery(endpointUrlAl,searchParams)+"&tipus=transfer";
+			var innovSolUrl = buildQuery(endpointUrlUocInnovSol,searchParams);
 			buildAjaxQueryCallout2GrupOrFitxaAndProcessResultsFromCloudSearch(fitxaURL,fitxaResults, "fitxa");
 			buildAjaxQueryCallout2GrupOrFitxaAndProcessResultsFromCloudSearch(grupURL,grupResults, "grup");
 			buildAjaxQueryCallout2TransfersAndProcessResultsFromCloudSearch(transferURL);
+			buildAjaxQueryCallout2SearchInnovativeSolutions(innovSolUrl);
 			break;
 		default:
 			break;
@@ -784,3 +810,6 @@ function initPagination(content_type){
 		}
 	}
 }
+
+
+
