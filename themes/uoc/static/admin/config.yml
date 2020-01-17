@@ -198,7 +198,7 @@ collections: # A list of collections the CMS should be able to edit
         required: false   
         widget: list
         fields:
-          - {label: titol, name: titol, widget: string}
+          - {label: titolawdawdwaawddwwawawawwda, name: titol, widget: string}
           - {label: descripcio, name: descripcio, widget: markdown}
           - label: Documentos Relacionados
             name: docs_rels
