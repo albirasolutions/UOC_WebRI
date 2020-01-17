@@ -229,23 +229,17 @@ collections: # A list of collections the CMS should be able to edit
                   config:
                     multiple: true
               - {label: size, name: size, widget: string}
-      - label: Grups de Recerca
+      - label: Grups de recerca
         name: grups_recerca  
         required: false    
         widget: list
         fields:
           - label: Grups
             name: grups
-            widget: object
-            fields: 
-              - {label: Grup, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
           - label: Investigadors
             name: investigadors
-            widget: object
-            fields: 
-              - {label: Investigador, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
       - label: Contacte
         name: contacte
         required: false
@@ -369,16 +363,10 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - label: Grupos
             name: grups
-            widget: grups,
-            fields: 
-              - {label: Grupo, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
           - label: Investigadores
             name: investigadors
-            widget: investigadors
-            fields: 
-              - {label: Investigador, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
       - label: Contacto
         name: contacte
         required: false
@@ -503,16 +491,10 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - label: Groups
             name: grups
-            widget: grups,
-            fields: 
-              - {label: Group, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
           - label: Researchers
             name: investigadors
-            widget: investigadors
-            fields: 
-              - {label: Researcher, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
       - label: Contact
         name: contacte
         required: false
@@ -630,23 +612,17 @@ collections: # A list of collections the CMS should be able to edit
                   config:
                     multiple: true
               - {label: size, name: size, widget: string}
-      - label: Grups de Recerca
-        name: grups_recerca
-        required: false      
+      - label: Grups de recerca
+        name: grups_recerca  
+        required: false    
         widget: list
         fields:
           - label: Grups
             name: grups
-            widget: grups,
-            fields: 
-              - {label: Grup, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
           - label: Investigadors
             name: investigadors
-            widget: investigadors
-            fields: 
-              - {label: Investigador, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
       - label: Contacte
         name: contacte
         required: false
@@ -764,22 +740,16 @@ collections: # A list of collections the CMS should be able to edit
                     multiple: true
               - {label: size, name: size, widget: string}
       - label: Grupos de Investigación
-        name: grups_recerca
-        required: false      
+        name: grups_recerca  
+        required: false    
         widget: list
         fields:
           - label: Grupos
             name: grups
-            widget: grups,
-            fields: 
-              - {label: Grupo, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
           - label: Investigadores
             name: investigadors
-            widget: investigadors
-            fields: 
-              - {label: Investigador, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
       - label: Contacto
         name: contacte
         required: false
@@ -896,23 +866,17 @@ collections: # A list of collections the CMS should be able to edit
                   config:
                     multiple: true
               - {label: size, name: size, widget: string}
-      - label: Research groups
-        name: grups_recerca
-        required: false      
+      - label: Research Groups
+        name: grups_recerca  
+        required: false    
         widget: list
         fields:
           - label: Groups
             name: grups
-            widget: grups,
-            fields: 
-              - {label: Group, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
           - label: Researchers
             name: investigadors
-            widget: investigadors
-            fields: 
-              - {label: Researcher, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
       - label: Contact
         name: contacte
         required: false
@@ -1000,23 +964,17 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Títol, name: titol, widget: string, required: true}
           - {label: Descripció, name: descripcio, widget: markdown}
           - {label: Url Cas d'Èxit, name: url_success, widget: string}
-      - label: Grups de Recerca
-        name: grups_recerca
-        required: false      
+      - label: Grups de recerca
+        name: grups_recerca  
+        required: false    
         widget: list
         fields:
           - label: Grups
             name: grups
-            widget: grups,
-            fields: 
-              - {label: Grup, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
           - label: Investigadors
             name: investigadors
-            widget: investigadors
-            fields: 
-              - {label: Investigador, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
       - label: Contacte
         name: contacte
         required: false
@@ -1104,22 +1062,16 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Descripción, name: descripcio, widget: markdown}
           - {label: Url Caso de éxito, name: url_success, widget: string}
       - label: Grupos de Investigación
-        name: grups_recerca
-        required: false      
+        name: grups_recerca  
+        required: false    
         widget: list
         fields:
           - label: Grupos
             name: grups
-            widget: grups,
-            fields: 
-              - {label: Grupo, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
           - label: Investigadores
             name: investigadors
-            widget: investigadors
-            fields: 
-              - {label: Investigador, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
       - label: Contacto
         name: contacte
         required: false
@@ -1206,23 +1158,17 @@ collections: # A list of collections the CMS should be able to edit
           - {label: title, name: titol, widget: string, required: true}
           - {label: description, name: descripcio, widget: markdown}
           - {label: Url Success Case, name: url_success, widget: string}
-      - label: Research groups
-        name: grups_recerca
-        required: false      
+      - label: Research Groups
+        name: grups_recerca  
+        required: false    
         widget: list
         fields:
           - label: Groups
             name: grups
-            widget: grups,
-            fields: 
-              - {label: Group, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
           - label: Researchers
             name: investigadors
-            widget: investigadors
-            fields: 
-              - {label: Researcher, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
       - label: Contact
         name: contacte
         required: false
@@ -1340,23 +1286,17 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Títol, name: titol, widget: string, required: true}
           - {label: Descripció, name: descripcio, widget: markdown}
           - {label: Url Cas d'Èxit, name: url_success, widget: string}
-      - label: Grups de Recerca
-        name: grups_recerca
-        required: false      
+      - label: Grups de recerca
+        name: grups_recerca  
+        required: false    
         widget: list
         fields:
           - label: Grups
             name: grups
-            widget: grups,
-            fields: 
-              - {label: Grup, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
           - label: Investigadors
             name: investigadors
-            widget: investigadors
-            fields: 
-              - {label: Investigador, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
       - label: Contacte
         name: contacte
         required: false
@@ -1474,22 +1414,16 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Descripción, name: descripcio, widget: markdown}
           - {label: Url Caso de éxito, name: url_success, widget: string}
       - label: Grupos de Investigación
-        name: grups_recerca
-        required: false      
+        name: grups_recerca  
+        required: false    
         widget: list
         fields:
           - label: Grupos
             name: grups
-            widget: grups,
-            fields: 
-              - {label: Grupo, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
           - label: Investigadores
             name: investigadors
-            widget: investigadors
-            fields: 
-              - {label: Investigador, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
       - label: Contacto
         name: contacte
         required: false
@@ -1606,23 +1540,17 @@ collections: # A list of collections the CMS should be able to edit
           - {label: title, name: titol, widget: string, required: true}
           - {label: description, name: descripcio, widget: markdown}
           - {label: Url Success Case, name: url_success, widget: string}
-      - label: Research groups
-        name: grups_recerca
-        required: false      
+      - label: Research Groups
+        name: grups_recerca  
+        required: false    
         widget: list
         fields:
           - label: Groups
             name: grups
-            widget: grups,
-            fields: 
-              - {label: Group, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
           - label: Researchers
             name: investigadors
-            widget: investigadors
-            fields: 
-              - {label: Researcher, name: name, widget: string}
-              - {label: Id, name: id, widget: hidden}
+            widget: string
       - label: Contact
         name: contacte
         required: false
