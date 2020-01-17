@@ -134,7 +134,7 @@ collections: # A list of collections the CMS should be able to edit
     extension: 'md'
     create: true
     fields:
-      - {label: Títol, name: title, widget : string, required: true}
+      - {label: TítolAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA, name: title, widget : string, required: true}
       - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "ca", required: true}
       - label: General
         name: general
