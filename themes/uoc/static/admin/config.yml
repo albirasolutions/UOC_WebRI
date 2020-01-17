@@ -334,10 +334,13 @@ collections: # A list of collections the CMS should be able to edit
             name: docs_rels
             widget: list
             fields:
-              - {label: path, name: path, widget: string}
-              - {label: url, name: url, widget: string}
+              - label: File
+                name: file
+                widget: file
+                media_library:
+                  config:
+                    multiple: true
               - {label: size, name: size, widget: string}
-              - {label: type, name: type, widget: string}
       - label: Aplicaciones
         name: aplicacions   
         required: false   
