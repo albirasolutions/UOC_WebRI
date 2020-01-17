@@ -238,7 +238,7 @@ collections: # A list of collections the CMS should be able to edit
             name: grups
             widget: list
             fields: 
-              -label: Grup
+              - label: Grup
               - name: grup
           - label: Investigadors
             name: investigadors
@@ -371,7 +371,7 @@ collections: # A list of collections the CMS should be able to edit
             name: grups
             widget: list
             fields: 
-              -label: Grupo
+              - label: Grupo
               - name: grup
           - label: Investigadores
             name: investigadors
@@ -505,7 +505,7 @@ collections: # A list of collections the CMS should be able to edit
             name: grups
             widget: list
             fields: 
-              -label: Group
+              - label: Group
               - name: grup
           - label: Researchers
             name: investigadors
@@ -639,7 +639,7 @@ collections: # A list of collections the CMS should be able to edit
             name: grups
             widget: list
             fields: 
-              -label: Grup
+              - label: Grup
               - name: grup
           - label: Investigadors
             name: investigadors
@@ -772,7 +772,7 @@ collections: # A list of collections the CMS should be able to edit
             name: grups
             widget: list
             fields: 
-              -label: Grupo
+              - label: Grupo
               - name: grup
           - label: Investigadores
             name: investigadors
@@ -905,7 +905,7 @@ collections: # A list of collections the CMS should be able to edit
             name: grups
             widget: list
             fields: 
-              -label: Group
+              - label: Group
               - name: grup
           - label: Researchers
             name: investigadors
@@ -1009,7 +1009,7 @@ collections: # A list of collections the CMS should be able to edit
             name: grups
             widget: list
             fields: 
-              -label: Grup
+              - label: Grup
               - name: grup
           - label: Investigadors
             name: investigadors
@@ -1112,7 +1112,7 @@ collections: # A list of collections the CMS should be able to edit
             name: grups
             widget: list
             fields: 
-              -label: Grupo
+              - label: Grupo
               - name: grup
           - label: Investigadores
             name: investigadors
@@ -1215,7 +1215,7 @@ collections: # A list of collections the CMS should be able to edit
             name: grups
             widget: list
             fields: 
-              -label: Group
+              - label: Group
               - name: grup
           - label: Researchers
             name: investigadors
@@ -1349,7 +1349,7 @@ collections: # A list of collections the CMS should be able to edit
             name: grups
             widget: list
             fields: 
-              -label: Grup
+              - label: Grup
               - name: grup
           - label: Investigadors
             name: investigadors
@@ -1482,7 +1482,7 @@ collections: # A list of collections the CMS should be able to edit
             name: grups
             widget: list
             fields: 
-              -label: Grupo
+              - label: Grupo
               - name: grup
           - label: Investigadores
             name: investigadors
@@ -1615,7 +1615,7 @@ collections: # A list of collections the CMS should be able to edit
             name: grups
             widget: list
             fields: 
-              -label: Group
+              - label: Group
               - name: grup
           - label: Researchers
             name: investigadors
