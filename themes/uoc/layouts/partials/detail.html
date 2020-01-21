@@ -11,8 +11,9 @@
 {{ $sobreTec := index (.Params.sobre_tecnologia) 0 }}
 {{ $aspectesInnova := index (.Params.aspectes_innovadors) 0 }}
 {{ $apps := index (.Params.aplicacions) 0 }}
-{{ $grupsRecerca := index (.Params.grups_recerca) 0 }}
-{{ $contacte := index (.Params.contacte) 0 }}
+{{ if isset .Params "grups_recerca" }}{{ $grupsRecerca := index (.Params.grups_recerca) 0}}{{end}}
+
+{{$contacte := index (.Params.contacte) 0 }}
 <section class="info-general">
     <div class="row">
         <div class="col-xs-12">
@@ -159,7 +160,9 @@
                                 </div>
                             </div>
                             <div class="card-in-acordeon">
+                                
                                 <h4>{{ T "uoc_ri_docs" }}</h4>
+                                
                                 <div class="row" >
                                     <a class="icon icon--material-pdf icon--header float-right" href="/img/prova2.pdf" aria-hidden="true"></a>
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adwdwad</p>

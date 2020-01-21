@@ -248,7 +248,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Id, name: id, widget: hidden}
       - label: Contacte
         name: contacte
-        required: false
+        required: true
         widget: list
         fields:
           - {label: Name, name: text, widget: string}
@@ -381,7 +381,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Id, name: id, widget: hidden}
       - label: Contacto
         name: contacte
-        required: false
+        required: true
         widget: list
         fields:
           - {label: Nombre, name: text, widget: string}
@@ -515,7 +515,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Id, name: id, widget: hidden}
       - label: Contact
         name: contacte
-        required: false
+        required: true
         widget: list
         fields:
           - {label: Name, name: text, widget: string}
