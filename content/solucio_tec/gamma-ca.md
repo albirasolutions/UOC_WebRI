@@ -33,7 +33,6 @@ sobre_tecnologia:
       habitant morbi tristique senectus et netus, Ellentesque habitant morbi
       tristique senectus et netus Ellentesque habitant morbi tristique senectus
       et netus.
-    docs_rels: []
     titol: Sobre la solució tecnológica GAMMA
 aspectes_innovadors:
   - descripcio: >-
