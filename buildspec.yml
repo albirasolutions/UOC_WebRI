@@ -1,18 +1,12 @@
 version: 0.2
 
-env:
-  variables:
-    s3_output: "$BUCKET_S3"
-    hugo_version: "$HUGO_VERSION"
-    cloursearch_url: "$CLOUDSEARCH_URL"
-
 phases:
   install:
     runtime-versions:
       nodejs: 10
     commands:
-      - wget "https://github.com/gohugoio/hugo/releases/download/v${hugo_version}/hugo_${hugo_version}_Linux-64bit.deb"
-      - dpkg -i hugo_${hugo_version}_Linux-64bit.deb
+      - wget "https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/hugo_$HUGO_VERSION_Linux-64bit.deb"
+      - dpkg -i hugo_$HUGO_VERSION_Linux-64bit.deb
     finally:
       - hugo version
   pre_build:
@@ -23,7 +17,7 @@ phases:
   build:
     commands:
       - hugo
-      - cd public && aws s3 sync . s3://${s3_output} --delete --acl public-read
-      - aws cloudsearchdomain --endpoint-url ${cloursearch_url} upload-documents --content-type application/json --documents ./ca/index.json
+      - cd public && aws s3 sync . s3://$BUCKET_S3 --delete --acl public-read
+      - aws cloudsearchdomain --endpoint-url $CLOUDSEARCH_URL upload-documents --content-type application/json --documents ./ca/index.json
     finally:
       - echo "Script finished running"
