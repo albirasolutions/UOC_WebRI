@@ -5,7 +5,7 @@ service: webri-cloudsearch
 provider:
   name: aws
   runtime: python3.6
-  region: $AWS_DEFAULT_REGION
+  region: ${opt:region, self:custom.defaultRegion}
   stage: ${opt:stage, self:custom.defaultStage}
    
 resources:
@@ -36,3 +36,4 @@ functions:
           cors: true
 custom:
   defaultStage: dev
+  defaultRegion: eu-west-1
