@@ -18,5 +18,11 @@ sobre_tecnologia:
         size: ''
       - file: /img/prova2.pdf
     titol: sobre tec
+aspectes_innovadors:
+  - descripcio: awdwawdwaaw
+    titol: adwdaad
+aplicacions:
+  - descripcio: awdadwawddwawadwa
+    titol: awwdaaw
 ---
 
