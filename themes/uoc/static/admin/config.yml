@@ -187,11 +187,11 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - label: File
                 name: file
+                required: true
                 widget: file
                 media_library:
                   config:
                     multiple: true
-              - {label: size, name: size, widget: string}
 
       - label: Aspectes Innovadors
         name: aspectes_innovadors  
