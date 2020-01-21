@@ -2,16 +2,16 @@ version: 0.2
 
 env:
   variables:
-    s3_output: $BUCKET_S3
-    hugo_version: $HUGO_VERSION
-    cloursearch_url: $CLOUDSEARCH_URL
+    s3_output: ${BUCKET_S3}
+    hugo_version: ${HUGO_VERSION}
+    cloursearch_url: ${CLOUDSEARCH_URL}
 
 phases:
   install:
     runtime-versions:
       nodejs: 10
     commands:
-      - wget "https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/hugo_$HUGO_VERSION_Linux-64bit.deb"
+      - wget "https://github.com/gohugoio/hugo/releases/download/v${hugo_version}/hugo_${hugo_version}_Linux-64bit.deb"
       - dpkg -i hugo_${hugo_version}_Linux-64bit.deb
     finally:
       - hugo version
