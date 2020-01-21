@@ -23,6 +23,6 @@ phases:
       - cd ../img && aws s3 sync . s3://${BUCKET_S3}/ri_live/img --acl public-read
       - cd ../js && aws s3 sync . s3://${BUCKET_S3}/ri_live/js --acl public-read
       - cd ../css && aws s3 sync . s3://${BUCKET_S3}/ri_live/css --acl public-read
-      - aws cloudsearchdomain --endpoint-url ${CLOUDSEARCH_URL} upload-documents --content-type application/json --documents ./ca/index.json
+      - aws cloudsearchdomain --endpoint-url ${CLOUDSEARCH_URL} upload-documents --content-type application/json --documents ./ri_live/ca/index.json
     finally:
       - echo "Script finished running"
