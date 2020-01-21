@@ -14,6 +14,9 @@ sobre_tecnologia:
     docs_rels:
       - file: /img/prova2.pdf
         size: 34kb
+      - file: /img/prova2.pdf
+        size: ''
+      - file: /img/prova2.pdf
     titol: sobre tec
 ---
 
