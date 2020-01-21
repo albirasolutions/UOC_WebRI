@@ -24,5 +24,10 @@ aspectes_innovadors:
 aplicacions:
   - descripcio: awdadwawddwawadwa
     titol: awwdaaw
+contacte:
+  - address: awddawwad
+    email: adwawdwad
+    telefon: '6757657'
+    text: sesfs
 ---
 
