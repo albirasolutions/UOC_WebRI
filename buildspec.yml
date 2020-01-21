@@ -2,8 +2,9 @@ version: 0.2
 
 env:
   variables:
-    s3_output: "uocwebrisupport"
-    hugo_version: "0.59.1"
+    s3_output: $BUCKET_S3
+    hugo_version: $HUGO_VERSION
+    cloursearch_url: $CLOUDSEARCH_URL
 
 phases:
   install:
@@ -23,6 +24,6 @@ phases:
     commands:
       - hugo
       - cd public && aws s3 sync . s3://${s3_output} --delete --acl public-read
-      - aws cloudsearchdomain --endpoint-url http://doc-webri-2dz3yckt2f5cjq7hcsbois6nw4.eu-west-1.cloudsearch.amazonaws.com upload-documents --content-type application/json --documents ./ca/index.json
+      - aws cloudsearchdomain --endpoint-url ${cloursearch_url} upload-documents --content-type application/json --documents ./ca/index.json
     finally:
       - echo "Script finished running"
