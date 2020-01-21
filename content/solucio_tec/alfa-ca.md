@@ -12,7 +12,7 @@ general:
 sobre_tecnologia:
   - descripcio: adwawwdawdaw
     docs_rels:
-      - file: /img/prova2.pdf
+      - file: ''
         size: 34kb
       - file: /img/prova2.pdf
         size: ''
