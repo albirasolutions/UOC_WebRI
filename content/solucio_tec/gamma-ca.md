@@ -64,10 +64,10 @@ aplicacions:
       * Ellentesque habitant morbi tristique senectus et netus.
     titol: Aplicacions de la solució tecnológica Gamma
 grups_recerca:
-  - id: '7902'
-    name: CoSIN3
-  - id: '6002'
-    name: MeL
+  - id: '3202'
+    name: Cognitive NeuroLab
+  - id: '8102'
+    name: DARTS
 grupus:
   - investigadors: INVESTIGADOR 1
 contacte:
