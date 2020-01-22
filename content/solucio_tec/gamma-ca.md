@@ -70,7 +70,7 @@ grups_recerca:
     name: 'DigiBiz'
   - id: '902'
     name: 'MEDIACCIONS'
-grupus
+grupus:
   - investigadors: INVESTIGADOR 1
 contacte:
   - address: ''
