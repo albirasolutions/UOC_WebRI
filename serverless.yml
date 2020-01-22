@@ -1,4 +1,4 @@
-org: uoc
+org: mfonolleda
 app: webri
 service: webri-cloudsearch
 
@@ -31,7 +31,7 @@ functions:
     handler: event.search
     events:
       - http:
-          path: user/search
+          path: search
           method: get
           cors: true
 custom:
