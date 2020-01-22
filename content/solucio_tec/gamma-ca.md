@@ -64,12 +64,12 @@ aplicacions:
       * Ellentesque habitant morbi tristique senectus et netus.
     titol: Aplicacions de la solució tecnológica Gamma
 grups_recerca:
-  - id: '1902'
-    name: GAME
-  - id: '2902'
-    name: DigiBiz
-  - id: '902'
-    name: MEDIACCIONS
+  - value: '1902'
+    label: GAME
+  - value: '2902'
+    label: DigiBiz
+  - value: '902'
+    label: MEDIACCIONS
 investigadors: Investigadors 1
 contacte:
   - address: ''
