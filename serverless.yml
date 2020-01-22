@@ -1,4 +1,4 @@
-org: mfonolleda
+org: uoc
 app: webri
 service: webri-cloudsearch
 
@@ -20,18 +20,11 @@ resources:
         RestApiId:
           Ref: 'ApiGatewayRestApi'
 functions:
-  test:
-    handler: event.test
-    events:
-      - http:
-          path: public/create
-          method: get
-          cors: true
   search:
     handler: event.search
     events:
       - http:
-          path: public/search
+          path: search
           method: get
           cors: true
 custom:
