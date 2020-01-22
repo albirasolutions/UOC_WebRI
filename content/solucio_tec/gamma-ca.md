@@ -69,7 +69,9 @@ grups_recerca:
   - id: '2902'
     name: 'DigiBiz'
   - id: '902'
-    name: 'MEDIACCIONS' 
+    name: 'MEDIACCIONS'
+grupus:
+  - investigadors: INVESTIGADOR 1
 contacte:
   - address: ''
     email: pau.domingo@gmail.com

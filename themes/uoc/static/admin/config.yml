@@ -177,7 +177,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: Sobre la Tecnología
         name: sobre_tecnologia 
         required: false     
-        widget: list
+        widget: object
         fields:
           - {label: titol, name: titol, widget: string}
           - {label: descripcio, name: descripcio, widget: markdown}
@@ -196,7 +196,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: Aspectes Innovadors
         name: aspectes_innovadors  
         required: false   
-        widget: list
+        widget: object
         fields:
           - {label: titol, name: titol, widget: string}
           - {label: descripcio, name: descripcio, widget: markdown}
@@ -214,7 +214,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: Aplicacions
         name: aplicacions   
         required: false   
-        widget: list
+        widget: object
         fields:
           - {label: titol, name: titol, widget: string}
           - {label: descripcio, name: descripcio, widget: markdown}
@@ -232,7 +232,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: Grups de Recerca
         name: grups_recerca  
         required: false    
-        widget: list
+        widget: object
         fields:
           - label: Grups
             name: grups
