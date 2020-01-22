@@ -70,7 +70,6 @@ grups_recerca:
     name: DigiBiz
   - id: '902'
     name: MEDIACCIONS
-  - '1'
 contacte:
   - address: ''
     email: pau.domingo@gmail.com
