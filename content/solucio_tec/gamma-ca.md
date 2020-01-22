@@ -63,19 +63,16 @@ aplicacions:
 
       * Ellentesque habitant morbi tristique senectus et netus.
     titol: Aplicacions de la solució tecnológica Gamma
-grups_recerca:
-  - description: >-
-      Lorem ipsum dolor sit amet consectetur adipiscing elit cras, faucibus cum
-      lobortis placerat molestie nostra aenean posuere mollis Release 12Des2019
-    id: '6402'
-    name: VICRIM
-    url: 'https://transfer-research.am.pre.uoc.es/ca/vicrim.html'
-    url_img: >-
-      https://transfer-research.am.pre.uoc.es/img/api/grupsrecerca/64/image/1572961615007
-  - description: Digital Business Research Group
-    id: '2902'
-    name: DigiBiz
-    url: 'https://transfer-research.am.pre.uoc.es/ca/digibiz.html'
+grups_recerca: []
+investigadors:
+  - id: '19906902'
+    name: 'Roig Telo, Antoni'
+    url: 'https://talent.am.pre.uoc.es/ca/roig-telo-antoni.html'
+    url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/199069/image/1573927160948'
+  - id: '18608302'
+    name: 'Garcia Alsina, Montserrat'
+    url: 'https://talent.am.pre.uoc.es/ca/garcia-alsina-montserrat.html'
+    url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/186083/image/1571921035749'
 contacte:
   - address: ''
     email: pau.domingo@gmail.com
