@@ -722,30 +722,30 @@ function getResultMarkup(item, content_type, idx){
 	} else if(content_type == "patent") { // sols_tec, patent, servei, spin-off print view
 
 			markup+="<a href='"+item.fields.url+"'>"
-			markup+='<div id="'+item.id+'" aria-label="region" class="card card-noimg"><div class="card__contents"><img src="'+item.fields.imatge_url+'" alt="" class="img-wpr__cover">';
-			markup+='<p class="title">'+item.fields.eslogan+'</p><p>'+item.fields.sobre_pat_descripcio+'</p><p>'+item.fields.contacts_name+'</p>';
-			markup+='</div></div></a>';
+			markup+='<div id="'+item.id+'"  class="card card-people"><div class="card__contents img-wpr"><img src="'+item.fields.imatge_url+'" alt="" class="img-wpr__cover">';
+			markup+='<div class="img-wpr__contents"><p class="title">'+item.fields.name+'</p>';
+			markup+='</div></div></div></a>';
 	}
-	else if(content_type == "servei") { // sols_tec, patent, servei, spin-off print view
+	else if(content_type == "servei") {
 
 		markup+="<a href='"+item.fields.url+"'>"
-		markup+='<div id="'+item.id+'" aria-label="region" class="card card-noimg"><div class="card__contents"><img src="'+item.fields.imatge_url+'" alt="" class="img-wpr__cover">';
-		markup+='<p class="title">'+item.fields.eslogan+'</p><p>'+item.fields.sobre_pat_descripcio+'</p><p>'+item.fields.contacts_name+'</p>';
-		markup+='</div></div></a>';
+		markup+='<div id="'+item.id+'"  class="card card-people"><div class="card__contents img-wpr"><img src="'+item.fields.imatge_url+'" alt="" class="img-wpr__cover">';
+		markup+='<div class="img-wpr__contents"><p class="title">'+item.fields.name+'</p>';
+		markup+='</div></div></div></a>';
 	}
-	else if(content_type == "solucio_tec") { // sols_tec, patent, servei, spin-off print view
+	else if(content_type == "solucio_tec") {
 
 		markup+="<a href='"+item.fields.url+"'>"
-		markup+='<div id="'+item.id+'" aria-label="region" class="card card-noimg"><div class="card__contents"><img src="'+item.fields.imatge_url+'" alt="" class="img-wpr__cover">';
-		markup+='<p class="title">'+item.fields.eslogan+'</p><p>'+item.fields.sobre_pat_descripcio+'</p><p>'+item.fields.contacts_name+'</p>';
-		markup+='</div></div></a>';
+		markup+='<div id="'+item.id+'"  class="card card-people"><div class="card__contents img-wpr"><img src="'+item.fields.imatge_url+'" alt="" class="img-wpr__cover">';
+		markup+='<div class="img-wpr__contents"><p class="title">'+item.fields.name+'</p>';
+		markup+='</div></div></div></a>';
 	}
-	else if(content_type == "spin_off") { // sols_tec, patent, servei, spin-off print view
+	else if(content_type == "spin_off") {
 
 		markup+="<a href='"+item.fields.url+"'>"
-		markup+='<div id="'+item.id+'" aria-label="region" class="card card-noimg"><div class="card__contents"><img src="'+item.fields.imatge_url+'" alt="" class="img-wpr__cover">';
-		markup+='<p class="title">'+item.fields.eslogan+'</p><p>'+item.fields.sobre_pat_descripcio+'</p><p>'+item.fields.contacts_name+'</p>';
-		markup+='</div></div></a>';
+		markup+='<div id="'+item.id+'"  class="card card-people"><div class="card__contents img-wpr"><img src="'+item.fields.imatge_url+'" alt="" class="img-wpr__cover">';
+		markup+='<div class="img-wpr__contents"><p class="title">'+item.fields.name+'</p>';
+		markup+='</div></div></div></a>';
 	}
 	
 	markup+='</div>';
