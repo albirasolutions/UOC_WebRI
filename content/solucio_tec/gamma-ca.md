@@ -64,12 +64,18 @@ aplicacions:
       * Ellentesque habitant morbi tristique senectus et netus.
     titol: Aplicacions de la solució tecnológica Gamma
 grups_recerca:
-  - id: '3202'
-    name: Cognitive NeuroLab
-  - id: '8102'
-    name: DARTS
-grupus:
-  - investigadors: INVESTIGADOR 1
+  - description: >-
+      Lorem ipsum dolor sit amet consectetur adipiscing elit cras, faucibus cum
+      lobortis placerat molestie nostra aenean posuere mollis Release 12Des2019
+    id: '6402'
+    name: VICRIM
+    url: 'https://transfer-research.am.pre.uoc.es/ca/vicrim.html'
+    url_img: >-
+      https://transfer-research.am.pre.uoc.es/img/api/grupsrecerca/64/image/1572961615007
+  - description: Digital Business Research Group
+    id: '2902'
+    name: DigiBiz
+    url: 'https://transfer-research.am.pre.uoc.es/ca/digibiz.html'
 contacte:
   - address: ''
     email: pau.domingo@gmail.com
