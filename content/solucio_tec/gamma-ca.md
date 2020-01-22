@@ -64,8 +64,7 @@ aplicacions:
       * Ellentesque habitant morbi tristique senectus et netus.
     titol: Aplicacions de la solució tecnológica Gamma
 grups_recerca: 
-  - value: '1902'
-    label: GAME
+  - gurp: 'GAME'
 investigadors: Investigadors 1
 contacte:
   - address: ''
