@@ -220,13 +220,41 @@ collections: # A list of collections the CMS should be able to edit
               - {label: url, name: url, widget: string}
               - {label: size, name: size, widget: string}
               - {label: type, name: type, widget: string}
-      - label: Grups de Recerca
-        name: grups_recerca  
-        required: false    
-        widget: list
-        fields:
-          - {label: Grups, name: grups, widget: grups}
-          - {label: Investigadors, name: investigadors, widget: investigadors}
+      - label: "Grups de Recerca"
+        name: grups_recerca
+        widget: "grups_custom_list"
+        fields: 
+          - label: Grup
+            name: id
+            widget: grups_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Descripcio
+            name: description
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
+      - label: "Investigadors"
+        name: investigadors
+        widget: "investigadors_custom_list"
+        fields: 
+          - label: Investigador
+            name: id
+            widget: investigadors_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
       - label: Contacte
         name: contacte
         required: false
@@ -339,13 +367,41 @@ collections: # A list of collections the CMS should be able to edit
               - {label: url, name: url, widget: string}
               - {label: size, name: size, widget: string}
               - {label: type, name: type, widget: string}
-      - label: Grupos de Investigación
-        name: grups_recerca  
-        required: false    
-        widget: list
-        fields:
-          - {label: Grupos, name: grups, widget: grups}
-          - {label: Investigadores, name: investigadors, widget: investigadors}
+      - label: "Grups de Recerca"
+        name: grups_recerca
+        widget: "grups_custom_list"
+        fields: 
+          - label: Grup
+            name: id
+            widget: grups_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Descripcio
+            name: description
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
+      - label: "Investigadors"
+        name: investigadors
+        widget: "investigadors_custom_list"
+        fields: 
+          - label: Investigador
+            name: id
+            widget: investigadors_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
       - label: Contacto
         name: contacte
         required: false
@@ -454,13 +510,41 @@ collections: # A list of collections the CMS should be able to edit
               - {label: url, name: url, widget: string}
               - {label: size, name: size, widget: string}
               - {label: type, name: type, widget: string}
-      - label: Research Groups
-        name: grups_recerca  
-        required: false    
-        widget: list
-        fields:
-          - {label: Groups, name: grups, widget: grups}
-          - {label: Researchers, name: investigadors, widget: investigadors}
+      - label: "Grups de Recerca"
+        name: grups_recerca
+        widget: "grups_custom_list"
+        fields: 
+          - label: Grup
+            name: id
+            widget: grups_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Descripcio
+            name: description
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
+      - label: "Investigadors"
+        name: investigadors
+        widget: "investigadors_custom_list"
+        fields: 
+          - label: Investigador
+            name: id
+            widget: investigadors_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
       - label: Contact
         name: contacte
         required: false
@@ -569,13 +653,41 @@ collections: # A list of collections the CMS should be able to edit
               - {label: url, name: url, widget: string}
               - {label: size, name: size, widget: string}
               - {label: type, name: type, widget: string}
-      - label: Grups de Recerca
+      - label: "Grups de Recerca"
         name: grups_recerca
-        required: false      
-        widget: list
-        fields:
-          - {label: Grups, name: grups, widget: grups}
-          - {label: Investigadors, name: investigadors, widget: investigadors}
+        widget: "grups_custom_list"
+        fields: 
+          - label: Grup
+            name: id
+            widget: grups_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Descripcio
+            name: description
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
+      - label: "Investigadors"
+        name: investigadors
+        widget: "investigadors_custom_list"
+        fields: 
+          - label: Investigador
+            name: id
+            widget: investigadors_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
       - label: Contacte
         name: contacte
         required: false
@@ -683,13 +795,41 @@ collections: # A list of collections the CMS should be able to edit
               - {label: url, name: url, widget: string}
               - {label: size, name: size, widget: string}
               - {label: type, name: type, widget: string}
-      - label: Grupos de Investigación
+      - label: "Grups de Recerca"
         name: grups_recerca
-        required: false      
-        widget: list
-        fields:
-          - {label: Grupos, name: grups, widget: grups}
-          - {label: Investigadores, name: investigadors, widget: investigadors}
+        widget: "grups_custom_list"
+        fields: 
+          - label: Grup
+            name: id
+            widget: grups_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Descripcio
+            name: description
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
+      - label: "Investigadors"
+        name: investigadors
+        widget: "investigadors_custom_list"
+        fields: 
+          - label: Investigador
+            name: id
+            widget: investigadors_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
       - label: Contacto
         name: contacte
         required: false
@@ -797,13 +937,41 @@ collections: # A list of collections the CMS should be able to edit
               - {label: url, name: url, widget: string}
               - {label: size, name: size, widget: string}
               - {label: type, name: type, widget: string}
-      - label: Research groups
+      - label: "Grups de Recerca"
         name: grups_recerca
-        required: false      
-        widget: list
-        fields:
-          - {label: Groups, name: grups, widget: grups}
-          - {label: Investigators, name: investigadors, widget: investigadors}
+        widget: "grups_custom_list"
+        fields: 
+          - label: Grup
+            name: id
+            widget: grups_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Descripcio
+            name: description
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
+      - label: "Investigadors"
+        name: investigadors
+        widget: "investigadors_custom_list"
+        fields: 
+          - label: Investigador
+            name: id
+            widget: investigadors_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
       - label: Contact
         name: contacte
         required: false
@@ -888,13 +1056,41 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Títol, name: titol, widget: string, required: true}
           - {label: Descripció, name: descripcio, widget: markdown}
           - {label: Url Cas d'Èxit, name: url_success, widget: string}
-      - label: Grups de Recerca
+      - label: "Grups de Recerca"
         name: grups_recerca
-        required: false      
-        widget: list
-        fields:
-          - {label: Grups, name: grups, widget: grups}
-          - {label: Investigadors, name: investigadors, widget: investigadors}
+        widget: "grups_custom_list"
+        fields: 
+          - label: Grup
+            name: id
+            widget: grups_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Descripcio
+            name: description
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
+      - label: "Investigadors"
+        name: investigadors
+        widget: "investigadors_custom_list"
+        fields: 
+          - label: Investigador
+            name: id
+            widget: investigadors_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
       - label: Contacte
         name: contacte
         required: false
@@ -978,13 +1174,41 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Título, name: titol, widget: string, required: true}
           - {label: Descripción, name: descripcio, widget: markdown}
           - {label: Url Caso de éxito, name: url_success, widget: string}
-      - label: Grupos de Investigación
+      - label: "Grups de Recerca"
         name: grups_recerca
-        required: false      
-        widget: list
-        fields:
-          - {label: Grupos, name: grups, widget: grups}
-          - {label: Investigadores, name: investigadors, widget: investigadors}
+        widget: "grups_custom_list"
+        fields: 
+          - label: Grup
+            name: id
+            widget: grups_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Descripcio
+            name: description
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
+      - label: "Investigadors"
+        name: investigadors
+        widget: "investigadors_custom_list"
+        fields: 
+          - label: Investigador
+            name: id
+            widget: investigadors_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
       - label: Contacto
         name: contacte
         required: false
@@ -1068,13 +1292,41 @@ collections: # A list of collections the CMS should be able to edit
           - {label: title, name: titol, widget: string, required: true}
           - {label: description, name: descripcio, widget: markdown}
           - {label: Url Success Case, name: url_success, widget: string}
-      - label: Research groups
+      - label: "Grups de Recerca"
         name: grups_recerca
-        required: false      
-        widget: list
-        fields:
-          - {label: Groups, name: grups, widget: grups}
-          - {label: Investigators, name: investigadors, widget: investigadors}
+        widget: "grups_custom_list"
+        fields: 
+          - label: Grup
+            name: id
+            widget: grups_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Descripcio
+            name: description
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
+      - label: "Investigadors"
+        name: investigadors
+        widget: "investigadors_custom_list"
+        fields: 
+          - label: Investigador
+            name: id
+            widget: investigadors_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
       - label: Contact
         name: contacte
         required: false
@@ -1183,13 +1435,41 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Títol, name: titol, widget: string, required: true}
           - {label: Descripció, name: descripcio, widget: markdown}
           - {label: Url Cas d'Èxit, name: url_success, widget: string}
-      - label: Grups de Recerca
+      - label: "Grups de Recerca"
         name: grups_recerca
-        required: false      
-        widget: list
-        fields:
-          - {label: Grups, name: grups, widget: grups}
-          - {label: Investigadors, name: investigadors, widget: investigadors}
+        widget: "grups_custom_list"
+        fields: 
+          - label: Grup
+            name: id
+            widget: grups_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Descripcio
+            name: description
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
+      - label: "Investigadors"
+        name: investigadors
+        widget: "investigadors_custom_list"
+        fields: 
+          - label: Investigador
+            name: id
+            widget: investigadors_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
       - label: Contacte
         name: contacte
         required: false
@@ -1297,13 +1577,41 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Título, name: titol, widget: string, required: true}
           - {label: Descripción, name: descripcio, widget: markdown}
           - {label: Url Caso de éxito, name: url_success, widget: string}
-      - label: Grupos de Investigación
+      - label: "Grups de Recerca"
         name: grups_recerca
-        required: false      
-        widget: list
-        fields:
-          - {label: Grupos, name: grups, widget: grups}
-          - {label: Investigadores, name: investigadors, widget: investigadors}
+        widget: "grups_custom_list"
+        fields: 
+          - label: Grup
+            name: id
+            widget: grups_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Descripcio
+            name: description
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
+      - label: "Investigadors"
+        name: investigadors
+        widget: "investigadors_custom_list"
+        fields: 
+          - label: Investigador
+            name: id
+            widget: investigadors_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
       - label: Contacto
         name: contacte
         required: false
@@ -1411,13 +1719,41 @@ collections: # A list of collections the CMS should be able to edit
           - {label: title, name: titol, widget: string, required: true}
           - {label: description, name: descripcio, widget: markdown}
           - {label: Url Success Case, name: url_success, widget: string}
-      - label: Research groups
+      - label: "Grups de Recerca"
         name: grups_recerca
-        required: false      
-        widget: list
-        fields:
-          - {label: Groups, name: grups, widget: grups}
-          - {label: Investigators, name: investigadors, widget: investigadors}
+        widget: "grups_custom_list"
+        fields: 
+          - label: Grup
+            name: id
+            widget: grups_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Descripcio
+            name: description
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
+      - label: "Investigadors"
+        name: investigadors
+        widget: "investigadors_custom_list"
+        fields: 
+          - label: Investigador
+            name: id
+            widget: investigadors_custom_select
+          - label: Nom
+            name: name
+            widget: hidden
+          - label: Url
+            name: url
+            widget: hidden
+          - label: Url_img
+            name: url_img
+            widget: hidden
       - label: Contact
         name: contacte
         required: false
