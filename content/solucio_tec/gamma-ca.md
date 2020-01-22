@@ -65,9 +65,11 @@ aplicacions:
     titol: Aplicacions de la solució tecnológica Gamma
 grups_recerca:
   - id: '1902'
+    name: 'GAME'
   - id: '2902'
+    name: 'DigiBiz'
   - id: '902'
-  - id: '1902'
+    name: 'MEDIACCIONS' 
 contacte:
   - address: ''
     email: pau.domingo@gmail.com
