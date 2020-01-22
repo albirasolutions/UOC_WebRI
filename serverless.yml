@@ -24,14 +24,14 @@ functions:
     handler: event.test
     events:
       - http:
-          path: user/create
+          path: public/create
           method: get
           cors: true
   search:
     handler: event.search
     events:
       - http:
-          path: search
+          path: public/search
           method: get
           cors: true
 custom:
