@@ -64,8 +64,10 @@ aplicacions:
       * Ellentesque habitant morbi tristique senectus et netus.
     titol: Aplicacions de la solució tecnológica Gamma
 grups_recerca:
-  - id: '6902'
-  - id: '6402'
+  - id: '7902'
+    name: CoSIN3
+  - id: '6002'
+    name: MeL
 grupus:
   - investigadors: INVESTIGADOR 1
 contacte:
