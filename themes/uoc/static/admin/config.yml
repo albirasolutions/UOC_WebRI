@@ -138,7 +138,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "ca", required: true}
       - label: General
         name: general
-        widget: list
+        widget: object
         fields: 
           - {label: "Nom Solucio", name: nom_solucio, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
@@ -196,7 +196,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: Aspectes Innovadors
         name: aspectes_innovadors  
         required: false   
-        widget: object
+        widget: list
         fields:
           - {label: titol, name: titol, widget: string}
           - {label: descripcio, name: descripcio, widget: markdown}
@@ -232,7 +232,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: Grups de Recerca
         name: grups_recerca  
         required: false    
-        widget: object
+        widget: list
         fields:
           - label: Grups
             name: grups

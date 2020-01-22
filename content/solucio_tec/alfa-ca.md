@@ -9,6 +9,10 @@ general:
     sector: alfa
     slogan: alfa
     text_breu: alfa
+    keywords:
+      - value: '#tecnologia'
+      - value: '#uoc'
+      - value: '#hugo'
     xarxes:
       - address: 'https://www.facebook.com/UOC.universitat'
         xarxa: facebook
@@ -19,7 +23,7 @@ general:
 sobre_tecnologia:
   - descripcio: adwawwdawdaw
     docs_rels:
-      - file: /img/prova2.pdf
+      - file: /img/informe_disseny_web_r_i.pdf
         size: ''
       - file: /img/prova2.pdf
         size: 34kb
