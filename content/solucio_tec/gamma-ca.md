@@ -63,7 +63,19 @@ aplicacions:
 
       * Ellentesque habitant morbi tristique senectus et netus.
     titol: Aplicacions de la solució tecnológica Gamma
-grups_recerca: []
+grups_recerca:
+  - description: Metacampus Real
+    id: '902'
+    name: MEDIACCIONS
+    url: 'https://transfer-research.am.pre.uoc.es/ca/mediaccions.html'
+    url_img: >-
+      https://transfer-research.am.pre.uoc.es/img/api/grupsrecerca/9/image/1573919706793
+  - description: 'Grup de recerca en Aprenentatges, Mitjans de comunicació i Entreteniment'
+    id: '1902'
+    name: GAME
+    url: 'https://transfer-research.am.pre.uoc.es/ca/game.html'
+    url_img: >-
+      https://transfer-research.am.pre.uoc.es/img/api/grupsrecerca/19/image/1573664391789
 investigadors:
   - id: '19906902'
     name: 'Roig Telo, Antoni'
