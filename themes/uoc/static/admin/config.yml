@@ -367,7 +367,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: url, name: url, widget: string}
               - {label: size, name: size, widget: string}
               - {label: type, name: type, widget: string}
-      - label: "Grups de Recerca"
+      - label: "Grupos de Investigación"
         name: grups_recerca
         widget: "grups_custom_list"
         fields: 
@@ -386,7 +386,7 @@ collections: # A list of collections the CMS should be able to edit
           - label: Url_img
             name: url_img
             widget: hidden
-      - label: "Investigadors"
+      - label: "Investigadores"
         name: investigadors
         widget: "investigadors_custom_list"
         fields: 
@@ -510,7 +510,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: url, name: url, widget: string}
               - {label: size, name: size, widget: string}
               - {label: type, name: type, widget: string}
-      - label: "Grups de Recerca"
+      - label: "Research Groups"
         name: grups_recerca
         widget: "grups_custom_list"
         fields: 
@@ -529,7 +529,7 @@ collections: # A list of collections the CMS should be able to edit
           - label: Url_img
             name: url_img
             widget: hidden
-      - label: "Investigadors"
+      - label: "Researchers"
         name: investigadors
         widget: "investigadors_custom_list"
         fields: 
@@ -795,7 +795,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: url, name: url, widget: string}
               - {label: size, name: size, widget: string}
               - {label: type, name: type, widget: string}
-      - label: "Grups de Recerca"
+      - label: "Grupos de Investigación"
         name: grups_recerca
         widget: "grups_custom_list"
         fields: 
@@ -814,7 +814,7 @@ collections: # A list of collections the CMS should be able to edit
           - label: Url_img
             name: url_img
             widget: hidden
-      - label: "Investigadors"
+      - label: "Investigadores"
         name: investigadors
         widget: "investigadors_custom_list"
         fields: 
@@ -937,7 +937,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: url, name: url, widget: string}
               - {label: size, name: size, widget: string}
               - {label: type, name: type, widget: string}
-      - label: "Grups de Recerca"
+      - label: "Research Groups"
         name: grups_recerca
         widget: "grups_custom_list"
         fields: 
@@ -956,7 +956,7 @@ collections: # A list of collections the CMS should be able to edit
           - label: Url_img
             name: url_img
             widget: hidden
-      - label: "Investigadors"
+      - label: "Researchers"
         name: investigadors
         widget: "investigadors_custom_list"
         fields: 
@@ -1174,7 +1174,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Título, name: titol, widget: string, required: true}
           - {label: Descripción, name: descripcio, widget: markdown}
           - {label: Url Caso de éxito, name: url_success, widget: string}
-      - label: "Grups de Recerca"
+      - label: "Grupos de Investigación"
         name: grups_recerca
         widget: "grups_custom_list"
         fields: 
@@ -1193,7 +1193,7 @@ collections: # A list of collections the CMS should be able to edit
           - label: Url_img
             name: url_img
             widget: hidden
-      - label: "Investigadors"
+      - label: "Investigadores"
         name: investigadors
         widget: "investigadors_custom_list"
         fields: 
@@ -1292,7 +1292,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: title, name: titol, widget: string, required: true}
           - {label: description, name: descripcio, widget: markdown}
           - {label: Url Success Case, name: url_success, widget: string}
-      - label: "Grups de Recerca"
+      - label: "Research Groups"
         name: grups_recerca
         widget: "grups_custom_list"
         fields: 
@@ -1311,7 +1311,7 @@ collections: # A list of collections the CMS should be able to edit
           - label: Url_img
             name: url_img
             widget: hidden
-      - label: "Investigadors"
+      - label: "Researchers"
         name: investigadors
         widget: "investigadors_custom_list"
         fields: 
@@ -1577,7 +1577,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Título, name: titol, widget: string, required: true}
           - {label: Descripción, name: descripcio, widget: markdown}
           - {label: Url Caso de éxito, name: url_success, widget: string}
-      - label: "Grups de Recerca"
+      - label: "Grupos de Investigación"
         name: grups_recerca
         widget: "grups_custom_list"
         fields: 
@@ -1596,7 +1596,7 @@ collections: # A list of collections the CMS should be able to edit
           - label: Url_img
             name: url_img
             widget: hidden
-      - label: "Investigadors"
+      - label: "Investigadores"
         name: investigadors
         widget: "investigadors_custom_list"
         fields: 
@@ -1719,7 +1719,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: title, name: titol, widget: string, required: true}
           - {label: description, name: descripcio, widget: markdown}
           - {label: Url Success Case, name: url_success, widget: string}
-      - label: "Grups de Recerca"
+      - label: "Research Groups"
         name: grups_recerca
         widget: "grups_custom_list"
         fields: 
@@ -1738,7 +1738,7 @@ collections: # A list of collections the CMS should be able to edit
           - label: Url_img
             name: url_img
             widget: hidden
-      - label: "Investigadors"
+      - label: "Researchers"
         name: investigadors
         widget: "investigadors_custom_list"
         fields: 
