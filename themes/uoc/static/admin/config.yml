@@ -2620,7 +2620,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Descripció, name: descripcio, widget: markdown, required: true}
           - {label: "Lloc", name: lloc, widget: string, required: true} 
           - {label: "Quan", name: "data", widget: datetime, required: true}
-          - {label: "Imatge", name: "img", widget: image}
+          - {label: "Imatge", name: "img", widget: image, default: ""}
           - label: "Social"
             name: xarxes
             widget: list
