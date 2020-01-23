@@ -2493,7 +2493,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
       - label: General
         name: general
-        widget: list
+        widget: object
         fields: 
           - {label: "Títol", name: titol, widget: string, required: true}
           - {label: "Imatge", name: "img", widget: image}
@@ -2533,7 +2533,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "es"}       
       - label: General
         name: general
-        widget: list
+        widget: object
         fields: 
           - {label: "Título", name: titol, widget: string, required: true}
           - {label: "Imagen", name: "img", widget: image}
@@ -2573,7 +2573,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Language, name: language, widget: select, options: ["ca","es","en"],default: "en"}       
       - label: General
         name: general
-        widget: list
+        widget: object
         fields: 
           - {label: "Title", name: titol, widget: string, required: true}
           - {label: "Image", name: "img", widget: image}
