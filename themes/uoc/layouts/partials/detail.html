@@ -175,7 +175,6 @@
                                 
                             
                                 {{ range $d := $sobreTec.docs_rels }}
-                                {{if isset $d "file" }}
                                 <div class="row" >
                                    
                                     {{$doc := split $d.file "/"}}
@@ -183,7 +182,6 @@
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{index $doc 2}}</p>
                                    
                                 </div>
-                                {{end}}
                                 {{end}}
 
                                 
@@ -206,13 +204,12 @@
                         <div id="collapse1" class="contentCollapse">
                             <div class="card-in-acordeon">
                                 <div class="wrap-richText">
-                                    <p>{{ safeHTML (markdownify $aspectesInnova.descripcio) }}</p>
+                                    {{ safeHTML (markdownify $aspectesInnova.descripcio) }}
                                 </div>
                             </div>
                             <div class="card-in-acordeon">
                                 <h4>{{ T "uoc_ri_docs" }}</h4>
                                 {{ range $d := $aspectesInnova.docs_rels }}
-                                {{if isset $d "file" }}
                                 <div class="row" >
                                    
                                     {{$doc := split $d.file "/"}}
@@ -220,7 +217,6 @@
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{index $doc 2}}</p>
                                    
                                 </div>
-                                {{end}}
                                 {{end}}
                             </div>
                         </div>
@@ -241,13 +237,12 @@
                         <div id="collapseApps" class="contentCollapse">
                             <div class="card-in-acordeon">
                                 <div class="wrap-richText">
-                                    <p>{{ safeHTML (markdownify $apps.descripcio) }}</p>
+                                    {{ safeHTML (markdownify $apps.descripcio) }}
                                 </div>
                             </div>
                             <div class="card-in-acordeon">
                                 <h4>{{ T "uoc_ri_docs" }}</h4>
                                 {{ range $d := $apps.docs_rels }}
-                                {{if isset $d "file" }}
                                 <div class="row" >
                                    
                                     {{$doc := split $d.file "/"}}
@@ -255,7 +250,6 @@
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{index $doc 2}}</p>
                                    
                                 </div>
-                                {{end}}
                                 {{end}}
                             </div>
                         </div>
@@ -507,7 +501,6 @@
                                 <h4>{{ T "uoc_ri_docs" }}</h4>
 
                                 {{ range $d := $sobrePat.docs_rels }}
-                                {{if isset $d "file" }}
                                 <div class="row" >
                                    
                                     {{$doc := split $d.file "/"}}
@@ -515,7 +508,6 @@
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{index $doc 2}}</p>
                                    
                                 </div>
-                                {{end}}
                                 {{end}}
                             </div>
                         </div>
@@ -536,13 +528,12 @@
                         <div id="collapse1" class="contentCollapse">
                             <div class="card-in-acordeon">
                                 <div class="wrap-richText">
-                                    <p>{{ $aspectesInnova.descripcio}}</p>
+                                    {{ safeHTML (markdownify $aspectesInnova.descripcio) }}
                                 </div>
                             </div>
                             <div class="card-in-acordeon">
                                 <h4>{{ T "uoc_ri_docs" }}</h4>
                                 {{ range $d := $aspectesInnova.docs_rels }}
-                                {{if isset $d "file" }}
                                 <div class="row" >
                                    
                                     {{$doc := split $d.file "/"}}
@@ -550,7 +541,6 @@
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{index $doc 2}}</p>
                                    
                                 </div>
-                                {{end}}
                                 {{end}}
                             </div>
                         </div>
@@ -571,13 +561,12 @@
                         <div id="collapseApps" class="contentCollapse">
                             <div class="card-in-acordeon">
                                 <div class="wrap-richText">
-                                    <p>{{ $apps.descripcio}}</p>
+                                    {{ safeHTML (markdownify $apps.descripcio) }}
                                 </div>
                             </div>
                             <div class="card-in-acordeon">
                                 <h4>{{ T "uoc_ri_docs" }}</h4>
                                 {{ range $d := $apps.docs_rels }}
-                                {{if isset $d "file" }}
                                 <div class="row" >
                                    
                                     {{$doc := split $d.file "/"}}
@@ -585,7 +574,6 @@
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{index $doc 2}}</p>
                                    
                                 </div>
-                                {{end}}
                                 {{end}}
                             </div>
                         </div>
@@ -831,7 +819,6 @@
                                 <h4>{{ T "uoc_ri_docs" }}</h4>
 
                                 {{ range $d := $sobreServ.docs_rels }}
-                                {{if isset $d "file" }}
                                 <div class="row" >
                                    
                                     {{$doc := split $d.file "/"}}
@@ -839,7 +826,6 @@
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{index $doc 2}}</p>
                                    
                                 </div>
-                                {{end}}
                                 {{end}}
                             </div>
                         </div>
@@ -1125,7 +1111,6 @@
                                 <h4>{{ T "uoc_ri_docs" }}</h4>
 
                                 {{ range $d := $sobreSpin.docs_rels }}
-                                {{if isset $d "file" }}
                                 <div class="row" >
                                    
                                     {{$doc := split $d.file "/"}}
@@ -1133,7 +1118,6 @@
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{index $doc 2}}</p>
                                    
                                 </div>
-                                {{end}}
                                 {{end}}
                             </div>
                         </div>
@@ -1154,13 +1138,12 @@
                         <div id="collapse1" class="contentCollapse">
                             <div class="card-in-acordeon">
                                 <div class="wrap-richText">
-                                    <p>{{ safeHTML (markdownify $products_serveis.descripcio) }}</p>
+                                    {{ safeHTML (markdownify $products_serveis.descripcio) }}
                                 </div>
                             </div>
                             <div class="card-in-acordeon">
                                 <h4>{{ T "uoc_ri_docs" }}</h4>
                                 {{ range $d := $products_serveis.docs_rels }}
-                                {{if isset $d "file" }}
                                 <div class="row" >
                                    
                                     {{$doc := split $d.file "/"}}
@@ -1168,7 +1151,6 @@
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{index $doc 2}}</p>
                                    
                                 </div>
-                                {{end}}
                                 {{end}}
                             </div>
                         </div>
@@ -1189,14 +1171,13 @@
                         <div id="collapseApps" class="contentCollapse">
                             <div class="card-in-acordeon">
                                 <div class="wrap-richText">
-                                    <p>{{ safeHTML (markdownify $clients.descripcio) }}</p>
+                                    {{ safeHTML (markdownify $clients.descripcio) }}
                                 </div>
                             </div>
                             <div class="card-in-acordeon">
                                 <h4>{{ T "uoc_ri_docs" }}</h4>
 
                                 {{ range $d := $clients.docs_rels }}
-                                {{if isset $d "file" }}
                                 <div class="row" >
                                    
                                     {{$doc := split $d.file "/"}}
@@ -1204,7 +1185,6 @@
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{index $doc 2}}</p>
                                    
                                 </div>
-                                {{end}}
                                 {{end}}
                             </div>
                         </div>
