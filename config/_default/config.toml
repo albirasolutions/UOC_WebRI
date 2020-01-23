@@ -52,5 +52,6 @@ URL = "s3://uocwebrisupport?region=eu-west-1"
 
 [params]
   apiPlatacon = "https://transfer-research.am.pre.uoc.es/api/search"
-  apiRI = "https://hhbr3knf8j.execute-api.eu-west-1.amazonaws.com/dev/search"
-  authProviderUrl = "https://eh7d3mcjpg.execute-api.eu-west-1.amazonaws.com/prod"
+  apiRI = "https://webri.albira.io/api-ri/search"
+  authProviderBaseUrl = "https://webri.albira.io/api-oauth"
+  githubRepo = "albirasolutions/UOC_WebRI"

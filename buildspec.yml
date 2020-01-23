@@ -16,7 +16,7 @@ phases:
       - echo "Finished renaming language files"
   build:
     commands:
-      - hugo
+      - hugo --environment ${ENV}
       - cd public/ && aws s3 cp index.html s3://${BUCKET_S3}/${DEST_FOLDER}/index.html --acl public-read
       - cd ./admin && aws s3 sync . s3://${BUCKET_S3}/${DEST_FOLDER}/admin --acl public-read --delete
       - cd ../ca && aws s3 sync . s3://${BUCKET_S3}/${DEST_FOLDER}/ca --acl public-read --delete

@@ -1,3 +1,4 @@
 [params]
+  apiPlatacon = "/api/search"
   apiRI = "/api-ri/search"
   authProviderBaseUrl = ""
