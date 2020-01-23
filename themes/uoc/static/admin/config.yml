@@ -214,7 +214,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: Aplicacions
         name: aplicacions   
         required: false   
-        widget: object
+        widget: list
         fields:
           - {label: titol, name: titol, widget: string}
           - {label: descripcio, name: descripcio, widget: markdown}
@@ -291,7 +291,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "es", required: true}
       - label: General
         name: general
-        widget: list
+        widget: object
         fields: 
           - {label: "Nombre Solución", name: nom_solucio, widget: string, required: true}
           - {label: "Texto", name: text_breu, widget: string}
@@ -330,7 +330,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: Sobre la Tecnologia
         name: sobre_tecnologia 
         required: false     
-        widget: list
+        widget: object
         fields:
           - {label: Título, name: titol, widget: string}
           - {label: Descripción, name: descripcio, widget: markdown}
@@ -443,7 +443,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Language, name: language, widget : select, options: ["ca","es","en"],default: "en", required: true}
       - label: General
         name: general
-        widget: list
+        widget: object
         fields: 
           - {label: "Solution name", name: nom_solucio, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
@@ -483,7 +483,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: About Technology
         name: sobre_tecnologia 
         required: false     
-        widget: list
+        widget: object
         fields:
           - {label: Title, name: titol, widget: string}
           - {label: description, name: descripcio, widget: markdown}
@@ -597,7 +597,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "ca", required: true}
       - label: General
         name: general
-        widget: list
+        widget: object
         fields: 
           - {label: "Nom Patent", name: nom_patent, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
@@ -636,7 +636,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: Sobre la Patent
         name: sobre_patent  
         required: false    
-        widget: list
+        widget: object
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
@@ -749,7 +749,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "es", required: true}
       - label: General
         name: general
-        widget: list
+        widget: object
         fields: 
           - {label: "Nombre Patente", name: nom_patent, widget: string, required: true}
           - {label: "Texto", name: text_breu, widget: string}
@@ -788,7 +788,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: Sobre la Patente
         name: sobre_patent  
         required: false    
-        widget: list
+        widget: object
         fields:
           - {label: Título, name: titol, widget: string}
           - {label: Descripción, name: descripcio, widget: markdown}
@@ -901,7 +901,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Language, name: language, widget : select, options: ["ca","es","en"],default: "en", required: true}
       - label: General
         name: general
-        widget: list
+        widget: object
         fields: 
           - {label: "Patent name", name: nom_patent, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
@@ -940,7 +940,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: About the Patent
         name: sobre_patent  
         required: false    
-        widget: list
+        widget: object
         fields:
           - {label: Title, name: titol, widget: string}
           - {label: Description, name: descripcio, widget: markdown}
@@ -1054,7 +1054,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "ca", required: true}
       - label: General
         name: general
-        widget: list
+        widget: object
         fields: 
           - {label: "Nom Servei", name: nom_servei, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
@@ -1108,7 +1108,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: size, name: size, widget: string}
       - label: Casos d'Èxit
         name: casos_exit    
-        widget: list
+        widget: object
         fields:
           - {label: "Imatge", name: "img", widget: image, required: false}
           - {label: Títol, name: titol, widget: string, required: true}
@@ -1175,7 +1175,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "es", required: true}
       - label: General
         name: general
-        widget: list
+        widget: object
         fields: 
           - {label: "Nombre Servicio", name: nom_servei, widget: string, required: true}
           - {label: "Texto", name: text_breu, widget: string}
@@ -1212,7 +1212,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: Sobre el Servicio
         name: sobre_servei  
         required: false    
-        widget: list
+        widget: object
         fields:
           - {label: Título, name: titol, widget: string}
           - {label: Descripción, name: descripcio, widget: markdown}
@@ -1296,7 +1296,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Language, name: language, widget : select, options: ["ca","es","en"],default: "en", required: true}
       - label: General
         name: general
-        widget: list
+        widget: object
         fields: 
           - {label: "Service Name", name: nom_servei, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
@@ -1333,7 +1333,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: About the service
         name: sobre_servei  
         required: false    
-        widget: list
+        widget: object
         fields:
           - {label: title, name: titol, widget: string}
           - {label: description, name: descripcio, widget: markdown}
@@ -1418,7 +1418,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "ca", required: true}
       - label: General
         name: general
-        widget: list
+        widget: object
         fields: 
           - {label: "Nom Servei", name: nom_spinoff, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
@@ -1449,7 +1449,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: Sobre la Spin-Off
         name: sobre_spinoff  
         required: false    
-        widget: list
+        widget: object
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
@@ -1569,7 +1569,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "es", required: true}
       - label: General
         name: general
-        widget: list
+        widget: object
         fields: 
           - {label: "Nombre Servicio", name: nom_spinoff, widget: string, required: true}
           - {label: "Texto", name: text_breu, widget: string}
@@ -1600,7 +1600,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: Sobre la Spin-Off
         name: sobre_spinoff  
         required: false    
-        widget: list
+        widget: object
         fields:
           - {label: Título, name: titol, widget: string}
           - {label: Descripción, name: descripcio, widget: markdown}
@@ -1720,7 +1720,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "en", required: true}
       - label: General
         name: general
-        widget: list
+        widget: object
         fields: 
           - {label: "Spin Off Name", name: nom_spinoff, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
@@ -1751,7 +1751,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: About Spin-Off
         name: sobre_spinoff  
         required: false    
-        widget: list
+        widget: object
         fields:
           - {label: Title, name: titol, widget: string}
           - {label: Description, name: descripcio, widget: markdown}

@@ -7,8 +7,8 @@
 
 
 {{if eq $type "solucio_tec"}}
-{{ $generalInfo := index (.Params.general) 0 }}
-{{ $sobreTec := index (.Params.sobre_tecnologia) 0 }}
+{{ $generalInfo :=.Params.general }}
+{{ $sobreTec := .Params.sobre_tecnologia}}
 {{ $aspectesInnova := index (.Params.aspectes_innovadors) 0 }}
 {{ $apps := index (.Params.aplicacions) 0 }}
 {{ if isset .Params "grups_recerca" }}{{ $grupsRecerca := index (.Params.grups_recerca) 0}}{{end}}
@@ -207,7 +207,7 @@
                         <div id="collapse1" class="contentCollapse">
                             <div class="card-in-acordeon">
                                 <div class="wrap-richText">
-                                    <p>{{ $aspectesInnova.descripcio}}</p>
+                                    <p>{{ safeHTML (markdownify $aspectesInnova.descripcio) }}</p>
                                 </div>
                             </div>
                             <div class="card-in-acordeon">
@@ -242,7 +242,7 @@
                         <div id="collapseApps" class="contentCollapse">
                             <div class="card-in-acordeon">
                                 <div class="wrap-richText">
-                                    <p>{{ $apps.descripcio}}</p>
+                                    <p>{{ safeHTML (markdownify $apps.descripcio) }}</p>
                                 </div>
                             </div>
                             <div class="card-in-acordeon">
@@ -335,8 +335,8 @@
 
 {{else if eq $type "patent"}}
 
-{{ $generalInfo := index (.Params.general) 0 }}
-{{ $sobrePat := index (.Params.sobre_patent) 0 }}
+{{ $generalInfo := .Params.general }}
+{{ $sobrePat := .Params.sobre_patent}}
 {{ $aspectesInnova := index (.Params.aspectes_innovadors) 0 }}
 {{ $apps := index (.Params.aplicacions) 0 }}
 {{ $contacte := index (.Params.contacte) 0 }}
@@ -666,8 +666,8 @@
 
 {{else if eq $type "servei"}}
 
-{{ $generalInfo := index (.Params.general) 0 }}
-{{ $sobreServ := index (.Params.sobre_servei) 0 }}
+{{ $generalInfo := .Params.general }}
+{{ $sobreServ := .Params.sobre_servei }}
 {{ $casosExit := index (.Params.casos_exit) 0 }}
 {{ if isset .Params "grups_recerca" }}{{ $grupsRecerca := index (.Params.grups_recerca) 0}}{{end}}
 {{ $contacte := index (.Params.contacte) 0 }}
@@ -949,8 +949,8 @@
 
 {{else}}
 
-{{ $generalInfo := index (.Params.general) 0 }}
-{{ $sobreSpin := index (.Params.sobre_spinoff) 0 }}
+{{ $generalInfo := .Params.general }}
+{{ $sobreSpin := .Params.sobre_spinoff }}
 {{ $products_serveis := index (.Params.productes_serveis) 0 }}
 {{ $clients := index (.Params.clients) 0 }}
 {{ $casosExit := index (.Params.casos_exit) 0 }}
@@ -1255,40 +1255,27 @@
             </div>
             <div id="tab-content-14" data-tab-content="" role="tabpanel" aria-labelledby="tab-14"
             aria-hidden="true" class="tab-content">
-                <div class="collapse">
+                <div class="collapse grup results">
                     <div class="head-collapse js-collapse">
-                        <p><a href="#collapse10_1" aria-expanded="false"
-                            class="js-collapseClick">{{ T "uoc_ri_research_groups" }}<span
-                            class="icon icon--arrow-down"></span></a></p>
+                        <p><a href="#collapse3" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_grups"}}<span class="icon icon--arrow-down"></span></a></p>
                     </div>
-                    <div id="collapse10_1" class="contentCollapse show">
-                        <div class="card-in-acordeon">
-                            <div class="row list-grups">
-                                <div class="row data-grups"></div>
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <ul role="navigation" class="pagination-grups"></ul>
-                                    </div>
-                                </div>
+                    <div id="collapse3" class="contentCollapse show ajaxLoading grupResults">
+                        <div class="card-in-acordeon js-changeVist">
+                            <div class="row">
+                                
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="collapse">
+                <div class="collapse fitxa results">
                     <div class="head-collapse js-collapse">
-                        <p><a href="#collapse10_2" aria-expanded="false"
-                            class="js-collapseClick">{{ T "uoc_ri_researchers" }}<span
-                            class="icon icon--arrow-down"></span></a></p>
+                        <p><a href="#collapse2" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_cercador_investigadors"}}<span class="icon icon--arrow-down"></span></a></p>
+                        <p class="result"></p>
                     </div>
-                    <div id="collapse10_2" class="contentCollapse show">
-                        <div class="card-in-acordeon">
-                            <div class="row list-investigadors">
-                                <div class="row data-investigadors"></div>
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <ul role="navigation" class="pagination-investigadors"></ul>
-                                    </div>
-                                </div>
+                    <div id="collapse2" class="contentCollapse show ajaxLoading fitxaResults">
+                        <div class="card-in-acordeon js-changeVist">
+                            <div class="row">
+                                
                             </div>
                         </div>
                     </div>
