@@ -8,15 +8,26 @@ def search(event,context):
     client = boto3.client('cloudsearchdomain', endpoint_url='https://search-webri-2dz3yckt2f5cjq7hcsbois6nw4.eu-west-1.cloudsearch.amazonaws.com')
     args= event['queryStringParameters']
     simple=args.get('s')
-    if simple:
-        response = client.search(
-        query= simple,
-        queryParser='simple')
+    visualitzacio=args.get('visualitzacio')
+
+    if simple and visualitzacio:
+        visualitzacio=list(visualitzacio.items())
         ret={
         "statusCode":200,
-        "body": json.dumps(response)
+        "body": json.dumps(visualitzacio)
+        consulta="(and "
+
         }
-        return ret
+    if simple:
+        response = client.search(
+            query= simple,
+            queryParser='simple')
+            ret={
+            "statusCode":200,
+            "body": json.dumps(response)
+            }
+            return ret
+
 
 
     items=list(args.items())
