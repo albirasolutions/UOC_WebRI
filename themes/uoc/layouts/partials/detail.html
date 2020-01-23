@@ -158,12 +158,12 @@
                     <div class="collapse">
                         <div class="head-collapse js-collapse">
                             <p>
-                                <a href="#collapse2" aria-expanded="true"
+                                <a href="#collapse1" aria-expanded="true"
                                 class="js-collapseClick">{{ T "uoc_ri_about_tec" }}<span
                                 class="icon icon--arrow-down"></span></a>
                             </p>
                         </div>
-                        <div id="collapse2" class="contentCollapse show">
+                        <div id="collapseSobreTec" class="contentCollapse show">
                             <div class="card-in-acordeon">
                                 <div class="wrap-richText">
                                     {{ safeHTML (markdownify $sobreTec.descripcio) }}
@@ -196,12 +196,12 @@
                     <div class="collapse">
                         <div class="head-collapse js-collapse">
                             <p>
-                                <a href="#collapse1" aria-expanded="false" class="js-collapseClick">{{ T "uoc_ri_aspect_innov" }}<span
+                                <a href="#collapse1" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_aspect_innov" }}<span
                                     class="icon icon--arrow-down"></span>
                                 </a>
                             </p>
                         </div>
-                        <div id="collapse1" class="contentCollapse">
+                        <div id="collapseInnovaTec" class="contentCollapse show">
                             <div class="card-in-acordeon">
                                 <div class="wrap-richText">
                                     {{ safeHTML (markdownify $aspectesInnova.descripcio) }}
@@ -260,21 +260,20 @@
             aria-hidden="true" class="tab-content">
                 <div class="collapse">
                     <div class="head-collapse js-collapse">
-                        <p><a href="#collapse10_1" aria-expanded="false"
+                        <p><a href="#collapseResearchTec" aria-expanded="false"
                             class="js-collapseClick">{{ T "uoc_ri_research_groups" }}<span
                             class="icon icon--arrow-down"></span></a></p>
                     </div>
-                    <div id="collapse10_1" class="contentCollapse show">
-                        <div class="card-in-acordeon">
-                            <div class="row list-grups">
-                                <div class="row data-grups"></div>
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <ul role="navigation" class="pagination-grups"></ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div id="collapseResearchTec" class="contentCollapse show">
+                        {{ range $g := .Params.grups}}
+                        <ul>
+                            <li><h3>{{ $g.name }}</h3></li>
+                            <li>{{ $g.name }}</li>
+                            <li></li>
+
+
+                        </ul>
+                        {{end}}
                     </div>
                 </div>
                 <div class="collapse">
