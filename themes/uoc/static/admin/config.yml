@@ -446,10 +446,10 @@ collections: # A list of collections the CMS should be able to edit
         widget: object
         fields: 
           - {label: "Solution name", name: nom_solucio, widget: string, required: true}
-          - {label: "Text", name: text_breu, widget: string}
+          - {label: "Text", name: text_breu, widget: string, required: true}
           - {label: "Slogan", name: slogan, widget: string}
           - {label: "Img Background", name: "img_background", widget: image, required: true}
-          - {label: "Typology", name: tipologia, widget: select, options: ["Technical Solution","Patent", "Business Service","Spin-Off"], default: "Technical Solution"}
+          - {label: "Typology", name: tipologia, widget: select, options: ["Technical Solution","Patent", "Business Service","Spin-Off"], default: "Technical Solution", widget: hidden}
           - label: "Sector"
             name: sector
             widget: relation
