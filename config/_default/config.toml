@@ -49,3 +49,7 @@ URL = "s3://uocwebrisupport?region=eu-west-1"
 
 [outputs]
   page = ["HTML","json"]
+
+[params]
+  apiPlatacon = "https://transfer-research.am.pre.uoc.es/api/search"
+  apiRI = "https://hhbr3knf8j.execute-api.eu-west-1.amazonaws.com/dev/search"
