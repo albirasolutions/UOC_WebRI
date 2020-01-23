@@ -67,7 +67,7 @@ casos_exit:
       habitant morbi tristique senectus et netus Ellentesque habitant morbi
       tristique senectus et netus.
     img: /img/0a5e3d8399408516a201716607daee9dc776694d.png
-    titol: Cas d'èxit Spin-Off Alfa
+    titol: "Cas d'èxit Spin-Off Alfa"
     url_success: 'https://www.uoc.edu/portal/en/index.html'
 grups_recerca:
   - investigadors: Investigador 19
