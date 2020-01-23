@@ -18,19 +18,19 @@ general:
     - address: 'https://twitter.com/UOCuniversitat'
       xarxa: twitter
 sobre_tecnologia:
-  descripcio: >-
-    ## Delta solució
+    descripcio: >-
+      ## Delta solució
 
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  docs_rels:
-    - file: /img/informe_disseny_web_r_i.pdf
-  titol: Sobre delta
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    docs_rels:
+      - file: /img/informe_disseny_web_r_i.pdf
+    titol: Sobre delta
 aspectes_innovadors:
   - descripcio: >-
       ## Aquest aspecte delta
@@ -47,16 +47,16 @@ aspectes_innovadors:
       - file: /img/prova2.pdf
     titol: Aspecte innovador Delta
 aplicacions:
-  descripcio: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  docs_rels:
-    - file: /img/informe_disseny_web_r_i.pdf
-  titol: app delta
+  - descripcio: >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    docs_rels:
+      - file: /img/informe_disseny_web_r_i.pdf
+    titol: app delta
 grups_recerca:
   - description: 'Grup de recerca en Aprenentatges, Mitjans de comunicació i Entreteniment'
     id: '1902'
