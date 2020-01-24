@@ -438,7 +438,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Title, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : hidden, default: "en"}
+      - {label: Language, name: language, widget : hidden, default: "en"}
       - label: General
         name: general
         widget: object
@@ -742,7 +742,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Título, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "es", required: true}
+      - {label: Idioma, name: language, widget : hidden, default: "es"}      
       - label: General
         name: general
         widget: object
@@ -893,7 +893,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Title, name: title, widget : string, required: true}
-      - {label: Language, name: language, widget : select, options: ["ca","es","en"],default: "en", required: true}
+      - {label: Language, name: language, widget : hidden, default: "en"}      
       - label: General
         name: general
         widget: object
@@ -1166,7 +1166,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Título, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "es", required: true}
+      - {label: Idioma, name: language, widget : hidden, default: "es"}      
       - label: General
         name: general
         widget: object
@@ -1287,7 +1287,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Title, name: title, widget : string, required: true}
-      - {label: Language, name: language, widget : select, options: ["ca","es","en"],default: "en", required: true}
+      - {label: Language, name: language, widget : hidden, default: "en"}      
       - label: General
         name: general
         widget: object
@@ -1409,7 +1409,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Títol, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "ca", required: true}
+      - {label: Idioma, name: language, widget : hidden, default: "ca"}      
       - label: General
         name: general
         widget: object
@@ -1560,7 +1560,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Título, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "es", required: true}
+      - {label: Idioma, name: language, widget : hidden, default: "es"}      
       - label: General
         name: general
         widget: object
@@ -1711,7 +1711,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: Title, name: title, widget : string, required: true}
-      - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "en", required: true}
+      - {label: Language, name: language, widget : hidden, default: "en"}      
       - label: General
         name: general
         widget: object
