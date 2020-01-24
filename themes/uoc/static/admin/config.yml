@@ -1085,7 +1085,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: Sobre el Servei
         name: sobre_servei  
         required: false    
-        widget: list
+        widget: object
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
@@ -1102,7 +1102,7 @@ collections: # A list of collections the CMS should be able to edit
                     multiple: true
       - label: Casos d'Èxit
         name: casos_exit    
-        widget: object
+        widget: list
         fields:
           - {label: "Imatge", name: "img", widget: image, required: false}
           - {label: Títol, name: titol, widget: string, required: true}
