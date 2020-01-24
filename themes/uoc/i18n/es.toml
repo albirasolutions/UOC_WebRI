@@ -172,3 +172,6 @@
 [uoc_ri_difusio_novetats] other = "Consulta las últimas novedades, noticias y casos de éxito de la R&I en la UOC"
 [uoc_ri_difusio_noticia] other = "Notícia"
 [uoc_ri_difusio_esdeveniment] other = "Evento"
+
+[uoc_ri_noticia] other = "#Notícia"
+[uoc_ri_esdeveniment] other = "#Evento"

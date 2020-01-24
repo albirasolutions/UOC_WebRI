@@ -172,3 +172,6 @@
 [uoc_ri_difusio_novetats] other = "Check out the last novelties, news and cases of success of the R&I at UOC"
 [uoc_ri_difusio_noticia] other = "Report"
 [uoc_ri_difusio_esdeveniment] other = "Event"
+
+[uoc_ri_noticia] other = "#Report"
+[uoc_ri_esdeveniment] other = "#Event"
