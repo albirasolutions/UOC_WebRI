@@ -2,7 +2,7 @@
 backend:
   name: github
   branch: master
-  repo: albirasolutions/UOC_WebRI
+  repo: ${GITHUB_REPO}
   base_url: https://webri.albira.io # Path to ext auth provider
   auth_endpoint: /api-oauth/auth
 media_folder: "static/img" # Media files will be stored in the repo under static/media/
@@ -2491,7 +2491,6 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: Títol, name: title, widget: string}
       - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
-      - {label: Data de creació, name: createDate, widget: datetime}
       - label: General
         name: general
         widget: object
@@ -2532,7 +2531,6 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: Título, name: title, widget: string}
       - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "es"}       
-      - {label: Fecha de creación, name: createDate, widget: datetime}
       - label: General
         name: general
         widget: object
@@ -2573,7 +2571,6 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: Title, name: title, widget: string}
       - {label: Language, name: language, widget: select, options: ["ca","es","en"],default: "en"}       
-      - {label: CreateDate, name: createDate, widget: datetime}
       - label: General
         name: general
         widget: object
@@ -2615,7 +2612,6 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: Títol, name: title, widget: string}
       - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
-      - {label: Data de creació, name: createDate, widget: datetime}
       - label: General
         name: general
         widget: object
@@ -2646,7 +2642,6 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: Título, name: title, widget: string}
       - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "es"}       
-      - {label: Fecha de creación, name: createDate, widget: datetime}
       - label: General
         name: general
         widget: object
@@ -2677,7 +2672,6 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: Title, name: title, widget: string}
       - {label: Language, name: language, widget: select, options: ["ca","es","en"],default: "en"}       
-      - {label: CreateDate, name: createDate, widget: datetime}
       - label: General
         name: general
         widget: object
