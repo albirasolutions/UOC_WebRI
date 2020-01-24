@@ -116,7 +116,6 @@
 [uoc_ri_cercador_solucions_serveis] other = "Servicio a la empresa"
 [uoc_ri_cercador_spin_off] other = "Spin-Offs"
 
-
 [uoc_ri_mapaambits_cercaper_especialitzacio] other = "Busca por ámbito de especialización"
 [uoc_ri_mapaambits_cercaper_ambit] other = "Busca por ámbito"
 [uoc_ri_mapaambits_cercaper_ambit_titol] other = "Ámbitos generales"
@@ -175,3 +174,9 @@
 
 [uoc_ri_noticia] other = "#Notícia"
 [uoc_ri_esdeveniment] other = "#Evento"
+
+[uoc_ri_esdeveniment_On] other = "Dónde"
+[uoc_ri_esdeveniment_Quan] other = "Cuándo"
+
+[uoc_ri_casos_link] other = "Enlace al caso de éxito"
+

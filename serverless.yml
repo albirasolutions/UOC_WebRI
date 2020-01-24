@@ -1,11 +1,11 @@
-org: jccarhuas
+org: uoc
 app: webri
 service: webri-cloudsearch
 
 provider:
   name: aws
   runtime: python3.6
-  region: eu-west-1
+  region: ${opt:region, self:custom.defaultRegion}
   stage: ${opt:stage, self:custom.defaultStage}
    
 resources:
@@ -20,19 +20,13 @@ resources:
         RestApiId:
           Ref: 'ApiGatewayRestApi'
 functions:
-  test:
-    handler: event.test
-    events:
-      - http:
-          path: user/create
-          method: get
-          cors: true
   search:
     handler: event.search
     events:
       - http:
-          path: user/search
+          path: api-ri/search
           method: get
           cors: true
 custom:
   defaultStage: dev
+  defaultRegion: eu-west-1

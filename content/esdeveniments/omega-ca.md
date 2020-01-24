@@ -20,5 +20,12 @@ general:
       Barcelona Espanya
     titol: ' Conversa sobre pedagogia i neurociència entre Antonio Zabala i David Bueno'
     destacat: true
+    img: ''
+    xarxes:
+      - address: 'https://twitter.com/UOCuniversitat'
+        xarxa: twitter
+      - address: 'https://www.instagram.com/uocuniversitat/?hl=en'
+        xarxa: instagram
+
 ---
 
