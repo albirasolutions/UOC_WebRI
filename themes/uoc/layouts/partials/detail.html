@@ -812,7 +812,7 @@
                     <div class="collapse">
                         <div class="head-collapse js-collapse">
                             <p>
-                                <a href="#collapse2" aria-expanded="false"
+                                <a href="#collapse2" aria-expanded="true"
                                 class="js-collapseClick">{{ T "uoc_ri_about_serv" }}<span
                                 class="icon icon--arrow-down"></span></a>
                             </p>
@@ -846,12 +846,12 @@
                     <div class="collapse">
                         <div class="head-collapse js-collapse">
                             <p>
-                                <a href="#collapse1" aria-expanded="false" class="js-collapseClick">{{ T "uoc_ri_casos_exit" }}<span
+                                <a href="#collapse1" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_casos_exit" }}<span
                                     class="icon icon--arrow-down"></span>
                                 </a>
                             </p>
                         </div>
-                        <div id="collapse1" class="contentCollapse">
+                        <div id="collapse1" class="contentCollapse show">
                             <div class="card-in-acordeon ">
                                 {{ range $c := .Params.casos_exit }}
                                 <div class="row" >

@@ -2601,6 +2601,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false
 
+      
   - name: "esdeveniment_ca"
     label: "Esdeveniments [ca]"
     folder: "content/esdeveniments"
