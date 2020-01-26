@@ -29,7 +29,11 @@ phases:
       - cd ../img && aws s3 sync . s3://${BUCKET_S3}/${DEST_FOLDER}/img --acl public-read --delete
       - cd ../js && aws s3 sync . s3://${BUCKET_S3}/${DEST_FOLDER}/js --acl public-read --delete
       - cd ../css && aws s3 sync . s3://${BUCKET_S3}/${DEST_FOLDER}/css --acl public-read --delete
-      - cd .. && aws cloudsearchdomain --endpoint-url ${CLOUDSEARCH_URL} upload-documents --content-type application/json --documents ./ca/index.json
+      - |
+          if [ "${UPLOAD_TO_CLOUDSEARCH}" -eq "true" ]; then
+            echo "Uploading data to cloudsearch"
+            cd .. && aws cloudsearchdomain --endpoint-url ${CLOUDSEARCH_URL} upload-documents --content-type application/json --documents ./ca/index.json
+          fi
     finally:
       - aws cloudfront create-invalidation --distribution-id ${DISTRIBUTION_ID} --paths "/admin,/ca,/es,en/,js/,css/,img/"
       - echo "Script finished running"
