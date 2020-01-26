@@ -2510,13 +2510,8 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Description, name: descripcio, widget: markdown}
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
-<<<<<<< HEAD
-=======
     editor:
-      - preview: false
-
-      
->>>>>>> 16b595f89a115bcbe57e54c98139446ee09620c4
+      - preview: false      
   - name: "esdeveniment_ca"
     label: "Esdeveniments [ca]"
     folder: "content/esdeveniments"
