@@ -11,10 +11,11 @@ import boto3
 CORS_HEADERS = {
     'headers': {
         'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Credentials': True
+        'Access-Control-Allow-Credentials': True,
+        'Access-Control-Allow-Methods':'GET, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Requested-With'
     }
 }
-
 
 def with_cors(f):
     """Adds CORS headers."""
