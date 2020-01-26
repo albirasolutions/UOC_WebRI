@@ -5,8 +5,7 @@ phases:
     runtime-versions:
       nodejs: 10
     commands:
-      - npm -g install loose-envify
-      - npm -g install js-yaml
+      - npm install
       - wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb
       - dpkg -i hugo_${HUGO_VERSION}_Linux-64bit.deb
     finally:
