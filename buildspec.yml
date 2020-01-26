@@ -30,7 +30,7 @@ phases:
       - cd ../js && aws s3 sync . s3://${BUCKET_S3}/${DEST_FOLDER}/js --acl public-read --delete
       - cd ../css && aws s3 sync . s3://${BUCKET_S3}/${DEST_FOLDER}/css --acl public-read --delete
       - |
-          if [ "${UPLOAD_TO_CLOUDSEARCH}" -eq "true" ]; then
+          if [ "${UPLOAD_TO_CLOUDSEARCH}" == "true" ]; then
             echo "Uploading data to cloudsearch"
             cd .. && aws cloudsearchdomain --endpoint-url ${CLOUDSEARCH_URL} upload-documents --content-type application/json --documents ./ca/index.json
           fi
