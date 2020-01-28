@@ -189,12 +189,13 @@
 									<p><a href="#collapse3" aria-expanded="false" class="js-collapseClick">{{ T "uoc_ri_home_difusions" }}<span class="icon icon--arrow-down"></span></a></p>
 								</div>
 								<div id="collapse2" class="contentCollapse show">
+									<div class="col-xs-6 col-md-3" role="article">
+										{{ range (where .Site.Pages.ByDate.Reverse .Params.destacat true) .Pages }}
+											<a href="{{ .Permalink }}"><h1>Featured 1 — {{ .Title }}</h1></a>
+										{{ end }}
+									</div>
 
-										<!-- {{ range where (where .Pages "Section" "esdeveniments") ".Params.general.destacat" "!=" true }}
-											<li><a href="{{ .Permalink }}">{{.Title}}</li></a>
-										{{ end }} -->
-
-									{{ range $i, $sequence :=  (seq 4) }}
+  								<!-- {{ range $i, $sequence :=  (seq 4) }}
 									<div class="col-xs-6 col-md-3" role="article">
 										
 										<a href="/ca/noticies/alfa.html" class="card-absolute-link"></a>
@@ -211,7 +212,7 @@
 											</div>
 										</div>
 									</div>
-									{{end}}
+									{{end}} -->
 								</div>
 							</div>
 						</div>
