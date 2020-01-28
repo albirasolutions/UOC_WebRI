@@ -2,7 +2,7 @@
 <html lang="{{.Site.Language.Lang}}">
 
 <head>
-    {{ partial "head.html" . }}
+    <!-- {{ partial "head.html" . }}
     {{$language := .Site.Language.Lang }}
     {{ $.Scratch.Add "lastNoticiaPos" 0 }}
     {{ $.Scratch.Add "lastEsdevenimentPos" 0 }}
@@ -82,13 +82,13 @@
     
     {{end}}
     
-    {{end}}
+    {{end}} -->
     
 
 </head>
 
 <body>
-    {{ partial "google_code_body.html" . }}
+    <!-- {{ partial "google_code_body.html" . }}
     {{ partial "header.html" . }}
     {{$firstLink := index ($.Scratch.Get "firstDestLink") 0 }}
     {{$firstImg := index ($.Scratch.Get "firstDestImg") 0 }}
@@ -329,7 +329,7 @@
         </div>    
         {{ partial "ri_js_imports.html" . }}
     </section>
-</div>
+</div> -->
 </body>
 </html>
 
