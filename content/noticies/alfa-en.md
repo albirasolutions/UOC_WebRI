@@ -4,10 +4,10 @@ language: en
 createDate: '2019-12-17T14:01:39+01:00'
 destacat: true
 general:
-  - autor: Javi
-    data: '2019-12-17T14:01:39+01:00'
-    img: /img/0a5e3d8399408516a201716607daee9dc776694d.png
-    titol: Alfa
+  autor: Javi
+  data: '2019-12-17T14:01:39+01:00'
+  img: /img/0a5e3d8399408516a201716607daee9dc776694d.png
+  titol: Alfa
 descripcio:
   - descripcio: >-
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

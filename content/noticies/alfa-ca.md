@@ -4,12 +4,12 @@ language: ca
 createDate: '2019-12-17T13:33:49+01:00'
 destacat: true
 general:
-  - autor: Javi
-    data: '2019-12-17T13:33:49+01:00'
-    img: /img/detall_solucions_principal.png
-    link_extern: www.google.com
-    titol: Alfa
-    xarxes: []
+  autor: Javi
+  data: '2019-12-17T13:33:49+01:00'
+  img: /img/detall_solucions_principal.png
+  link_extern: www.google.com
+  titol: Alfa
+  xarxes: []
 descripcio:
   - descripcio: >-
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
