@@ -35,5 +35,5 @@ phases:
             cd .. && aws cloudsearchdomain --endpoint-url ${CLOUDSEARCH_URL} upload-documents --content-type application/json --documents ./ca/index.json
           fi
     finally:
-      - aws cloudfront create-invalidation --distribution-id ${DISTRIBUTION_ID} --paths "/admin,/ca,/es,en/,js/,css/,img/"
+      - aws cloudfront create-invalidation --distribution-id ${DISTRIBUTION_ID} --paths "/admin/*,/ca/*,/es/*,/en/*,/js/*,/css/*,/img/*"
       - echo "Script finished running"
