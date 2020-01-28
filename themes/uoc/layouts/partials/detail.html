@@ -9,8 +9,6 @@
 {{if eq $type "solucio_tec"}}
 {{ $generalInfo :=.Params.general }}
 {{ $sobreTec := .Params.sobre_tecnologia}}
-{{ $aspectesInnova := index (.Params.aspectes_innovadors) 0 }}
-{{ $apps := index (.Params.aplicacions) 0 }}
 {{ if isset .Params "grups_recerca" }}{{ $grupsRecerca := index (.Params.grups_recerca) 0}}{{end}}
 
 {{$contacte := index (.Params.contacte) 0 }}
@@ -204,12 +202,13 @@
                         <div id="collapseInnovaTec" class="contentCollapse show">
                             <div class="card-in-acordeon">
                                 <div class="wrap-richText">
-                                    {{ safeHTML (markdownify $aspectesInnova.descripcio) }}
+                                   {{with .Params.aspectes_innovadors}}{{ safeHTML (markdownify (index . 0).descripcio) }}{{end}}
                                 </div>
                             </div>
                             <div class="card-in-acordeon">
                                 <h4>{{ T "uoc_ri_docs" }}</h4>
-                                {{ range $d := $aspectesInnova.docs_rels }}
+                                {{with .Params.aspectes_innovadors}}
+                                {{ range $d := (index . 0).docs_rels }}
                                 <div class="row" >
                                    
                                     {{$doc := split $d.file "/"}}
@@ -217,6 +216,7 @@
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{index $doc 2}}</p>
                                    
                                 </div>
+                                {{end}}
                                 {{end}}
                             </div>
                         </div>
@@ -237,12 +237,13 @@
                         <div id="collapseApps" class="contentCollapse show">
                             <div class="card-in-acordeon">
                                 <div class="wrap-richText">
-                                    {{ safeHTML (markdownify $apps.descripcio) }}
+                                    {{with .Params.aplicacions}}{{ safeHTML (markdownify (index . 0).descripcio) }}{{end}}
                                 </div>
                             </div>
                             <div class="card-in-acordeon">
                                 <h4>{{ T "uoc_ri_docs" }}</h4>
-                                {{ range $d := $apps.docs_rels }}
+                                {{with .Params.aplicacions}}
+                                {{ range $d := (index . 0).docs_rels }}
                                 <div class="row" >
                                    
                                     {{$doc := split $d.file "/"}}
@@ -250,6 +251,7 @@
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{index $doc 2}}</p>
                                    
                                 </div>
+                                {{end}}
                                 {{end}}
                             </div>
                         </div>
@@ -342,8 +344,6 @@
 
 {{ $generalInfo := .Params.general }}
 {{ $sobrePat := .Params.sobre_patent}}
-{{ $aspectesInnova := index (.Params.aspectes_innovadors) 0 }}
-{{ $apps := index (.Params.aplicacions) 0 }}
 {{ $contacte := index (.Params.contacte) 0 }}
 {{ if isset .Params "grups_recerca" }}{{ $grupsRecerca := index (.Params.grups_recerca) 0}}{{end}}
 
@@ -533,12 +533,13 @@
                         <div id="collapse1" class="contentCollapse show">
                             <div class="card-in-acordeon">
                                 <div class="wrap-richText">
-                                    {{ safeHTML (markdownify $aspectesInnova.descripcio) }}
+                                    {{with .Params.aspectes_innovadors}}{{ safeHTML (markdownify (index . 0).descripcio) }}{{end}}
                                 </div>
                             </div>
                             <div class="card-in-acordeon">
                                 <h4>{{ T "uoc_ri_docs" }}</h4>
-                                {{ range $d := $aspectesInnova.docs_rels }}
+                                {{with .Params.aspectes_innovadors}}
+                                {{ range $d := (index . 0).docs_rels }}
                                 <div class="row" >
                                    
                                     {{$doc := split $d.file "/"}}
@@ -546,6 +547,7 @@
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{index $doc 2}}</p>
                                    
                                 </div>
+                                {{end}}
                                 {{end}}
                             </div>
                         </div>
@@ -565,13 +567,14 @@
                         </div>
                         <div id="collapseApps" class="contentCollapse show">
                             <div class="card-in-acordeon">
-                                <div class="wrap-richText">
-                                    {{ safeHTML (markdownify $apps.descripcio) }}
+                                <div class="wrap-richText">                                    
+                                    {{with .Params.aplicacions}}{{ safeHTML (markdownify (index . 0).descripcio) }}{{end}}
                                 </div>
                             </div>
                             <div class="card-in-acordeon">
                                 <h4>{{ T "uoc_ri_docs" }}</h4>
-                                {{ range $d := $apps.docs_rels }}
+                                {{with .Params.aplicacions}}
+                                {{ range $d := (index . 0).docs_rels }}
                                 <div class="row" >
                                    
                                     {{$doc := split $d.file "/"}}
@@ -579,6 +582,7 @@
                                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{index $doc 2}}</p>
                                    
                                 </div>
+                                {{end}}
                                 {{end}}
                             </div>
                         </div>
