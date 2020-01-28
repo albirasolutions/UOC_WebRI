@@ -190,7 +190,7 @@
 								</div>
 								<div id="collapse2" class="contentCollapse show">
 									<div class="col-xs-6 col-md-3" role="article">
-										{{ range (where .Site.Pages.ByDate.Reverse .Params.destacat true) .Pages }}
+										{{ range where .Site.Pages "Params.destacat" true }}
 											<a href="{{ .Permalink }}"><h1>Featured 1 — {{ .Title }}</h1></a>
 										{{ end }}
 									</div>

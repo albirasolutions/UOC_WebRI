@@ -192,7 +192,6 @@ collections: # A list of collections the CMS should be able to edit
                 media_library:
                   config:
                     multiple: true
-
       - label: Aspectes Innovadors
         name: aspectes_innovadors  
         required: false   
