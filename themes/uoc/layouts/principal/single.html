@@ -190,11 +190,11 @@
 								</div>
 								<div id="collapse2" class="contentCollapse show">
 
-										{{ range where (where .Pages "Section" "esdeveniments") ".Params.general.destacat" "!=" true }}
+										<!-- {{ range where (where .Pages "Section" "esdeveniments") ".Params.general.destacat" "!=" true }}
 											<li><a href="{{ .Permalink }}">{{.Title}}</li></a>
-										{{ end }}
+										{{ end }} -->
 
-									<!-- {{ range $i, $sequence :=  (seq 4) }}
+									{{ range $i, $sequence :=  (seq 4) }}
 									<div class="col-xs-6 col-md-3" role="article">
 										
 										<a href="/ca/noticies/alfa.html" class="card-absolute-link"></a>
@@ -211,7 +211,7 @@
 											</div>
 										</div>
 									</div>
-									{{end}} -->
+									{{end}}
 								</div>
 							</div>
 						</div>
