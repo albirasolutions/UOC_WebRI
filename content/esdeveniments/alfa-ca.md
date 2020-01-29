@@ -2,8 +2,8 @@
 title: Alfa
 language: ca
 destacat: true
+date: '2019-12-19T13:34:26+01:00'
 general:
-  data: '2019-12-19T13:34:26+01:00'
   descripcio: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

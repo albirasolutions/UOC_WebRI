@@ -27,7 +27,7 @@
                     <div class="float-left" id="img-figcaption1">
                         <em class="text-extra-small">Foto: {{with .img_autor}}{{.}}{{end}}</em>
                         <br><br>
-                        {{with .data}}{{dateFormat "02/01/2006" .}}{{end}} <br>  {{with .autor}}{{.}}{{end}}
+                        {{with .date}}{{dateFormat "02/01/2006" .}}{{end}} <br>  {{with .autor}}{{.}}{{end}}
                     </div>
                     <div class="float-right" role="complementary" id="img-figcaption2">
                         
@@ -82,7 +82,7 @@
                             <p>{{with .lloc}}{{.}}{{end}}</p>
                             <h3 class="h4 clear-both">{{ T "uoc_ri_esdeveniment_Quan" }}</h3>
                             <p>
-                                    {{with .data}}{{dateFormat "02/01/2006 15:04" .}}{{end}}
+                                    {{with .date}}{{dateFormat "02/01/2006 15:04" .}}{{end}}
                             <p>
                             &nbsp;</p>
                         </div>

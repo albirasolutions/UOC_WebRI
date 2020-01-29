@@ -2,9 +2,9 @@
 title: Torra
 language: ca
 destacat: true
+date: 2020-01-29T11:00:31.711Z
 general:
   autor: Miquel Fonolleda
-  data: 2020-01-29T11:00:31.711Z
   img: /img/Treva-al-Govern-presos-Parlament_2389571120_69251975_377x224.jpg
   img_autor: Miquel Fonolleda
   link_extern: 'https://www.ara.cat/politica/Treva-Govern-presos-Parlament_0_2389561106.html'

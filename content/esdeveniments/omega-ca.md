@@ -1,10 +1,9 @@
 ---
 title: omega
 language: ca
-createDate: '2020-02-10T18:30:33+01:00'
+date: '2020-02-10T18:30:33+01:00'
 destacat: true
 general:
-  data: '2020-02-10T18:30:33+01:00'
   descripcio: >-
     Aquesta trobada dels Dilluns del Màster serà una conversa entre dos
     professors amb una amplia carrera professional. Antonio Zabala és
