@@ -1,11 +1,10 @@
 ---
 title: omega
 language: ca
-createDate: '2020-01-26T11:03:28+02:00'
+date: '2020-01-26T11:03:28+02:00'
 destacat: false
 general:
   autor: Pau Martinez
-  data: '2020-01-26T11:03:28+02:00'
   img: /img/marvin-meyer-syto3xs06fu-unsplash.jpg
   img_autor: Temàtiques d'ensenyament
   titol: >-
