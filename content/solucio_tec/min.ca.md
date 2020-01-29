@@ -1,12 +1,12 @@
 ---
-title: min
+title: mintec
 language: ca
 general:
   centre: e-Learn Center
   img_background: /img/marvin-meyer-syto3xs06fu-unsplash.jpg
   keywords:
     - value: AWS
-  nom_solucio: min
+  nom_solucio: mintec
   sector: Dret i governança
 sobre_tecnologia:
   descripcio: >-
