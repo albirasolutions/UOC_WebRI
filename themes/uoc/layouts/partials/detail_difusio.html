@@ -35,7 +35,7 @@
                         
                         <div class="social-links unstyled">
                             
-                            {{range .Params.xarxes}}
+                            {{range .}}
                                 {{if eq .xarxa "facebook"}}
                             <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Facebook']);" href="{{.address}}" target="_blank"
                                     title='Facebook {{ T "uoc_grup_footer_links_new_window"}}' aria-label='Facebook {{ T "uoc_grup_footer_links_new_window"}}'><span class="icon icon--social-facebook"> </span></a>
@@ -105,10 +105,11 @@
                         <div class="ruler ruler--thin"></div>
                     </div>
                     <br>
+                    {{with .Params.general.xarxes}}
                     <div class="float-right" role="complementary">
                         
                         <div class="social-links unstyled">
-                            {{with .Params.general.xarxes}}
+                            
                             {{range .}}
                                 {{if eq .xarxa "facebook"}}
                             <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Facebook']);" href="{{.address}}" target="_blank"
@@ -123,11 +124,11 @@
                                     title='LinkedIn {{ T "uoc_grup_footer_links_new_window"}}' aria-label='LinkedIn {{ T "uoc_grup_footer_links_new_window"}}'><span class="icon icon--social-instagram"> </span></a>
                                 {{end}}
                             {{end}}
-                            {{end}}
+                            
                         </div>
 
                     </div>           
-                
+                    {{end}}
             {{end}}
         </div>
     </div>             

@@ -1,8 +1,8 @@
 ---
 title: delta
 language: ca
+date: '2020-01-29T11:40:58.524Z'
 destacat: false
-date: 2020-01-29T11:40:58.524Z
 general:
   descripcio: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
