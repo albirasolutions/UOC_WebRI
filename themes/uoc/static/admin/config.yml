@@ -191,7 +191,6 @@ collections: # A list of collections the CMS should be able to edit
                 media_library:
                   config:
                     multiple: true
-
       - label: Aspectes Innovadors
         name: aspectes_innovadors  
         required: false   
@@ -2395,6 +2394,7 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: Títol, name: title, widget: string}
       - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
+      - {label: "Destacat", name: "destacat", widget: "boolean", default: false, required: true}
       - label: General
         name: general
         widget: object
@@ -2411,7 +2411,6 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Nom", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
               - {label: "Url", name: address, widget: string}
           - {label: "Link extern", name: link_extern, widget: string}
-          - {label: "Destacat", name: "destacat", widget: "boolean", default: false, required: true}
     
       - label: Descripció
         name: descripcio 
@@ -2433,6 +2432,7 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: Título, name: title, widget: string}
       - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "es"}       
+      - {label: "Destacado", name: "destacat", widget: "boolean", default: false, required: true}
       - label: General
         name: general
         widget: object
@@ -2449,7 +2449,6 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Nombre", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
               - {label: "Url", name: address, widget: string}
           - {label: "Link externo", name: link_extern, widget: string}
-          - {label: "Destacado", name: "destacat", widget: "boolean", default: false, required: true}
     
       - label: Descripción
         name: descripcio 
@@ -2471,6 +2470,7 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: Title, name: title, widget: string}
       - {label: Language, name: language, widget: select, options: ["ca","es","en"],default: "en"}       
+      - {label: "Featured", name: "destacat", widget: "boolean", default: false, required: true}
       - label: General
         name: general
         widget: object
@@ -2487,7 +2487,6 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
               - {label: "Url", name: address, widget: string}
           - {label: "External link", name: link_extern, widget: string}
-          - {label: "Highlighted", name: "destacat", widget: "boolean", default: false, required: true}
     
       - label: Description
         name: descripcio 
@@ -2498,8 +2497,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Description, name: descripcio, widget: markdown}
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
-    editor:
-      - preview: false      
   - name: "esdeveniment_ca"
     label: "Esdeveniments [ca]"
     folder: "content/esdeveniments"
@@ -2511,6 +2508,7 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: Títol, name: title, widget: string}
       - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
+      - {label: "Detacat", name: "destacat", widget: "boolean", default: false, required: true}
       - label: General
         name: general
         widget: object
@@ -2539,6 +2537,7 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: Título, name: title, widget: string}
       - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "es"}       
+      - {label: "Destacado", name: "destacat", widget: "boolean", default: false, required: true}
       - label: General
         name: general
         widget: object
@@ -2566,7 +2565,8 @@ collections: # A list of collections the CMS should be able to edit
     filter: {field: language , value: "en"}
     fields:
       - {label: Title, name: title, widget: string}
-      - {label: Language, name: language, widget: select, options: ["ca","es","en"],default: "en"}       
+      - {label: Language, name: language, widget: select, options: ["ca","es","en"],default: "en"}  
+      - {label: "Featured", name: "destacat", widget: "boolean", default: false, required: true}
       - label: General
         name: general
         widget: object

@@ -189,24 +189,23 @@
 									<p><a href="#collapse3" aria-expanded="false" class="js-collapseClick">{{ T "uoc_ri_home_difusions" }}<span class="icon icon--arrow-down"></span></a></p>
 								</div>
 								<div id="collapse2" class="contentCollapse show">
-									{{ range $i, $sequence :=  (seq 4) }}
-									<div class="col-xs-6 col-md-3" role="article">
-										
-										<a href="/ca/noticies/alfa.html" class="card-absolute-link"></a>
-										<div class="card" role="region" aria-label="Texto descriptivo" >
-											<div class="card__image">
-												<img src="/img/detall_solucions_principal2.png" alt="Texto alternativo">
-											</div>
-											<div class="card__contents" >
-												<p class="text-big text font-alternate">El treballador fluid, un nou tipus d'empleat difícil de retenir a l'empresa</p>
-											</div>
-											<div class="card__footer">
-												<div class="float-left p-left-x  icon icon--external-link"></div>
-												<div class="float-right p-right-x">Esdeveniment</div>
+										{{ range first 4 (where (where .Site.Pages.ByDate.Reverse ".Params.destacat" true) ".Params.language" .Site.Language.Lang)}}
+										<div class="col-xs-6 col-md-3" role="article">
+											<a href="/ca/noticies/alfa.html" class="card-absolute-link"></a>
+											<div class="card" role="region" aria-label="Texto descriptivo" >
+												<div class="card__image">
+													{{with .Params.general.img}}<img src="{{.}}" alt="Texto alternativo">{{end}}
+												</div>
+												<div class="card__contents" >
+													<p class="text-big text font-alternate">{{with .Params.general.titol}}{{.}}{{end}}</p>
+												</div>
+												<div class="card__footer">
+													<div class="float-left p-left-x  icon icon--external-link"></div>
+													<div class="float-right p-right-x">{{.Type}}</div>
+												</div>
 											</div>
 										</div>
-									</div>
-									{{end}}
+										{{ end }}
 								</div>
 							</div>
 						</div>

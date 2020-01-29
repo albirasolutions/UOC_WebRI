@@ -2,14 +2,14 @@
 title: omega
 language: ca
 createDate: '2020-01-26T11:03:28+02:00'
+destacat: true
 general:
-  - autor: Pau Martinez
-    data: '2020-01-26T11:03:28+02:00'
-    destacat: true
-    img: /img/marvin-meyer-syto3xs06fu-unsplash.jpg
-    img_autor: Temàtiques d'ensenyament
-    titol: >-
-      Gamma
+  autor: Pau Martinez
+  data: '2020-01-26T11:03:28+02:00'
+  img: /img/marvin-meyer-syto3xs06fu-unsplash.jpg
+  img_autor: Temàtiques d'ensenyament
+  titol: >-
+    Gamma
 descripcio:
   - descripcio: >-
       L'Agència Estatal de Recerca, mitjançant el Ministeri de Ciència,
