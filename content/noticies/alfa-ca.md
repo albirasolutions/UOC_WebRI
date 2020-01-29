@@ -2,13 +2,13 @@
 title: Alfa
 language: ca
 createDate: '2019-12-17T13:33:49+01:00'
-destacat: true
+destacat: false
 general:
   autor: Javi
   data: '2019-12-17T13:33:49+01:00'
   img: /img/detall_solucions_principal.png
   link_extern: www.google.com
-  titol: Alfa
+  titol: Alfa 2 - 17/12/19 (ca) 
   xarxes: []
 descripcio:
   - descripcio: >-

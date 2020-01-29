@@ -13,7 +13,7 @@ general:
     non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   img: /img/0a5e3d8399408516a201716607daee9dc776694d.png
   lloc: Barcelona
-  titol: Alfa
+  titol: Alfa 1 - 19/12/19 (ca)
   xarxes:
     - address: 'https://www.facebook.com/'
       xarxa: facebook

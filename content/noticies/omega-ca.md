@@ -10,7 +10,7 @@ general:
   img_autor: Temàtiques d'ensenyament
   titol: >-
     El Ministeri de Ciència, Innovació i Universitats finança onze noves
-    recerques de la UOC sobre la digitalització de la societat
+    recerques de la UOC sobre la digitalització de la societat - 26/09/19 (ca)
 descripcio:
   - descripcio: >-
       L'Agència Estatal de Recerca, mitjançant el Ministeri de Ciència,

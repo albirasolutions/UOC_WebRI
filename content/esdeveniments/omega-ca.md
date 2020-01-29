@@ -19,7 +19,7 @@ general:
   lloc: >-
     Auditori del Campus del Poblenou Carrer de Roc Boronat, 138 08018
     Barcelona Espanya
-  titol: ' Conversa sobre pedagogia i neurociència entre Antonio Zabala i David Bueno'
+  titol: Conversa sobre pedagogia i neurociència entre Antonio Zabala i David Bueno - 10/02/20 (ca)
   img: ''
   xarxes:
     - address: 'https://twitter.com/UOCuniversitat'
