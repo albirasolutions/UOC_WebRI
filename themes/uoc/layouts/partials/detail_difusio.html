@@ -1,5 +1,4 @@
 {{$type := .Type}}
-{{with .Params.general}}
 
 <section>
     <div class="row">
@@ -14,7 +13,7 @@
         </div>
         <div class="col-xs-12 col-md-9">
             <div class="page-title title-border-green">
-                <h1>{{with .titol}}{{.}}{{end}}</h1>
+                <h1>{{with .Params.general.titol}}{{.}}{{end}}</h1>
             </div>
         </div>
         <div class="col-xs-12 col-md-3">
@@ -24,19 +23,19 @@
         <div class="col-xs-12 col-md-9">
             {{if eq $type "noticies"}}
             <figure class="img-figure">
-                <img src={{with .img}}{{.}}{{end}}>
+                <img src={{with .Params.general.img}}{{.}}{{end}}>
                 <figcaption class="img-figcaption">
                     <div class="float-left" id="img-figcaption1">
-                        <em class="text-extra-small">Foto: {{with .img_autor}}{{.}}{{end}}</em>
+                        <em class="text-extra-small">Foto: {{with .Params.general.img_autor}}{{.}}{{end}}</em>
                         <br><br>
-                        {{with .Params.date}}{{dateFormat "02/01/2006" .}}{{end}} <br>  {{with .autor}}{{.}}{{end}}
+                        {{with .Params.date}}{{dateFormat "02/01/2006" .}}{{end}} <br>  {{with .Params.general.autor}}{{.}}{{end}}
                     </div>
                     {{with .Params.general.xarxes}}
                     <div class="float-right" role="complementary" id="img-figcaption2">
                         
                         <div class="social-links unstyled">
                             
-                            {{range .}}
+                            {{range .Params.xarxes}}
                                 {{if eq .xarxa "facebook"}}
                             <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Facebook']);" href="{{.address}}" target="_blank"
                                     title='Facebook {{ T "uoc_grup_footer_links_new_window"}}' aria-label='Facebook {{ T "uoc_grup_footer_links_new_window"}}'><span class="icon icon--social-facebook"> </span></a>
@@ -208,4 +207,3 @@
         }
         
     });</script>
-{{end}}
