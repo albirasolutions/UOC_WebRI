@@ -144,7 +144,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Eslogan", name: slogan, widget: string}
           - {label: "Img Background", name: "img_background", widget: image, required: true}
-          - {label: "Tipologia", name: tipologia, widget: select, options: ["Solució Tecnològica","Patent", "Servei a l'empresa","Spin-Off"], default: "Solució Tecnològica"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -172,8 +171,8 @@ collections: # A list of collections the CMS should be able to edit
             name: xarxes
             widget: list
             fields:
-              - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
-              - {label: "Url", name: address, widget: string}
+              - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"], required: true}
+              - {label: "Url", name: address, widget: string, required: true}
       - label: Sobre la Tecnología
         name: sobre_tecnologia 
         required: false     
@@ -293,7 +292,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Texto", name: text_breu, widget: string}
           - {label: "Eslogan", name: slogan, widget: string}
           - {label: "Imagen", name: "img_background", widget: image, required: true}
-          - {label: "Tipología", name: tipologia, widget: select, options: ["Solución Tecnologica","Patente", "Servicio a la Empresa","Spin-Off"], default: "Solución Tecnologica"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -321,8 +319,8 @@ collections: # A list of collections the CMS should be able to edit
             name: xarxes
             widget: list
             fields:
-              - {label: "Nombre", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
-              - {label: "Url", name: address, widget: string}
+              - {label: "Nombre", name: xarxa, widget: select, options: ["facebook","twitter","instagram"], required: true}
+              - {label: "Url", name: address, widget: string, required: true}
       - label: Sobre la Tecnologia
         name: sobre_tecnologia 
         required: false     
@@ -442,7 +440,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Text", name: text_breu, widget: string, required: true}
           - {label: "Slogan", name: slogan, widget: string}
           - {label: "Img Background", name: "img_background", widget: image, required: true}
-          - {label: "Typology", name: tipologia, widget: select, options: ["Technical Solution","Patent", "Business Service","Spin-Off"], default: "Technical Solution"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -471,8 +468,8 @@ collections: # A list of collections the CMS should be able to edit
             name: xarxes
             widget: list
             fields:
-              - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
-              - {label: "Url", name: address, widget: string}
+              - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"], required: true}
+              - {label: "Url", name: address, widget: string, required: true}
       - label: About Technology
         name: sobre_tecnologia 
         required: false     
@@ -592,7 +589,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
-          - {label: "Tipologia", name: tipologia, widget: select, options: ["Solució Tecnològica","Patent", "Servei a l'empresa","Spin-Off"], default: "Patent"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -620,8 +616,8 @@ collections: # A list of collections the CMS should be able to edit
             name: xarxes
             widget: list
             fields:
-              - {label: "Xarxa", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
-              - {label: "Url", name: address, widget: string}
+              - {label: "Xarxa", name: xarxa, widget: select, options: ["facebook","twitter","instagram"], required: true}
+              - {label: "Url", name: address, widget: string, required: true}
       - label: Sobre la Patent
         name: sobre_patent  
         required: false    
@@ -741,7 +737,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Texto", name: text_breu, widget: string}
           - {label: "Eslogan", name: slogan, widget: string}
           - {label: "Img Fondo", name: "img_background", widget: image, required: true}
-          - {label: "Tipología", name: tipologia, widget: select, options: ["Solución Tecnologica","Patente", "Servicio a la Empresa","Spin-Off"], default: "Patente"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -769,8 +764,8 @@ collections: # A list of collections the CMS should be able to edit
             name: xarxes
             widget: list
             fields:
-              - {label: "Nombre", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
-              - {label: "Url", name: address, widget: string}
+              - {label: "Nombre", name: xarxa, widget: select, options: ["facebook","twitter","instagram"], required: true}
+              - {label: "Url", name: address, widget: string, required: true}
       - label: Sobre la Patente
         name: sobre_patent  
         required: false    
@@ -890,7 +885,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Slogan", name: slogan, widget: string}
           - {label: "Img Background", name: "img_background", widget: image, required: true}
-          - {label: "Typology", name: tipologia, widget: select, options: ["Technical Solution","Patent", "Business Service","Spin-Off"], default: "Patent"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -918,8 +912,8 @@ collections: # A list of collections the CMS should be able to edit
             name: xarxes
             widget: list
             fields:
-              - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
-              - {label: "Url", name: address, widget: string}
+              - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"], required: true}
+              - {label: "Url", name: address, widget: string, required: true}
       - label: About the Patent
         name: sobre_patent  
         required: false    
@@ -1038,7 +1032,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Nom Servei", name: nom_servei, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
-          - {label: "Tipologia", name: tipologia, widget: select, options: ["Solució Tecnològica","Patent", "Servei a l'empresa","Spin-Off"], default: "Servei a l'empresa"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -1065,8 +1058,8 @@ collections: # A list of collections the CMS should be able to edit
             name: xarxes
             widget: list
             fields:
-              - {label: "Nom", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
-              - {label: "Url", name: address, widget: string}
+              - {label: "Nom", name: xarxa, widget: select, options: ["facebook","twitter","instagram"], required: true}
+              - {label: "Url", name: address, widget: string, required: true}
       - label: Sobre el Servei
         name: sobre_servei  
         required: false    
@@ -1157,7 +1150,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Nombre Servicio", name: nom_servei, widget: string, required: true}
           - {label: "Texto", name: text_breu, widget: string}
           - {label: "Img Fondo", name: "img_background", widget: image, required: true}
-          - {label: "Tipología", name: tipologia, widget: select, options: ["Solución Tecnologica","Patente", "Servicio a la empresa","Spin-Off"], default: "Servicio a la empresa"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -1184,8 +1176,8 @@ collections: # A list of collections the CMS should be able to edit
             name: xarxes
             widget: list
             fields:
-              - {label: "Nombre", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
-              - {label: "Url", name: address, widget: string}
+              - {label: "Nombre", name: xarxa, widget: select, options: ["facebook","twitter","instagram"], required: true}
+              - {label: "Url", name: address, widget: string, required: true}
       - label: Sobre el Servicio
         name: sobre_servei  
         required: false    
@@ -1276,7 +1268,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Service Name", name: nom_servei, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Background Img", name: "img_background", widget: image, required: true}
-          - {label: "Typology", name: tipologia, widget: select, options: ["Technical Solution","Patent", "Business Service","Spin-Off"], default: "Business Service"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -1303,8 +1294,8 @@ collections: # A list of collections the CMS should be able to edit
             name: xarxes
             widget: list
             fields:
-              - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
-              - {label: "Url", name: address, widget: string}
+              - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"], required: true}
+              - {label: "Url", name: address, widget: string, required: true}
       - label: About the service
         name: sobre_servei  
         required: false    
@@ -1396,7 +1387,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
-          - {label: "Tipologia", name: tipologia, widget: select, options: ["Solució Tecnològica","Patent", "Servei a l'empresa","Spin-Off"], default: "Spin-Off"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -1416,8 +1406,8 @@ collections: # A list of collections the CMS should be able to edit
             name: xarxes
             widget: list
             fields:
-              - {label: "Nom", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
-              - {label: "Url", name: address, widget: string}
+              - {label: "Nom", name: xarxa, widget: select, options: ["facebook","twitter","instagram"], required: true}
+              - {label: "Url", name: address, widget: string, required: true}
       - label: Sobre la Spin-Off
         name: sobre_spinoff  
         required: false    
@@ -1545,7 +1535,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Texto", name: text_breu, widget: string}
           - {label: "Eslógan", name: slogan, widget: string}
           - {label: "Img Fondo", name: "img_background", widget: image, required: true}
-          - {label: "Tipología", name: tipologia, widget: select, options: ["Solución Tecnologica","Patente", "Servicio a la empresa","Spin-Off"], default: "Spin-Off"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -1565,8 +1554,8 @@ collections: # A list of collections the CMS should be able to edit
             name: xarxes
             widget: list
             fields:
-              - {label: "Nombre", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
-              - {label: "Url", name: address, widget: string}
+              - {label: "Nombre", name: xarxa, widget: select, options: ["facebook","twitter","instagram"], required: true}
+              - {label: "Url", name: address, widget: string, required: true}
       - label: Sobre la Spin-Off
         name: sobre_spinoff  
         required: false    
@@ -1694,7 +1683,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Slogan", name: slogan, widget: string}
           - {label: "Background Img", name: "img_background", widget: image, required: true}
-          - {label: "Typology", name: tipologia, widget: select, options: ["Technical Solution","Patent", "Business Service","Spin-Off"], default: "Spin-Off"}
           - label: "Sector"
             name: sector
             widget: relation
@@ -1714,8 +1702,8 @@ collections: # A list of collections the CMS should be able to edit
             name: xarxes
             widget: list
             fields:
-              - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"]}
-              - {label: "Url", name: address, widget: string}
+              - {label: "Name", name: xarxa, widget: select, options: ["facebook","twitter","instagram"], required: true}
+              - {label: "Url", name: address, widget: string, required: true}
       - label: About Spin-Off
         name: sobre_spinoff  
         required: false    
