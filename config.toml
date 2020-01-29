@@ -30,7 +30,7 @@ disableKinds = ["home", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap",
 
 
 [outputs]
-  page = ["HTML"]
+  page = ["HTML"] 
 
 [frontmatter]
 date = ["date", "publishDate", "lastmod"]
