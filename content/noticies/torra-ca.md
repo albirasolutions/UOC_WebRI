@@ -12,7 +12,7 @@ general:
     Torra compareix per aclarir com queda el Govern després de la crisi de
     dilluns
 descripcio:
-  - descripcio: >-
+    text: >-
       Quan passaven pocs minuts de dos quarts de dotze de la nit d'aquest
       dimarts, el president de la Generalitat, Quim Torra, va anunciar una
       compareixença d’urgència per avui amb l’objectiu de donar una resposta a

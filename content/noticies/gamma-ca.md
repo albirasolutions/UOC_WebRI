@@ -10,7 +10,7 @@ general:
   titol: >-
     Gamma - 26/01/20 (ca)
 descripcio:
-  - descripcio: >-
+    text: >-
       L'Agència Estatal de Recerca, mitjançant el Ministeri de Ciència,
       Innovació i Universitats, ha resolt el finançament que atorga amb els seus
       plans nacionals d'R+D+I a nous projectes de recerca. Aquesta vegada, la

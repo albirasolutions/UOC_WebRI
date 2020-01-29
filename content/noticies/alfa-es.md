@@ -8,7 +8,7 @@ general:
   img: /img/0a5e3d8399408516a201716607daee9dc776694d.png
   titol: Alfa
 descripcio:
-  - descripcio: >-
+    text: >-
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
       veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea

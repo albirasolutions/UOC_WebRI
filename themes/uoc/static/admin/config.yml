@@ -2447,10 +2447,10 @@ collections: # A list of collections the CMS should be able to edit
       - label: Descripció
         name: descripcio 
         required: false    
-        widget: list
+        widget: object
         fields:
           - {label: Entrada Breu, name: entrada, widget: string}
-          - {label: Descripció, name: descripcio, widget: markdown}
+          - {label: Descripció, name: text, widget: markdown}
   - name: "noticia_es"
     label: "Notícies [es]"
     folder: "content/noticies"
@@ -2483,10 +2483,10 @@ collections: # A list of collections the CMS should be able to edit
       - label: Descripció
         name: descripcio 
         required: false    
-        widget: list
+        widget: object
         fields:
           - {label: Entrada Breu, name: entrada, widget: string}
-          - {label: Descripció, name: descripcio, widget: markdown}
+          - {label: Descripció, name: text, widget: markdown}
   - name: "noticia_en"
     label: "Notícies [en]"
     folder: "content/noticies"
@@ -2519,10 +2519,10 @@ collections: # A list of collections the CMS should be able to edit
       - label: Descripció
         name: descripcio 
         required: false    
-        widget: list
+        widget: object
         fields:
           - {label: Entrada Breu, name: entrada, widget: string}
-          - {label: Descripció, name: descripcio, widget: markdown}
+          - {label: Descripció, name: text, widget: markdown}
   - name: "esdeveniment_ca"
     label: "Esdeveniments [ca]"
     folder: "content/esdeveniments"

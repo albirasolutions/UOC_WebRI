@@ -8,7 +8,7 @@ general:
   img: /img/speakapplogo.png
   titol: Notícia de test - 28/01/20 (ca)
 descripcio:
-  - descripcio: Aquest és el text de la notícia
+    text: Aquest és el text de la notícia
     entrada: Entrada breu
 ---
 
