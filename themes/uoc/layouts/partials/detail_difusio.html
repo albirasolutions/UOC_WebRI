@@ -1,9 +1,11 @@
+{{$type := .Type}}
 {{with .Params.general}}
+
 <section>
     <div class="row">
         <div class="col-xs-12 col-md-3">
             <div class="page-title title-border-green ">
-                {{if eq .Type "noticies"}}
+                {{if eq $type "noticies"}}
                 <h3 class="col-xs-12 col-md-3"><strong>{{ T "uoc_ri_difusio_noticia"}}</strong></h3>
                 {{else}}
                 <h3 class="col-xs-12 col-md-3"><strong>{{ T "uoc_ri_difusio_esdeveniment"}}</strong></h3>
@@ -20,19 +22,20 @@
         </div>
         
         <div class="col-xs-12 col-md-9">
-            {{if eq .Type "noticies"}}
+            {{if eq $type "noticies"}}
             <figure class="img-figure">
                 <img src={{with .img}}{{.}}{{end}}>
                 <figcaption class="img-figcaption">
                     <div class="float-left" id="img-figcaption1">
                         <em class="text-extra-small">Foto: {{with .img_autor}}{{.}}{{end}}</em>
                         <br><br>
-                        {{with .date}}{{dateFormat "02/01/2006" .}}{{end}} <br>  {{with .autor}}{{.}}{{end}}
+                        {{with .Params.date}}{{dateFormat "02/01/2006" .}}{{end}} <br>  {{with .autor}}{{.}}{{end}}
                     </div>
+                    {{with .Params.general.xarxes}}
                     <div class="float-right" role="complementary" id="img-figcaption2">
                         
                         <div class="social-links unstyled">
-                            {{with .xarxes}}
+                            
                             {{range .}}
                                 {{if eq .xarxa "facebook"}}
                             <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Facebook']);" href="{{.address}}" target="_blank"
@@ -47,9 +50,10 @@
                                     title='LinkedIn {{ T "uoc_grup_footer_links_new_window"}}' aria-label='LinkedIn {{ T "uoc_grup_footer_links_new_window"}}'><span class="icon icon--social-instagram"> </span></a>
                                 {{end}}
                             {{end}}
-                           {{end}}
+                           
                         </div>
                     </div>
+                    {{end}}
                 </figcaption>
             </figure>
             {{ end }}
@@ -62,27 +66,26 @@
 <section>
     <div class="row">
         <div class="col-xs-12 col-md-3">
-            {{if eq .Type "noticies"}}
-                {{with .descripcio}}
-                <blockquote class="pullquote">{{(index . 0).entrada}}</blockquote>
+            {{if eq $type "noticies"}}
+                {{with .Params.descripcio.entrada}}
+                <blockquote class="pullquote">{{.}}</blockquote>
                 {{end}}
             {{end}}
         </div>
         <div class="col-xs-12 col-md-9">
-            {{if eq .Type "noticies"}}
-                {{$descMap := (index (index .descripcio) 0) 0}}
-                <p>{{safeHTML (markdownify $descMap.descripcio)}}</p>
+            {{if eq $type "noticies"}}
+                <p>{{with .Params.descripcio.text}}{{safeHTML (markdownify .)}}{{end}}</p>
             {{else}}
-                <p>{{with .descripcio}}{{.}}{{end}}</p>
+                <p>{{with .Params.general.descripcio}}{{safeHTML (markdownify .)}}{{end}}</p>
                 
                     <div>
                         <div class="card card--image-horizontal card--info col-xs-12 card--2y col-clear-right">
                         <div class="card__contents col-xs-12 col-md-4">
                             <h3 class="h4 ">{{ T "uoc_ri_esdeveniment_On" }}</h3>
-                            <p>{{with .lloc}}{{.}}{{end}}</p>
+                            <p>{{with .Params.general.lloc}}{{.}}{{end}}</p>
                             <h3 class="h4 clear-both">{{ T "uoc_ri_esdeveniment_Quan" }}</h3>
                             <p>
-                                    {{with .date}}{{dateFormat "02/01/2006 15:04" .}}{{end}}
+                            {{with .Params.date}}{{dateFormat "02/01/2006 15:04" .}}{{end}}
                             <p>
                             &nbsp;</p>
                         </div>
@@ -106,7 +109,7 @@
                     <div class="float-right" role="complementary">
                         
                         <div class="social-links unstyled">
-                            {{with .xarxes}}
+                            {{with .Params.general.xarxes}}
                             {{range .}}
                                 {{if eq .xarxa "facebook"}}
                             <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Facebook']);" href="{{.address}}" target="_blank"
@@ -143,7 +146,7 @@
         })
     });
     
-    var address = "{{with .lloc}}{{ .}}{{end}}";
+    var address = "{{with .Params.general.lloc}}{{ .}}{{end}}";
     var lat = 0;
     var lng = 0;
     L.esri.Geocoding.geocode().text(address).run((err, results, response) => {
