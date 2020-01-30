@@ -8,5 +8,10 @@ general:
     - value: key
   nom_solucio: min
   sector: Dret i governança
+contacte:
+  - address: adsdsad
+    email: mail@mail.com
+    telefon: '123456789'
+    text: pau
 ---
 
