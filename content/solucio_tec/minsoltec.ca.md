@@ -7,7 +7,7 @@ general:
   keywords:
     - value: key
   nom_solucio: min
-  sector: Salut - eHealth
+  sector: 'Art, Turisme i Llengües'
 contacte:
   - address: adsdsad
     email: mail@mail.com
