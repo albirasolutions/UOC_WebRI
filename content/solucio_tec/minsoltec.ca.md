@@ -7,7 +7,7 @@ general:
   keywords:
     - value: key
   nom_solucio: min
-  sector: Dret i governança
+  sector: Salut - eHealth
 contacte:
   - address: adsdsad
     email: mail@mail.com
