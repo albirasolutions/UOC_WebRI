@@ -146,5 +146,24 @@
             {{ partial "footer.html" . }}
         </div>    
         {{ partial "ri_js_imports.html" . }}
+
+        <script src="/js/search.js"></script>
+        <script>
+            var difusions = [
+                {{ range (after 2 (where (where .Site.Pages.ByDate ".Params.destacat" true) ".Params.language" .Site.Language.Lang))}}
+                  {
+                    "link": {{.Permalink}},{{with .Params.general.img}}
+                    "img" : {{.}},{{end}}{{with .Params.general.titol}}
+                    "titol" : {{.}},{{end}}
+
+                    {{- if eq .Type "noticies" }}
+                    "type" : "noticies"
+                    {{else if eq .Type "esdeveniments"}}
+                    "type" : "esdeveniments"
+                    {{end}} 
+                  },
+                {{end}}                                                        
+            ]
+        </script>
 </body>
 </html>
