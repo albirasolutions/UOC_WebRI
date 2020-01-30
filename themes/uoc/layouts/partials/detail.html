@@ -893,7 +893,9 @@
                         </div>
                     </div> 
                 </div>
-            </div>                
+            </div>
+            {{end}}     
+            {{with .Params.casos_exit}}           
             <div id="tab-content-innovaServ" data-tab-content="" role="tabpanel" aria-labelledby="tab-11"
                 aria-hidden="true" class="tab-content">
                 <div class="js-collapse-group">
@@ -907,19 +909,19 @@
                         </div>
                         <div id="collapse1" class="contentCollapse show">
                             <div class="card-in-acordeon ">
-                                {{ range $c := .Params.casos_exit }}
+                                {{ range . }}
                                 <div class="row" >
                                 
                                     <ul class="list--unstyled">
-                                        <li><h2>{{ $c.titol }}</h2></li>
-                                        {{if isset $c "img" }}
-                                        <li><img src="{{$c.img}}"></li>
+                                        <li><h2>{{ .titol }}</h2></li>
+                                        {{if isset . "img" }}
+                                        <li><img src="{{.img}}"></li>
                                         {{end}}
-                                        {{if isset $c "descripcio" }}
-                                        <li><div class="wrap-richText">{{ safeHTML (markdownify $c.descripcio) }}</div></li>
+                                        {{if isset . "descripcio" }}
+                                        <li><div class="wrap-richText">{{ safeHTML (markdownify .descripcio) }}</div></li>
                                         {{end}}
-                                        {{if isset $c "url_success" }}
-                                        <li><a href="{{$c.url_success}}"><h3>{{T "uoc_ri_casos_link"}}</h3></a></li>
+                                        {{if isset . "url_success" }}
+                                        <li><a href="{{.url_success}}"><h3>{{T "uoc_ri_casos_link"}}</h3></a></li>
                                         {{end}}
                                     </ul>
                                 </div>
@@ -932,8 +934,10 @@
                     </div>
                 </div>
             </div>
-            <div id="tab-content-12" data-tab-content="" role="tabpanel" aria-labelledby="tab-12"
+            {{end}}
+            <div id="tab-content-grupsServ" data-tab-content="" role="tabpanel" aria-labelledby="tab-grupsServ"
             aria-hidden="true" class="tab-content">
+                {{with .Params.grups_recerca}}
                 <div class="collapse">
                     <div class="head-collapse js-collapse">
                         <p><a href="#collapseResearchServ" aria-expanded="true"
@@ -942,14 +946,14 @@
                     </div>
                     <div id="collapseResearchServ" class="contentCollapse show">
                         <div class="row">
-                            {{ range $g := .Params.grups_recerca}}
+                            {{ range .}}
                                 <div class="col-md-4 col-xs-12">
-                                    <a href="{{$g.url}}">
+                                    <a href="{{.url}}">
                                         <div class="card card-noimg" style="background-color: #C3FFDE;" role="region">
                                             
                                             <div class="card__contents">
-                                                <div><h4><strong>{{ $g.name }}</strong></h4></div>
-                                                <div>{{ $g.description }}</div>
+                                                <div><h4><strong>{{ .name }}</strong></h4></div>
+                                                <div>{{ .description }}</div>
                                             </div>
                                         </div>
                                     </a>
@@ -958,6 +962,8 @@
                         </div>
                     </div>
                 </div>
+                {{end}}
+                {{with .Params.investigadors}}
                 <div class="collapse">
                     <div class="head-collapse js-collapse">
                         <p><a href="#collapseResearchersServ" aria-expanded="true"
@@ -966,14 +972,14 @@
                     </div>
                     <div id="collapseResearchersServ" class="contentCollapse show">
                         <div class="row">
-                            {{ range $i := .Params.investigadors}}
+                            {{ range .}}
                             <div class="col-xs-12 col-md-4">
-                                <a href="{{$i.url}}">
+                                <a href="{{.url}}">
                                     <div class="card">
                                         <div class="card__contents img-wpr">
-                                            <img src="{{$i.url_img}}" alt="" class="img-wpr__cover">
+                                            <img src="{{.url_img}}" alt="" class="img-wpr__cover">
                                             <div class="img-wpr__contents">
-                                                <p><strong>{{ $i.name }}</strong></p>
+                                                <p><strong>{{ .name }}</strong></p>
                                             </div>
                                         </div>
                                     </div>
@@ -983,32 +989,39 @@
                         </div>
                     </div>
                 </div>
+                {{end}}
             </div>       
-            <div id="tab-content-13" data-tab-content="" role="tabpanel" aria-labelledby="tab-13"
+            {{with .Params.contacte}}       
+            <div id="tab-content-contactServ" data-tab-content="" role="tabpanel" aria-labelledby="tab-contactServ"
             aria-hidden="false" class="tab-content">
                 <div class="collapse">
                     <div class="head-collapse js-collapse">
                         <p>
-                            <a href="#collapse12" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_contacte" }}<span
+                            <a href="#collapseContactServ" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_contacte" }}<span
                             class="icon icon--arrow-down"></span></a>
                         </p>
                     </div>
-                    <div id="collapse12" class="contentCollapse show">
+                    <div id="collapseContactServ" class="contentCollapse show">
                         <div class="contact-list-icon">
+                            
                             <div class="row">
-                                <div class="col-xs-12 col-md-9">
+                                {{range .}}
+                                <div class="col-xs-12 col-md-3">
                                     <div class="wrap-content">
-                                        <p >{{ $contacte.text}}</p>
-                                        <p >{{ $contacte.address}}</p>
-                                        <p >{{ $contacte.telefon}}</p>
-                                        <p >{{ $contacte.email}}</p>
+                                        <p ><h2>{{ .text}}</h2></p>
+                                        <p >{{ .address}}</p>
+                                        <p >{{ .telefon}}</p>
+                                        <p >{{ .email}}</p>
                                     </div>
                                 </div>
+                                {{end}}
                             </div>
+                            
+                            
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>{{end}}
         </div>
     </div>
 </section>
