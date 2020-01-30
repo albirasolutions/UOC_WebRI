@@ -26,15 +26,24 @@
 			"xarxes_list": {{$xarxesList | jsonify}},{{end}}{{- if ne $xarxesAddress nil }}
 			"xarxes_address": {{$xarxesAddress | jsonify}},{{end}}{{else}}
 			"imatge_alt": {{$s.Params.title | jsonify}},
-			"imatge_title": {{$s.Params.title | jsonify}},{{end}}{{- end }}{{if eq $s.Type "solucio_tec" }}{{- if and (isset $s.Params "sobre_tecnologia") (ne $s.Params.sobre_tecnologia nil) }}{{$sobre_tecnologia := $s.Params.sobre_tecnologia }}
-			"sobre_tec_title": {{$sobre_tecnologia.titol | jsonify}},
-			"sobre_tec_descripcio": {{$sobre_tecnologia.descripcio | jsonify}},{{end}}{{else if eq $s.Type "patent"}}{{- if and (isset $s.Params "sobre_patent") (ne $s.Params.sobre_patent nil) }}{{$sobre_patent := $s.Params.sobre_patent }}
-			"sobre_pat_title": {{$sobre_patent.titol | jsonify}},
-			"sobre_pat_descripcio": {{$sobre_patent.descripcio | jsonify}},{{end}}{{else if eq $s.Type "servei"}}{{- if and (isset $s.Params "sobre_servei") (ne $s.Params.sobre_servei nil) }}{{$sobre_servei := $s.Params.sobre_servei }}
-			"sobre_servei_title": {{$sobre_servei.titol | jsonify}},
-			"sobre_servei_descripcio": {{$sobre_servei.descripcio | jsonify}},{{end}}{{else}}{{- if and (isset $s.Params "sobre_spinoff") (ne $s.Params.sobre_spinoff nil) }}{{$sobre_spinoff := $s.Params.sobre_spinoff }}
-			"sobre_spin_title": {{$sobre_spinoff.titol | jsonify}},
-			"sobre_spin_descripcio": {{$sobre_spinoff.descripcio | jsonify}},{{end}}{{end}}{{if or (eq $s.Type "solucio_tec") (eq $s.Type "pantent")}}{{- if and (isset $s.Params "aspectes_innovadors") (ne $s.Params.aspectes_innovadors nil) }}{{$aspectes_innovadors := index ($s.Params.aspectes_innovadors) 0 }}
+			"imatge_title": {{$s.Params.title | jsonify}},{{end}}{{- end }}
+			
+			{{if eq $s.Type "solucio_tec"}}
+				{{with .Params.sobre_tecnologia}}"sobre_tec_title": {{(index . 0).titol | jsonify}},{{end}}
+				{{with .Params.sobre_tecnologia}}"sobre_tec_descripcio": {{(index . 0).descripcio | jsonify}},{{end}}
+			{{else if eq $s.Type "patent"}}
+				{{with .Params.sobre_patent}} "sobre_pat_title": {{(index . 0).titol | jsonify}},{{end}}
+				{{with .Params.sobre_patent}} "sobre_pat_descripcio": {{(index . 0).descripcio | jsonify}},{{end}}
+			{{else if eq $s.Type "servei"}}
+				{{with .Params.sobre_servei}} "sobre_servei_title": {{(index . 0).titol | jsonify}},{{end}}
+				{{with .Params.sobre_servei}} "sobre_servei_descripcio": {{(index . 0).descripcio | jsonify}},{{end}}
+			{{else}}
+				{{with .Params.sobre_spinoff}} "sobre_spin_title": {{(index . 0).titol | jsonify}},{{end}}
+				{{with .Params.sobre_spinoff}} "sobre_spin_descripcio": {{(index . 0).descripcio | jsonify}},{{end}}
+			{{end}}
+			
+			{{if or (eq $s.Type "solucio_tec") (eq $s.Type "pantent")}}
+				{{- if and (isset $s.Params "aspectes_innovadors") (ne $s.Params.aspectes_innovadors nil) }}{{$aspectes_innovadors := index ($s.Params.aspectes_innovadors) 0 }}
 			"asp_innov_title": {{$aspectes_innovadors.titol | jsonify}},
 			"asp_innov_descripcio": {{$aspectes_innovadors.descripcio | jsonify}},{{end}}{{- if and (isset $s.Params "aplicacions") (ne $s.Params.aplicacions nil) }}{{$aplicacions := index ($s.Params.aplicacions) 0 }}
 			"app_title": {{- if ne $aplicacions.titol nil}}{{ $aplicacions.titol | jsonify }}{{else}}""{{end}},
