@@ -121,32 +121,32 @@
             <ul role="tablalist" data-sticky="data-sticky" class="list-group borderTopGrey toStick">
                 {{with .Params.aspectes_innovadors}}    
                 <li role="presentation">
-                    <a id="tab-10" href="#tab-content-10" role="tab"
-                    aria-controls="tab-content-10" aria-selected="true" data-tab-trigger=""
+                    <a id="tab-sobreTec" href="#tab-content-sobreTec" role="tab"
+                    aria-controls="tab-content-sobreTec" aria-selected="true" data-tab-trigger=""
                     class="tab is-active js-width-final"><span>{{ T "uoc_ri_about_tec" }}</span></a>
                 </li>{{end}}
                 {{with .Params.aspectes_innovadors}}                   
                 <li role="presentation">
-                    <a id="tab-11" href="#tab-content-11" role="tab"
-                    aria-controls="tab-content-11" aria-selected="false" data-tab-trigger=""
+                    <a id="tab-innovaTec" href="#tab-content-innovaTec" role="tab"
+                    aria-controls="tab-content-innovaTec" aria-selected="false" data-tab-trigger=""
                     class="tab"><span>{{ T "uoc_ri_aspect_innov" }}</span></a>
                 </li>{{end}}
-                {{with .Params.aspectes_innovadors}}          
+                {{with .Params.aplicacions}}          
                 <li role="presentation">
-                    <a id="tab-12" href="#tab-content-12" role="tab"
-                    aria-controls="tab-content-12" aria-selected="false" data-tab-trigger=""
+                    <a id="tab-appsTec" href="#tab-content-appsTec" role="tab"
+                    aria-controls="tab-content-appsTec" aria-selected="false" data-tab-trigger=""
                     class="tab"><span>{{ T "uoc_ri_apps" }}</span></a>
                 </li>{{end}}
                 {{with or .Params.grup_recerca .Params.investigadors}}          
                 <li role="presentation">
-                    <a id="tab-13" href="#tab-content-13" role="tab"
-                    aria-controls="tab-content-13" aria-selected="false" data-tab-trigger=""
+                    <a id="tab-grupsTec" href="#tab-content-grupsTec" role="tab"
+                    aria-controls="tab-content-grupsTec" aria-selected="false" data-tab-trigger=""
                     class="tab"><span>{{ T "uoc_ri_research_groups" }}</span></a>
                 </li>{{end}}
                 {{with .Params.contacte}}       
                 <li role="presentation">
-                    <a id="tab-14" href="#tab-content-14" role="tab"
-                    aria-controls="tab-content-14" aria-selected="false" data-tab-trigger=""
+                    <a id="tab-contactTec" href="#tab-content-contactTec" role="tab"
+                    aria-controls="tab-content-contactTec" aria-selected="false" data-tab-trigger=""
                     class="tab"><span>{{ T "uoc_ri_contacte" }}</span></a>
                 </li>{{end}}
             </ul>
@@ -154,7 +154,7 @@
         </div>
         <div class="col-xs-12 col-md-9">
             {{with .Params.sobre_tecnologia}}
-            <div id="tab-content-sobreTec" data-tab-content="" role="tabpanel" aria-labelledby="tab-10"
+            <div id="tab-content-sobreTec" data-tab-content="" role="tabpanel" aria-labelledby="tab-sobreTec"
             aria-hidden="false" class="tab-content is-active">
                 <div class="js-collapse-group">
                     
@@ -193,7 +193,7 @@
             </div>
             {{end}}
             {{with .Params.aspectes_innovadors}}                
-            <div id="tab-content-11" data-tab-content="" role="tabpanel" aria-labelledby="tab-11"
+            <div id="tab-content-innovaTec" data-tab-content="" role="tabpanel" aria-labelledby="tab-innovaTec"
                 aria-hidden="true" class="tab-content">
                 <div class="js-collapse-group">
                     <div class="collapse">
@@ -229,7 +229,7 @@
             </div>
             {{end}}
             {{with .Params.aplicacions}}
-            <div id="tab-content-12" data-tab-content="" role="tabpanel" aria-labelledby="tab-12"
+            <div id="tab-content-appsTec" data-tab-content="" role="tabpanel" aria-labelledby="tab-12"
             aria-hidden="true" class="tab-content">
                 <div class="js-collapse-group">
                     <div class="collapse">
@@ -264,7 +264,7 @@
                 </div>
             </div> 
             {{end}}
-            <div id="tab-content-13" data-tab-content="" role="tabpanel" aria-labelledby="tab-13"
+            <div id="tab-content-grupsTec" data-tab-content="" role="tabpanel" aria-labelledby="tab-13"
             aria-hidden="true" class="tab-content">
                 {{with .Params.grups_recerca}}
                 <div class="collapse">
@@ -471,31 +471,31 @@
             <ul role="tablalist" data-sticky="data-sticky" class="list-group borderTopGrey toStick">
                 {{with .Params.aspectes_innovadors}}    
                 <li role="presentation">
-                    <a id="tab-10" href="#tab-content-sobrePat" role="tab"
+                    <a id="tab-sobrePat" href="#tab-content-sobrePat" role="tab"
                     aria-controls="tab-content-10" aria-selected="true" data-tab-trigger=""
                     class="tab is-active js-width-final"><span>{{ T "uoc_ri_about_pat" }}</span></a>
                 </li>{{end}}
                 {{with .Params.aspectes_innovadors}}                   
                 <li role="presentation">
-                    <a id="tab-11" href="#tab-content-innovaPat" role="tab"
+                    <a id="tab-innovaPat" href="#tab-content-innovaPat" role="tab"
                     aria-controls="tab-content-11" aria-selected="false" data-tab-trigger=""
                     class="tab"><span>{{ T "uoc_ri_aspect_innov" }}</span></a>
                 </li>{{end}}
-                {{with .Params.aspectes_innovadors}}          
+                {{with .Params.aplicacions}}          
                 <li role="presentation">
-                    <a id="tab-12" href="#tab-content-12" role="tab"
+                    <a id="tab-appsPat" href="#tab-content-appsPat" role="tab"
                     aria-controls="tab-content-12" aria-selected="false" data-tab-trigger=""
                     class="tab"><span>{{ T "uoc_ri_apps" }}</span></a>
                 </li>{{end}}
                 {{with or .Params.grup_recerca .Params.investigadors}}          
                 <li role="presentation">
-                    <a id="tab-13" href="#tab-content-13" role="tab"
+                    <a id="tab-grupsPat" href="#tab-content-grupsPat" role="tab"
                     aria-controls="tab-content-13" aria-selected="false" data-tab-trigger=""
                     class="tab"><span>{{ T "uoc_ri_research_groups" }}</span></a>
                 </li>{{end}}
                 {{with .Params.contacte}}       
                 <li role="presentation">
-                    <a id="tab-14" href="#tab-content-14" role="tab"
+                    <a id="tab-14" href="#tab-content-contactPat" role="tab"
                     aria-controls="tab-content-14" aria-selected="false" data-tab-trigger=""
                     class="tab"><span>{{ T "uoc_ri_contacte" }}</span></a>
                 </li>{{end}}
@@ -504,14 +504,14 @@
         </div>
         <div class="col-xs-12 col-md-9">
             {{with .Params.sobre_patent}}
-            <div id="tab-content-sobrePat" data-tab-content="" role="tabpanel" aria-labelledby="tab-10"
+            <div id="tab-content-sobrePat" data-tab-content="" role="tabpanel" aria-labelledby="tab-sobrePat"
             aria-hidden="false" class="tab-content is-active">
                 <div class="js-collapse-group">
                     
                     <div class="collapse">
                         <div class="head-collapse js-collapse">
                             <p>
-                                <a href="#collapseSobreTec" aria-expanded="true"
+                                <a href="#collapseSobrePat" aria-expanded="true"
                                 class="js-collapseClick">{{ T "uoc_ri_about_pat" }}<span
                                 class="icon icon--arrow-down"></span></a>
                             </p>
@@ -578,26 +578,26 @@
                 </div>
             </div>
             {{end}}
-            <div id="tab-content-12" data-tab-content="" role="tabpanel" aria-labelledby="tab-12"
-            aria-hidden="true" class="tab-content">
+            {{with .Params.aplicacions}}      
+            <div id="tab-content-appsPat" data-tab-content="" role="tabpanel" aria-labelledby="tab-11"
+                aria-hidden="true" class="tab-content">
                 <div class="js-collapse-group">
                     <div class="collapse">
                         <div class="head-collapse js-collapse">
                             <p>
-                                <a href="#collapseApps" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_apps" }}<span
+                                <a href="#collapseAppsPat" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_aspect_innov" }}<span
                                     class="icon icon--arrow-down"></span>
                                 </a>
                             </p>
                         </div>
-                        <div id="collapseApps" class="contentCollapse show">
+                        <div id="collapseAppsPat" class="contentCollapse show">
                             <div class="card-in-acordeon">
-                                <div class="wrap-richText">                                    
-                                    {{with .Params.aplicacions}}{{ safeHTML (markdownify (index . 0).descripcio) }}{{end}}
+                                <div class="wrap-richText">
+                                   {{ safeHTML (markdownify (index . 0).descripcio) }}
                                 </div>
                             </div>
                             <div class="card-in-acordeon">
                                 <h4>{{ T "uoc_ri_docs" }}</h4>
-                                {{with .Params.aplicacions}}
                                 {{ range $d := (index . 0).docs_rels }}
                                 <div class="row" >
                                    
@@ -607,40 +607,41 @@
                                    
                                 </div>
                                 {{end}}
-                                {{end}}
+                                
                             </div>
                         </div>
                     </div>
                 </div>
-            </div> 
-            <div id="tab-content-13" data-tab-content="" role="tabpanel" aria-labelledby="tab-13"
+            </div>
+            {{end}}
+            <div id="tab-content-grupsPat" data-tab-content="" role="tabpanel" aria-labelledby="tab-13"
             aria-hidden="true" class="tab-content">
+                {{with .Params.grups_recerca}}
                 <div class="collapse">
                     <div class="head-collapse js-collapse">
-                        <p><a href="#collapseResearchPat" aria-expanded="true"
+                        <p><a href="#collapseResearchTec" aria-expanded="true"
                             class="js-collapseClick">{{ T "uoc_ri_research_groups" }}<span
                             class="icon icon--arrow-down"></span></a></p>
                     </div>
-
-                    
-                    <div id="collapseResearchPat" class="contentCollapse show">
+                    <div id="collapseResearchTec" class="contentCollapse show">
                         <div class="row">
-                        {{ range $g := .Params.grups_recerca}}
-                            <div class="col-md-4 col-xs-12">
-                                <a href="{{$g.url}}">
-                                    <div class="card card-noimg" style="background-color: #C3FFDE;" role="region">
-                                        
-                                        <div class="card__contents">
-                                            <div><h4><strong>{{ $g.name }}</strong></h4></div>
-                                            <div>{{ $g.description }}</div>
+                            {{ range .}}
+                                <div class="col-md-4 col-xs-12">
+                                    <a href="{{.url}}">
+                                        <div class="card card-noimg" style="background-color: #C3FFDE;" role="region">
+                                            
+                                            <div class="card__contents">
+                                                <div><h4><strong>{{ .name }}</strong></h4></div>
+                                                <div>{{ .description }}</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                        {{end}}
-                        </div>   
+                                    </a>
+                                </div>
+                            {{end}}
+                        </div>
                     </div>
                 </div>
+                {{end}}
                 <div class="collapse">
                     <div class="head-collapse js-collapse">
                         <p><a href="#collapseResearchersPat" aria-expanded="true"
