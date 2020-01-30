@@ -175,8 +175,8 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Url", name: address, widget: string, required: true}
       - label: Sobre la Tecnología
         name: sobre_tecnologia 
-        required: true     
-        widget: object
+        required: false     
+        widget: list
         fields:
           - {label: titol, name: titol, widget: string}
           - {label: descripcio, name: descripcio, widget: markdown}
@@ -325,8 +325,8 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Url", name: address, widget: string, required: true}
       - label: Sobre la Tecnología
         name: sobre_tecnologia 
-        required: true     
-        widget: object
+        required: false     
+        widget: list
         fields:
           - {label: titol, name: titol, widget: string}
           - {label: descripcio, name: descripcio, widget: markdown}
@@ -475,8 +475,8 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Url", name: address, widget: string, required: true}
       - label: Sobre la Tecnología
         name: sobre_tecnologia 
-        required: true     
-        widget: object
+        required: false     
+        widget: list
         fields:
           - {label: titol, name: titol, widget: string}
           - {label: descripcio, name: descripcio, widget: markdown}
@@ -625,8 +625,8 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Url", name: address, widget: string, required: true}
       - label: Sobre la Patent
         name: sobre_patent  
-        required: true    
-        widget: object
+        required: false    
+        widget: list
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
@@ -775,8 +775,8 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Url", name: address, widget: string, required: true}
       - label: Sobre la Patent
         name: sobre_patent  
-        required: true    
-        widget: object
+        required: false    
+        widget: list
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
@@ -925,8 +925,8 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Url", name: address, widget: string, required: true}
       - label: Sobre la Patent
         name: sobre_patent  
-        required: true    
-        widget: object
+        required: false    
+        widget: list
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
@@ -1073,8 +1073,8 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Url", name: address, widget: string, required: true}
       - label: Sobre el Servei
         name: sobre_servei  
-        required: true    
-        widget: object
+        required: false    
+        widget: list
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
@@ -1194,8 +1194,8 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Url", name: address, widget: string, required: true}
       - label: Sobre el Servei
         name: sobre_servei  
-        required: true    
-        widget: object
+        required: false    
+        widget: list
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
@@ -1315,8 +1315,8 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Url", name: address, widget: string, required: true}
       - label: Sobre el Servei
         name: sobre_servei  
-        required: true    
-        widget: object
+        required: false    
+        widget: list
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
@@ -1431,8 +1431,8 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Url", name: address, widget: string, required: true}
       - label: Sobre la Spin-Off
         name: sobre_spinoff  
-        required: true    
-        widget: object
+        required: false    
+        widget: list
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
@@ -1583,8 +1583,8 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Url", name: address, widget: string, required: true}
       - label: Sobre la Spin-Off
         name: sobre_spinoff  
-        required: true    
-        widget: object
+        required: false    
+        widget: list
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
@@ -1735,8 +1735,8 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Url", name: address, widget: string, required: true}
       - label: Sobre la Spin-Off
         name: sobre_spinoff  
-        required: true    
-        widget: object
+        required: false    
+        widget: list
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
