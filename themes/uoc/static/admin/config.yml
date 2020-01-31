@@ -1402,7 +1402,7 @@ collections: # A list of collections the CMS should be able to edit
         name: general
         widget: object
         fields: 
-          - {label: "Nom Servei", name: nom_spinoff, widget: string, required: true}
+          - {label: "Nom Spin off", name: nom_spinoff, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
@@ -1554,7 +1554,7 @@ collections: # A list of collections the CMS should be able to edit
         name: general
         widget: object
         fields: 
-          - {label: "Nom Servei", name: nom_spinoff, widget: string, required: true}
+          - {label: "Nom Spin off", name: nom_spinoff, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
@@ -1706,7 +1706,7 @@ collections: # A list of collections the CMS should be able to edit
         name: general
         widget: object
         fields: 
-          - {label: "Nom Servei", name: nom_spinoff, widget: string, required: true}
+          - {label: "Nom Spin off", name: nom_spinoff, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
