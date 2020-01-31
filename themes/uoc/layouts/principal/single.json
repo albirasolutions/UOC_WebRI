@@ -22,8 +22,8 @@
 				{{$general.nom_spinoff | jsonify}}
 			{{end}},
 
-			{{with .Params.general.text_breu}}"text_breu": {{.}} | jsonify}},{{end}}
-			{{with .Params.general.slogan}}"eslogan": {{.}} | jsonify}},{{end}}
+			{{with .Params.general.text_breu}}"text_breu": {{. | jsonify}},{{end}}
+			{{with .Params.general.slogan}}"eslogan": {{. | jsonify}},{{end}}
 
 			"imatge_alt": {{$s.Params.title | jsonify}},
 			"imatge_title": {{$s.Params.title | jsonify}},
