@@ -32,15 +32,15 @@
 			{{with $s.Params.general.centre}}"centre" : {{. | jsonify}},{{end}}
 			{{with $s.Params.general.sector}}"sector" : {{. | jsonify}},{{end}}
 			{{with $s.Params.general.logo}}"logo_url": {{. | jsonify}},{{end}}
-			
-			{{with $s.Params.general.keywords}}
-				{{$keywords := slice ""}}
-				{{- range .}}
-					{{$keywords := slice .value }}
+			{{if false}}
+				{{with $s.Params.general.keywords}}
+					{{$keywords := slice ""}}
+					{{- range .}}
+						{{$keywords := slice .value }}
+					{{end}}
+					"keywords": {{$keywords | jsonify}},
 				{{end}}
-				"keywords": {{$keywords | jsonify}},
 			{{end}}
-			
 			{{if eq $s.Type "solucio_tec"}}
 				{{with $s.Params.sobre_tecnologia}}"sobre_tec_title": {{(index . 0).titol | jsonify}},{{end}}
 				{{with $s.Params.sobre_tecnologia}}"sobre_tec_descripcio": {{(index . 0).descripcio | jsonify}},{{end}}
@@ -73,36 +73,38 @@
 				{{with $s.Params.clients}}"clients_title": {{(index . 0).titol | jsonify}},{{end}}
 				{{with $s.Params.clients}}"clients_descripcio": {{(index . 0).titol | jsonify}},{{end}}
 			{{end}}
-
-			{{with $s.Params.grups_recerca}}
-				{{$grups := slice ""}}
-				{{- range .}}
-					{{$grups := slice .name}}
+			{{if false}}
+				{{with $s.Params.grups_recerca}}
+					{{$grups := slice ""}}
+					{{- range .}}
+						{{$grups := slice .name}}
+					{{end}}
+					"grups": {{$grups | jsonify}},
 				{{end}}
-				"grups": {{$grups | jsonify}},
-			{{end}}
-			{{with $s.Params.investigadors}}
-				{{$investigadors := slice ""}}
-				{{- range .}}
-					{{$investigadors := slice .name}}
+			
+				{{with $s.Params.investigadors}}
+					{{$investigadors := slice ""}}
+					{{- range . }}
+						{{$investigadors := $investigadors | append (slice .name)}}
+					{{end}}
+					{{if ( eq $investigadors ("") )}}"investigadors": {{$investigadors}} {{$investigadors | jsonify}},{{end}}
 				{{end}}
-				"investigadors": {{$investigadors | jsonify}},
-			{{end}}
-			{{with $s.Params.contacte}}
-				{{$nom := slice ""}}
-				{{$email := slice ""}}
-				{{$address := slice ""}}
-				{{$phone := slice ""}}
-				{{- range .}}
-					{{$nom := slice .text}}
-					{{$email := slice .email}}
-					{{$address := slice .address}}
-					{{$phone := slice .telefon}}
+				{{with $s.Params.contacte}}
+					{{$nom := slice ""}}
+					{{$email := slice ""}}
+					{{$address := slice ""}}
+					{{$phone := slice ""}}
+					{{- range .}}
+						{{$nom := $nom | append .text}}
+						{{$email := $email | append .email}}
+						{{$address := $address | append .address}}
+						{{$phone := $phone | append .telefon}}
+					{{end}}
+					{{- if ne $nom nil}}"contacts_name": {{$nom | jsonify}},{{end}}
+					{{- if ne $email nil}}"contacts_email": {{$email | jsonify}},{{end}}
+					{{- if ne $address nil}}"contacts_address": {{$address | jsonify}},{{end}}
+					{{- if ne $phone nil}}"contacts_phone": {{$phone | jsonify}},{{end}}
 				{{end}}
-				{{- if ne $nom nil}}"contacts_name": {{$nom | jsonify}},{{end}}
-				{{- if ne $email nil}}"contacts_email": {{$email | jsonify}},{{end}}
-				{{- if ne $address nil}}"contacts_address": {{$address | jsonify}},{{end}}
-				{{- if ne $phone nil}}"contacts_phone": {{$phone | jsonify}},{{end}}
 			{{end}}
 			"content" : "transfer",
 			"content_encoding" : "utf-8",
