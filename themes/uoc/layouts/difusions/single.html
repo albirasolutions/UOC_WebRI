@@ -97,9 +97,11 @@
             $(".list-difusions .card").matchHeight(); 
             var noticiaLabel = '{{ T "uoc_ri_noticia" }}';
             var esdevenimentLabel = '{{ T "uoc_ri_esdeveniment" }}';
-            var difusions = [
+            var difusionsDestacades = [
                 {{ range (after 2 (where (where .Site.Pages.ByDate ".Params.destacat" true) ".Params.language" .Site.Language.Lang))}}
                   {
+                    "destacat": {{.Params.destacat}},
+                    "data": {{.Params.date}},
                     "link": {{.Permalink}},{{with .Params.general.img}}
                     "img" : {{.}},{{end}}{{with .Params.general.titol}}
                     "titol" : {{.}},{{end}}{{with .Params.general.entrada}}
@@ -111,6 +113,24 @@
                     "type" : "esdeveniments"
                     {{end}} 
                   },
+                {{end}}                                                        
+            ];
+            var restaDifusions = [
+                {{ range (where (where .Site.Pages.ByDate ".Params.destacat" false) ".Params.language" .Site.Language.Lang)}}
+                {
+                    "destacat": {{.Params.destacat}},
+                    "data": {{.Params.date}},
+                    "link": {{.Permalink}},{{with .Params.general.img}}
+                    "img" : {{.}},{{end}}{{with .Params.general.titol}}
+                    "titol" : {{.}},{{end}}{{with .Params.general.entrada}}
+                    "entrada": {{.}},{{end}}
+
+                    {{- if eq .Type "noticies" }}
+                    "type" : "noticies"
+                    {{else if eq .Type "esdeveniments"}}
+                    "type" : "esdeveniments"
+                    {{end}} 
+                },
                 {{end}}                                                        
             ]
             var literals = {

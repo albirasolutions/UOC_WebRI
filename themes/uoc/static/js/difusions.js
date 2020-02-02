@@ -1,9 +1,13 @@
 jQuery(document).ready(function ($) {
 
-    console.log(difusions);
-
     var difusionsList = [];
-    for(var difusio of difusions){
+    var allDifusions = [];
+    allDifusions = allDifusions.concat(difusionsDestacades);
+    allDifusions = allDifusions.concat(restaDifusions);
+
+    console.log(allDifusions);
+    
+    for(var difusio of allDifusions){
         difusionsList.push(getResultMarkup(difusio));
     }
     initPagination(difusionsList);
@@ -42,7 +46,7 @@ function initPagination(dataset) {
 
     $('.resultsDifusions .pagination-difusions .pagination-difusions-container').pagination({
 	    dataSource: dataset,
-	    pageSize: 6,
+	    pageSize: 8,
 	    autoHidePrevious: true,
 	    autoHideNext: true,
 	    callback: function(data, pagination) {
