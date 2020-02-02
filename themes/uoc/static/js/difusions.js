@@ -11,39 +11,23 @@ jQuery(document).ready(function ($) {
 
 function getResultMarkup(difusio){
 
+    var label;
+    if(difusio.type == 'noticies') label = noticiaLabel;
+    else if(difusio.type == 'esdeveniments') label = esdevenimentLabel;
+
     var markup='<div class="col-xs-6 col-md-3" role="article" data-id="">';
-
-    if(difusio.type == 'noticies'){
-
-        markup+='<a href="' + difusio.link + '" class="card-absolute-link"></a>';
-        markup+='<div class="card" role="region" aria-label="Texto descriptivo" >';
-        markup+='<div class="card__image">';
-        if(difusio.img) markup+='<img src="'+ difusio.img + '" alt="Texto alternativo">';
-        markup+='</div>';
-        markup+='<div class="card__contents" >';
-        if(difusio.titol) markup+='<p class="text-big text font-alternate">' + difusio.titol+ '</p>'
-        if(difusio.entrada) markup+='<p class="text-small text"><blockquote class="pullquote">'+ difusio.entrada + '</blockquote></p>';
-        markup+='</div><div class="card__footer"><div class="float-left p-left-x  icon icon--external-link"></div>';
-        markup+='<div class="float-right p-right-x">'+ noticiaLabel +'</div>';
-        markup+='</div></div>';
-
-    } else if(difusio.type == 'esdeveniments'){
-
-        markup+='<a href="' + difusio.link + '" class="card-absolute-link"></a>';
-        markup+='<div class="card" role="region" aria-label="Texto descriptivo" >';
-        markup+='<div class="card__image">';
-        if(difusio.img) markup+='<img src="'+ difusio.img + '" alt="Texto alternativo">';
-        markup+='</div>';
-        markup+='<div class="card__contents" >';
-        if(difusio.titol) markup+='<p class="text-big text font-alternate">' + difusio.titol+ '</p>'
-        markup+='</div><div class="card__footer"><div class="float-left p-left-x  icon icon--external-link"></div>';
-        markup+='<div class="float-right p-right-x">'+ esdevenimentLabel +'</div>';
-        markup+='</div></div>';          
-    }
-
-	
+    markup+='<a href="' + difusio.link + '" class="card-absolute-link"></a>';
+    markup+='<div class="card" role="region" aria-label="Texto descriptivo" >';
+    markup+='<div class="card__image">';
+    if(difusio.img) markup+='<img src="'+ difusio.img + '" alt="Texto alternativo">';
     markup+='</div>';
-    console.log(markup);
+    markup+='<div class="card__contents" >';
+    if(difusio.titol) markup+='<p class="text-big text font-alternate">' + difusio.titol+ '</p>'
+    markup+='</div><div class="card__footer"><div class="float-left p-left-x  icon icon--external-link"></div>';
+    markup+='<div class="float-right p-right-x">'+ label +'</div>';
+    markup+='</div></div>';
+    markup+='</div>';
+
 	return markup;
 }
 
