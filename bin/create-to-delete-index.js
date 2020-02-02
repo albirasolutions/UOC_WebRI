@@ -23,8 +23,10 @@ for(var item of toDeleleteIndexList){
     })
 }
 
-var json = JSON.stringify(cloudSearchDeleteList);
-fs.writeFileSync('./ca/index-to-delete.json', json, 'utf8');
+if(cloudSearchDeleteList.length) {
+    var json = JSON.stringify(cloudSearchDeleteList);
+    fs.writeFileSync('./ca/index-to-delete.json', json, 'utf8');
+}
 console.log('Finished!');
 
 
