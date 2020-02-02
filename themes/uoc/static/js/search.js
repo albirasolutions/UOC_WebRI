@@ -510,7 +510,7 @@ function initPagination(dataset, content_type) {
 	    	$(".pagination-"+content_type+">div>div").removeClass("col-md-4");
 	    },
 	    afterPaging: function(){
-	    	if($('.grupResults .js-changeVist').hasClass("change-to-list")){
+	    	if($('.'+content_type+'Results_' + tab +' .js-changeVist').hasClass("change-to-list")){
 	    		$("."+content_type+"Results_" + tab +" .list-"+content_type+" div").removeClass("col-md-4");
 	    		$(".pagination-"+content_type+">div>div").removeClass("col-md-4");
 	    	}
