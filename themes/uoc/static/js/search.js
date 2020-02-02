@@ -22,12 +22,15 @@ jQuery(document).ready(function ($) {
 		break;
 		case 'cercadorSectors':
 			console.log('Tab: cercadorSectors');
+			$(".tab.cercadorSectors h3").click();
 			tab = 'cercadorSectors';			
 			queryInnovaSolSearchEngine(searchParams);
 		break;
 		case 'cercadorTextual':
 			console.log('Tab: cercadorTextual');
+			$(".tab.cercadorTextual h3").click();
 			tab = 'cercadorTextual';	
+			$(".cercadorTextual input#search").val(searchParams.s);
 			querySearchEngine(searchParams);
 			queryInnovaSolSearchEngine(searchParams);			
 		break;
@@ -41,7 +44,8 @@ jQuery(document).ready(function ($) {
 	});
 	$(".tab.cercadorFiltres h3").click(function(e){	
 		searchParams =	{};
-		tab = 'cercadorFiltres';	
+		tab = 'cercadorFiltres';
+		submitSearch(e);
 	});	
 
 	$(".cercadorTextual form").submit(function(e){ //Free text search
@@ -63,6 +67,7 @@ jQuery(document).ready(function ($) {
 	$(".tab.cercadorTextual h3").click(function(e){	
 		console.log('Tab: cercadorTextual');
 		searchParams =	{};
+		$(".cercadorTextual input#search").val(' ');
 		tab = 'cercadorTextual';	
 		$(".cercadorTextual .collapse-filter").hide();
 		$(".cercadorTextual .collapse.grup.results").hide();

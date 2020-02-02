@@ -10,16 +10,16 @@ function initCercaHome(){
 		searchParams=getFormValues();
 		window.location = buildURL(searchParams,'cercadorFiltres');
 	});
+	$(".tab-content.cercaSectors form").on('submit', function(e){
+		e.preventDefault();
+		searchParams=getFormValues();
+		window.location = buildURL(searchParams,'cercadorSectors');
+	});
 	$(".tab-content.cercaTextual form").on('submit', function(e){
 		e.preventDefault();
 		searchParams={};
 		searchParams.s = $(".tab-content.cercaTextual form input#search").val();
 		window.location = buildURL(searchParams,'cercadorTextual');
-	});
-	$(".tab-content.cercaSectors form").on('submit', function(e){
-		e.preventDefault();
-		searchParams=getFormValues();
-		window.location = buildURL(searchParams,'cercadorSectors');
 	});
 }
 function getFormValues(){
@@ -50,6 +50,7 @@ function getFormValues(){
 			searchParams.centre.push($(this).text());
 		});	
 		if(searchParams.centre.includes($($(".tab-content.cercaFiltres .tag-list.centre li")[0]).text())){
+			console.log('Deleting search params centre');
 			delete searchParams["centre"];
 		}
 	}
