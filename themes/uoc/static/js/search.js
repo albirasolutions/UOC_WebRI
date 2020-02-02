@@ -30,9 +30,11 @@ jQuery(document).ready(function ($) {
 			console.log('Tab: cercadorTextual');
 			$(".tab.cercadorTextual h3").click();
 			tab = 'cercadorTextual';	
-			$(".cercadorTextual input#search").val(searchParams.s);
-			querySearchEngine(searchParams);
-			queryInnovaSolSearchEngine(searchParams);			
+			if(searchParams.s){
+				$(".cercadorTextual input#search").val(searchParams.s);
+				querySearchEngine(searchParams);
+				queryInnovaSolSearchEngine(searchParams);			
+			}
 		break;
 	}
 
@@ -76,13 +78,20 @@ jQuery(document).ready(function ($) {
 		$(".cercadorTextual .collapse.spin.results").hide();
 	});
 
+	$(".uoc_submitSearch_cercadorTextual").click(function(e){		
+		submitSearch(e);
+	});	
+
 	$(".tab.cercadorSectors h3").click(function(e){	
 		console.log('Tab: cercadorSectors');
 		tab = 'cercadorSectors';	
 		searchParams =	{};
 		queryInnovaSolSearchEngine(searchParams);
-	});		
-
+	});	
+	
+	$(".uoc_submitSearch_cercadorSectors").click(function(e){		
+		submitSearch(e);
+	});
 });
 	
 
@@ -114,31 +123,82 @@ function getCurrentLanguage(){
 							FORM METHODS								
 ***********************************************************************/
 function submitSearch(caller){
-		if(caller != null){
-			caller.preventDefault();	
-		}
-		getSearchFormValues();
-		querySearchEngine(searchParams);
+	if(caller != null){
+		caller.preventDefault();	
+	}
+	getSearchFormValues();
+	console.log('submitSearch. Form values: ', searchParams);
+
+	switch(tab){
+		case 'cercadorFiltres':
+			querySearchEngine(searchParams);
+		break;
+		case 'cercadorSectors':
+			queryInnovaSolSearchEngine(searchParams);
+		break;
+		case 'cercadorTextual':
+			querySearchEngine(searchParams);
+			queryInnovaSolSearchEngine(searchParams);
+		break;
+	}
+
+	if(searchParams.visualitzacio && searchParams.visualitzacio.length){
 		
-		$(".cercadorFiltres .collapse.results").addClass("hidden");						//Hide depending on "visualitza per" options
+		switch(tab){
+			case 'cercadorFiltres':
+				$(".cercadorFiltres .collapse.results").addClass("hidden");						//Hide depending on "visualitza per" options
+			break;
+			case 'cercadorSectors':
+				$(".cercadorSectors .collapse.results").addClass("hidden");						//Hide depending on "visualitza per" options
+			break;
+			case 'cercadorTextual':
+				$(".cercadorTextual .collapse.results").addClass("hidden");						//Hide depending on "visualitza per" options
+			break;
+		}
+		
 		for(selector in searchParams.visualitzacio){
-			$(".cercadorFiltres .collapse."+searchParams.visualitzacio[selector]).removeClass("hidden");
-		}		
+			switch(tab){
+				case 'cercadorFiltres':
+					$(".cercadorFiltres .collapse."+searchParams.visualitzacio[selector]).removeClass("hidden");
+				break;
+				case 'cercadorSectors':
+					//console.log('Remove ' + searchParams.visualitzacio[selector] + ' results');
+					//console.log(".cercadorSectors .collapse."+searchParams.visualitzacio[selector]);
+					$(".cercadorSectors .collapse."+searchParams.visualitzacio[selector]).removeClass("hidden");
+				break;
+				case 'cercadorTextual':
+					//console.log('Remove ' + searchParams.visualitzacio[selector] + ' results');
+					$(".cercadorTextual .collapse."+searchParams.visualitzacio[selector]).removeClass("hidden");
+				break;
+			}
+		}
+	} 
 }
+
 function getSearchFormValues(){
 	searchParams={};
+
+	if($("#collapse-sector_productiu input:checked").length>0){									//Ambits checked
+		searchParams.sector_productiu = [];
+		$("#collapse-sector_productiu input:checked").each(function( index ) {
+			searchParams.sector_productiu.push($(this).val());
+		});	
+	}
+
 	if($("#collapse-ambits_especialitzacio input:checked").length>0){									//Ambits checked
 		searchParams.ambit_especialitzacio = [];
 		$("#collapse-ambits_especialitzacio input:checked").each(function( index ) {
 			searchParams.ambit_especialitzacio.push($(this).val());
 		});	
 	}
+
 	if($("#collapse-ods input:checked").length>0){										//Ods checked
 		searchParams.ods = [];
 		$("#collapse-ods input:checked").each(function( index ) {
 			searchParams.ods.push($(this).val());
 		});	
 	}
+
 	var unescoFreeTextSearch = $("#collapse-codi input[name='searchWords']").val();		//UNESCO Free text search
 	if (unescoFreeTextSearch != null && unescoFreeTextSearch != ""){
 		searchParams.unesco = unescoFreeTextSearch;
@@ -157,8 +217,18 @@ function getSearchFormValues(){
 		});	
 	} else {
 		searchParams.visualitzacio = [];
-		searchParams.visualitzacio.push("grup");
-		searchParams.visualitzacio.push("fitxa");
+		if(tab=="cercadorFiltres") {
+			searchParams.visualitzacio.push("grup");
+			searchParams.visualitzacio.push("fitxa");
+		} else if(tab=="cercadorSectors"){
+			searchParams.visualitzacio.push("solucions");
+			searchParams.visualitzacio.push("spin");
+		} else if(tab=="cercadorTextual"){
+			searchParams.visualitzacio.push("grup");
+			searchParams.visualitzacio.push("fitxa");
+			searchParams.visualitzacio.push("solucions");
+			searchParams.visualitzacio.push("spin");
+		}
 	}
 }
 
@@ -403,8 +473,8 @@ function getResultMarkup(item, content_type, idx, listView){
 
 function initPagination(dataset, content_type) {
 
-	console.log('Entering initPagination for content type: ' + content_type + '. Tab: ' + tab);
-	console.log('Looking for element: .pagination-'+content_type+'_'+tab+' .pagination-'+content_type+'-container_'+ tab);
+	//console.log('Entering initPagination for content type: ' + content_type + '. Tab: ' + tab);
+	//console.log('Looking for element: .pagination-'+content_type+'_'+tab+' .pagination-'+content_type+'-container_'+ tab);
 
     $('.pagination-'+content_type+'_'+tab+' .pagination-'+content_type+'-container_'+ tab).pagination({
 	    dataSource: dataset,
@@ -413,14 +483,14 @@ function initPagination(dataset, content_type) {
 	    autoHideNext: true,
 	    callback: function(data, pagination) {
 			// template method of yourself
-			console.log('Entering initPagination callback for content type: ' + content_type);
+			//console.log('Entering initPagination callback for content type: ' + content_type);
 			var html = data;
-			console.log('There is more than one match: '+ $('.'+content_type+'Results_' + tab +' .list-'+content_type).length)
+			//console.log('There is more than one match: '+ $('.'+content_type+'Results_' + tab +' .list-'+content_type).length)
             $('.'+content_type+'Results_' + tab +' .list-'+content_type).html(html);
 	    },
 	    afterRender: function(isForced) {
 	    	if($('.pagination-'+content_type+'-container_' + tab +' .J-paginationjs-page').length > 1){
-				console.log('There is more than one match: '+ $('.pagination-'+content_type+'-container_' + tab +' .J-paginationjs-page').length)
+				//console.log('There is more than one match: '+ $('.pagination-'+content_type+'-container_' + tab +' .J-paginationjs-page').length)
 		    	$('.pagination-'+content_type+'-container_' + tab +' .J-paginationjs-page').addClass("col-md-1");
 		    	$('.pagination-'+content_type+'-container_' + tab +' .paginationjs-ellipsis').addClass("col-md-1");
 				$('.pagination-'+content_type+'-container_' + tab +' .J-paginationjs-previous').addClass("col-md-2");
