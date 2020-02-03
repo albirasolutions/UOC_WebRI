@@ -186,7 +186,11 @@
                         <div class="head-collapse js-collapse">
                             <p>
                                 <a href="#collapseAbout" aria-expanded="true"
-                                class="js-collapseClick">{{ T "uoc_ri_about_tec" }}<span
+                                class="js-collapseClick">
+                                {{if eq $type "solucio_tec"}}{{ T "uoc_ri_about_tec" }}
+                                {{else if eq $type "patent"}}{{ T "uoc_ri_about_pat" }}
+                                {{else if eq $type "servei"}}{{ T "uoc_ri_about_serv" }}
+                                {{else}}{{ T "uoc_ri_about_spin" }}{{end}}<span
                                 class="icon icon--arrow-down"></span></a>
                             </p>
                         </div>
