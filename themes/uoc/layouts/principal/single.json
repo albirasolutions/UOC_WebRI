@@ -112,4 +112,4 @@
 			"resourcename" : {{$s.Params.title | jsonify}},
 			"url" : {{ $s.Permalink | jsonify }}
 		}
-	}{{ if ne ($.Scratch.Get "len") ($.Scratch.Get "counter")}}{{end}}{{end}}{{end}}]
+	{{ if ne ($.Scratch.Get "len") ($.Scratch.Get "counter")}}{{end}}{{end}}{{end}}]
