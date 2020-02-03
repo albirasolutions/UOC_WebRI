@@ -40,18 +40,9 @@
 					"keywords": {{$keywords | jsonify}},
 				{{end}}
 			{{end}}
-			{{if eq $s.Type "solucio_tec"}}
-				{{with $s.Params.sobre_tecnologia}}"sobre_tec_title": {{(index . 0).titol | jsonify}},{{end}}
-				{{with $s.Params.sobre_tecnologia}}"sobre_tec_descripcio": {{(index . 0).descripcio | jsonify}},{{end}}
-			{{else if eq $s.Type "patent"}}
-				{{with $s.Params.sobre_patent}} "sobre_pat_title": {{(index . 0).titol | jsonify}},{{end}}
-				{{with $s.Params.sobre_patent}} "sobre_pat_descripcio": {{(index . 0).descripcio | jsonify}},{{end}}
-			{{else if eq $s.Type "servei"}}
-				{{with $s.Params.sobre_servei}} "sobre_servei_title": {{(index . 0).titol | jsonify}},{{end}}
-				{{with $s.Params.sobre_servei}} "sobre_servei_descripcio": {{(index . 0).descripcio | jsonify}},{{end}}
-			{{else if eq $s.Type "spin_off"}}
-				{{with $s.Params.sobre_spinoff}} "sobre_spin_title": {{(index . 0).titol | jsonify}},{{end}}
-				{{with $s.Params.sobre_spinoff}} "sobre_spin_descripcio": {{(index . 0).descripcio | jsonify}},{{end}}
+			{{if false}}
+			{{with $s.Params.about}}"about_title": {{(index . 0).titol | jsonify}},{{end}}
+			{{with $s.Params.about}}"about_descripcio": {{(index . 0).descripcio | jsonify}},{{end}}
 			{{end}}
 			
 			{{if or (eq $s.Type "solucio_tec") (eq $s.Type "pantent")}}

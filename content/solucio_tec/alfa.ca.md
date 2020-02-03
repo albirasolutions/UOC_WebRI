@@ -19,7 +19,7 @@ general:
       xarxa: facebook
     - address: 'https://twitter.com/UOCuniversitat'
       xarxa: twitter
-sobre_tecnologia:
+about:
   - descripcio: >-
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut etiam sit amet
