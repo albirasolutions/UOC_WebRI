@@ -1,12 +1,11 @@
-{{ $.Scratch.Set "len" 0 }}
-{{ range $i, $s := .Site.AllPages }}
-	{{- if and ( or (eq $s.Type "solucio_tec") (eq $s.Type "patent") (eq $s.Type "servei") (eq $s.Type "spin_off") (eq $s.Type "noticies") (eq $s.Type "esdeveniments")) (ne $s.File.UniqueID "")}}
-	{{ $.Scratch.Set "len" (add ($.Scratch.Get "len") 1) }}
-	{{end}}
-{{end}}
-{{ $.Scratch.Set "counter" 0 }}
-[{{ range $i, $s := .Site.AllPages }}{{- if and ( or (eq $s.Type "solucio_tec") (eq $s.Type "patent") (eq $s.Type "servei") (eq $s.Type "spin_off")) (ne $s.File.UniqueID "")}}{
-	  {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
+
+
+[
+	{{ $.Scratch.Set "counter" 0 }}
+	{{ range $i, $s := .Site.AllPages }}
+	{{- if and ( or (eq $s.Type "solucio_tec") (eq $s.Type "patent") (eq $s.Type "servei") (eq $s.Type "spin_off")) (ne $s.File.UniqueID "")}}
+		{{ if ne 0 ($.Scratch.Get "counter")}},{{end}}{		  
+		{{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
 		"type" : "add",
 		"id" : {{ $s.File.UniqueID | jsonify }},
 		"fields" : {
@@ -112,4 +111,5 @@
 			"resourcename" : {{$s.Params.title | jsonify}},
 			"url" : {{ $s.Permalink | jsonify }}
 		}
-	{{ if ne ($.Scratch.Get "len") ($.Scratch.Get "counter")}}{{end}}{{end}}{{end}}]
+	}{{end}}{{end}} 
+]
