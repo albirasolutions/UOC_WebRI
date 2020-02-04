@@ -30,7 +30,7 @@
 				{{- range .}}
 					{{$.Scratch.Add "xarxes" (slice .address)}}
 				{{end}}
-				"xarxes_adress": {{	$.Scratch.Get "xarxes" | jsonify}},
+				"xarxes_address": {{	$.Scratch.Get "xarxes" | jsonify}},
 			{{end}}
 
 			{{with $s.Params.about}}"about_title": {{(index . 0).titol | jsonify}},{{end}}
