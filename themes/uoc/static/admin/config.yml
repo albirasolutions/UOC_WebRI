@@ -133,13 +133,13 @@ collections: # A list of collections the CMS should be able to edit
     extension: 'md'
     create: true
     fields:
-      - {label: Títol, name: title, widget : string, required: true}
+      - {label: Nom, name: title, widget : string, required: true}
       - {label: Idioma, name: language, widget : hidden, default: "ca"}
       - label: General
         name: general
         widget: object
         fields: 
-          - {label: "Nom Solucio", name: nom, widget: string, required: true}
+          - {label: "Títol", name: nom, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string, required: false}
           - {label: "Eslogan", name: slogan, widget: string, required: false}
           - {label: "Img Background", name: "img_background", widget: image, required: true}
@@ -283,13 +283,13 @@ collections: # A list of collections the CMS should be able to edit
     extension: 'md'
     create: true
     fields:
-      - {label: Títol, name: title, widget : string, required: true}
+      - {label: Nom, name: title, widget : string, required: true}
       - {label: Idioma, name: language, widget : hidden, default: "es"}
       - label: General
         name: general
         widget: object
         fields: 
-          - {label: "Nom Solucio", name: nom, widget: string, required: true}
+          - {label: "Títol", name: nom, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string, required: false}
           - {label: "Eslogan", name: slogan, widget: string, required: false}
           - {label: "Img Background", name: "img_background", widget: image, required: true}
@@ -433,13 +433,13 @@ collections: # A list of collections the CMS should be able to edit
     extension: 'md'
     create: true
     fields:
-      - {label: Títol, name: title, widget : string, required: true}
+      - {label: Nom, name: title, widget : string, required: true}
       - {label: Idioma, name: language, widget : hidden, default: "en"}
       - label: General
         name: general
         widget: object
         fields: 
-          - {label: "Nom Solucio", name: nom, widget: string, required: true}
+          - {label: "Títol", name: nom, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string, required: false}
           - {label: "Eslogan", name: slogan, widget: string, required: false}
           - {label: "Img Background", name: "img_background", widget: image, required: true}
@@ -583,13 +583,13 @@ collections: # A list of collections the CMS should be able to edit
     extension: 'md'
     create: true
     fields:
-      - {label: Títol, name: title, widget : string, required: true}
+      - {label: Nom, name: title, widget : string, required: true}
       - {label: Idioma, name: language, widget : hidden, default: "ca"}      
       - label: General
         name: general
         widget: object
         fields: 
-          - {label: "Nom Patent", name: nom, widget: string, required: true}
+          - {label: "Títol", name: nom, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
@@ -733,13 +733,13 @@ collections: # A list of collections the CMS should be able to edit
     extension: 'md'
     create: true
     fields:
-      - {label: Título, name: title, widget : string, required: true}
+      - {label: Nom, name: title, widget : string, required: true}
       - {label: Idioma, name: language, widget : hidden, default: "es"}      
       - label: General
         name: general
         widget: object
         fields: 
-          - {label: "Nom Patent", name: nom, widget: string, required: true}
+          - {label: "Títol", name: nom, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
@@ -883,13 +883,13 @@ collections: # A list of collections the CMS should be able to edit
     extension: 'md'
     create: true
     fields:
-      - {label: Title, name: title, widget : string, required: true}
+      - {label: Nom, name: title, widget : string, required: true}
       - {label: Language, name: language, widget : hidden, default: "en"}      
       - label: General
         name: general
         widget: object
         fields: 
-          - {label: "Nom Patent", name: nom, widget: string, required: true}
+          - {label: "Títol", name: nom, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
@@ -1033,13 +1033,13 @@ collections: # A list of collections the CMS should be able to edit
     extension: 'md'
     create: true
     fields:
-      - {label: Títol, name: title, widget : string, required: true}
+      - {label: Nom, name: title, widget : string, required: true}
       - {label: Idioma, name: language, widget : select, options: ["ca","es","en"],default: "ca", required: true}
       - label: General
         name: general
         widget: object
         fields: 
-          - {label: "Nom Servei", name: nom, widget: string, required: true}
+          - {label: "Títol", name: nom, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - label: "Sector"
@@ -1154,13 +1154,13 @@ collections: # A list of collections the CMS should be able to edit
     extension: 'md'
     create: true
     fields:
-      - {label: Título, name: title, widget : string, required: true}
+      - {label: Nom, name: title, widget : string, required: true}
       - {label: Idioma, name: language, widget : hidden, default: "es"}      
       - label: General
         name: general
         widget: object
         fields: 
-          - {label: "Nom Servei", name: nom, widget: string, required: true}
+          - {label: "Títol", name: nom, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - label: "Sector"
@@ -1275,13 +1275,13 @@ collections: # A list of collections the CMS should be able to edit
     extension: 'md'
     create: true
     fields:
-      - {label: Title, name: title, widget : string, required: true}
+      - {label: Nom, name: title, widget : string, required: true}
       - {label: Language, name: language, widget : hidden, default: "en"}      
       - label: General
         name: general
         widget: object
         fields: 
-          - {label: "Nom Servei", name: nom, widget: string, required: true}
+          - {label: "Títol", name: nom, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - label: "Sector"
@@ -1396,13 +1396,13 @@ collections: # A list of collections the CMS should be able to edit
     extension: 'md'
     create: true
     fields:
-      - {label: Títol, name: title, widget : string, required: true}
+      - {label: Nom, name: title, widget : string, required: true}
       - {label: Idioma, name: language, widget : hidden, default: "ca"}      
       - label: General
         name: general
         widget: object
         fields: 
-          - {label: "Nom Spin off", name: nom, widget: string, required: true}
+          - {label: "Títol", name: nom, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
@@ -1548,13 +1548,13 @@ collections: # A list of collections the CMS should be able to edit
     extension: 'md'
     create: true
     fields:
-      - {label: Título, name: title, widget : string, required: true}
+      - {label: Nom, name: title, widget : string, required: true}
       - {label: Idioma, name: language, widget : hidden, default: "es"}      
       - label: General
         name: general
         widget: object
         fields: 
-          - {label: "Nom Spin off", name: nom, widget: string, required: true}
+          - {label: "Títol", name: nom, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
@@ -1700,13 +1700,13 @@ collections: # A list of collections the CMS should be able to edit
     extension: 'md'
     create: true
     fields:
-      - {label: Title, name: title, widget : string, required: true}
+      - {label: Nom, name: title, widget : string, required: true}
       - {label: Language, name: language, widget : hidden, default: "en"}      
       - label: General
         name: general
         widget: object
         fields: 
-          - {label: "Nom Spin off", name: nom, widget: string, required: true}
+          - {label: "Títol", name: nom, widget: string, required: true}
           - {label: "Text", name: text_breu, widget: string}
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
