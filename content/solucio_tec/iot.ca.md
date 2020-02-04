@@ -4,7 +4,7 @@ language: ca
 general:
   centre: Estuids
   img_background: /img/x20190326-iot-in-five-years2-1.jpg.pagespeed.ic.jkhmNWwrQd.jpg
-  nom_solucio: Solució IoT
+  nom: Solució IoT
   sector: 'Art, Turisme i Llengües'
   slogan: Go long ways with IoT!
   text_breu: Solució de control IoT
