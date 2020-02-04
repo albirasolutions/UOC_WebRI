@@ -335,7 +335,7 @@ function queryInnovaSolSearchEngine(searchParams){
 
     var innovaSolURL = buildInnovaSolQuery(apiRI,searchParams);
 	var solucionsTecResults = $(".solucio_tecResults_"+tab+" .list-solucio_tec");
-	var patentsResults = $(".patentsResults_"+tab+" .list-patent");
+	var patentsResults = $(".patentResults_"+tab+" .list-patent");
 	var serveisResults = $(" .serveiResults_"+tab+" .list-servei");
 	var spinResults = $(" .spin_offResults_"+tab+" .list-spin_off");
 	var r=[solucionsTecResults,patentsResults,serveisResults,spinResults];
