@@ -293,12 +293,12 @@
                     <div class="collapse">
                         <div class="head-collapse js-collapse">
                             <p>
-                                <a href="#collapsePS" aria-expanded="false" class="js-collapseClick">{{ T "uoc_ri_productes_serveis" }}<span
+                                <a href="#collapsePS" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_productes_serveis" }}<span
                                     class="icon icon--arrow-down"></span>
                                 </a>
                             </p>
                         </div>
-                        <div id="collapsePS" class="contentCollapse">
+                        <div id="collapsePS" class="contentCollapse show">
                             <div class="card-in-acordeon">
                                 <div class="wrap-richText">
                                     {{ safeHTML (markdownify (index . 0).descripcio) }}
@@ -330,12 +330,12 @@
                     <div class="collapse">
                         <div class="head-collapse js-collapse">
                             <p>
-                                <a href="#collapseClients" aria-expanded="false" class="js-collapseClick">{{ T "uoc_ri_clients" }}<span
+                                <a href="#collapseClients" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_clients" }}<span
                                     class="icon icon--arrow-down"></span>
                                 </a>
                             </p>
                         </div>
-                        <div id="collapseClients" class="contentCollapse">
+                        <div id="collapseClients" class="contentCollapse show">
                             <div class="card-in-acordeon">
                                 <div class="wrap-richText">
                                     {{ safeHTML (markdownify (index . 0).descripcio) }}
