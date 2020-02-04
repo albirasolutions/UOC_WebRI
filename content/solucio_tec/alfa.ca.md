@@ -8,7 +8,7 @@ general:
     - value: lorem
     - value: ipsum
   logo: /img/speakapplogo.png
-  nom_solucio: alfa
+  nom: alfa
   sector: Dret i governança
   slogan: eslogan alfa
   text_breu: text alfa

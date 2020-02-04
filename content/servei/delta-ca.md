@@ -7,7 +7,7 @@ general:
   keywords:
     - value: hugo
     - value: serveis
-  nom_servei: delta
+  nom: delta
   sector: sector
   text_breu: delta text
   tipologia: Servei a l'empresa
