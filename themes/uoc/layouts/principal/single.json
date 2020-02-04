@@ -69,10 +69,6 @@
 				"investigadors": {{	$.Scratch.Get "investigadors" | jsonify}},
 			{{end}}
 			{{with $s.Params.contacte}}
-				{{$nom := slice ""}}
-				{{$email := slice ""}}
-				{{$address := slice ""}}
-				{{$phone := slice ""}}
 				{{- range .}}
 					{{$.Scratch.Add "contact_name" (slice .text)}}
 					{{$.Scratch.Add "contact_email" (slice .email)}}
