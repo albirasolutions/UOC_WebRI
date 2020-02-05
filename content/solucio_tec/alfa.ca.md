@@ -20,23 +20,38 @@ about:
       SpeakApps representa una solució innovadora per a l’ensenyament d’idiomes
       amb eines i materials en línia dissenyats específicament perquè els
       estudiants d’idiomes puguin practicar i millorar les competències orals en
-      l’aprenentatge d’una llengua. SpeakApps consta de quatre eines:  Langblog:
-      audioblog/videoblog pensat per a l’aprenentatge amb activitats orals. 
-      Tandem: eina que permet als estudiants realitzar activitats per parelles
+      l’aprenentatge d’una llengua. 
+
+
+      SpeakApps consta de quatre eines: 
+
+
+      *  Langblog: audioblog/videoblog pensat per a l’aprenentatge amb
+      activitats orals.  
+
+      * Tandem: eina que permet als estudiants realitzar activitats per parelles
       que fomentin la pràctica oral. Distribueix materials en temps real per a
-      potenciar la interacció entre els estudiants. Videochat: eina que permet
-      fer sessions de videoconferència amb fins a sis persones, que facilita als
-      estudiants organitzar i enregistrar sessions sense la presència del
-      professor i permet al professor escoltar i avaluar les intervencions
-      individuals de cada participant. Open Educational Resources (OER): eina de
-      creació i edició d’activitats i materials per a l’ensenyament d’idiomes en
-      línia que inclou un repositori de materials amb llicència Creative
-      Commons. Les eines poden integrar-se fàcilment en qualsevol plataforma
-      educativa compatible amb l’estàndard LTI d’IMS Global.  A més, la
-      comunitat de SpeakApps, dirigida a professors de llengües, desenvolupadors
-      de tecnologies d’aprenentatge i tot tipus d’institucions relacionades amb
-      l’ensenyament de llengües, promou la contribució i l’intercanvi de
-      continguts, serveis i pedagogies per a l’ensenyament de llengües.
+      potenciar la interacció entre els estudiants.
+
+      *  Videochat: eina que permet fer sessions de videoconferència amb fins a
+      sis persones, que facilita als estudiants organitzar i enregistrar
+      sessions sense la presència del professor i permet al professor escoltar i
+      avaluar les intervencions individuals de cada participant.
+
+      * Open Educational Resources (OER): eina de creació i edició d’activitats
+      i materials per a l’ensenyament d’idiomes en línia que inclou un
+      repositori de materials amb llicència Creative Commons. 
+
+
+      Les eines poden integrar-se fàcilment en qualsevol plataforma educativa
+      compatible amb l’estàndard LTI d’IMS Global.  
+
+
+      A més, la comunitat de SpeakApps, dirigida a professors de llengües,
+      desenvolupadors de tecnologies d’aprenentatge i tot tipus d’institucions
+      relacionades amb l’ensenyament de llengües, promou la contribució i
+      l’intercanvi de continguts, serveis i pedagogies per a l’ensenyament de
+      llengües.
 
 
 
