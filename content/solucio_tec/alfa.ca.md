@@ -13,12 +13,8 @@ general:
   slogan: 'SpeakApps: eines i activitats per a l’aprenentatge oral de les llengües'
   text_breu: xx
   xarxes:
-    - address: 'https://www.instagram.com/uocuniversitat/?hl=en'
-      xarxa: instagram
-    - address: 'https://www.facebook.com/UOC.universitat'
+    - address: 'http://speakapps.rdi.uoc.edu/'
       xarxa: facebook
-    - address: 'https://twitter.com/UOCuniversitat'
-      xarxa: twitter
 about:
   - descripcio: >-
       SpeakApps representa una solució innovadora per a l’ensenyament d’idiomes
