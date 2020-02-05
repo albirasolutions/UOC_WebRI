@@ -1,17 +1,37 @@
 ---
-title: alfa
+title: SpeakApps
 language: ca
 general:
-  centre: IN3
+  centre: Estuids
   img_background: /img/0a5e3d8399408516a201716607daee9dc776694d.png
   keywords:
     - value: lorem
     - value: ipsum
   logo: /img/speakapplogo.png
-  nom: alfa
+  nom: SpeakApps
   sector: Dret i governança
-  slogan: eslogan alfa
-  text_breu: text alfa
+  slogan: 'SpeakApps: eines i activitats per a l’aprenentatge oral de les llengües'
+  text_breu: >-
+    SpeakApps representa una solució innovadora per a l’ensenyament d’idiomes
+    amb eines i materials en línia dissenyats específicament perquè els
+    estudiants d’idiomes puguin practicar i millorar les competències orals en
+    l’aprenentatge d’una llengua. SpeakApps consta de quatre eines:  Langblog:
+    audioblog/videoblog pensat per a l’aprenentatge amb activitats orals. 
+    Tandem: eina que permet als estudiants realitzar activitats per parelles que
+    fomentin la pràctica oral. Distribueix materials en temps real per a
+    potenciar la interacció entre els estudiants. Videochat: eina que permet fer
+    sessions de videoconferència amb fins a sis persones, que facilita als
+    estudiants organitzar i enregistrar sessions sense la presència del
+    professor i permet al professor escoltar i avaluar les intervencions
+    individuals de cada participant. Open Educational Resources (OER): eina de
+    creació i edició d’activitats i materials per a l’ensenyament d’idiomes en
+    línia que inclou un repositori de materials amb llicència Creative Commons.
+    Les eines poden integrar-se fàcilment en qualsevol plataforma educativa
+    compatible amb l’estàndard LTI d’IMS Global.  A més, la comunitat de
+    SpeakApps, dirigida a professors de llengües, desenvolupadors de tecnologies
+    d’aprenentatge i tot tipus d’institucions relacionades amb l’ensenyament de
+    llengües, promou la contribució i l’intercanvi de continguts, serveis i
+    pedagogies per a l’ensenyament de llengües.
   xarxes:
     - address: 'https://www.instagram.com/uocuniversitat/?hl=en'
       xarxa: instagram
@@ -36,43 +56,54 @@ about:
     titol: Sobre alfa
 aspectes_innovadors:
   - descripcio: >-
-      Senectus et netus et malesuada fames ac turpis egestas. Maecenas ultricies
-      mi eget mauris pharetra. Lorem mollis aliquam ut porttitor leo a diam
-      sollicitudin. Ridiculus mus mauris vitae ultricies leo integer malesuada
-      nunc. Massa enim nec dui nunc mattis. Mauris ultrices eros in cursus
-      turpis massa tincidunt. Elementum tempus egestas sed sed risus. Augue
-      interdum velit euismod in pellentesque massa placerat duis ultricies.
-      Viverra orci sagittis eu volutpat odio. Vel pharetra vel turpis nunc eget
-      lorem dolor sed viverra. Diam in arcu cursus euismod quis viverra nibh
-      cras pulvinar. Tempor orci dapibus ultrices in iaculis. Gravida dictum
-      fusce ut placerat. Sapien pellentesque habitant morbi tristique.
-      Parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Quis
-      imperdiet massa tincidunt nunc. Lectus sit amet est placerat in egestas
-      erat imperdiet. Nulla porttitor massa id neque aliquam. Gravida arcu ac
-      tortor dignissim convallis.
+      SpeakApps permet dur a terme activitats per a la pràctica oral d’una
+      llengua en línia, que tradicionalment s’han realitzat presencialment:
+      alumnes i professors poden interactuar de manera flexible, fàcil i
+      intuïtiva, simplificant les interfícies i unificant formats. Això millora
+      l’experiència educativa, ja que centra els esforços en l’aprenentatge i
+      evita la dispersió en l’ús de la tecnologia.
+
+
+      S’ha comprovat que amb l’ús de SpeakApps:
+
+
+      * Els alumnes augmenten el sentiment de pertinença de grup, tenen més
+      motivació i s’incrementa la qualitat de l’aprenentatge d’habilitats de la
+      parla.
+
+      * Els professors disposen d’eines i recursos més potents per a promoure i
+      avaluar la pràctica oral de llengües entre els alumnes.
+
+
+      SpeakApps ha estat guardonat amb la medalla de plata a la convocatòria
+      dels premis Learning Impact 2014, organitzats per l’IMS Global Learning
+      Consortium, una entitat sense ànim de lucre que vol impulsar el creixement
+      i l’impacte de les tecnologies d’aprenentatge en l’ensenyament superior.
     docs_rels:
       - file: /img/uocs_videowatermarkingsystem_brochure.pdf
-    titol: Aspectes innovadors alfa
+    titol: Aspectes innovadors SpeakApps
 aplicacions:
   - descripcio: >-
-      Libero id faucibus nisl tincidunt eget nullam. Ornare aenean euismod
-      elementum nisi quis eleifend quam adipiscing vitae. Placerat orci nulla
-      pellentesque dignissim. Etiam dignissim diam quis enim lobortis
-      scelerisque fermentum. Viverra ipsum nunc aliquet bibendum enim facilisis
-      gravida. Ut aliquam purus sit amet luctus venenatis lectus. Nunc lobortis
-      mattis aliquam faucibus purus in massa tempor. Feugiat pretium nibh ipsum
-      consequat. Quis viverra nibh cras pulvinar mattis nunc sed. Posuere
-      sollicitudin aliquam ultrices sagittis orci a scelerisque. Cras ornare
-      arcu dui vivamus arcu felis bibendum ut. Tempus imperdiet nulla malesuada
-      pellentesque. Id nibh tortor id aliquet lectus. Quisque sagittis purus sit
-      amet volutpat. Condimentum mattis pellentesque id nibh tortor id.
-      Porttitor lacus luctus accumsan tortor posuere. Et leo duis ut diam.
-      Egestas tellus rutrum tellus pellentesque eu. Cursus in hac habitasse
-      platea dictumst quisque sagittis purus. Tellus cras adipiscing enim eu
-      turpis egestas pretium aenean.
+      SpeakApps està inicialment pensat per a l’ensenyament de llengües a
+      distància, però també es pot fer servir com a reforç de la pràctica oral
+      en models presencials o mixtos. La UOC ofereix una sèrie de serveis perquè
+      les entitats interessades puguin treure el màxim profit de SpeakApps:
+
+
+      * Servei d’integració en la plataforma educativa de l’entitat.
+
+      * Servei SAAS (accés a les eines al núvol en cas de no disposar de
+      plataforma educativa).
+
+      * Suport tècnic (per a problemes en la instal·lació, per a manteniment,
+      etc.).
+
+      * Suport pedagògic (adaptació d’activitats a ensenyament en línia).
+
+      * Formació (eines SpeakApps, ensenyament virtual, etc.).
     docs_rels:
       - file: /img/uocs_videowatermarkingsystem_brochure.pdf
-    titol: aplicacions alfa
+    titol: Aplicacions
 grups_recerca:
   - description: Metacampus Real
     id: '902'
