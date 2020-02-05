@@ -9,7 +9,7 @@ general:
     - value: ipsum
   logo: /img/speakapplogo.png
   nom: SpeakApps
-  sector: Dret i governança
+  sector: Educació - eLearning
   slogan: 'SpeakApps: eines i activitats per a l’aprenentatge oral de les llengües'
   text_breu: ''
   xarxes:
