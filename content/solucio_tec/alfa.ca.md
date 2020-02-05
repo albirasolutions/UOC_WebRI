@@ -39,14 +39,6 @@ about:
       de tecnologies d’aprenentatge i tot tipus d’institucions relacionades amb
       l’ensenyament de llengües, promou la contribució i l’intercanvi de
       continguts, serveis i pedagogies per a l’ensenyament de llengües.
-
-
-
-
-      <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/wOhL8U3NpmQ" frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope;
-      picture-in-picture" allowfullscreen></iframe>
     docs_rels:
       - file: /img/informe_disseny_web_r_i.pdf
     titol: Sobre alfa
