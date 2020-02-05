@@ -19,8 +19,6 @@ general:
       xarxa: facebook
 about:
   - descripcio: >-
-
-
       Els professionals d’Open Evidence són professors, investigadors i
       consultors amb més de vint anys d’experiència en la recerca aplicada i la
       consultoria.
@@ -28,19 +26,20 @@ about:
 
       Els trets diferenciadors de la seva activitat són:\
 
-      - Metodologies i dissenys presentats i compartits en obert: el disseny de
+
+      * Metodologies i dissenys presentats i compartits en obert: el disseny de
       recerca i les metodologies aplicades per l’empresa són sempre
       transparents, verificables i compartides en obert amb els seus clients i
       amb la comunitat d’investigadors i professionals mitjançant processos de
-      consulta i de validació.\
+      consulta i de validació.
 
-      - Caixes negres obertes: Open Evidence obre les «caixes negres» de models
+      * Caixes negres obertes: Open Evidence obre les «caixes negres» de models
       empírics complexos i de tècniques sofisticades d’econometria i
       d’estadística per a garantir que els resultats de les seves anàlisis de
       dades i les seves simulacions de modelització són fàcils de fer servir i
-      d’entendre.\
+      d’entendre.
 
-      - Oberts a la innovació i el compromís de les parts interessades:
+      * Oberts a la innovació i el compromís de les parts interessades:
       l’enfocament no és mai tecnocràtic ni vertical, sinó que mira d’incloure
       perspectives i coneixements de totes les parts interessades, per mitjà de
       processos de consulta i de compromís col·laboratiu oberts i en línia.
