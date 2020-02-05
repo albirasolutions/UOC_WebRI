@@ -140,7 +140,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: object
         fields: 
           - {label: "Títol", name: nom, widget: string, required: true}
-          - {label: "Text breu", name: text_breu, widget: string, required: false}
+          - {label: "Subtítol", name: text_breu, widget: string, required: false}
           - {label: "Eslogan", name: slogan, widget: string, required: false}
           - {label: "Img Background", name: "img_background", widget: image, required: true}
           - label: "Sector"
@@ -290,7 +290,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: object
         fields: 
           - {label: "Títol", name: nom, widget: string, required: true}
-          - {label: "Text breu", name: text_breu, widget: string, required: false}
+          - {label: "Subtítol", name: text_breu, widget: string, required: false}
           - {label: "Eslogan", name: slogan, widget: string, required: false}
           - {label: "Img Background", name: "img_background", widget: image, required: true}
           - label: "Sector"
@@ -440,7 +440,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: object
         fields: 
           - {label: "Títol", name: nom, widget: string, required: true}
-          - {label: "Text breu", name: text_breu, widget: string, required: false}
+          - {label: "Subtítol", name: text_breu, widget: string, required: false}
           - {label: "Eslogan", name: slogan, widget: string, required: false}
           - {label: "Img Background", name: "img_background", widget: image, required: true}
           - label: "Sector"
@@ -590,7 +590,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: object
         fields: 
           - {label: "Títol", name: nom, widget: string, required: true}
-          - {label: "Text breu", name: text_breu, widget: string}
+          - {label: "Subtítol", name: text_breu, widget: string}
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - label: "Sector"
@@ -740,7 +740,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: object
         fields: 
           - {label: "Títol", name: nom, widget: string, required: true}
-          - {label: "Text breu", name: text_breu, widget: string}
+          - {label: "Subtítol", name: text_breu, widget: string}
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - label: "Sector"
@@ -890,7 +890,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: object
         fields: 
           - {label: "Títol", name: nom, widget: string, required: true}
-          - {label: "Text breu", name: text_breu, widget: string}
+          - {label: "Subtítol", name: text_breu, widget: string}
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - label: "Sector"
@@ -1040,7 +1040,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: object
         fields: 
           - {label: "Títol", name: nom, widget: string, required: true}
-          - {label: "Text breu", name: text_breu, widget: string}
+          - {label: "Subtítol", name: text_breu, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - label: "Sector"
             name: sector
@@ -1161,7 +1161,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: object
         fields: 
           - {label: "Títol", name: nom, widget: string, required: true}
-          - {label: "Text breu", name: text_breu, widget: string}
+          - {label: "Subtítol", name: text_breu, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - label: "Sector"
             name: sector
@@ -1282,7 +1282,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: object
         fields: 
           - {label: "Títol", name: nom, widget: string, required: true}
-          - {label: "Text breu", name: text_breu, widget: string}
+          - {label: "Subtítol", name: text_breu, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - label: "Sector"
             name: sector
@@ -1403,7 +1403,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: object
         fields: 
           - {label: "Títol", name: nom, widget: string, required: true}
-          - {label: "Text breu", name: text_breu, widget: string}
+          - {label: "Subtítol", name: text_breu, widget: string}
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - label: "Sector"
@@ -1555,7 +1555,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: object
         fields: 
           - {label: "Títol", name: nom, widget: string, required: true}
-          - {label: "Text breu", name: text_breu, widget: string}
+          - {label: "Subtítol", name: text_breu, widget: string}
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - label: "Sector"
@@ -1707,7 +1707,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: object
         fields: 
           - {label: "Títol", name: nom, widget: string, required: true}
-          - {label: "Text breu", name: text_breu, widget: string}
+          - {label: "Subtítol", name: text_breu, widget: string}
           - {label: "Eslògan", name: slogan, widget: string}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - label: "Sector"
