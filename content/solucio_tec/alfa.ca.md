@@ -94,19 +94,7 @@ aplicacions:
     docs_rels:
       - file: /img/uocs_videowatermarkingsystem_brochure.pdf
     titol: Aplicacions
-grups_recerca:
-  - description: Metacampus Real
-    id: '902'
-    name: MEDIACCIONS
-    url: 'https://transfer-research.am.pre.uoc.es/ca/mediaccions.html'
-    url_img: >-
-      https://transfer-research.am.pre.uoc.es/img/api/grupsrecerca/9/image/1573919706793
-  - description: Cognitive NeuroLab
-    id: '3202'
-    name: Cognitive NeuroLab
-    url: 'https://transfer-research.am.pre.uoc.es/ca/cognitive-neurolab.html'
-    url_img: >-
-      https://transfer-research.am.pre.uoc.es/img/api/grupsrecerca/32/image/1574092616302
+grups_recerca: []
 investigadors:
   - id: '66577502'
     name: 'Creus Quinteros, Amalia Susana'
@@ -115,18 +103,10 @@ investigadors:
   - id: '42444002'
     name: 'Prado Fonts, Carles'
     url: 'https://talent.am.pre.uoc.es/ca/prado-fonts-carles.html'
-  - id: '52637302'
-    name: 'Rotger Cerdà, Neus'
-    url: 'https://talent.am.pre.uoc.es/ca/rotger-cerda-neus.html'
-    url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/526373/image/1573926566251'
 contacte:
-  - address: adreça
-    email: e@mail.com
-    telefon: '123456789'
-    text: David Perez
-  - address: adreça
-    email: e@mail.com
-    telefon: '123456789'
-    text: Pere hidalgo
+  - address: "Av. Carl Friedrich Gauss, 5\_- 08860 Castelldefels"
+    email: transfer_ari@uoc.edu
+    telefon: 'http://speakapps.rdi.uoc.edu/'
+    text: Equip Trasferència
 ---
 
