@@ -11,7 +11,7 @@ general:
   nom: SpeakApps
   sector: Educació - eLearning
   slogan: ''
-  text_breu: 'SpeakApps: eines i activitats per a l’aprenentatge oral de les llengües'
+  text_breu: 'SpeakApps: eines i activitats per a l’aprenentatge oral de les llengües.'
   xarxes:
     - address: 'http://speakapps.rdi.uoc.edu/'
       xarxa: facebook
@@ -47,16 +47,6 @@ about:
       src="https://www.youtube.com/embed/wOhL8U3NpmQ" frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope;
       picture-in-picture" allowfullscreen></iframe>
-
-
-      ```
-
-      <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/wOhL8U3NpmQ" frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope;
-      picture-in-picture" allowfullscreen></iframe>
-
-      ```
     docs_rels:
       - file: /img/informe_disseny_web_r_i.pdf
     titol: Sobre alfa
