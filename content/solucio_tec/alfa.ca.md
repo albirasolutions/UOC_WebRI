@@ -114,10 +114,6 @@ investigadors:
   - id: '42444002'
     name: 'Prado Fonts, Carles'
     url: 'https://talent.am.pre.uoc.es/ca/prado-fonts-carles.html'
-contacte:
-  - address: "Av. Carl Friedrich Gauss, 5\_- 08860 Castelldefels"
-    email: transfer_ari@uoc.edu
-    telefon: 'http://speakapps.rdi.uoc.edu/'
-    text: Equip Trasferència
+contacte: []
 ---
 
