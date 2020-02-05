@@ -13,7 +13,9 @@ general:
     als governs i organitzacions investigacions que fonamenten decisions
     informades sobre evidències per afrontar alguns dels principals reptes del
     món.
-  text_breu: ' Open Evidence és una empresa de recerca i consultoria que es troba a la intersecció de la tecnologia i la societat'
+  text_breu: >-
+    Recerca i consultoria que es troba a la intersecció de la tecnologia i la
+    societat
   xarxes:
     - address: 'https://open-evidence.com/'
       xarxa: facebook
