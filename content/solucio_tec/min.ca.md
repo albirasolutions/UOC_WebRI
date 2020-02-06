@@ -7,13 +7,13 @@ general:
   nom: min
   sector: Educació - eLearning
   xarxes:
-    - address: facebook.com/UOC.universitat
+    - address: 'https://www.facebook.com/UOC.universitat'
       xarxa: facebook
-    - address: twitter.com/UOCuniversitat
+    - address: 'https://www.twitter.com/UOCuniversitat'
       xarxa: twitter
     - address: 'https://www.instagram.com/uocuniversitat/?hl=en'
       xarxa: instagram
-    - address: www.google.com
+    - address: 'https://www.google.com'
       xarxa: web
 ---
 
