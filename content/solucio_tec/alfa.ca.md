@@ -14,7 +14,7 @@ general:
   text_breu: 'SpeakApps: eines i activitats per a l’aprenentatge oral de les llengües.'
   xarxes:
     - address: 'http://speakapps.rdi.uoc.edu/'
-      xarxa: facebook
+      xarxa: web
 about:
   - descripcio: >-
       SpeakApps representa una solució innovadora per a l’ensenyament d’idiomes
