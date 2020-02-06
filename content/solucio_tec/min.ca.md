@@ -9,8 +9,6 @@ general:
   xarxes:
     - address: 'https://www.facebook.com/UOC.universitat'
       xarxa: facebook
-    - address: 'https://www.twitter.com/UOCuniversitat'
-      xarxa: twitter
     - address: 'https://www.instagram.com/uocuniversitat/?hl=en'
       xarxa: instagram
     - address: 'https://www.google.com'
