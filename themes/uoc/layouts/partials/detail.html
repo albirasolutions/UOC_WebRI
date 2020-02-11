@@ -18,7 +18,7 @@
                         </div>
                         <div class="col-md-12"></div>
                         <div class="col-md-8 col-lg-8 col-xs-8">
-                            {{with .Params.general.slogan}}<h5>{{.}}</h5>{{end}}
+                            {{with .Params.general.slogan}}<h3  class="h5" style="color:white">{{.}}</h3>{{end}}
                         </div>
                         <div data-dropdown="" class="dropdown">
                             <button data-dropdown-trigger="" aria-expanded="false" class="btn btn--primary">
@@ -293,7 +293,7 @@
                                 <div class="row" >
                                 
                                     <ul class="list--unstyled">
-                                        <li><h2>{{ .titol }}</h2></li>
+                                        <li><h3 class = "h2">{{ .titol }}</h3></li>
                                         {{if isset . "img" }}
                                         <li><img src="{{.img}}" alt="{{ .titlol }} img"></li>
                                         {{end}}
@@ -336,7 +336,7 @@
                                         <div class="card card-noimg" style="background-color: #C3FFDE;" role="region">
                                             
                                             <div class="card__contents">
-                                                <div><h4><strong>{{ .name }}</strong></h4></div>
+                                                <div class = "h4"><strong>{{ .name }}</strong></div>
                                                 <div>{{ .description }}</div>
                                             </div>
                                         </div>
@@ -392,7 +392,7 @@
                                 {{range .}}
                                 <div class="col-xs-12 col-md-3">
                                     <div class="wrap-content">
-                                        <p ><h2>{{ .text}}</h2></p>
+                                        <p ><h3>{{ .text}}</h3></p>
                                         <p >{{ .address}}</p>
                                         <p >{{ .telefon}}</p>
                                         <p >{{ .email}}</p>
