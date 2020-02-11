@@ -22,9 +22,7 @@ about:
       estudiants d’idiomes puguin practicar i millorar les competències orals en
       l’aprenentatge d’una llengua. 
 
-
       SpeakApps consta de quatre eines: 
-
 
       * Langblog: audioblog/videoblog pensat per a l’aprenentatge amb activitats
       orals.  
@@ -41,29 +39,20 @@ about:
       * Open Educational Resources (OER): eina de creació i edició d’activitats
       i materials per a l’ensenyament d’idiomes en línia que inclou un
       repositori de materials amb llicència Creative Commons. 
-
-
-      ```
-
-      <div class="embed-container">
-        <iframe title="Vídeo explicatiu" src="https://www.youtube.com/watch?v=6PhQZ--oI_0" allowfullscreen></iframe>
-      </div>
-
-      ```
-
-
+      
       Les eines poden integrar-se fàcilment en qualsevol plataforma educativa
       compatible amb l’estàndard LTI d’IMS Global.  
-
 
       A més, la comunitat de SpeakApps, dirigida a professors de llengües,
       desenvolupadors de tecnologies d’aprenentatge i tot tipus d’institucions
       relacionades amb l’ensenyament de llengües, promou la contribució i
       l’intercanvi de continguts, serveis i pedagogies per a l’ensenyament de
       llengües.
+
     docs_rels:
       - file: /img/informe_disseny_web_r_i.pdf
     titol: Sobre alfa
+    video: https://www.youtube.com/watch?v=6PhQZ--oI_0
 aspectes_innovadors:
   - descripcio: >-
       SpeakApps permet dur a terme activitats per a la pràctica oral d’una
