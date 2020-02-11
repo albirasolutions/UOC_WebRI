@@ -26,14 +26,14 @@ about:
       SpeakApps consta de quatre eines: 
 
 
-      *  Langblog: audioblog/videoblog pensat per a l’aprenentatge amb
-      activitats orals.  
+      * Langblog: audioblog/videoblog pensat per a l’aprenentatge amb activitats
+      orals.  
 
       * Tandem: eina que permet als estudiants realitzar activitats per parelles
       que fomentin la pràctica oral. Distribueix materials en temps real per a
       potenciar la interacció entre els estudiants.
 
-      *  Videochat: eina que permet fer sessions de videoconferència amb fins a
+      * Videochat: eina que permet fer sessions de videoconferència amb fins a
       sis persones, que facilita als estudiants organitzar i enregistrar
       sessions sense la presència del professor i permet al professor escoltar i
       avaluar les intervencions individuals de cada participant.
@@ -41,6 +41,15 @@ about:
       * Open Educational Resources (OER): eina de creació i edició d’activitats
       i materials per a l’ensenyament d’idiomes en línia que inclou un
       repositori de materials amb llicència Creative Commons. 
+
+
+      ```
+
+      <div class="embed-container">
+        <iframe title="Vídeo explicatiu" src="https://www.youtube.com/watch?v=6PhQZ--oI_0" allowfullscreen></iframe>
+      </div>
+
+      ```
 
 
       Les eines poden integrar-se fàcilment en qualsevol plataforma educativa
