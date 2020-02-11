@@ -2434,8 +2434,8 @@ collections: # A list of collections the CMS should be able to edit
         fields: 
           - {label: "Títol", name: titol, widget: string, required: true}
           - {label: "Imatge", name: "img", widget: image}
-          - {label: "Autor", name: autor, widget: string}
-          - {label: "Foto autor", name: "img_autor", widget: string}
+          - {label: "Autor", name: autor, widget: string, required: false}
+          - {label: "Foto autor", name: "img_autor", widget: string, required: false}
           - label: "Social"
             name: xarxes
             widget: list
@@ -2470,8 +2470,8 @@ collections: # A list of collections the CMS should be able to edit
         fields: 
           - {label: "Títol", name: titol, widget: string, required: true}
           - {label: "Imatge", name: "img", widget: image}
-          - {label: "Autor", name: autor, widget: string}
-          - {label: "Foto autor", name: "img_autor", widget: string}
+          - {label: "Autor", name: autor, widget: string, required: false}
+          - {label: "Foto autor", name: "img_autor", widget: string, required: false}
           - label: "Social"
             name: xarxes
             widget: list
@@ -2506,8 +2506,8 @@ collections: # A list of collections the CMS should be able to edit
         fields: 
           - {label: "Títol", name: titol, widget: string, required: true}
           - {label: "Imatge", name: "img", widget: image}
-          - {label: "Autor", name: autor, widget: string}
-          - {label: "Foto autor", name: "img_autor", widget: string}
+          - {label: "Autor", name: autor, widget: string, required: false}
+          - {label: "Foto autor", name: "img_autor", widget: string, required: false}
           - label: "Social"
             name: xarxes
             widget: list

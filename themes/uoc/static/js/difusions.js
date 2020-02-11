@@ -23,7 +23,7 @@ function getResultMarkup(difusio){
     markup+='<a href="' + difusio.link + '" class="card-absolute-link"></a>';
     markup+='<div class="card" role="region" aria-label="Texto descriptivo" >';
     markup+='<div class="card__image">';
-    if(difusio.img) markup+='<img src="'+ difusio.img + '" alt="Texto alternativo">';
+    if(difusio.img) markup+='<img src="'+ difusio.img + '" alt="">';
     markup+='</div>';
     markup+='<div class="card__contents" >';
     if(difusio.titol) markup+='<p class="text-big text font-alternate">' + difusio.titol+ '</p>'
