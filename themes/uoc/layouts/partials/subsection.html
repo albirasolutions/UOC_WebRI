@@ -4,9 +4,9 @@
     </div>
 </div>
 
-<div class="card-in-acordeon">
+<div class="card-in-acordeon" aria-hidden="true">
     
-    <h4>{{ T "uoc_ri_docs" }}</h4>
+    <h3 class = "h4">{{ T "uoc_ri_docs" }}</h3>
     {{$scratch := newScratch}}
     {{$scratch.Set "idx" 1}}
     {{ range $d := (index . 0).docs_rels }}
@@ -14,9 +14,8 @@
         {{$doc := split $d.file "/"}}
         
         <a href="{{ $d.file }}" target="_blank" title='{{ T "uoc_ri_docs" }} ({{$scratch.Get "idx"}})'>
-            <span class="icon icon--material-pdf">
-                <span class="h5">{{index $doc 2}}</span>
-            </span>
+            <span class="icon icon--material-pdf" ></span>
+            <span class="h5">{{index $doc 2}}</span>
         </a>
     </div>
         {{$scratch.Set "idx" (add ($scratch.Get "idx") 1)}}

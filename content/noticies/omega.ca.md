@@ -33,9 +33,6 @@ descripcio:
       ## 5G per a la digitalització de la indústria
 
 
-      ## 
-
-
       Un projecte coordinat per Xavier Vilajosana, catedràtic i investigador
       líder del grup Wireless Network (WiNE), adscrit a l'Internet
       Interdisciplinary Institute (IN3), estudiarà el desenvolupament tecnològic
@@ -53,9 +50,6 @@ descripcio:
 
 
       ## Internet autogestionat
-
-
-      ## 
 
 
       Des de fa un quant temps hi ha la possibilitat de tenir accés a internet
@@ -78,9 +72,6 @@ descripcio:
 
 
       ## Resiliència urbana i riscos hidroclimàtics
-
-
-      ## 
 
 
       L'estudi de les ciutats resilients s'ha popularitzat durant els darrers
@@ -112,10 +103,6 @@ descripcio:
 
       ## Xarxes socials per a estimular la participació ciutadana dels joves
 
-
-      ## 
-
-
       «Internet és un canal més afí a les necessitats socioculturals dels joves,
       amb menys control dels seus pares que altres mitjans», assenyala Daniel
       Aranda, sotsdirector de recerca dels Estudis de Ciències de la Informació
@@ -133,9 +120,6 @@ descripcio:
 
 
       ## Aprofitar el retorn que es rep per a fomentar l'aprenentatge
-
-
-      ## 
 
 
       Per a garantir l'aprenentatge, els estudiants reben un retorn (feedback)
@@ -157,9 +141,6 @@ descripcio:
 
 
       ## Les correccions en l'estudi d'idiomes
-
-
-      ## 
 
 
       El projecte Optimització de l'aprenentatge d'idiomes en línia mitjançant
@@ -188,9 +169,6 @@ descripcio:
       ## Estudi de la societat com a ecosistema en xarxa
 
 
-      ## 
-
-
       L'estudi dels sistemes complexos, és a dir, els sistemes formats per un
       gran nombre de partícules que interaccionen entre elles, s'ha convertit en
       un àmbit de recerca transversal incipient. La importància que té no
@@ -211,9 +189,6 @@ descripcio:
 
 
       ## Marc legal en l'ús de la intel·ligència artificial
-
-
-      ## 
 
 
       La intel·ligència artificial aporta beneficis socials en un gran nombre de
@@ -239,9 +214,6 @@ descripcio:
 
 
       ## Millorar la classificació digital automàtica de les emocions
-
-
-      ## 
 
 
       Estan en auge tecnologies digitals com la visió per computador aplicada al
@@ -282,9 +254,6 @@ descripcio:
       ## Ciberseguretat a l'internet de les coses
 
 
-      ## 
-
-
       Cada vegada hi ha més dispositius electrònics que recullen i comparteixen
       dades. L'anomenat internet de les coses (IoT) permet, per exemple, des de
       desenvolupar un sistema d'enllumenat públic intel·ligent a les ciutats
@@ -310,9 +279,6 @@ descripcio:
 
 
       ## El poder de la creació social d'històries
-
-
-      ## 
 
 
       Internet ha revolucionat la manera d'explicar històries, no solament la
