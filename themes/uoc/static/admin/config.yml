@@ -178,7 +178,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: list
         fields:
           - {label: titol, name: titol, widget: string}
-          - {label: Video URL, name: video, widget: string}
+          - {label: Video URL, name: video, widget: string,  required: false}
           - {label: descripcio, name: descripcio, widget: markdown}
           - label: Documents Relacionats
             name: docs_rels
