@@ -26,7 +26,7 @@ function getResultMarkup(difusio){
     if(difusio.img) markup+='<img src="'+ difusio.img + '" alt="">';
     markup+='</div>';
     markup+='<div class="card__contents" >';
-    if(difusio.titol) markup+='<p class="text-big text font-alternate">' + difusio.titol+ '</p>'
+    if(difusio.titol) markup+='<h3 class="h5 text font-alternate">' + difusio.titol+ '</h3>'
     markup+='</div><div class="card__footer"><div class="float-left p-left-x  icon icon--external-link"></div>';
     markup+='<div class="float-right p-right-x">'+ label +'</div>';
     markup+='</div></div>';
