@@ -39,7 +39,7 @@ about:
       * Open Educational Resources (OER): eina de creació i edició d’activitats
       i materials per a l’ensenyament d’idiomes en línia que inclou un
       repositori de materials amb llicència Creative Commons. 
-      
+
       Les eines poden integrar-se fàcilment en qualsevol plataforma educativa
       compatible amb l’estàndard LTI d’IMS Global.  
 
@@ -48,7 +48,6 @@ about:
       relacionades amb l’ensenyament de llengües, promou la contribució i
       l’intercanvi de continguts, serveis i pedagogies per a l’ensenyament de
       llengües.
-
     docs_rels:
       - file: /img/informe_disseny_web_r_i.pdf
     titol: Sobre alfa
