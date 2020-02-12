@@ -51,7 +51,7 @@ about:
     docs_rels:
       - file: /img/informe_disseny_web_r_i.pdf
     titol: Sobre alfa
-    video: qtIqKaDlqXo
+    video: Amif-_UhI4I
 aspectes_innovadors:
   - descripcio: >-
       SpeakApps permet dur a terme activitats per a la pràctica oral d’una
