@@ -2,15 +2,11 @@
 	
 
 	{{ $url := (split .Permalink "/") }}
-	{{$n := 0}}
-	{{if eq (index (split (index $url 2) ":") 0) "localhost"}}
-		{{$n := 2}}
-	{{end}}
-	{{$lang := index $url (add 1 $n)}}
-	{{$collection := index $url (add 2 $n)}}
-	{{$file := index (split (index $url (add 3 $n)) ".") 0}}
+	{{$lang := index $url 1}}
+	{{$collection := index $url 2}}
+	{{$file := index (split (index $url 3 ) ".") 0}}
 	<div class="js-CMS float-right">
-		<a href="http://{{index $url 2}}/admin/#/collections/{{$collection}}_{{$lang}}/entries/{{$file}}.{{$lang}}"> 
+		<a href="http://{{index $url 0}}/admin/#/collections/{{$collection}}_{{$lang}}/entries/{{$file}}.{{$lang}}"> 
 			<span class="icon icon--edit-pencil"></span>
 			<span class="h5">Editar {{$file}} amb Netlify CMS</span>
 		</a>
