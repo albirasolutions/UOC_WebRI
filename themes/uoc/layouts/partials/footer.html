@@ -2,13 +2,12 @@
 	
 
 	{{ $url := (split .Permalink "/") }}
-	{{$local := (index (split (index $url 2) ":") 0)}}
 	{{$lang := index $url 3}}
 	{{$collection := index $url 4}}
 	{{$file := index (split (index $url 5) ".") 0}}
 	<div class="js-CMS float-right">
 		<a href="http://{{index $url 2}}/admin/#/collections/{{$collection}}_{{$lang}}/entries/{{$file}}.{{$lang}}"> 
-			<span class="icon icon--edit-pencil" ></span>
+			<span class="icon icon--edit-pencil"></span>
 			<span class="h5">Editar {{$file}} amb Netlify CMS</span>
 		</a>
 	</div>

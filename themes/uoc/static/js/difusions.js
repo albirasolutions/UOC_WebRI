@@ -16,8 +16,8 @@ jQuery(document).ready(function ($) {
 function getResultMarkup(difusio){
 
     var label;
-    if(difusio.type == 'noticies') label = noticiaLabel;
-    else if(difusio.type == 'esdeveniments') label = esdevenimentLabel;
+    if(difusio.type == 'noticia') label = noticiaLabel;
+    else if(difusio.type == 'esdeveniment') label = esdevenimentLabel;
 
     var markup='<div class="col-xs-6 col-md-3" role="article" data-id="">';
     	markup+='<a href="' + difusio.link + '" class="card-absolute-link" aria-label="link"></a>';

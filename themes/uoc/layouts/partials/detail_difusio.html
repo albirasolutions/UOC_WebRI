@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-xs-12 col-md-3">
             <div class="page-title title-border-green ">
-                {{if eq $type "noticies"}}
+                {{if eq $type "noticia"}}
                 <h3 class="col-xs-12 col-md-3"><strong>{{ T "uoc_ri_difusio_noticia"}}</strong></h3>
                 {{else}}
                 <h3 class="col-xs-12 col-md-3"><strong>{{ T "uoc_ri_difusio_esdeveniment"}}</strong></h3>
@@ -21,7 +21,7 @@
         </div>
         
         <div class="col-xs-12 col-md-9">
-            {{if eq $type "noticies"}}
+            {{if eq $type "noticia"}}
             <figure class="img-figure">
                 <img src="{{with .Params.general.img}}{{.}}{{end}}" alt="{{ T "uoc_ri_difusio_noticia"}} img">
                 <figcaption class="img-figcaption">
@@ -69,14 +69,14 @@
 <section>
     <div class="row">
         <div class="col-xs-12 col-md-3">
-            {{if eq $type "noticies"}}
+            {{if eq $type "noticia"}}
                 {{with .Params.descripcio.entrada}}
                 <blockquote class="pullquote">{{.}}</blockquote>
                 {{end}}
             {{end}}
         </div>
         <div class="col-xs-12 col-md-9">
-            {{if eq $type "noticies"}}
+            {{if eq $type "noticia"}}
                 <p>{{with .Params.descripcio.text}}{{safeHTML (markdownify .)}}{{end}}</p>
             {{else}}
                 <p>{{with .Params.general.descripcio}}{{safeHTML (markdownify .)}}{{end}}</p>

@@ -34,7 +34,7 @@
                     </div>
                     <div class="img-wpr__contents_no-bg"  style="bottom: .5rem;">
                         <div class="row">
-                            <div class="float-right p-right-x text-small inverse">{{if eq .Type "noticies" }}{{ T "uoc_ri_noticia" }}{{else}}{{ T "uoc_ri_esdeveniment" }}{{end}}
+                            <div class="float-right p-right-x text-small inverse">{{if eq .Type "noticia" }}{{ T "uoc_ri_noticia" }}{{else}}{{ T "uoc_ri_esdeveniment" }}{{end}}
                             </div>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="card__footer">
                         <div class="float-left p-left-x  icon icon--external-link"></div>
-                        <div class="float-right p-right-x">{{if eq .Type "noticies" }}{{ T "uoc_ri_noticia" }}{{else}}{{ T "uoc_ri_esdeveniment" }}{{end}}</div>
+                        <div class="float-right p-right-x">{{if eq .Type "noticia" }}{{ T "uoc_ri_noticia" }}{{else}}{{ T "uoc_ri_esdeveniment" }}{{end}}</div>
                     </div>
                 </div>
             </div>
@@ -105,10 +105,10 @@
                     "titol" : {{.}},{{end}}{{with .Params.general.entrada}}
                     "entrada": {{.}},{{end}}
 
-                    {{- if eq .Type "noticies" }}
-                    "type" : "noticies"
-                    {{else if eq .Type "esdeveniments"}}
-                    "type" : "esdeveniments"
+                    {{- if eq .Type "noticia" }}
+                    "type" : "noticia"
+                    {{else if eq .Type "esdeveniment"}}
+                    "type" : "esdeveniment"
                     {{end}} 
                   },
                 {{end}}                                                        
@@ -123,10 +123,10 @@
                     "titol" : {{.}},{{end}}{{with .Params.general.entrada}}
                     "entrada": {{.}},{{end}}
 
-                    {{- if eq .Type "noticies" }}
-                    "type" : "noticies"
-                    {{else if eq .Type "esdeveniments"}}
-                    "type" : "esdeveniments"
+                    {{- if eq .Type "noticia" }}
+                    "type" : "noticia"
+                    {{else if eq .Type "esdeveniment"}}
+                    "type" : "esdeveniment"
                     {{end}} 
                 },
                 {{end}}                                                        
