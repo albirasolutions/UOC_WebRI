@@ -206,4 +206,10 @@ jQuery(document).ready(function ($) {
             $(this).parent().parent().parent().find('input').prop("checked", false);
         })
     }
+    if(window.localStorage && window.localStorage["netlify-cms-user"]){
+        console.log("LOGAT")
+        $('.js-CMS').addClass('show');
+    }else{
+        console.log("NO LOGAT")
+    }
 });
