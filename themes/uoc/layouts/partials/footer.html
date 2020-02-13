@@ -2,9 +2,13 @@
 	
 
 	{{ $url := (split .Permalink "/") }}
-	{{$lang := index $url 3}}
-	{{$collection := index $url 4}}
-	{{$file := index (split (index $url 5) ".") 0}}
+	{{$n := 0}}
+	{{if eq (index (split (index $url 2) ":") 0) "localhost"}}
+		{{$n := 2}}
+	{{end}}
+	{{$lang := index $url (add 1 $n)}}
+	{{$collection := index $url (add 2 $n)}}
+	{{$file := index (split (index $url (add 3 $n)) ".") 0}}
 	<div class="js-CMS float-right">
 		<a href="http://{{index $url 2}}/admin/#/collections/{{$collection}}_{{$lang}}/entries/{{$file}}.{{$lang}}"> 
 			<span class="icon icon--edit-pencil"></span>
