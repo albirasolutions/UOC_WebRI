@@ -2446,7 +2446,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Date", name: "date", widget: "datetime"}
   - name: "noticia_ca"
     label: "Notícies [ca]"
-    folder: "content/noticies"
+    folder: "content/noticia"
     extension : "md"  
     create: true
     slug: "{{title}}.{{language}}"
@@ -2482,7 +2482,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Descripció, name: text, widget: markdown}
   - name: "noticia_es"
     label: "Notícies [es]"
-    folder: "content/noticies"
+    folder: "content/noticia"
     extension : "md"  
     create: true
     slug: "{{title}}.{{language}}"
@@ -2518,7 +2518,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Descripció, name: text, widget: markdown}
   - name: "noticia_en"
     label: "Notícies [en]"
-    folder: "content/noticies"
+    folder: "content/noticia"
     extension : "md"  
     create: true
     slug: "{{title}}.{{language}}"
@@ -2554,7 +2554,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Descripció, name: text, widget: markdown}
   - name: "esdeveniment_ca"
     label: "Esdeveniments [ca]"
-    folder: "content/esdeveniments"
+    folder: "content/esdeveniment"
     extension : "md"  
     create: true
     slug: "{{title}}.{{language}}"
@@ -2581,7 +2581,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Url", name: address, widget: string}
   - name: "esdeveniment_es"
     label: "Esdeveniments [es]"
-    folder: "content/esdeveniments"
+    folder: "content/esdeveniment"
     extension : "md"  
     create: true
     slug: "{{title}}.{{language}}"
@@ -2608,7 +2608,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Url", name: address, widget: string}
   - name: "esdeveniment_en"
     label: "Esdeveniments [en]"
-    folder: "content/esdeveniments"
+    folder: "content/esdeveniment"
     extension : "md"  
     create: true
     slug: "{{title}}.{{language}}"
