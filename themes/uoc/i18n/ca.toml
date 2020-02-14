@@ -210,3 +210,6 @@
 [uoc_ri_noticia] other = "#Notícia"
 [uoc_ri_esdeveniment] other = "#Esdeveniment"
 [uoc_ri_casos_link] other = "Enllaç al cas d'èxit"
+
+[uoc_ri_cercador_llista_simple] other = "Vista de llista"
+[uoc_ri_cercador_llista_bloc] other = "Vista de bloc"

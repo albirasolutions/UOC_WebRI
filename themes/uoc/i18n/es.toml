@@ -211,3 +211,5 @@
 [uoc_ri_esdeveniment_Quan] other = "Cuándo"
 [uoc_ri_casos_link] other = "Enlace al caso de éxito"
 
+[uoc_ri_cercador_llista_simple] other = "Vista de lista"
+[uoc_ri_cercador_llista_bloc] other = "Vista de bloque"

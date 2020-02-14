@@ -207,8 +207,12 @@ jQuery(document).ready(function ($) {
         })
     }
     if(window.localStorage && window.localStorage["netlify-cms-user"]){
+        var _href = $('#time-stamp').attr("href");
+        var date = new Date();
+        var timestamp = date.getTime(); 
         console.log("LOGAT")
-        $('.js-CMS').addClass('show');
+        $('.js-CMS').addClass('show');   
+        $('#time-stamp').attr("href", _href+"?preview="+timestamp);
     }else{
         console.log("NO LOGAT")
     }

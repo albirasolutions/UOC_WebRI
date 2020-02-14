@@ -2,14 +2,30 @@
 	
 
 	{{ $url := (split .Permalink "/") }}
-	{{$lang := index $url 1}}
-	{{$collection := index $url 2}}
-	{{$file := index (split (index $url 3 ) ".") 0}}
+	{{ $baseurl := printf "%s" .Site.BaseURL }}
+	{{$baseurl}}
+	{{$n := 0}}
+	<!-- A localhost el permalink canvia -->
+	{{if (eq $baseurl "//localhost:1313/")}}
+		{{$n = 2}}	
+	{{end}}
+	{{$n}}
+	{{$lang := index $url (add 1 $n)}}
+	{{$collection := index $url (add 2 $n)}}
+	{{$file := index (split (index $url (add 3 $n) ) ".") 0}}
 	<div class="js-CMS float-right">
-		<a href="{{.Site.BaseURL}}admin/#/collections/{{$collection}}_{{$lang}}/entries/{{$file}}.{{$lang}}" target="_blank"> 
-			<span class="icon icon--edit-pencil"></span>
-			<span class="h5">Editar {{$file}} amb Netlify CMS</span>
-		</a>
+		<div class="ruler ruler--ri"></div>
+		<div class="row">
+			<a id="time-stamp" href="{{if not (eq $baseurl "//localhost:1313/") }}{{$baseurl}}{{end}}{{.Permalink}}" > 
+				<span class="icon icon--lab"></span>
+				<span class="h5">Preview</span>
+			</a>
+			&nbsp;&nbsp;&nbsp;
+			<a href="{{$baseurl}}admin/#/collections/{{$collection}}_{{$lang}}/entries/{{$file}}.{{$lang}}" target="_blank"> 
+				<span class="icon icon--edit-pencil"></span>
+				<span class="h5">Editar {{$file}} amb Netlify CMS</span>
+			</a>
+		</div>
 	</div>
 	<div class="page-footer-container footer-brand">
 		<div class="col-xs-12 col-clear">
