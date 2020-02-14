@@ -6,7 +6,7 @@
 	{{$collection := index $url 2}}
 	{{$file := index (split (index $url 3 ) ".") 0}}
 	<div class="js-CMS float-right">
-		<a href="http://{{index $url 0}}/admin/#/collections/{{$collection}}_{{$lang}}/entries/{{$file}}.{{$lang}}"> 
+		<a href="{{.Site.BaseURL}}admin/#/collections/{{$collection}}_{{$lang}}/entries/{{$file}}.{{$lang}}" target="_blank"> 
 			<span class="icon icon--edit-pencil"></span>
 			<span class="h5">Editar {{$file}} amb Netlify CMS</span>
 		</a>
