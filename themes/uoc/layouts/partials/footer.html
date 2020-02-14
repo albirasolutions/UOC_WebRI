@@ -3,13 +3,11 @@
 
 	{{ $url := (split .Permalink "/") }}
 	{{ $baseurl := printf "%s" .Site.BaseURL }}
-	{{$baseurl}}
 	{{$n := 0}}
 	<!-- A localhost el permalink canvia -->
 	{{if (eq $baseurl "//localhost:1313/")}}
 		{{$n = 2}}	
 	{{end}}
-	{{$n}}
 	{{$lang := index $url (add 1 $n)}}
 	{{$collection := index $url (add 2 $n)}}
 	{{$file := index (split (index $url (add 3 $n) ) ".") 0}}
