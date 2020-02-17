@@ -10,7 +10,7 @@ general:
   logo: /img/speakapplogo.png
   nom: SpeakApps
   sector: Educació - eLearning
-  slogan: ''
+  slogan: Faig una prova
   text_breu: Eines i activitats per a l’aprenentatge oral de les llengües
   xarxes:
     - address: 'http://speakapps.rdi.uoc.edu/'
