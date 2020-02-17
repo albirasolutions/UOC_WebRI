@@ -11,7 +11,7 @@ general:
   nom: SpeakApps
   sector: Educació - eLearning
   slogan: ''
-  text_breu: Eines i activitats per a l’aprenentatge oral de les llengües.
+  text_breu: Eines i activitats per a l’aprenentatge oral de les llengües
   xarxes:
     - address: 'http://speakapps.rdi.uoc.edu/'
       xarxa: web
