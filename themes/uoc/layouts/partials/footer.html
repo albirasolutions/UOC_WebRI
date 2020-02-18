@@ -4,8 +4,10 @@
 	{{ $url := (split .Permalink "/") }}
 	{{ $baseurl := printf "%s" .Site.BaseURL }}
 	{{$n := 0}}
+	{{$local := false}}
 	<!-- A localhost el permalink canvia -->
-	{{if (eq $baseurl "//localhost:1313/")}}
+	{{if (eq (index (split $baseurl ":") 0) "//localhost")}}
+		{{$local = true}}
 		{{$n = 2}}	
 	{{end}}
 	{{$lang := index $url (add 1 $n)}}
@@ -19,7 +21,7 @@
 				<span class="h5">Preview</span>
 			</a>
 			&nbsp;&nbsp;&nbsp;
-			<a href="{{$baseurl}}admin/#/collections/{{$collection}}_{{$lang}}/entries/{{$file}}.{{$lang}}" target="_blank"> 
+			<a href="{{$baseurl}}admin/{{if not $local}}index.html{{end}}#/collections/{{$collection}}_{{$lang}}/entries/{{$file}}.{{$lang}}" target="_blank"> 
 				<span class="icon icon--edit-pencil"></span>
 				<span class="h5">Editar {{$file}} amb Netlify CMS</span>
 			</a>
