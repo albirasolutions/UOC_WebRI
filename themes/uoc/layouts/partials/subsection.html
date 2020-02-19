@@ -9,17 +9,17 @@
         {{ safeHTML (markdownify (index . 0).descripcio) }}
     </div>
 </div>
-
+{{with (index . 0).docs_rels}}
 <div class="card-in-acordeon" aria-hidden="true">
     
-    <h3 class = "h4">{{ T "uoc_ri_docs" }}</h3>
+    <h4 class = "h4">{{ T "uoc_ri_docs" }}</h4>
     {{$scratch := newScratch}}
     {{$scratch.Set "idx" 1}}
-    {{ range $d := (index . 0).docs_rels }}
+    {{ range $d := . }}
     <div class="row" >
         {{$doc := split $d.file "/"}}
         
-        <a href="{{ $d.file }}" target="_blank" title='{{ T "uoc_ri_docs" }} ({{$scratch.Get "idx"}})'>
+        <a id="docs" href="{{ $d.file }}" target="_blank" title='{{ T "uoc_ri_docs" }} ({{$scratch.Get "idx"}})'>
             <span class="icon icon--material-pdf" ></span>
             <span class="h5">{{index $doc 2}}</span>
         </a>
@@ -28,4 +28,4 @@
     {{end}}
     
     
-</div>
+</div>{{end}}

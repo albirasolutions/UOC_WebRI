@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="h1 page-title title-border-green">
-                {{with .Params.general.nom}}{{.}}{{end}}
+                {{with .Params.general.nom}}<h2>{{.}}</h2>{{end}}
             </div>
         </div>
 
@@ -14,11 +14,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 col-lg-6 col-xs-6">
-                            {{with .Params.general.text_breu}}<h2>{{.}}</h2>{{end}}
+                            {{with .Params.general.text_breu}}<h3 class="h2 inverse" >{{.}}</h3>{{end}}
                         </div>
                         <div class="col-md-12"></div>
                         <div class="col-md-8 col-lg-8 col-xs-8">
-                            {{with .Params.general.slogan}}<h3  class="h5 inverse" >{{.}}</h3>{{end}}
+                            {{with .Params.general.slogan}}<h4  class="h5 inverse" >{{.}}</h4>{{end}}
                         </div>
                         <div data-dropdown="" class="dropdown">
                             <button data-dropdown-trigger="" aria-expanded="false" class="btn btn--primary">
@@ -27,22 +27,22 @@
                             </button>
                             {{with .Params.general.xarxes}}
                             <div data-dropdown-content class="dropdown__content" style="background-color: white;">
-                                <div class="social-links unstyled">
+                                <div class="social-links unstyled" role="list">
                                     {{range .}}
                                     {{if eq .xarxa "facebook"}}
-                                    <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Facebook']);" href="{{.address}}" target="_blank"
+                                    <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Facebook']);" href="{{.address}}" target="_blank" role="listitem"
                                     title='Facebook {{ T "uoc_grup_footer_links_new_window"}}' aria-label='Facebook {{ T "uoc_grup_footer_links_new_window"}}'><span class="icon icon--social-facebook"> </span></a>
                                     {{end}}
                                     {{if eq .xarxa "twitter"}}
-                                    <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Twitter']);"	href="{{.address}}" target="_blank"
+                                    <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Twitter']);"	href="{{.address}}" target="_blank" role="listitem"
                                     title='Twitter {{ T "uoc_grup_footer_links_new_window"}}' aria-label='Twitter {{ T "uoc_grup_footer_links_new_window"}}'><span class="icon icon--social-twitter"> </span></a>
                                     {{end}}
                                     {{if eq .xarxa "instagram"}}        
-                                    <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Instagram']);" href="{{.address}}" target="_blank"	
+                                    <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Instagram']);" href="{{.address}}" target="_blank" role="listitem"	
                                     title='Instagram {{ T "uoc_grup_footer_links_new_window"}}' aria-label='Instagram {{ T "uoc_grup_footer_links_new_window"}}'><span class="icon icon--social-instagram"> </span></a>
                                     {{end}}
                                     {{if eq .xarxa "web"}}        
-                                    <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Web']);" href="{{.address}}" target="_blank"	
+                                    <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Web']);" href="{{.address}}" target="_blank" role="listitem"
                                     title='Web {{ T "uoc_grup_footer_links_new_window"}}' aria-label='Web {{ T "uoc_grup_footer_links_new_window"}}'><span class="icon icon--material-web"> </span></a>
                                     {{end}}
                                     {{end}}
@@ -81,10 +81,9 @@
                                 <div class="col-xs-12">
 
                                     <div data-dropdown="" aria-label="keywords" class="dropdown">
-                                        <span data-dropdown-trigger="" class="dropdown-trigger" aria-expanded="false" aria-controls="dropdown__content1"><strong>{{ T "uoc_ri_keywords" }}</strong>
-                                            <span aria-hidden="true" class="icon icon--arrow-down icon--after is-active-hidden float-right"></span>
-                                            <span aria-hidden="true" class="icon icon--arrow-up icon--after is-active-visible float-right"></span>
-                                        </span>
+                                        <a href="#" data-dropdown-trigger="" class="dropdown-trigger" aria-expanded="false" aria-controls="dropdown__content1"><strong>{{ T "uoc_ri_keywords" }}</strong>
+                                            <span class="icon icon--arrow-down icon--after is-active-hidden float-right"></span>
+                                        </a>
                                         <ul role="list" id="dropdown__content1" data-dropdown-content="" class="dropdown__content dropdown__list">
                                             
                                             {{range .}}
@@ -182,7 +181,7 @@
                     
                     <div class="collapse">
                         <div class="head-collapse js-collapse">
-                            <h2>
+                            <h3 class="h2">
                                 <a href="#collapseAbout" aria-expanded="true"
                                 class="js-collapseClick">
                                 {{if eq $type "solucio_tec"}}{{ T "uoc_ri_about_tec" }}
@@ -190,7 +189,7 @@
                                 {{else if eq $type "servei"}}{{ T "uoc_ri_about_serv" }}
                                 {{else}}{{ T "uoc_ri_about_spin" }}{{end}}<span
                                 class="icon icon--arrow-down"></span></a>
-                            </h2>
+                            </h3>
                         </div>
                         <div id="collapseAbout" class="contentCollapse show">
                             {{partial "subsection.html" .}}
@@ -201,15 +200,15 @@
             {{end}}
             {{with .Params.aspectes_innovadors}}                
             <div id="tab-content-innova" data-tab-content="" role="tabpanel" aria-labelledby="tab-innova"
-                aria-hidden="true" class="tab-content">
+                aria-hidden="false" class="tab-content">
                 <div class="js-collapse-group">
                     <div class="collapse">
                         <div class="head-collapse js-collapse">
-                            <h2>
+                            <h3 class="h2">
                                 <a href="#collapseInnova" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_aspect_innov" }}<span
                                     class="icon icon--arrow-down"></span>
                                 </a>
-                            </h2>
+                            </h3>
                         </div>
                         <div id="collapseInnova" class="contentCollapse show">
                             {{partial "subsection.html" .}}
@@ -220,15 +219,15 @@
             {{end}}
             {{with .Params.aplicacions}}
             <div id="tab-content-apps" data-tab-content="" role="tabpanel" aria-labelledby="tab-apps"
-            aria-hidden="true" class="tab-content">
+            aria-hidden="false" class="tab-content">
                 <div class="js-collapse-group">
                     <div class="collapse">
                         <div class="head-collapse js-collapse">
-                            <h2>
+                            <h3 class="h2">
                                 <a href="#collapseApps" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_apps" }}<span
                                     class="icon icon--arrow-down"></span>
                                 </a>
-                            </h2>
+                            </h3>
                         </div>
                         <div id="collapseApps" class="contentCollapse show">
                             {{partial "subsection.html" .}}
@@ -239,15 +238,15 @@
             {{end}}
             {{with .Params.productes_serveis}}                
             <div id="tab-content-PS" data-tab-content="" role="tabpanel" aria-labelledby="tab-PS"
-                aria-hidden="true" class="tab-content">
+                aria-hidden="false" class="tab-content">
                 <div class="js-collapse-group">
                     <div class="collapse">
                         <div class="head-collapse js-collapse">
-                            <h2>
+                            <h3 class="h2">
                                 <a href="#collapsePS" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_productes_serveis" }}<span
                                     class="icon icon--arrow-down"></span>
                                 </a>
-                            </h2>
+                            </h3>
                         </div>
                         <div id="collapsePS" class="contentCollapse show">
                             {{partial "subsection.html" .}}
@@ -258,15 +257,15 @@
             {{end}}     
             {{with .Params.clients}}  
             <div id="tab-content-clients" data-tab-content="" role="tabpanel" aria-labelledby="tab-clients"
-            aria-hidden="true" class="tab-content">
+            aria-hidden="false" class="tab-content">
                 <div class="js-collapse-group">
                     <div class="collapse">
                         <div class="head-collapse js-collapse">
-                            <h2>
+                            <h3 class="h2">
                                 <a href="#collapseClients" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_clients" }}<span
                                     class="icon icon--arrow-down"></span>
                                 </a>
-                            </h2>
+                            </h3>
                         </div>
                         <div id="collapseClients" class="contentCollapse show">
                             {{partial "subsection.html" .}}
@@ -277,15 +276,15 @@
             {{end}}     
             {{with .Params.casos_exit}}  
             <div id="tab-content-casos" data-tab-content="" role="tabpanel" aria-labelledby="tab-casos"
-                aria-hidden="true" class="tab-content">
+                aria-hidden="false" class="tab-content">
                 <div class="js-collapse-group">
                     <div class="collapse">
                         <div class="head-collapse js-collapse">
-                            <h2>
+                            <h3 class="h2">
                                 <a href="#collapseCasos" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_casos_exit" }}<span
                                     class="icon icon--arrow-down"></span>
                                 </a>
-                            </h2>
+                            </h3>
                         </div>
                         <div id="collapseCasos" class="contentCollapse show">
                             <div class="card-in-acordeon ">
@@ -320,13 +319,14 @@
             </div>
             {{end}}
             <div id="tab-content-grups" data-tab-content="" role="tabpanel" aria-labelledby="tab-grups"
-            aria-hidden="true" class="tab-content">
+            aria-hidden="false" class="tab-content">
                 {{with .Params.grups_recerca}}
                 <div class="collapse">
                     <div class="head-collapse js-collapse">
-                        <h2><a href="#collapseResearch" aria-expanded="true"
-                            class="js-collapseClick">{{ T "uoc_ri_research_groups" }}<span
-                            class="icon icon--arrow-down"></span></a></h2>
+                        <h3 class="h2">
+                            <a href="#collapseResearch" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_research_groups" }}<span
+                            class="icon icon--arrow-down"></span></a>
+                        </h3>
                     </div>
                     <div id="collapseResearch" class="contentCollapse show">
                         <div class="row">
@@ -350,9 +350,10 @@
                 {{with .Params.investigadors}}
                 <div class="collapse">
                     <div class="head-collapse js-collapse">
-                        <h2><a href="#collapseResearchers" aria-expanded="true"
-                            class="js-collapseClick">{{ T "uoc_ri_researchers" }}<span
-                            class="icon icon--arrow-down"></span></a></h2>
+                        <h3 class="h2">
+                            <a href="#collapseResearchers" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_researchers" }}<span
+                            class="icon icon--arrow-down"></span></a>
+                        </h3>
                     </div>
                     <div id="collapseResearchers" class="contentCollapse show">
                         <div class="row">
@@ -380,10 +381,10 @@
             aria-hidden="false" class="tab-content">
                 <div class="collapse">
                     <div class="head-collapse js-collapse">
-                        <h2>
+                        <h3 class="h2">
                             <a href="#collapseContact" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_contacte" }}<span
                             class="icon icon--arrow-down"></span></a>
-                        </h2>
+                        </h3>
                     </div>
                     <div id="collapseContact" class="contentCollapse show">
                         <div class="contact-list-icon">
