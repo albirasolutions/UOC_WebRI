@@ -183,3 +183,8 @@
 .js-CMS.show{
     display: block; 
 }
+
+ul.xarxes{
+    list-style-type: none;
+    display: inline;
+}

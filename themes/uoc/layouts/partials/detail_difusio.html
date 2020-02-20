@@ -32,28 +32,18 @@
                         </div>
                         {{with .Params.general.xarxes}}
                         <div class="float-right" id="img-figcaption2" role="complementary">
-                            
+
                             <div class="social-links unstyled" role="list">
-                                
-                                {{range .}}
-                                {{if eq .xarxa "facebook"}}
-                                <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Facebook']);" href="{{.address}}" target="_blank" role="listitem"
-                                title='Facebook {{ T "uoc_grup_footer_links_new_window"}}' aria-label='Facebook {{ T "uoc_grup_footer_links_new_window"}}'><span class="icon icon--social-facebook"> </span></a>
-                                {{end}}
-                                {{if eq .xarxa "twitter"}}
-                                <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Twitter']);"	href="{{.address}}" target="_blank" role="listitem"
-                                title='Twitter {{ T "uoc_grup_footer_links_new_window"}}' aria-label='Twitter {{ T "uoc_grup_footer_links_new_window"}}'><span class="icon icon--social-twitter"> </span></a>
-                                {{end}}
-                                {{if eq .xarxa "instagram"}}        
-                                <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Instagram']);" href="{{.address}}" target="_blank" role="listitem"	
-                                title='LinkedIn {{ T "uoc_grup_footer_links_new_window"}}' aria-label='LinkedIn {{ T "uoc_grup_footer_links_new_window"}}'><span class="icon icon--social-instagram"> </span></a>
-                                {{end}}
-                                {{if eq .xarxa "web"}}        
-                                <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Web']);" href="{{.address}}" target="_blank"role="listitem"
-                                title='Web {{ T "uoc_grup_footer_links_new_window"}}' aria-label='Web {{ T "uoc_grup_footer_links_new_window"}}'><span class="icon icon--material-web"> </span></a>
-                                {{end}}
-                                {{end}}
-                                
+
+                                <div class="social-links unstyled">
+                                    <ul class="social">
+                                        <li><a class="addthis_button_facebook at300b" title="Facebook button" aria-label="Facebook&nbsp;(El link s'obre en finestra nova)" href="#"><span class="icon icon--social-facebook" aria-hidden="true">&nbsp;</span></a></li>
+                                        <li><a class="addthis_button_twitter at300b" title="Twitter button" aria-label="Twitter&nbsp;(El link s'obre en finestra nova)" href="#"><span class="icon icon--social-twitter" aria-hidden="true">&nbsp;</span></a></li>
+                                        <li><a class="addthis_button_linkedin at300b" title="LinkedIn button" aria-label="LinkedIn&nbsp;(El link s'obre en finestra nova)" target="_blank" href="#"><span class="icon icon--social-linkedin" aria-hidden="true">&nbsp;</span></a></li>
+                                        <li><a class="addthis_button_whatsapp at300b" title="WhatsApp button" aria-label="Whatsapp&nbsp;(El link s'obre en finestra nova)" target="_blank" href="#"><span class="icon icon--social-whatsapp" aria-hidden="true">&nbsp;</span></a></li>
+                                    </ul>
+                                </div>
+                                <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=uocuniversitat"></script>
                             </div>
                         </div>
                         {{end}}
@@ -110,31 +100,16 @@
                 <br>
                 {{with .Params.general.xarxes}}
                 <div class="float-right" role="complementary">
-                    
+
                     <div class="social-links unstyled" role="list">
-                        
-                        {{range .}}
-                        {{if eq .xarxa "facebook"}}
-                        <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Facebook']);" href="{{.address}}" target="_blank" role="listitem"
-                        title='Facebook {{ T "uoc_grup_footer_links_new_window"}}' aria-label='Facebook {{ T "uoc_grup_footer_links_new_window"}}'><span class="icon icon--social-facebook"> </span></a>
-                        {{end}}
-                        {{if eq .xarxa "twitter"}}
-                        <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Twitter']);"	href="{{.address}}" target="_blank" role="listitem"
-                        title='Twitter {{ T "uoc_grup_footer_links_new_window"}}' aria-label='Twitter {{ T "uoc_grup_footer_links_new_window"}}'><span class="icon icon--social-twitter"> </span></a>
-                        {{end}}
-                        {{if eq .xarxa "instagram"}}        
-                        <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Instagram']);" href="{{.address}}" target="_blank" role="listitem"	
-                        title='LinkedIn {{ T "uoc_grup_footer_links_new_window"}}' aria-label='LinkedIn {{ T "uoc_grup_footer_links_new_window"}}'><span class="icon icon--social-instagram"> </span></a>
-                        {{end}}
-                        {{if eq .xarxa "web"}}        
-                        <a onclick="_gaq.push(['_trackEvent','Footer','{{ T "uoc_grup_footer_social"}}', 'Web']);" href="{{.address}}" target="_blank"role="listitem"
-                        title='Web {{ T "uoc_grup_footer_links_new_window"}}' aria-label='Web {{ T "uoc_grup_footer_links_new_window"}}'><span class="icon icon--material-web"> </span></a>
-                        {{end}}
-                        {{end}}
-                        
+                        <a class="addthis_button_facebook at300b" title="Facebook button" aria-label="Facebook&nbsp;(El link s'obre en finestra nova)" href="#"><span class="icon icon--social-facebook" aria-hidden="true">&nbsp;</span></a>
+                        <a class="addthis_button_twitter at300b" title="Twitter button" aria-label="Twitter&nbsp;(El link s'obre en finestra nova)" href="#"><span class="icon icon--social-twitter" aria-hidden="true">&nbsp;</span></a>
+                        <a class="addthis_button_linkedin at300b" title="LinkedIn button" aria-label="LinkedIn&nbsp;(El link s'obre en finestra nova)" target="_blank" href="#"><span class="icon icon--social-linkedin" aria-hidden="true">&nbsp;</span></a>
+                        <a class="addthis_button_whatsapp at300b" title="WhatsApp button" aria-label="Whatsapp&nbsp;(El link s'obre en finestra nova)" target="_blank" href="#"><span class="icon icon--social-whatsapp" aria-hidden="true">&nbsp;</span></a>
                     </div>
-                    
-                </div>           
+
+                </div>
+                <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=uocuniversitat"></script>
                 {{end}}
                 {{end}}
             </div>
