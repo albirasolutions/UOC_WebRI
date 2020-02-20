@@ -461,8 +461,7 @@ function getResultMarkup(item, content_type, idx, listView){
 
 			markup+="<a href='"+item.fields.url+"'>"
 			markup+='<div id="'+item.id+'" aria-label="region" class="card card-noimg"><div class="card__contents">';
-			markup+='<h4 class="title">'+item.fields.name;
-			if(item.fields.descripcio) markup+='</h4><p>'+item.fields.descripcio+'</p>';
+			markup+='<h4 class="title">'+item.fields.name+'</h4><p>'+item.fields.text_breu+'</p>';
 			markup+='</div></div></a>';
 	}
 	
