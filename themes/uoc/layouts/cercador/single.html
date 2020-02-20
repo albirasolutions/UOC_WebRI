@@ -243,12 +243,12 @@
 											<div class="collapse">
 												<div class="head-collapse js-collapse js-collapseAll">
 													<p>
-														<a href="#collapse-sector_productiu" aria-expanded="false" class="js-collapseClick">
+														<a href="#collapse-sector_productiu" aria-expanded="true" class="js-collapseClick">
 															<span class="icon icon--arrow-down"></span>{{ T "uoc_ri_cercador_filtres_sectors_productius" }}
 														</a>
 													</p>
 												</div>
-												<div id="collapse-sector_productiu" class="contentCollapse">
+												<div id="collapse-sector_productiu" class="contentCollapse show">
 													{{ range $index, $el := .Params.sector_productiu }}
 													<div class="wrap-input">
 														<fieldset>
