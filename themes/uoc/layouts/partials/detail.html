@@ -61,6 +61,17 @@
                     <div class="boxGrey">
                         {{with .Params.general.sector}}<p><strong>{{ T "uoc_ri_sector" }} :</strong>{{.}}</p>{{end}}
                         {{with .Params.general.centre}}<p><strong>{{ T "uoc_ri_centre" }} :</strong>{{.}}</p>{{end}}
+                        
+                        {{if eq $type "solucio_tec"}}
+                        <p><strong>{{ T "uoc_ri_tipologia" }} :</strong>{{ T "uoc_ri_cercador_solucions_tec" }}</p>
+                        {{else if eq $type "patent"}}
+                        <p><strong>{{ T "uoc_ri_tipologia" }} :</strong>{{ T "uoc_ri_cercador_solucions_patents" }}</p>
+                        {{else if eq $type "servei"}}
+                        <p><strong>{{ T "uoc_ri_tipologia" }} :</strong>{{ T "uoc_ri_cercador_solucions_serveis" }}</p>
+                        {{else}}
+                        <p><strong>{{ T "uoc_ri_tipologia" }} :</strong>{{ T "uoc_ri_cercador_spin_off" }}</p>
+                        {{end}}
+
                         {{with .Params.general.logo}}
                         <p>
                             <div class="row">
