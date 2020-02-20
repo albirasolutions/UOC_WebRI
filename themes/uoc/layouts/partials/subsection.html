@@ -18,10 +18,12 @@
     {{ range $d := . }}
     <div class="row" >
         {{$doc := split $d.file "/"}}
+        {{$stat := os.Stat "static/img/informe_disseny_web_r_i.pdf"}}
         
         <a id="docs" href="{{ $d.file }}" target="_blank" title='{{ T "uoc_ri_docs" }} ({{$scratch.Get "idx"}})'>
             <span class="icon icon--material-pdf" ></span>
-            <span class="h5">{{index $doc 2}}</span>
+            <!--File size in MB with 3 dec-->
+            <span class="h5">{{index $doc 2}} ({{div (math.Round (div $stat.Size 1048.576)) 1000}} MB)</span>
         </a>
     </div>
         {{$scratch.Set "idx" (add ($scratch.Get "idx") 1)}}
