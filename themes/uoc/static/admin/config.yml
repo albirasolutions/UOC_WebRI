@@ -2615,12 +2615,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Imatge", name: "img", widget: image}
           - {label: "Autor", name: autor, widget: string, required: false}
           - {label: "Foto autor", name: "img_autor", widget: string, required: false}
-          - label: "Social"
-            name: xarxes
-            widget: list
-            fields:
-              - {label: "Nom", name: xarxa, widget: select, options: ["facebook","twitter","instagram","web"]}
-              - {label: "Url", name: address, widget: string}
           - {label: "Link extern", name: link_extern, widget: string, required: false}
     
       - label: Descripció
@@ -2651,12 +2645,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Imatge", name: "img", widget: image}
           - {label: "Autor", name: autor, widget: string, required: false}
           - {label: "Foto autor", name: "img_autor", widget: string, required: false}
-          - label: "Social"
-            name: xarxes
-            widget: list
-            fields:
-              - {label: "Nom", name: xarxa, widget: select, options: ["facebook","twitter","instagram","web"]}
-              - {label: "Url", name: address, widget: string}
           - {label: "Link extern", name: link_extern, widget: string, required: false}
     
       - label: Descripció
@@ -2687,12 +2675,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Imatge", name: "img", widget: image}
           - {label: "Autor", name: autor, widget: string, required: false}
           - {label: "Foto autor", name: "img_autor", widget: string, required: false}
-          - label: "Social"
-            name: xarxes
-            widget: list
-            fields:
-              - {label: "Nom", name: xarxa, widget: select, options: ["facebook","twitter","instagram","web"]}
-              - {label: "Url", name: address, widget: string}
           - {label: "Link extern", name: link_extern, widget: string, required: false}
     
       - label: Descripció
