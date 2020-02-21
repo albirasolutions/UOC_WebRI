@@ -179,7 +179,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: titol, name: titol, widget: string}
           - {label: descripcio, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -198,7 +203,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: titol, name: titol, widget: string}
           - {label: descripcio, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -217,7 +227,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: titol, name: titol, widget: string}
           - {label: descripcio, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -332,7 +347,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: titol, name: titol, widget: string}
           - {label: descripcio, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -351,7 +371,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: titol, name: titol, widget: string}
           - {label: descripcio, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -370,7 +395,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: titol, name: titol, widget: string}
           - {label: descripcio, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -485,7 +515,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: titol, name: titol, widget: string}
           - {label: descripcio, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -504,7 +539,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: titol, name: titol, widget: string}
           - {label: descripcio, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -523,7 +563,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: titol, name: titol, widget: string}
           - {label: descripcio, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -638,7 +683,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -657,7 +707,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -676,7 +731,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -791,7 +851,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -810,7 +875,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -829,7 +899,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -944,7 +1019,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -963,7 +1043,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -982,7 +1067,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -1095,7 +1185,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}          
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -1217,7 +1312,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -1339,7 +1439,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -1456,7 +1561,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -1475,7 +1585,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -1494,7 +1609,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -1611,7 +1731,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -1630,7 +1755,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -1649,7 +1779,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -1766,7 +1901,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -1785,7 +1925,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
@@ -1804,7 +1949,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Títol, name: titol, widget: string}
           - {label: Descripció, name: descripcio, widget: markdown}
-          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - label: Videos
+            name: video_list
+            required: false
+            widget: list
+            fields:
+              - {label: ID video Youtube, name: video, widget: string,  required: true}
           - label: Documents Relacionats
             name: docs_rels
             widget: list
