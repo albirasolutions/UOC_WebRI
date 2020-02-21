@@ -18,8 +18,8 @@
     {{ range $d := . }}
     <div class="row" >
         {{$doc := split $d.file "/"}}
-        {{$stat := os.Stat "static/img/informe_disseny_web_r_i.pdf"}}
-        
+        {{$docpre := (print "static/" $d.file)}}
+        {{$stat := os.Stat $docpre }}
         <a id="docs" href="{{ $d.file }}" target="_blank" title='{{ T "uoc_ri_docs" }} ({{$scratch.Get "idx"}})'>
             <span class="icon icon--material-pdf" ></span>
             <!--File size in MB with 3 dec-->
