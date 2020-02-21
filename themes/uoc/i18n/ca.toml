@@ -213,3 +213,5 @@
 
 [uoc_ri_cercador_llista_simple] other = "Vista de llista"
 [uoc_ri_cercador_llista_bloc] other = "Vista de bloc"
+
+[uoc_ri_esdeveniment_inscripcio] other = "Inscripció"

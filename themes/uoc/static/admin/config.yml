@@ -2573,12 +2573,9 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Descripció, name: descripcio, widget: markdown, required: true}
           - {label: "Lloc", name: lloc, widget: string, required: true} 
           - {label: "Imatge", name: "img", widget: image, default: ""}
-          - label: "Social"
-            name: xarxes
-            widget: list
-            fields:
-              - {label: "Nom", name: xarxa, widget: select, options: ["facebook","twitter","instagram","web"]}
-              - {label: "Url", name: address, widget: string}
+          - {label: "Inscripció", name: inscripcio, widget: string, required: false}
+          - {label: "Link contacte", name: contact_link, widget: string, required: false}
+          - {label: "Email contacte", name: contact_mail, widget: string, required: false}
   - name: "esdeveniment_es"
     label: "Esdeveniments [es]"
     folder: "content/esdeveniment"
@@ -2600,12 +2597,9 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Descripció, name: descripcio, widget: markdown, required: true}
           - {label: "Lloc", name: lloc, widget: string, required: true} 
           - {label: "Imatge", name: "img", widget: image, default: ""}
-          - label: "Social"
-            name: xarxes
-            widget: list
-            fields:
-              - {label: "Nom", name: xarxa, widget: select, options: ["facebook","twitter","instagram","web"]}
-              - {label: "Url", name: address, widget: string}
+          - {label: "Inscripció", name: inscripcio, widget: string, required: false}
+          - {label: "Link contacte", name: contact_link, widget: string, required: false}
+          - {label: "Email contacte", name: contact_mail, widget: string, required: false}
   - name: "esdeveniment_en"
     label: "Esdeveniments [en]"
     folder: "content/esdeveniment"
@@ -2627,9 +2621,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Descripció, name: descripcio, widget: markdown, required: true}
           - {label: "Lloc", name: lloc, widget: string, required: true} 
           - {label: "Imatge", name: "img", widget: image, default: ""}
-          - label: "Social"
-            name: xarxes
-            widget: list
-            fields:
-              - {label: "Nom", name: xarxa, widget: select, options: ["facebook","twitter","instagram","web"]}
-              - {label: "Url", name: address, widget: string}
+          - {label: "Inscripció", name: inscripcio, widget: string, required: false}
+          - {label: "Link contacte", name: contact_link, widget: string, required: false}
+          - {label: "Email contacte", name: contact_mail, widget: string, required: false}
