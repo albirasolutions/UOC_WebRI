@@ -279,32 +279,22 @@
                             </h3>
                         </div>
                         <div id="collapseCasos" class="contentCollapse show">
-                            <div class="card-in-acordeon ">
-                                {{ range . }}
-                                <div class="row" >
-                                
-                                    <ul class="list--unstyled">
-                                        <li><h3 class = "h2">{{ .titol }}</h3></li>
-                                        {{if isset . "img" }}
-                                        <li><img src="{{.img}}" alt="{{ .titlol }} img"></li>
-                                        {{end}}
-                                        {{if isset . "descripcio" }}
-                                        <li><div class="wrap-richText">{{ safeHTML (markdownify .descripcio) }}</div></li>
-                                        {{end}}
-                                        {{if isset . "url_success" }}
-                                        <li><a href="{{.url_success}}" target="_blank" title=''>
-                                            <span class="icon icon--access">
-                                                <span class="h3">{{T "uoc_ri_casos_link"}}</span>
-                                            </span>
-                                        </a></li>
-                                        {{end}}
-                                    </ul>
-                                </div>
-                                
-                                
-
+                            {{ range $c := . }}
+                            <div class="card-in-acordeon " role="list"> 
+                                <h4 class = "h2" role="listitem">{{ $c.titol }}</h3>
+                                {{with $c.img }}
+                                <img src="{{.}}" alt="{{ $c.titol }} img" role="listitem">
                                 {{end}}
-                            </div>
+                                {{with $c.descripcio }}
+                                <div class="wrap-richText" role="listitem">{{ safeHTML (markdownify .) }}</div>
+                                {{end}}
+                                {{with $c.url_success }}
+                                <a href="{{.}}" target="_blank" title='' role="listitem">
+                                    <span class="icon icon--access"></span>
+                                    <span class="h3">{{T "uoc_ri_casos_link"}}</span>
+                                </a>
+                                {{end}} 
+                            </div>{{end}}
                         </div>
                     </div>
                 </div>
