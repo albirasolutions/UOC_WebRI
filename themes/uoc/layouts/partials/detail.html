@@ -391,7 +391,7 @@
                                         {{with .email}}<p><a href="mailto: {{.}}">{{.}}</a></p>{{end}}
                                         {{with .image}}<img src="{{.}}" alt="" aria-hidden="true">{{end}}
                                         {{with .video}}
-                                        <div class="embed-container">
+                                        <div class="embed-container" aria-hidden="true">
                                             <iframe src="https://www.youtube.com/embed/{{.}}" title='Youtube' allowfullscreen></iframe>
                                         </div>
                                         {{end}}
