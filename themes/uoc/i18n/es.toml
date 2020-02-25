@@ -213,5 +213,6 @@
 
 [uoc_ri_cercador_llista_simple] other = "Vista de lista"
 [uoc_ri_cercador_llista_bloc] other = "Vista de bloque"
+[uoc_ri_cercador_paraulesACercar] other = "Palabras de búsqueda"
 
 [uoc_ri_esdeveniment_inscripcio] other = "Inscripción"
