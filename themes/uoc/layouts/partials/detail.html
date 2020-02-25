@@ -384,11 +384,11 @@
                             <div class="row">
                                 {{range .}}
                                 <div class="col-xs-12 col-md-4">
-                                    <div class="wrap-content">
-                                        <h4><strong>{{ .text}}</strong></h4>
-                                        {{with .address}}<p >{{.}}</p>{{end}}
-                                        {{with .telefon}}<p >{{.}}</p>{{end}}
-                                        {{with .email}}<p><a href="mailto: {{.}}">{{.}}</a></p>{{end}}
+                                    <div class="wrap-content" role= list>
+                                        <h4 role= list><strong>{{ .text}}</strong></h4>
+                                        {{with .address}}<p role= listitem>{{.}}</p>{{end}}
+                                        {{with .telefon}}<p role= listitem>{{.}}</p>{{end}}
+                                        {{with .email}}<p role= listitem><a href="mailto: {{.}}">{{.}}</a></p>{{end}}
                                         {{with .image}}<img src="{{.}}" alt="" aria-hidden="true">{{end}}
                                         {{with .video}}
                                         <div class="embed-container" aria-hidden="true">
