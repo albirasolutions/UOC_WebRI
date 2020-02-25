@@ -290,6 +290,8 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Adreça, name: address, widget: string}
           - {label: Telèfon, name: telefon, widget: string}
           - {label: E-mail, name: email, widget: string}
+          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - {label: Imatge, name: image, widget: image,  required: false}
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
   - name: "solucio_tec_es"
@@ -458,6 +460,8 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Adreça, name: address, widget: string}
           - {label: Telèfon, name: telefon, widget: string}
           - {label: E-mail, name: email, widget: string}
+          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - {label: Imatge, name: image, widget: image,  required: false}
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
   - name: "solucio_tec_en"
@@ -626,6 +630,8 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Adreça, name: address, widget: string}
           - {label: Telèfon, name: telefon, widget: string}
           - {label: E-mail, name: email, widget: string}
+          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - {label: Imatge, name: image, widget: image,  required: false}
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
   - name: "patent_ca"
@@ -794,6 +800,8 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Adreça, name: address, widget: string}
           - {label: Telèfon, name: telefon, widget: string}
           - {label: E-mail, name: email, widget: string}
+          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - {label: Imatge, name: image, widget: image,  required: false}
     meta:
       - {label: "Data", name: "date", widget: "datetime"}
   - name: "patent_es"
@@ -962,6 +970,8 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Adreça, name: address, widget: string}
           - {label: Telèfon, name: telefon, widget: string}
           - {label: E-mail, name: email, widget: string}
+          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - {label: Imatge, name: image, widget: image,  required: false}
     meta:
       - {label: "Data", name: "date", widget: "datetime"}
   - name: "patent_en"
@@ -1130,6 +1140,8 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Adreça, name: address, widget: string}
           - {label: Telèfon, name: telefon, widget: string}
           - {label: E-mail, name: email, widget: string}
+          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - {label: Imatge, name: image, widget: image,  required: false}
     meta:
       - {label: "Data", name: "date", widget: "datetime"}
   - name: "servei_ca"
@@ -1257,6 +1269,8 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Adreça, name: address, widget: string}
           - {label: Telèfon, name: telefon, widget: string}
           - {label: E-mail, name: email, widget: string}
+          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - {label: Imatge, name: image, widget: image,  required: false}
     meta:
       - {label: "Data", name: "date", widget: "datetime"}
   - name: "servei_es"
@@ -1384,6 +1398,8 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Adreça, name: address, widget: string}
           - {label: Telèfon, name: telefon, widget: string}
           - {label: E-mail, name: email, widget: string}
+          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - {label: Imatge, name: image, widget: image,  required: false}
     meta:
       - {label: "Data", name: "date", widget: "datetime"}
   - name: "servei_en"
@@ -1511,6 +1527,8 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Adreça, name: address, widget: string}
           - {label: Telèfon, name: telefon, widget: string}
           - {label: E-mail, name: email, widget: string}
+          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - {label: Imatge, name: image, widget: image,  required: false}
     meta:
       - {label: "Data", name: "date", widget: "datetime"}
   - name: "spin_off_ca"
@@ -1681,6 +1699,8 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Adreça, name: address, widget: string}
           - {label: Telèfon, name: telefon, widget: string}
           - {label: E-mail, name: email, widget: string}
+          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - {label: Imatge, name: image, widget: image,  required: false}
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
   - name: "spin_off_es"
@@ -1851,6 +1871,8 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Adreça, name: address, widget: string}
           - {label: Telèfon, name: telefon, widget: string}
           - {label: E-mail, name: email, widget: string}
+          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - {label: Imatge, name: image, widget: image,  required: false}
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
   - name: "spin_off_en"
@@ -2021,6 +2043,8 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Adreça, name: address, widget: string}
           - {label: Telèfon, name: telefon, widget: string}
           - {label: E-mail, name: email, widget: string}
+          - {label: ID video Youtube, name: video, widget: string,  required: false}
+          - {label: Imatge, name: image, widget: image,  required: false}
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
   - name: "cercador_ca"

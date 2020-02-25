@@ -96,5 +96,13 @@ contacte:
     email: e@mail.com
     telefon: '123456789'
     text: Pere
+    image: 'https://talent.am.pre.uoc.es/img/api/pdi/665775/image/1573925440895'
+  - address: 'adreça '
+    email: e@mail.com
+    telefon: '123456789'
+    text: Pere
+    video: qtIqKaDlqXo
+    
+    
 ---
 

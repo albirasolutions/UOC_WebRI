@@ -325,7 +325,7 @@
                             {{ range .}}
                                 <div class="col-md-4 col-xs-12">
                                     <a href="{{.url}}">
-                                        <div class="card card-noimg" style="background-color: #C3FFDE;" role="region">
+                                        <div class="card card-noimg" style="background-color: rgb(205, 245, 223);" role="region">
                                             
                                             <div class="card__contents">
                                                 <div class = "h4"><strong>{{ .name }}</strong></div>
@@ -383,12 +383,18 @@
                             
                             <div class="row">
                                 {{range .}}
-                                <div class="col-xs-12 col-md-3">
+                                <div class="col-xs-12 col-md-4">
                                     <div class="wrap-content">
-                                        <p ><h3>{{ .text}}</h3></p>
-                                        <p >{{ .address}}</p>
-                                        <p >{{ .telefon}}</p>
-                                        <p >{{ .email}}</p>
+                                        <h4><strong>{{ .text}}</strong></h4>
+                                        {{with .address}}<p >{{.}}</p>{{end}}
+                                        {{with .telefon}}<p >{{.}}</p>{{end}}
+                                        {{with .email}}<p><a href="mailto: {{.}}">{{.}}</a></p>{{end}}
+                                        {{with .image}}<img src="{{.}}" aria-hidden="true">{{end}}
+                                        {{with .video}}
+                                        <div class="embed-container">
+                                            <iframe src="https://www.youtube.com/embed/{{.}}" title='Youtube' allowfullscreen></iframe>
+                                        </div>
+                                        {{end}}
                                     </div>
                                 </div>
                                 {{end}}

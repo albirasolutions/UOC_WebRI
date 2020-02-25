@@ -90,9 +90,10 @@ investigadors:
     url: 'https://talent.am.pre.uoc.es/ca/alexandre-lopez-borrull.html'
     url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/213649/image/1573933327138'
 contacte:
-  - address: adreça
-    email: e@mail.com
-    telefon: '123456789'
-    text: Pau
+  - contact_name: Pau
+    text: >-
+      Ipsum dolor sit amet consectetur adipiscing elit. Euismod quis viverra
+      nibh cras pulvinar. Placerat orci nulla pellentesque dignissim enim.
+      Nullam non nisi est sit amet facilisis magna etiam.
 ---
 
