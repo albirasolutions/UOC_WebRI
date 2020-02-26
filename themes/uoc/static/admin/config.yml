@@ -286,7 +286,7 @@ collections: # A list of collections the CMS should be able to edit
         required: true
         widget: list
         fields:
-          - {label: Name, name: text, widget: string, required: true}
+          - {label: Name, name: text, widget: string, required: false}
           - {label: Adreça, name: address, widget: string,  required: false}
           - {label: Telèfon, name: telefon, widget: string,  required: false}
           - {label: E-mail, name: email, widget: string, required: true}
@@ -456,7 +456,7 @@ collections: # A list of collections the CMS should be able to edit
         required: true
         widget: list
         fields:
-          - {label: Name, name: text, widget: string, required: true}
+          - {label: Name, name: text, widget: string, required: false}
           - {label: Adreça, name: address, widget: string,  required: false}
           - {label: Telèfon, name: telefon, widget: string,  required: false}
           - {label: E-mail, name: email, widget: string, required: true}
@@ -626,7 +626,7 @@ collections: # A list of collections the CMS should be able to edit
         required: true
         widget: list
         fields:
-          - {label: Name, name: text, widget: string, required: true}
+          - {label: Name, name: text, widget: string, required: false}
           - {label: Adreça, name: address, widget: string,  required: false}
           - {label: Telèfon, name: telefon, widget: string,  required: false}
           - {label: E-mail, name: email, widget: string, required: true}
@@ -1695,7 +1695,7 @@ collections: # A list of collections the CMS should be able to edit
         required: false
         widget: list
         fields:
-          - {label: Name, name: text, widget: string, required: true}
+          - {label: Name, name: text, widget: string, required: false}
           - {label: Adreça, name: address, widget: string,  required: false}
           - {label: Telèfon, name: telefon, widget: string,  required: false}
           - {label: E-mail, name: email, widget: string, required: true}
@@ -1867,7 +1867,7 @@ collections: # A list of collections the CMS should be able to edit
         required: false
         widget: list
         fields:
-          - {label: Name, name: text, widget: string, required: true}
+          - {label: Name, name: text, widget: string, required: false}
           - {label: Adreça, name: address, widget: string,  required: false}
           - {label: Telèfon, name: telefon, widget: string,  required: false}
           - {label: E-mail, name: email, widget: string, required: true}
@@ -2039,7 +2039,7 @@ collections: # A list of collections the CMS should be able to edit
         required: false
         widget: list
         fields:
-          - {label: Name, name: text, widget: string, required: true}
+          - {label: Name, name: text, widget: string, required: false}
           - {label: Adreça, name: address, widget: string,  required: false}
           - {label: Telèfon, name: telefon, widget: string,  required: false}
           - {label: E-mail, name: email, widget: string, required: true}

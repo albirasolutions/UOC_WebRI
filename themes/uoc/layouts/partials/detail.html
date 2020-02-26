@@ -375,7 +375,7 @@
                                 {{range .}}
                                 <div class="col-xs-12 col-md-4">
                                     <div class="wrap-content" role= list>
-                                        <h4 role= list><strong>{{ .text}}</strong></h4>
+                                        {{with .text}}<h4 role= listitem><strong>{{.}}</strong></h4>{{end}}
                                         {{with .address}}<p role= listitem>{{.}}</p>{{end}}
                                         {{with .telefon}}<p role= listitem>{{.}}</p>{{end}}
                                         {{with .email}}<p role= listitem><a href="mailto: {{.}}">{{.}}</a></p>{{end}}
