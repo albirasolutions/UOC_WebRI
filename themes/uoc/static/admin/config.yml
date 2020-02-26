@@ -286,10 +286,10 @@ collections: # A list of collections the CMS should be able to edit
         required: true
         widget: list
         fields:
-          - {label: Name, name: text, widget: string}
-          - {label: Adreça, name: address, widget: string}
-          - {label: Telèfon, name: telefon, widget: string}
-          - {label: E-mail, name: email, widget: string}
+          - {label: Name, name: text, widget: string, required: true}
+          - {label: Adreça, name: address, widget: string,  required: false}
+          - {label: Telèfon, name: telefon, widget: string,  required: false}
+          - {label: E-mail, name: email, widget: string, required: true}
           - {label: ID video Youtube, name: video, widget: string,  required: false}
           - {label: Imatge, name: image, widget: image,  required: false}
     meta:
@@ -456,10 +456,10 @@ collections: # A list of collections the CMS should be able to edit
         required: true
         widget: list
         fields:
-          - {label: Name, name: text, widget: string}
-          - {label: Adreça, name: address, widget: string}
-          - {label: Telèfon, name: telefon, widget: string}
-          - {label: E-mail, name: email, widget: string}
+          - {label: Name, name: text, widget: string, required: true}
+          - {label: Adreça, name: address, widget: string,  required: false}
+          - {label: Telèfon, name: telefon, widget: string,  required: false}
+          - {label: E-mail, name: email, widget: string, required: true}
           - {label: ID video Youtube, name: video, widget: string,  required: false}
           - {label: Imatge, name: image, widget: image,  required: false}
     meta:
@@ -626,10 +626,10 @@ collections: # A list of collections the CMS should be able to edit
         required: true
         widget: list
         fields:
-          - {label: Name, name: text, widget: string}
-          - {label: Adreça, name: address, widget: string}
-          - {label: Telèfon, name: telefon, widget: string}
-          - {label: E-mail, name: email, widget: string}
+          - {label: Name, name: text, widget: string, required: true}
+          - {label: Adreça, name: address, widget: string,  required: false}
+          - {label: Telèfon, name: telefon, widget: string,  required: false}
+          - {label: E-mail, name: email, widget: string, required: true}
           - {label: ID video Youtube, name: video, widget: string,  required: false}
           - {label: Imatge, name: image, widget: image,  required: false}
     meta:
@@ -796,10 +796,10 @@ collections: # A list of collections the CMS should be able to edit
         required: false
         widget: list
         fields:
-          - {label: Nom, name: text, widget: string}
-          - {label: Adreça, name: address, widget: string}
-          - {label: Telèfon, name: telefon, widget: string}
-          - {label: E-mail, name: email, widget: string}
+          - {label: Nom, name: text, widget: string, required: true}
+          - {label: Adreça, name: address, widget: string,  required: false}
+          - {label: Telèfon, name: telefon, widget: string,  required: false}
+          - {label: E-mail, name: email, widget: string, required: true}
           - {label: ID video Youtube, name: video, widget: string,  required: false}
           - {label: Imatge, name: image, widget: image,  required: false}
     meta:
@@ -966,10 +966,10 @@ collections: # A list of collections the CMS should be able to edit
         required: false
         widget: list
         fields:
-          - {label: Nom, name: text, widget: string}
-          - {label: Adreça, name: address, widget: string}
-          - {label: Telèfon, name: telefon, widget: string}
-          - {label: E-mail, name: email, widget: string}
+          - {label: Nom, name: text, widget: string, required: true}
+          - {label: Adreça, name: address, widget: string,  required: false}
+          - {label: Telèfon, name: telefon, widget: string,  required: false}
+          - {label: E-mail, name: email, widget: string, required: true}
           - {label: ID video Youtube, name: video, widget: string,  required: false}
           - {label: Imatge, name: image, widget: image,  required: false}
     meta:
@@ -1136,10 +1136,10 @@ collections: # A list of collections the CMS should be able to edit
         required: false
         widget: list
         fields:
-          - {label: Nom, name: text, widget: string}
-          - {label: Adreça, name: address, widget: string}
-          - {label: Telèfon, name: telefon, widget: string}
-          - {label: E-mail, name: email, widget: string}
+          - {label: Nom, name: text, widget: string, required: true}
+          - {label: Adreça, name: address, widget: string,  required: false}
+          - {label: Telèfon, name: telefon, widget: string,  required: false}
+          - {label: E-mail, name: email, widget: string, required: true}
           - {label: ID video Youtube, name: video, widget: string,  required: false}
           - {label: Imatge, name: image, widget: image,  required: false}
     meta:
@@ -1265,10 +1265,10 @@ collections: # A list of collections the CMS should be able to edit
         required: false
         widget: list
         fields:
-          - {label: Nom, name: text, widget: string}
-          - {label: Adreça, name: address, widget: string}
-          - {label: Telèfon, name: telefon, widget: string}
-          - {label: E-mail, name: email, widget: string}
+          - {label: Nom, name: text, widget: string, required: true}
+          - {label: Adreça, name: address, widget: string,  required: false}
+          - {label: Telèfon, name: telefon, widget: string,  required: false}
+          - {label: E-mail, name: email, widget: string, required: true}
           - {label: ID video Youtube, name: video, widget: string,  required: false}
           - {label: Imatge, name: image, widget: image,  required: false}
     meta:
@@ -1394,10 +1394,10 @@ collections: # A list of collections the CMS should be able to edit
         required: false
         widget: list
         fields:
-          - {label: Nom, name: text, widget: string}
-          - {label: Adreça, name: address, widget: string}
-          - {label: Telèfon, name: telefon, widget: string}
-          - {label: E-mail, name: email, widget: string}
+          - {label: Nom, name: text, widget: string, required: true}
+          - {label: Adreça, name: address, widget: string,  required: false}
+          - {label: Telèfon, name: telefon, widget: string,  required: false}
+          - {label: E-mail, name: email, widget: string, required: true}
           - {label: ID video Youtube, name: video, widget: string,  required: false}
           - {label: Imatge, name: image, widget: image,  required: false}
     meta:
@@ -1523,10 +1523,10 @@ collections: # A list of collections the CMS should be able to edit
         required: false
         widget: list
         fields:
-          - {label: Nom, name: text, widget: string}
-          - {label: Adreça, name: address, widget: string}
-          - {label: Telèfon, name: telefon, widget: string}
-          - {label: E-mail, name: email, widget: string}
+          - {label: Nom, name: text, widget: string, required: true}
+          - {label: Adreça, name: address, widget: string,  required: false}
+          - {label: Telèfon, name: telefon, widget: string,  required: false}
+          - {label: E-mail, name: email, widget: string, required: true}
           - {label: ID video Youtube, name: video, widget: string,  required: false}
           - {label: Imatge, name: image, widget: image,  required: false}
     meta:
@@ -1695,10 +1695,10 @@ collections: # A list of collections the CMS should be able to edit
         required: false
         widget: list
         fields:
-          - {label: Name, name: text, widget: string}
-          - {label: Adreça, name: address, widget: string}
-          - {label: Telèfon, name: telefon, widget: string}
-          - {label: E-mail, name: email, widget: string}
+          - {label: Name, name: text, widget: string, required: true}
+          - {label: Adreça, name: address, widget: string,  required: false}
+          - {label: Telèfon, name: telefon, widget: string,  required: false}
+          - {label: E-mail, name: email, widget: string, required: true}
           - {label: ID video Youtube, name: video, widget: string,  required: false}
           - {label: Imatge, name: image, widget: image,  required: false}
     meta:
@@ -1867,10 +1867,10 @@ collections: # A list of collections the CMS should be able to edit
         required: false
         widget: list
         fields:
-          - {label: Name, name: text, widget: string}
-          - {label: Adreça, name: address, widget: string}
-          - {label: Telèfon, name: telefon, widget: string}
-          - {label: E-mail, name: email, widget: string}
+          - {label: Name, name: text, widget: string, required: true}
+          - {label: Adreça, name: address, widget: string,  required: false}
+          - {label: Telèfon, name: telefon, widget: string,  required: false}
+          - {label: E-mail, name: email, widget: string, required: true}
           - {label: ID video Youtube, name: video, widget: string,  required: false}
           - {label: Imatge, name: image, widget: image,  required: false}
     meta:
@@ -2039,10 +2039,10 @@ collections: # A list of collections the CMS should be able to edit
         required: false
         widget: list
         fields:
-          - {label: Name, name: text, widget: string}
-          - {label: Adreça, name: address, widget: string}
-          - {label: Telèfon, name: telefon, widget: string}
-          - {label: E-mail, name: email, widget: string}
+          - {label: Name, name: text, widget: string, required: true}
+          - {label: Adreça, name: address, widget: string,  required: false}
+          - {label: Telèfon, name: telefon, widget: string,  required: false}
+          - {label: E-mail, name: email, widget: string, required: true}
           - {label: ID video Youtube, name: video, widget: string,  required: false}
           - {label: Imatge, name: image, widget: image,  required: false}
     meta:
