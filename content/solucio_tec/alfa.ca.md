@@ -111,6 +111,11 @@ investigadors:
   - id: '42444002'
     name: 'Prado Fonts, Carles'
     url: 'https://talent.am.pre.uoc.es/ca/prado-fonts-carles.html'
-contacte: []
+contacte:
+  - address: Adreça
+    email: transfer_ari@uoc.edu
+    telefon: '1234'
+    text: SpeakApps
+    video: YlzE09OlwNU
 ---
 
