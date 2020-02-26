@@ -29,6 +29,9 @@ about:
       morbi tristique senectus et netus et. Nibh nisl condimentum id venenatis a
       condimentum vitae sapien. Tellus in metus vulputate eu. Sed odio morbi
       quis commodo odio. Et pharetra pharetra massa massa ultricies.
+
+
+      ![](/img/131-mesures-igualtat-genere-bandera.png)
     docs_rels:
       - file: /img/informe_disseny_web_r_i.pdf
     titol: Sobre spin off gamma
