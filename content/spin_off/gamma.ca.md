@@ -29,6 +29,9 @@ about:
       morbi tristique senectus et netus et. Nibh nisl condimentum id venenatis a
       condimentum vitae sapien. Tellus in metus vulputate eu. Sed odio morbi
       quis commodo odio. Et pharetra pharetra massa massa ultricies.
+
+
+      ![](/img/131-mesures-igualtat-genere-bandera.png)
     docs_rels:
       - file: /img/informe_disseny_web_r_i.pdf
     titol: Sobre spin off gamma
@@ -73,6 +76,9 @@ casos_exit:
       viverra nibh cras pulvinar. Habitant morbi tristique senectus et. Vitae et
       leo duis ut. Ligula ullamcorper malesuada proin libero nunc consequat
       interdum.
+
+
+      ![](/img/131-mesures-igualtat-genere-bandera.png)
     img: /img/241-projectes-estatals-recerca-logo.jpg
     titol: CAs 1
     url_success: 'http://webri.albira.io/ca/index.html'
@@ -94,15 +100,13 @@ investigadors:
 contacte:
   - address: 'adreça '
     email: e@mail.com
+    image: 'https://talent.am.pre.uoc.es/img/api/pdi/665775/image/1573925440895'
     telefon: '123456789'
     text: Pere
-    image: 'https://talent.am.pre.uoc.es/img/api/pdi/665775/image/1573925440895'
   - address: 'adreça '
     email: e@mail.com
     telefon: '123456789'
     text: Pere
     video: qtIqKaDlqXo
-    
-    
 ---
 
