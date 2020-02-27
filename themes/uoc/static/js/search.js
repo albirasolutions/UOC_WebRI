@@ -210,26 +210,7 @@ function getSearchFormValues(){
 			searchParams.centre.push($(this).val());
 		});	
 	}
-	if($(".general-filter.visualitzacio input:checked").length>0){						//Visualitza per checked
-		searchParams.visualitzacio = [];
-		$(".general-filter.visualitzacio input:checked").each(function( index ) {
-			searchParams.visualitzacio.push($(this).val());
-		});	
-	} else {
-		searchParams.visualitzacio = [];
-		if(tab=="cercadorFiltres") {
-			searchParams.visualitzacio.push("grup");
-			searchParams.visualitzacio.push("fitxa");
-		} else if(tab=="cercadorSectors"){
-			searchParams.visualitzacio.push("solucions");
-			searchParams.visualitzacio.push("spin");
-		} else if(tab=="cercadorTextual"){
-			searchParams.visualitzacio.push("grup");
-			searchParams.visualitzacio.push("fitxa");
-			searchParams.visualitzacio.push("solucions");
-			searchParams.visualitzacio.push("spin");
-		}
-	}
+	
 }
 
 
