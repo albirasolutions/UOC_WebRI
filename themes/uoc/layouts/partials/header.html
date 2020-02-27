@@ -2,10 +2,7 @@
 		<div class="header-container clearfix">
 			<div class="col-xs-12 col-clear nav-menu-top">
 				<div class="col-xs-2 col-sm-1 top-logo top-logo-desktop">
-					<h1 tabindex="-1" data-element-id="hmap-0" class="top-h1 visually-hidden">{{ T "uoc_head_description"}}</h1><a href="#"
-						class="hidden-xs hidden-sm hidden-md"><img src="/img/logo-uoc-ri-white.png"
-							alt="Logo UOC"></a><a href="#" class="hidden-lg hidden-xl"><img
-							src="/img/logo-uoc-white.png" alt="Logo UOC"></a>
+					<img src="/img/logo-uoc-ri-white.png" alt='{{ T "uoc_title"}} logo'>
 				</div>
 				<div class="col-xs-10 col-md-8 col-lg-8"><span
 						class="ruler ruler--dynamic ruler--white w100-inline-block"></span>
@@ -111,11 +108,11 @@
 			<!-- Navigation -->
 			<div class="col-xs-12 col-clear nav-menu-container uoc-ri"> 
 	          <h2>
-	            <a href='{{ "index.html" | relLangURL }}'>{{ with .Site.GetPage "/principal" }}{{ .Title }}{{ end }}</a>
+	            {{ with .Site.GetPage "/principal" }}{{ .Title }}{{ end }}
 	          </h2>
 	          <div id="nav-menu-scrollable-container-expand" style="margin-bottom: 1em;">
 	            <div id="nav-menu-scrollable-container" class="nav-menu-scrollable-container">
-	              <nav id="main-nav-menu" aria-label="Menú de navegació" class="nav-menu nav-menu-soft-dropdown hidden-xs hidden-sm hidden-md"><a href="#" class="logogreen hidden-lg hidden-xl"><img src="../../static/media/logo-green.jpg" alt="Logo UOC"></a>
+	              <nav id="main-nav-menu" aria-label="Menú de navegació" class="nav-menu nav-menu-soft-dropdown hidden-xs hidden-sm hidden-md">
 	                <ul>
 	                  <li tabindex="-1" class="col-xs-12 col-lg-2">
 	                    <button onclick="location.href='{{ "index.html" | relLangURL }}';" value="{{ T "uoc_ri_menuitem_explore" }}" class="clickable"><span>{{ T "uoc_ri_menuitem_explore" }}</span></button>
