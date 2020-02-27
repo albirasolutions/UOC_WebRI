@@ -26,7 +26,7 @@ about:
       consultoria.
 
 
-      Els trets diferenciadors de la seva activitat són:\
+      #### Els trets diferenciadors de la seva activitat són:
 
 
       * Metodologies i dissenys presentats i compartits en obert: el disseny de
@@ -47,7 +47,7 @@ about:
       processos de consulta i de compromís col·laboratiu oberts i en línia.
 
 
-      Destaquen projectes en els àmbits següents:\
+      #### Destaquen projectes en els àmbits següents:\
 
       Projectes de neuroeconomia/neuromàrqueting:
 
@@ -64,7 +64,7 @@ about:
       aplicacions mòbils sobre la conducta infantil.
 
 
-      Projectes de salut electrònica:
+      #### Projectes de salut electrònica:
 
 
       * Desplegament de benchmarking sobre salut electrònica entre metges de
@@ -76,7 +76,7 @@ about:
       electrònica.
 
 
-      Innovació Oberta:
+      #### Innovació Oberta:
 
 
       * Innovació Oberta de la Fundació Jaume Bofill.
@@ -84,7 +84,7 @@ about:
       * Suport especialitzat en l’avaluació de la Iniciativa Kublai.
 
 
-      Economia del coneixement - dades massives (big data):
+      #### Economia del coneixement - dades massives (big data):
 
 
       * Mercat de dades europeu.
