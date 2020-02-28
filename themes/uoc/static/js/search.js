@@ -141,7 +141,37 @@ function submitSearch(caller){
 			queryInnovaSolSearchEngine(searchParams);
 		break;
 	}
-	//if($(".general-filter.visualitzacio input:checked").length>0){						//Visualitza per checked
+	//if($(".general-filter.visualitzacio input:checked").length>0){
+		
+	//Visualitza per checked
+	
+	if($(".general-filter.visualitzacio input:checked").length>0){
+		var filtreV = [false,false];
+		$(".general-filter.visualitzacio input:checked").each(function( index ) {
+			if($(this).val() == "solucions"){
+				filtreV[0] = true;
+			}
+			if($(this).val() == "spin"){
+				filtreV[1] = true;
+			}
+
+		});
+		if( filtreV[0] && !filtreV[1] ){
+			console.log(filtreV);
+			$(".collapse.solucions.results").removeClass("hidden");
+			$(".collapse.spin.results").addClass("hidden");
+		}else if( !filtreV[0] && filtreV[1] ){
+			$(".collapse.spin.results").removeClass("hidden");
+			$(".collapse.solucions.results").addClass("hidden");
+		}else{
+			$(".collapse.solucions.results").removeClass("hidden");
+			$(".collapse.spin.results").removeClass("hidden");
+		}
+		
+	}else{
+		$(".collapse.solucions.results").removeClass("hidden");
+		$(".collapse.spin.results").removeClass("hidden");
+	}
 	if(false){
 		switch(tab){
 			case 'cercadorFiltres':
@@ -209,6 +239,27 @@ function getSearchFormValues(){
 			searchParams.centre.push($(this).val());
 		});	
 	}
+	/*if($(".general-filter.visualitzacio input:checked").length>0){
+		searchParams.visualitzacio = [];
+		$(".general-filter.visualitzacio input:checked").each(function( index ) {
+			searchParams.visualitzacio.push($(this).val());
+		});
+	} else {
+		searchParams.visualitzacio = [];
+		if(tab=="cercadorFiltres") {
+			searchParams.visualitzacio.push("grup");
+			searchParams.visualitzacio.push("fitxa");
+		} else if(tab=="cercadorSectors"){
+			searchParams.visualitzacio.push("solucions");
+			searchParams.visualitzacio.push("spin");
+		} else if(tab=="cercadorTextual"){
+			searchParams.visualitzacio.push("grup");
+			searchParams.visualitzacio.push("fitxa");
+			searchParams.visualitzacio.push("solucions");
+			searchParams.visualitzacio.push("spin");
+		}
+	}*/
+	
 	
 }
 
