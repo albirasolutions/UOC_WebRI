@@ -141,9 +141,8 @@ function submitSearch(caller){
 			queryInnovaSolSearchEngine(searchParams);
 		break;
 	}
-
-	if(searchParams.visualitzacio && searchParams.visualitzacio.length){
-		
+	//if($(".general-filter.visualitzacio input:checked").length>0){						//Visualitza per checked
+	if(false){
 		switch(tab){
 			case 'cercadorFiltres':
 				$(".cercadorFiltres .collapse.results").addClass("hidden");						//Hide depending on "visualitza per" options

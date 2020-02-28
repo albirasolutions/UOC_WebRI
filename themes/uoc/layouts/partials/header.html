@@ -22,18 +22,18 @@
 								class="btn btn--primary dropdown__trigger">{{ T "uoc_lang_button" }}<span
 									class="icon icon--arrow-down icon--small bold m-left-x2"></span></button>
 							<div id="dropdown__content3" class="dropdown__content dropdown__list">
-								<button aria-label="Cerrar idioma" aria-controls="dropdown__content3"
+								<button aria-label='{{T "uoc_language_close"}}' aria-controls="dropdown__content3"
 									data-dropdown-trigger="" class="btn btn--primary close"><span aria-hidden="true"
 									class="icon icon--close"></span></button>
 								{{ if .IsTranslated }}
 									<ul data-animated="false">
 										{{ range .AllTranslations }}
 											{{ if eq $.Site.Language.LanguageName .Language.LanguageName }}
-												<li class="dropdown__item is-active">
+												<li class="dropdown__item is-active" aria-current="true">
 													<a href="#" lang="{{ .Language }}" class="dropdown__link">{{ .Language.LanguageName }}</a>
 												</li>
 											{{ else }}
-												<li class="dropdown__item">
+												<li class="dropdown__item" aria-current="false">
 													<a href="{{ .RelPermalink }}" lang="{{ .Language }}"
 														class="dropdown__link">{{ .Language.LanguageName }}</a>
 												</li>
