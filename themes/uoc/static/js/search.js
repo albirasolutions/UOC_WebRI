@@ -144,7 +144,7 @@ function submitSearch(caller){
 	//if($(".general-filter.visualitzacio input:checked").length>0){
 		
 	//Visualitza per checked
-	
+	// FILTRATGE VISUALITZACIO
 	if($(".general-filter.visualitzacio input:checked").length>0){
 		var filtreV = [false,false];
 		$(".general-filter.visualitzacio input:checked").each(function( index ) {
@@ -172,36 +172,7 @@ function submitSearch(caller){
 		$(".collapse.solucions.results").removeClass("hidden");
 		$(".collapse.spin.results").removeClass("hidden");
 	}
-	if(false){
-		switch(tab){
-			case 'cercadorFiltres':
-				$(".cercadorFiltres .collapse.results").addClass("hidden");						//Hide depending on "visualitza per" options
-			break;
-			case 'cercadorSectors':
-				$(".cercadorSectors .collapse.results").addClass("hidden");						//Hide depending on "visualitza per" options
-			break;
-			case 'cercadorTextual':
-				$(".cercadorTextual .collapse.results").addClass("hidden");						//Hide depending on "visualitza per" options
-			break;
-		}
-		
-		for(selector in searchParams.visualitzacio){
-			switch(tab){
-				case 'cercadorFiltres':
-					$(".cercadorFiltres .collapse."+searchParams.visualitzacio[selector]).removeClass("hidden");
-				break;
-				case 'cercadorSectors':
-					//console.log('Remove ' + searchParams.visualitzacio[selector] + ' results');
-					//console.log(".cercadorSectors .collapse."+searchParams.visualitzacio[selector]);
-					$(".cercadorSectors .collapse."+searchParams.visualitzacio[selector]).removeClass("hidden");
-				break;
-				case 'cercadorTextual':
-					//console.log('Remove ' + searchParams.visualitzacio[selector] + ' results');
-					$(".cercadorTextual .collapse."+searchParams.visualitzacio[selector]).removeClass("hidden");
-				break;
-			}
-		}
-	} 
+
 }
 
 function getSearchFormValues(){
