@@ -2429,7 +2429,7 @@ collections: # A list of collections the CMS should be able to edit
     identifier_field: '{{slug}}'
     filter: {field: language , value: "ca"}
     fields:
-      - {label: Títol, name: title, widget: string}
+      - {label: Nom, name: title, widget: string}
       - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
@@ -2442,7 +2442,7 @@ collections: # A list of collections the CMS should be able to edit
     identifier_field: '{{slug}}'
     filter: {field: language , value: "es"}
     fields:
-      - {label: Título, name: title, widget: string}
+      - {label: Nom, name: title, widget: string}
       - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "es"}       
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
@@ -2455,7 +2455,7 @@ collections: # A list of collections the CMS should be able to edit
     identifier_field: '{{slug}}'
     filter: {field: language , value: "en"}
     fields:
-      - {label: Title, name: title, widget: string}
+      - {label: Nom, name: title, widget: string}
       - {label: Language, name: language, widget: select, options: ["ca","es","en"],default: "en"}       
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
@@ -2627,7 +2627,7 @@ collections: # A list of collections the CMS should be able to edit
     identifier_field: '{{slug}}'
     filter: {field: language , value: "ca"}
     fields:
-      - {label: Títol, name: title, widget: string}
+      - {label: Nom, name: title, widget: string}
       - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
       - {label: "Destacat", name: "destacat", widget: "boolean", default: false, required: true}
       - {label: "Data", name: "date", widget: datetime, required: true}
@@ -2657,7 +2657,7 @@ collections: # A list of collections the CMS should be able to edit
     identifier_field: '{{slug}}'
     filter: {field: language , value: "es"}
     fields:
-      - {label: Títol, name: title, widget: string}
+      - {label: Nom, name: title, widget: string}
       - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
       - {label: "Destacat", name: "destacat", widget: "boolean", default: false, required: true}
       - {label: "Data", name: "date", widget: datetime, required: true}
@@ -2687,7 +2687,7 @@ collections: # A list of collections the CMS should be able to edit
     identifier_field: '{{slug}}'
     filter: {field: language , value: "en"}
     fields:
-      - {label: Títol, name: title, widget: string}
+      - {label: Nom, name: title, widget: string}
       - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
       - {label: "Destacat", name: "destacat", widget: "boolean", default: false, required: true}
       - {label: "Data", name: "date", widget: datetime, required: true}
@@ -2717,7 +2717,7 @@ collections: # A list of collections the CMS should be able to edit
     identifier_field: '{{slug}}'
     filter: {field: language , value: "ca"}
     fields:
-      - {label: Títol, name: title, widget: string}
+      - {label: Nom, name: title, widget: string}
       - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
       - {label: "Detacat", name: "destacat", widget: "boolean", default: false, required: true}
       - {label: "Quan", name: "date", widget: datetime, required: true}
@@ -2741,7 +2741,7 @@ collections: # A list of collections the CMS should be able to edit
     identifier_field: '{{slug}}'
     filter: {field: language , value: "es"}
     fields:
-      - {label: Títol, name: title, widget: string}
+      - {label: Nom, name: title, widget: string}
       - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
       - {label: "Detacat", name: "destacat", widget: "boolean", default: false, required: true}
       - {label: "Quan", name: "date", widget: datetime, required: true}
@@ -2765,7 +2765,7 @@ collections: # A list of collections the CMS should be able to edit
     identifier_field: '{{slug}}'
     filter: {field: language , value: "en"}
     fields:
-      - {label: Títol, name: title, widget: string}
+      - {label: Nom, name: title, widget: string}
       - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
       - {label: "Detacat", name: "destacat", widget: "boolean", default: false, required: true}
       - {label: "Quan", name: "date", widget: datetime, required: true}
