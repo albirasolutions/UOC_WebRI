@@ -1,5 +1,5 @@
 ---
-title: Estudis
+title: Estuids
 language: ca
 ---
 
