@@ -62,7 +62,6 @@ clients:
       viverra nibh cras pulvinar. Habitant morbi tristique senectus et. Vitae et
       leo duis ut. Ligula ullamcorper malesuada proin libero nunc consequat
       interdum.
-    docs_rels: []
     titol: Client
 casos_exit:
   - descripcio: >-
@@ -98,7 +97,7 @@ investigadors:
     url: 'https://talent.am.pre.uoc.es/ca/rotger-cerda-neus.html'
     url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/526373/image/1573926566251'
 contacte:
-  - address: 'adreça '
+  - address: 'adreça'
     email: e@mail.com
     image: 'https://talent.am.pre.uoc.es/img/api/pdi/665775/image/1573925440895'
     telefon: '123456789'
