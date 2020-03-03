@@ -11,7 +11,6 @@ general:
 sobre_tecnologia:
   - descripcio: No trobareu res millor que la nostra tecnologia IoT.
     titol: Simply de best technology
-aspectes_innovadors: []
 grups_recerca:
   - description: Metacampus Real
     id: '902'

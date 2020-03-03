@@ -201,8 +201,8 @@ collections: # A list of collections the CMS should be able to edit
         required: false   
         widget: list
         fields:
-          - {label: titol, name: titol, widget: string}
-          - {label: descripcio, name: descripcio, widget: markdown}
+          - {label: titol, name: titol, widget: string, required: true}
+          - {label: descripcio, name: descripcio, widget: markdown, required: false}
           - label: Videos
             name: video_list
             required: false
@@ -371,8 +371,8 @@ collections: # A list of collections the CMS should be able to edit
         required: false   
         widget: list
         fields:
-          - {label: titol, name: titol, widget: string}
-          - {label: descripcio, name: descripcio, widget: markdown}
+          - {label: titol, name: titol, widget: string, required: true}
+          - {label: descripcio, name: descripcio, widget: markdown, required: false}
           - label: Videos
             name: video_list
             required: false
@@ -541,8 +541,8 @@ collections: # A list of collections the CMS should be able to edit
         required: false   
         widget: list
         fields:
-          - {label: titol, name: titol, widget: string}
-          - {label: descripcio, name: descripcio, widget: markdown}
+          - {label: titol, name: titol, widget: string, required: true}
+          - {label: descripcio, name: descripcio, widget: markdown, required: false}
           - label: Videos
             name: video_list
             required: false
@@ -711,8 +711,8 @@ collections: # A list of collections the CMS should be able to edit
         required: false 
         widget: list
         fields:
-          - {label: Títol, name: titol, widget: string}
-          - {label: Descripció, name: descripcio, widget: markdown}
+          - {label: Títol, name: titol, widget: string, required: true}
+          - {label: Descripció, name: descripcio, widget: markdown, required: false}
           - label: Videos
             name: video_list
             required: false
@@ -881,8 +881,8 @@ collections: # A list of collections the CMS should be able to edit
         required: false 
         widget: list
         fields:
-          - {label: Títol, name: titol, widget: string}
-          - {label: Descripció, name: descripcio, widget: markdown}
+          - {label: Títol, name: titol, widget: string, required: true}
+          - {label: Descripció, name: descripcio, widget: markdown, required: false}
           - label: Videos
             name: video_list
             required: false
@@ -1051,8 +1051,8 @@ collections: # A list of collections the CMS should be able to edit
         required: false 
         widget: list
         fields:
-          - {label: Títol, name: titol, widget: string}
-          - {label: Descripció, name: descripcio, widget: markdown}
+          - {label: Títol, name: titol, widget: string, required: true}
+          - {label: Descripció, name: descripcio, widget: markdown, required: false}
           - label: Videos
             name: video_list
             required: false
