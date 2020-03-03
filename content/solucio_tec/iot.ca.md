@@ -2,7 +2,7 @@
 title: IoT
 language: ca
 general:
-  centre: Estuids
+  centre: Estudis
   img_background: /img/x20190326-iot-in-five-years2-1.jpg.pagespeed.ic.jkhmNWwrQd.jpg
   nom: Solució IoT
   sector: 'Art, Turisme i Llengües'
