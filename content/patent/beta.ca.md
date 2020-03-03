@@ -90,6 +90,7 @@ investigadors:
     url: 'https://talent.am.pre.uoc.es/ca/alexandre-lopez-borrull.html'
     url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/213649/image/1573933327138'
 contacte:
-  - text: Pau
+  - email: e@mail.com
+    text: Pau
 ---
 
