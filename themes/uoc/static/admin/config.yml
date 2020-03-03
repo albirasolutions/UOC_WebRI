@@ -2628,7 +2628,7 @@ collections: # A list of collections the CMS should be able to edit
     filter: {field: language , value: "ca"}
     fields:
       - {label: Nom, name: title, widget: string}
-      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
+      - {label: Language, name: language, widget : hidden, default: "ca"}            
       - {label: "Destacat", name: "destacat", widget: "boolean", default: false, required: true}
       - {label: "Data", name: "date", widget: datetime, required: true}
       - label: General
@@ -2658,7 +2658,7 @@ collections: # A list of collections the CMS should be able to edit
     filter: {field: language , value: "es"}
     fields:
       - {label: Nom, name: title, widget: string}
-      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
+      - {label: Language, name: language, widget : hidden, default: "es"}           
       - {label: "Destacat", name: "destacat", widget: "boolean", default: false, required: true}
       - {label: "Data", name: "date", widget: datetime, required: true}
       - label: General
@@ -2688,7 +2688,7 @@ collections: # A list of collections the CMS should be able to edit
     filter: {field: language , value: "en"}
     fields:
       - {label: Nom, name: title, widget: string}
-      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
+      - {label: Language, name: language, widget : hidden, default: "en"}       
       - {label: "Destacat", name: "destacat", widget: "boolean", default: false, required: true}
       - {label: "Data", name: "date", widget: datetime, required: true}
       - label: General
@@ -2718,7 +2718,7 @@ collections: # A list of collections the CMS should be able to edit
     filter: {field: language , value: "ca"}
     fields:
       - {label: Nom, name: title, widget: string}
-      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
+      - {label: Language, name: language, widget : hidden, default: "ca"}       
       - {label: "Detacat", name: "destacat", widget: "boolean", default: false, required: true}
       - {label: "Quan", name: "date", widget: datetime, required: true}
       - label: General
@@ -2742,7 +2742,7 @@ collections: # A list of collections the CMS should be able to edit
     filter: {field: language , value: "es"}
     fields:
       - {label: Nom, name: title, widget: string}
-      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
+      - {label: Language, name: language, widget : hidden, default: "es"}       
       - {label: "Detacat", name: "destacat", widget: "boolean", default: false, required: true}
       - {label: "Quan", name: "date", widget: datetime, required: true}
       - label: General
@@ -2766,7 +2766,7 @@ collections: # A list of collections the CMS should be able to edit
     filter: {field: language , value: "en"}
     fields:
       - {label: Nom, name: title, widget: string}
-      - {label: Idioma, name: language, widget: select, options: ["ca","es","en"],default: "ca"}       
+      - {label: Language, name: language, widget : hidden, default: "en"}       
       - {label: "Detacat", name: "destacat", widget: "boolean", default: false, required: true}
       - {label: "Quan", name: "date", widget: datetime, required: true}
       - label: General
