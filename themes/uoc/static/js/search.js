@@ -146,32 +146,34 @@ function submitSearch(caller){
 	//Visualitza per checked
 	// FILTRATGE VISUALITZACIO
 	if($(".general-filter.visualitzacio input:checked").length>0){
-		var filtreV = [false,false];
+		$(".collapse.solucions.results").addClass("hidden");
+		$(".collapse.spin.results").addClass("hidden");
+		$(".collapse.fitxa.results").addClass("hidden");
+		$(".collapse.grup.results").addClass("hidden");
+		var filtreV = [];
 		$(".general-filter.visualitzacio input:checked").each(function( index ) {
-			if($(this).val() == "solucions"){
-				filtreV[0] = true;
-			}
-			if($(this).val() == "spin"){
-				filtreV[1] = true;
-			}
-
+			filtreV[index] = $(this).val();
 		});
-		if( filtreV[0] && !filtreV[1] ){
-			console.log(filtreV);
+		if(filtreV.includes("solucions")){
 			$(".collapse.solucions.results").removeClass("hidden");
-			$(".collapse.spin.results").addClass("hidden");
-		}else if( !filtreV[0] && filtreV[1] ){
-			$(".collapse.spin.results").removeClass("hidden");
-			$(".collapse.solucions.results").addClass("hidden");
-		}else{
-			$(".collapse.solucions.results").removeClass("hidden");
+		}
+		if(filtreV.includes("spin")){
 			$(".collapse.spin.results").removeClass("hidden");
 		}
-		
+		if(filtreV.includes("fitxa")){
+			$(".collapse.fitxa.results").removeClass("hidden");
+		}
+		if(filtreV.includes("grup")){
+			$(".collapse.grup.results").removeClass("hidden");
+		}
+
+		console.log(filtreV);
 	}else{
 		$(".collapse.solucions.results").removeClass("hidden");
 		$(".collapse.spin.results").removeClass("hidden");
-	}
+		$(".collapse.fitxa.results").removeClass("hidden");
+		$(".collapse.grup.results").removeClass("hidden");
+	}	
 
 }
 
