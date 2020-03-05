@@ -2,19 +2,19 @@
 title: alfa
 language: ca
 general:
-  centre: Estudis
+  sector: Educació - eLearning
   img_background: /img/0a5e3d8399408516a201716607daee9dc776694d.png
   keywords:
     - value: lorem
     - value: ipsum
   logo: /img/speakapplogo.png
   nom: SpeakApps
-  sector: Educació - eLearning
-  slogan: Faig una prova
   text_breu: Eines i activitats per a l’aprenentatge oral de les llengües
+  centre: Estudis
   xarxes:
     - address: 'http://speakapps.rdi.uoc.edu/'
       xarxa: web
+  slogan: 'Faig una prova '
 about:
   - descripcio: >-
       SpeakApps representa una solució innovadora per a l’ensenyament d’idiomes
@@ -109,4 +109,3 @@ contacte:
     text: SpeakApps
     video: YlzE09OlwNU
 ---
-
