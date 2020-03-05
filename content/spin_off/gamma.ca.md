@@ -64,24 +64,6 @@ clients:
       interdum.
     docs_rels: []
     titol: Client
-casos_exit:
-  - descripcio: >-
-      Ut venenatis tellus in metus vulputate eu. Consectetur adipiscing elit
-      pellentesque habitant. Augue interdum velit euismod in. Sit amet cursus
-      sit amet dictum sit amet. Risus commodo viverra maecenas accumsan lacus.
-      Facilisis volutpat est velit egestas dui id ornare arcu. Augue eget arcu
-      dictum varius duis at. Eu scelerisque felis imperdiet proin fermentum leo
-      vel orci porta. Eget arcu dictum varius duis at consectetur lorem donec
-      massa. Mattis molestie a iaculis at erat pellentesque adipiscing. Quis
-      viverra nibh cras pulvinar. Habitant morbi tristique senectus et. Vitae et
-      leo duis ut. Ligula ullamcorper malesuada proin libero nunc consequat
-      interdum.
-
-
-      ![](/img/131-mesures-igualtat-genere-bandera.png)
-    img: /img/241-projectes-estatals-recerca-logo.jpg
-    titol: CAs 1
-    url_success: 'http://webri.albira.io/ca/index.html'
 grups_recerca:
   - id: '6002'
     name: MeL
@@ -97,4 +79,15 @@ investigadors:
     name: 'Rotger Cerdà, Neus'
     url: 'https://talent.am.pre.uoc.es/ca/rotger-cerda-neus.html'
     url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/526373/image/1573926566251'
+contacte:
+  - address: 'adreça '
+    email: e@mail.com
+    image: 'https://talent.am.pre.uoc.es/img/api/pdi/665775/image/1573925440895'
+    telefon: '123456789'
+    text: Pere
+  - address: 'adreça '
+    email: e@mail.com
+    telefon: '123456789'
+    text: Pere
+    video: qtIqKaDlqXo
 ---
