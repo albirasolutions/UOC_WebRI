@@ -10,7 +10,7 @@ general:
   nom: Gamma
   sector: Salut - eHealth
   slogan: Eslògan gamma
-  text_breu: text gamma
+  text_breu: 'text gamma '
   xarxes:
     - address: twitter.com/UOCuniversitat
       xarxa: twitter
