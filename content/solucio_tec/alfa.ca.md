@@ -108,10 +108,10 @@ investigadors:
     name: 'Creus Quinteros, Amalia Susana'
     url: 'https://talent.am.pre.uoc.es/ca/creus-quinteros-amalia-susana.html'
     url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/665775/image/1573925440895'
-  - id: '14225202'
-    name: 'Baraza Sánchez, Xavier'
-    url: 'https://talent.am.pre.uoc.es/ca/xavier-baraza-sanchez.html'
-    url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/142252/image/1573926396022'
+  - id: '19929902'
+    name: 'Marco Simó, Josep Maria'
+    url: 'https://talent.am.pre.uoc.es/ca/josep-maria-marco-simo.html'
+    url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/199299/image/1574954315497'
 contacte:
   - address: Adreça
     email: transfer_ari@uoc.edu
