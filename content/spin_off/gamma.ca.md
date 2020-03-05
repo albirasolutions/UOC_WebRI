@@ -82,19 +82,4 @@ casos_exit:
     img: /img/241-projectes-estatals-recerca-logo.jpg
     titol: CAs 1
     url_success: 'http://webri.albira.io/ca/index.html'
-grups_recerca:
-  - description: Management & eLearning
-    id: '6002'
-    name: MeL
-    url: 'https://transfer-research.am.pre.uoc.es/ca/mel.html'
-    url_img: >-
-      https://transfer-research.am.pre.uoc.es/img/api/grupsrecerca/60/image/1573920260582
-investigadors:
-  - id: '42444002'
-    name: 'Prado Fonts, Carles'
-    url: 'https://talent.am.pre.uoc.es/ca/prado-fonts-carles.html'
-  - id: '52637302'
-    name: 'Rotger Cerdà, Neus'
-    url: 'https://talent.am.pre.uoc.es/ca/rotger-cerda-neus.html'
-    url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/526373/image/1573926566251'
 ---
