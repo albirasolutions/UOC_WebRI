@@ -104,10 +104,10 @@ aplicacions:
     titol: Aplicacions
 grups_recerca: []
 investigadors:
-  - id: '36584502'
-    name: 'Canadell Rusiñol, Roger'
-    url: 'https://talent.am.pre.uoc.es/ca/roger-canadell-rusinol.html'
-    url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/365845/image/1580574190520'
+  - id: '66577502'
+    name: 'Creus Quinteros, Amalia Susana'
+    url: 'https://talent.am.pre.uoc.es/ca/creus-quinteros-amalia-susana.html'
+    url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/665775/image/1573925440895'
 contacte:
   - address: Adreça
     email: transfer_ari@uoc.edu
