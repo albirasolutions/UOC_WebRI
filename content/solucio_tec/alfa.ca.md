@@ -14,7 +14,7 @@ general:
   xarxes:
     - address: 'http://speakapps.rdi.uoc.edu/'
       xarxa: web
-  slogan: 'Faig una prova '
+  slogan: Faig una prova
 about:
   - descripcio: >-
       SpeakApps representa una solució innovadora per a l’ensenyament d’idiomes
