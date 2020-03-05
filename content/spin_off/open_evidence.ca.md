@@ -15,7 +15,7 @@ general:
     món.
   text_breu: >-
     Recerca i consultoria que es troba a la intersecció de la tecnologia i la
-    societat
+    societat 
   xarxes:
     - address: 'https://open-evidence.com/'
       xarxa: facebook
@@ -92,4 +92,3 @@ about:
       * Estudi sobre l’ús de tecnologies socials en petites i mitjanes empreses.
     titol: Sobre
 ---
-
