@@ -108,10 +108,10 @@ investigadors:
     name: 'Creus Quinteros, Amalia Susana'
     url: 'https://talent.am.pre.uoc.es/ca/creus-quinteros-amalia-susana.html'
     url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/665775/image/1573925440895'
-  - id: '19929902'
-    name: 'Marco Simó, Josep Maria'
-    url: 'https://talent.am.pre.uoc.es/ca/josep-maria-marco-simo.html'
-    url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/199299/image/1574954315497'
+  - id: '22767902'
+    name: 'Martínez Argüelles, M. Jesús'
+    url: 'https://talent.am.pre.uoc.es/ca/martinez-arguelles-m-jesus.html'
+    url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/227679/image/1573926296104'
 contacte:
   - address: Adreça
     email: transfer_ari@uoc.edu
