@@ -108,10 +108,10 @@ investigadors:
     name: 'Creus Quinteros, Amalia Susana'
     url: 'https://talent.am.pre.uoc.es/ca/creus-quinteros-amalia-susana.html'
     url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/665775/image/1573925440895'
-  - id: '22447502'
-    name: 'Minguillón Alfonso, Julià'
-    url: 'https://talent.am.pre.uoc.es/ca/julia-minguillon-alfonso.html'
-    url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/224475/image/1571905804511'
+  - id: '42444002'
+    name: 'Prado Fonts, Carles'
+    url: 'https://talent.am.pre.uoc.es/ca/prado-fonts-carles.html'
+    url_img: ''
 contacte:
   - address: Adreça
     email: transfer_ari@uoc.edu
