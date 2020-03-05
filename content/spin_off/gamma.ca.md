@@ -82,13 +82,6 @@ casos_exit:
     img: /img/241-projectes-estatals-recerca-logo.jpg
     titol: CAs 1
     url_success: 'http://webri.albira.io/ca/index.html'
-grups_recerca:
-  - id: '6002'
-    name: MeL
-    description: Management & eLearning
-    url: 'https://transfer-research.am.pre.uoc.es/ca/mel.html'
-    url_img: >-
-      https://transfer-research.am.pre.uoc.es/img/api/grupsrecerca/60/image/1573920260582
 investigadors:
   - id: '42444002'
     name: 'Prado Fonts, Carles'
