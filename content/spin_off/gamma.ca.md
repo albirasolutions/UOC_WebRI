@@ -35,34 +35,6 @@ about:
     docs_rels:
       - file: /img/informe_disseny_web_r_i.pdf
     titol: Sobre spin off gamma
-productes_serveis:
-  - descripcio: >-
-      Ut venenatis tellus in metus vulputate eu. Consectetur adipiscing elit
-      pellentesque habitant. Augue interdum velit euismod in. Sit amet cursus
-      sit amet dictum sit amet. Risus commodo viverra maecenas accumsan lacus.
-      Facilisis volutpat est velit egestas dui id ornare arcu. Augue eget arcu
-      dictum varius duis at. Eu scelerisque felis imperdiet proin fermentum leo
-      vel orci porta. Eget arcu dictum varius duis at consectetur lorem donec
-      massa. Mattis molestie a iaculis at erat pellentesque adipiscing. Quis
-      viverra nibh cras pulvinar. Habitant morbi tristique senectus et. Vitae et
-      leo duis ut. Ligula ullamcorper malesuada proin libero nunc consequat
-      interdum.
-    docs_rels:
-      - file: /img/prova2.pdf
-    titol: productes serveis spin off gamma
-clients:
-  - descripcio: >-
-      Ut venenatis tellus in metus vulputate eu. Consectetur adipiscing elit
-      pellentesque habitant. Augue interdum velit euismod in. Sit amet cursus
-      sit amet dictum sit amet. Risus commodo viverra maecenas accumsan lacus.
-      Facilisis volutpat est velit egestas dui id ornare arcu. Augue eget arcu
-      dictum varius duis at. Eu scelerisque felis imperdiet proin fermentum leo
-      vel orci porta. Eget arcu dictum varius duis at consectetur lorem donec
-      massa. Mattis molestie a iaculis at erat pellentesque adipiscing. Quis
-      viverra nibh cras pulvinar. Habitant morbi tristique senectus et. Vitae et
-      leo duis ut. Ligula ullamcorper malesuada proin libero nunc consequat
-      interdum.
-    titol: Client
 grups_recerca:
   - id: '6002'
     name: MeL
