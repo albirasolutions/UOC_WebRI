@@ -83,9 +83,9 @@ casos_exit:
     titol: CAs 1
     url_success: 'http://webri.albira.io/ca/index.html'
 grups_recerca:
-  - description: Management & eLearning
-    id: '6002'
+  - id: '6002'
     name: MeL
+    description: Management & eLearning
     url: 'https://transfer-research.am.pre.uoc.es/ca/mel.html'
     url_img: >-
       https://transfer-research.am.pre.uoc.es/img/api/grupsrecerca/60/image/1573920260582
@@ -97,4 +97,15 @@ investigadors:
     name: 'Rotger Cerdà, Neus'
     url: 'https://talent.am.pre.uoc.es/ca/rotger-cerda-neus.html'
     url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/526373/image/1573926566251'
+contacte:
+  - address: 'adreça '
+    email: e@mail.com
+    image: 'https://talent.am.pre.uoc.es/img/api/pdi/665775/image/1573925440895'
+    telefon: '123456789'
+    text: Pere
+  - address: 'adreça '
+    email: e@mail.com
+    telefon: '123456789'
+    text: Pere
+    video: qtIqKaDlqXo
 ---
