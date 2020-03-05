@@ -10,7 +10,7 @@ general:
   nom: Gamma
   sector: Salut - eHealth
   slogan: Eslògan gamma
-  text_breu: 'text gamma '
+  text_breu: text gamma
   xarxes:
     - address: twitter.com/UOCuniversitat
       xarxa: twitter
@@ -88,6 +88,10 @@ grups_recerca:
     url: 'https://transfer-research.am.pre.uoc.es/ca/mel.html'
     url_img: >-
       https://transfer-research.am.pre.uoc.es/img/api/grupsrecerca/60/image/1573920260582
+investigadors:
+  - id: '42444002'
+    name: 'Prado Fonts, Carles'
+    url: 'https://talent.am.pre.uoc.es/ca/prado-fonts-carles.html'
 contacte:
   - address: 'adreça '
     email: e@mail.com
