@@ -93,6 +93,10 @@ investigadors:
     name: 'Marco Simó, Josep Maria'
     url: 'https://talent.am.pre.uoc.es/ca/josep-maria-marco-simo.html'
     url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/199299/image/1574954315497'
+  - id: '19934002'
+    name: 'Cobarsí Morales, Josep'
+    url: 'https://talent.am.pre.uoc.es/ca/josep-cobarsi-morales.html'
+    url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/199340/image/1573925681278'
 contacte:
   - address: 'adreça '
     email: e@mail.com
