@@ -102,6 +102,8 @@ aplicacions:
     docs_rels:
       - file: /img/uocs_videowatermarkingsystem_brochure.pdf
     titol: Aplicacions
+grups_recerca: []
+investigadors: []
 contacte:
   - address: Adreça
     email: transfer_ari@uoc.edu
