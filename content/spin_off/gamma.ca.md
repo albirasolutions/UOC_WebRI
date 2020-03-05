@@ -100,7 +100,6 @@ investigadors:
 contacte:
   - address: 'adreça '
     email: e@mail.com
-    image: 'https://talent.am.pre.uoc.es/img/api/pdi/665775/image/1573925440895'
     telefon: '123456789'
     text: Pere
   - address: 'adreça '
