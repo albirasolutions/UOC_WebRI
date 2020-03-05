@@ -102,6 +102,7 @@ aplicacions:
     docs_rels:
       - file: /img/uocs_videowatermarkingsystem_brochure.pdf
     titol: Aplicacions
+grups_recerca: []
 investigadors:
   - id: '66577502'
     name: 'Creus Quinteros, Amalia Susana'
