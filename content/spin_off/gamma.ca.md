@@ -14,27 +14,6 @@ general:
   xarxes:
     - address: twitter.com/UOCuniversitat
       xarxa: twitter
-about:
-  - descripcio: >-
-      Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Viverra
-      tellus in hac habitasse platea dictumst vestibulum. Justo eget magna
-      fermentum iaculis eu non diam. A iaculis at erat pellentesque adipiscing
-      commodo elit. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus.
-      At elementum eu facilisis sed odio morbi. Commodo nulla facilisi nullam
-      vehicula ipsum. Tellus rutrum tellus pellentesque eu tincidunt. Ipsum
-      dolor sit amet consectetur adipiscing elit pellentesque habitant morbi.
-      Duis ultricies lacus sed turpis tincidunt id aliquet risus. Ultrices
-      tincidunt arcu non sodales neque sodales. Cursus metus aliquam eleifend mi
-      in nulla posuere sollicitudin aliquam. Vitae sapien pellentesque habitant
-      morbi tristique senectus et netus et. Nibh nisl condimentum id venenatis a
-      condimentum vitae sapien. Tellus in metus vulputate eu. Sed odio morbi
-      quis commodo odio. Et pharetra pharetra massa massa ultricies.
-
-
-      ![](/img/131-mesures-igualtat-genere-bandera.png)
-    docs_rels:
-      - file: /img/informe_disseny_web_r_i.pdf
-    titol: Sobre spin off gamma
 grups_recerca:
   - id: '6002'
     name: MeL
