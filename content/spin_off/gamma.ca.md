@@ -88,7 +88,11 @@ grups_recerca:
     url: 'https://transfer-research.am.pre.uoc.es/ca/mel.html'
     url_img: >-
       https://transfer-research.am.pre.uoc.es/img/api/grupsrecerca/60/image/1573920260582
-investigadors: []
+investigadors:
+  - id: '19929902'
+    name: 'Marco Simó, Josep Maria'
+    url: 'https://talent.am.pre.uoc.es/ca/josep-maria-marco-simo.html'
+    url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/199299/image/1574954315497'
 contacte:
   - address: 'adreça '
     email: e@mail.com
