@@ -103,7 +103,11 @@ aplicacions:
       - file: /img/uocs_videowatermarkingsystem_brochure.pdf
     titol: Aplicacions
 grups_recerca: []
-investigadors: []
+investigadors:
+  - id: '36584502'
+    name: 'Canadell Rusiñol, Roger'
+    url: 'https://talent.am.pre.uoc.es/ca/roger-canadell-rusinol.html'
+    url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/365845/image/1580574190520'
 contacte:
   - address: Adreça
     email: transfer_ari@uoc.edu
