@@ -23,7 +23,7 @@
             {{ range first 1 (where (where .Site.Pages.ByDate.Reverse ".Params.destacat" true) ".Params.language" .Site.Language.Lang)}}
             <div class=" col-md-9 col-xs-9 ">
                 
-                <div class="bg-simple img-wpr img-wpr--horizontal img--tint link-trigger">
+                <div class="bg-simple img-wpr img-wpr--horizontal img--tint link-trigger" aria-label="link">
                     
                     {{ with .Params.general.img}}<img src="{{.}}" class="img-wpr__cover" alt="">{{end}}
                     <a href="{{.Permalink}}"></a>
@@ -36,8 +36,7 @@
                     </div>
                     <div class="img-wpr__contents_no-bg"  style="bottom: .5rem;">
                         <div class="row">
-                            <div class="float-right p-right-x text-small inverse">{{if eq .Type "noticia" }}{{ T "uoc_ri_noticia" }}{{else}}{{ T "uoc_ri_esdeveniment" }}{{end}}
-                            </div>
+                            <span class="float-right p-right-x text-small inverse" aria-label="tag">{{if eq .Type "noticia" }}{{ T "uoc_ri_noticia" }}{{else}}{{ T "uoc_ri_esdeveniment" }}{{end}}</span>
                         </div>
                     </div>
                 </div>
