@@ -21,12 +21,12 @@
             </div>
 
             {{ range first 1 (where (where .Site.Pages.ByDate.Reverse ".Params.destacat" true) ".Params.language" .Site.Language.Lang)}}
-            <div class=" col-md-9 col-xs-9">
-                <a href="{{.Permalink}}" class="default-link">
-                <div class="bg-simple img-wpr img-wpr--horizontal img--tint">
+            <div class=" col-md-9 col-xs-9 ">
+                
+                <div class="bg-simple img-wpr img-wpr--horizontal img--tint link-trigger">
                     
                     {{ with .Params.general.img}}<img src="{{.}}" class="img-wpr__cover" alt="">{{end}}
-
+                    <a href="{{.Permalink}}" class="img-wrap-link"></a>
                     <div class="img-wpr__contents_no-bg">
                         <div class="row">
                             <div class="col-md-7">
@@ -40,7 +40,7 @@
                             </div>
                         </div>
                     </div>
-                </div></a>
+                </div>
             </div>
             {{end}}
 

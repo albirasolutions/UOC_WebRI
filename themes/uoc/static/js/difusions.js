@@ -89,3 +89,8 @@ function initPagination(dataset) {
 	    pageRange: 1
 	});	
 }
+
+$(".link-trigger").click(function() {
+    window.location = $(this).find("a").attr("href");
+    return false;
+});
