@@ -18,7 +18,7 @@ phases:
       - echo "Finished renaming language files"
   build:
     commands:
-      - env HUGO_PARAMS_CB_URL_BADGE="${CB_URL_BADGE}" hugo --environment ${ENV}
+      - env HUGO_PARAMS_CB_URL_BADGE=${CB_URL_BADGE} hugo --environment ${ENV}
       - node ./bin/update-netlify-config.js
       - cd public/ && loose-envify ./admin/main.js > updated-main.js && mv updated-main.js main.js
       - |
