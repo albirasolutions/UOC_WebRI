@@ -201,26 +201,28 @@
 									<h2><a href="#collapse3" aria-expanded="true" class="js-collapseClick">{{ T "uoc_ri_home_difusions" }}<span class="icon icon--arrow-down"></span></a></h2>
 								</div>
 								<div id="collapse3" class="contentCollapse show">
+										{{ $.Scratch.Set "idx" 1 }}
 										{{ range first 4 (where (where .Site.Pages.ByDate ".Params.destacat" true) ".Params.language" .Site.Language.Lang)}}
 										
 
 										<div class="col-xs-12 col-md-3 difusionsHomeList" role="region">
                 
-											<div class="card" aria-label="link" >
-												<a href="{{.Permalink}}" class="card-absolute-link"></a>
+											<div class="card">
+												<a href="{{.Permalink}}" aria-labelledby='x{{$.Scratch.Get "idx"}}' class="card-absolute-link" aria-hidden="true"></a>
 												<div class="card__image">
 													<img src="{{with .Params.general.img}}{{.}}{{end}}" alt="">
 												</div>
 												<div class="card__contents" >
-													<h3 class="h5 text font-alternate">{{.Params.general.titol}}</h3>
+													<h3 class="h5 text font-alternate">{{.Params.general.titol}}</h3><a id='x{{$.Scratch.Get "idx"}}' href="{{.Permalink}}"><span class="hidden">External link</span></a>
 													{{ with .Params.general.entrada}}<p class="text-small text font-alternate"><blockquote class="pullquote">{{.}}</blockquote></p>{{end}}
 												</div>
 												<div class="card__footer">
 													<span class="float-left p-left-x  icon icon--external-link" aria-hidden="true"></span>
-													<span class="float-right p-right-x" aria-label="tag">{{if eq .Type "noticia" }}{{ T "uoc_ri_noticia" }}{{else}}{{ T "uoc_ri_esdeveniment" }}{{end}}</span>
+													<span class="float-right p-right-x"><span class="hidden">Tag</span>{{if eq .Type "noticia" }}{{ T "uoc_ri_noticia" }}{{else}}{{ T "uoc_ri_esdeveniment" }}{{end}}</span>
 												</div>
 											</div>
 										</div>
+										{{ $.Scratch.Set "idx" (add ($.Scratch.Get "idx") 1) }}
 										{{ end }}
 								</div>
 							</div>
