@@ -9,6 +9,7 @@ general:
   sector: Educació - eLearning
   centre: Estudis
   logo: /img/logo_speakapps.png
+  keywords: []
 about:
   - descripcio: >-
       <!--StartFragment-->
