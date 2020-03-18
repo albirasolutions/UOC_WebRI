@@ -1,16 +1,16 @@
 ---
-title: Smart Logistics
+title: Smart Logistics 1
 language: ca
 general:
   centre: Estudis
   img_background: /img/35163823714_5988ddfcaa_w.jpg
-  nom: Smart Logistics
+  nom: Smart Logistics 2
   sector: 'Economia, empresa i TIC'
   slogan: >-
     Smart Logistics: Integració d’algorismes metaheurístics amb resultats de
     simulació per a generar solucions pseudoòptimes en la presa de decisions en
     problemes complexos en condicions d’incertesa
-  text_breu: 'prova subtitol '
+  text_breu: Smart logístics 3
 aspectes_innovadors:
   - descripcio: >-
       L’aplicació de la tecnologia permet obtenir solucions que proporcionin:
