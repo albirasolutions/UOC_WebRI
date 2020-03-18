@@ -54,7 +54,7 @@ about:
       <!--EndFragment-->
     titol: Sobre la patent
     video_list:
-      - video: T9V4-oY-m6E&feature
+      - video: T9V4-oY-m6E
     docs_rels:
       - file: /img/uocs_videowatermarkingsystem_brochure.pdf
 aplicacions:
