@@ -4,8 +4,8 @@ language: ca
 general:
   nom: eLearnCOURT
   text_breu: >-
-    eLearnCOURT: Eina per a l’aprenentatge en línia de la negociació, la
-    mediació, la conciliació i l’arbitratge
+    Eina per a l’aprenentatge en línia de la negociació, la mediació, la
+    conciliació i l’arbitratge
   img_background: /img/eleancourt_1.jpg
   sector: Educació - eLearning
   centre: Estudis
