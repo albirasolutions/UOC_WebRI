@@ -106,6 +106,13 @@ aplicacions:
 
       <!--EndFragment-->
     titol: Smartclocks
+grups_recerca:
+  - id: '2202'
+    name: GADE
+    description: 'eGovernança: administració i democràcia electrònica'
+    url: 'https://transfer-research.am.pre.uoc.es/ca/gade.html'
+    url_img: >-
+      https://transfer-research.am.pre.uoc.es/img/api/grupsrecerca/22/image/1581319786424
 investigadors:
   - id: '19929902'
     name: 'Marco Simó, Josep Maria'
