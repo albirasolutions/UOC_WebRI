@@ -60,12 +60,16 @@ about:
       <!--EndFragment-->
 
 
+      <!--StartFragment-->
 
 
-      Titularitat: UOC
+      ***Patent no. PCT/EP2016/067541***
 
 
-      Data de prioritat: 22/07/16
+      ***Titularitat: UOC***
+
+
+      ***Data de prioritat: 22/07/16***
     titol: Smartclocks
     video_list:
       - video: SKJj1810Xtc
