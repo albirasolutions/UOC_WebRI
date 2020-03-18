@@ -8,10 +8,9 @@ general:
   sector: 'Economia, empresa i TIC'
   centre: IN3
   slogan: >-
-    És reversible el teu sistema de marcatge de vídeo? La nostra solució en
-    temps real garanteix la transmissió i l’emmagatzematge de contingut
-    multimèdia sense alterar la velocitat de transferència de dades o el
-    contingut visible per al públic.
+    La nostra solució en temps real garanteix la transmissió i l’emmagatzematge
+    de contingut multimèdia sense alterar la velocitat de transferència de dades
+    o el contingut visible per al públic.
 about:
   - descripcio: >-
       Patent no. PCT/EP2017/057426
