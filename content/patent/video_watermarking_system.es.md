@@ -3,7 +3,7 @@ title: Video Watermarking System
 language: es
 general:
   nom: Video Watermarking System
-  text_breu: '¿Es reversible tu sistema de marcaje de vídeo? '
+  text_breu: Video Watermarking System
   slogan: >-
     ¿Es reversible tu sistema de marcaje de vídeo? Nuestra solución en tiempo
     real garantiza la transmisión y el almacenamiento de contenido multimedia
