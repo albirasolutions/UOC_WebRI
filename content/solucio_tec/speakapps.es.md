@@ -10,6 +10,9 @@ general:
   centre: Estudis
   logo: /img/logo_speakapps.png
   keywords: []
+  xarxes:
+    - address: '  http://speakapps.rdi.uoc.edu/'
+      xarxa: web
 about:
   - descripcio: >-
       <!--StartFragment-->
