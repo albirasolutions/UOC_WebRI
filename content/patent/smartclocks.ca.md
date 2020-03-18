@@ -1,8 +1,8 @@
 ---
-title: SMARTCLOCKS
+title: Nom SMARTCLOCKS
 language: ca
 general:
-  nom: SMARTCLOCKS
+  nom: Titol SMARTCLOCKS
   text_breu: >-
     Fes que les teves xarxes IoT estiguin perfectament sincronitzades eliminant
     fonts de temps externes (GPS) i comunicacions dedicades a la sincronització
