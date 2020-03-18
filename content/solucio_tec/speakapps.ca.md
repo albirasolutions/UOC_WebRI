@@ -3,7 +3,7 @@ title: SpeakApps
 language: ca
 general:
   nom: 'SpeakApps: eines i activitats per a l’aprenentatge oral de les llengües'
-  logo: /img/logo_speakapps.png
+  logo: /img/logo_petit.png
   sector: Educació - eLearning
   centre: Estudis
   img_background: /img/detall_solucions_principal.png
