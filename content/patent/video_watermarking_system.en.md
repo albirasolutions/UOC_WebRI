@@ -50,7 +50,7 @@ about:
       <!--EndFragment-->
     titol: Prova titol patent
     video_list:
-      - video: 66HAlT3XLQrp2VKg
+      - video: v=T9V4-oY-m6E
     docs_rels:
       - file: /img/uocs_videowatermarkingsystem_brochure.pdf
 aspectes_innovadors: []
