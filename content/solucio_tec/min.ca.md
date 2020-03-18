@@ -4,9 +4,9 @@ language: ca
 general:
   centre: Estudis
   img_background: /img/marvin-meyer-syto3xs06fu-unsplash.jpg
-  nom: min
+  nom: test
   sector: Educació - eLearning
-  text_breu: 'test'
+  text_breu: ''
   xarxes:
     - address: 'https://www.facebook.com/UOC.universitat'
       xarxa: facebook
@@ -15,4 +15,3 @@ general:
     - address: 'https://www.google.com'
       xarxa: web
 ---
-
