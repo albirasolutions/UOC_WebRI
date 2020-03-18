@@ -146,6 +146,5 @@ investigadors:
     url: 'https://talent.am.pre.uoc.es/ca/santi-caballe-llobet.html'
     url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/138276/image/1572253930175'
 contacte:
-  - text: Gracia Puigdevall Gómez
-    email: gracia.puigdevall@gmail.com
+  - email: transfer_ari@uoc.edu
 ---
