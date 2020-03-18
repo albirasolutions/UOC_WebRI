@@ -3,7 +3,7 @@ title: Video Watermarking System
 language: ca
 general:
   nom: Video Watermarking System
-  text_breu: És reversible el teu sistema de marcatge de vídeo?
+  text_breu: 'És reversible el teu sistema de marcatge de vídeo? '
   img_background: /img/video_watermaking.png
   sector: 'Economia, empresa i TIC'
   centre: IN3
