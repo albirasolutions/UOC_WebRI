@@ -52,7 +52,7 @@ about:
 
 
       <!--EndFragment-->
-    titol: Sobre la tecnologia
+    titol: Prova títol Sobre la tecnologia
 aspectes_innovadors:
   - descripcio: >-
       <!--StartFragment-->
