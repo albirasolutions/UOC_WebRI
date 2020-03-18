@@ -10,6 +10,8 @@ general:
   xarxes:
     - address: ' http://speakapps.rdi.uoc.edu/'
       xarxa: web
+  text_breu: Prova subtitol
+  slogan: Prova slogan
 about:
   - descripcio: >-
       <!--StartFragment-->
