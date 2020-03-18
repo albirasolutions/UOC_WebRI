@@ -91,4 +91,16 @@ about:
 
       * Estudi sobre l’ús de tecnologies socials en petites i mitjanes empreses.
     titol: Sobre
+productes_serveis:
+  - titol: Open Evidence
+    descripcio: >-
+      Open Evidence s’adreça al sector públic i privat d’àmbit internacional.
+      Entre els seus clients hi ha organismes com la Comissió Europea; entitats
+      sense ànim de lucre, com la Fundació Jaume Bofill, i institucions
+      públiques, com el Departament de Desenvolupament i Cohesió Econòmica
+      (Ministeri de Foment, Itàlia).
+clients: []
+contacte:
+  - email: info@open-evidence.com
+    text: Open Evidence
 ---
