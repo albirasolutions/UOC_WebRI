@@ -121,6 +121,6 @@ investigadors:
     url: 'https://talent.am.pre.uoc.es/ca/xavier-baraza-sanchez.html'
     url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/142252/image/1573926396022'
 contacte:
-  - text: 'Knowledge, transfer& entrepreneurship'
+  - text: 'Knowledge, transfer& entrepreneurship Unit'
     email: transfer_ari@uoc.edu
 ---
