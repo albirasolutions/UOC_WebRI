@@ -10,7 +10,7 @@ general:
     Smart Logistics: Integració d’algorismes metaheurístics amb resultats de
     simulació per a generar solucions pseudoòptimes en la presa de decisions en
     problemes complexos en condicions d’incertesa
-  text_breu: ''
+  text_breu: 'prova subtitol '
 aspectes_innovadors:
   - descripcio: >-
       L’aplicació de la tecnologia permet obtenir solucions que proporcionin:
@@ -60,4 +60,3 @@ aplicacions:
       dinàmiques en gestió d’aparcaments, etc.
     titol: text
 ---
-
