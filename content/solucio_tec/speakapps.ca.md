@@ -2,7 +2,7 @@
 title: SpeakApps
 language: ca
 general:
-  nom: 'SpeakApps: eines i activitats per a l’aprenentatge oral de les llengües'
+  nom: SpeakApps
   logo: /img/logo_petit.png
   sector: Educació - eLearning
   centre: Estudis
@@ -10,7 +10,7 @@ general:
   xarxes:
     - address: ' http://speakapps.rdi.uoc.edu/'
       xarxa: web
-  text_breu: Prova subtitol
+  text_breu: 'SpeakApps:eines i activitats per a l’aprenentatge oral de les llengües'
   slogan: Prova slogan
 about:
   - descripcio: >-
