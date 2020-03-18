@@ -18,7 +18,7 @@ general:
     societat 
   xarxes:
     - address: 'https://open-evidence.com/'
-      xarxa: facebook
+      xarxa: web
 about:
   - descripcio: >-
       Els professionals d’Open Evidence són professors, investigadors i
