@@ -7,6 +7,9 @@ general:
   sector: Educació - eLearning
   centre: Estudis
   img_background: /img/detall_solucions_principal.png
+  xarxes:
+    - address: ' http://speakapps.rdi.uoc.edu/'
+      xarxa: web
 about:
   - descripcio: >-
       <!--StartFragment-->
