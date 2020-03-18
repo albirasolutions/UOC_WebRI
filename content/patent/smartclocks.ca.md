@@ -1,8 +1,8 @@
 ---
-title: Nom SMARTCLOCKS
+title: SMARTCLOCKS
 language: ca
 general:
-  nom: Titol SMARTCLOCKS
+  nom: SMARTCLOCKS
   text_breu: >-
     Fes que les teves xarxes IoT estiguin perfectament sincronitzades eliminant
     fonts de temps externes (GPS) i comunicacions dedicades a la sincronització
@@ -10,7 +10,7 @@ general:
   sector: 'Economia, empresa i TIC'
   centre: IN3
   logo: /img/logo_petit_smartclock_.jpg
-  slogan: eslogan obligatori??
+  slogan: eslogan obligatori?
 about:
   - descripcio: >-
       <!--StartFragment-->
@@ -87,7 +87,7 @@ aspectes_innovadors:
 
 
       <!--EndFragment-->
-    titol: 'Títol Aspectes innovadors '
+    titol: Smartclocks
 aplicacions:
   - descripcio: >-
       <!--StartFragment-->
@@ -105,7 +105,7 @@ aplicacions:
 
 
       <!--EndFragment-->
-    titol: Titol aspectes innovadors
+    titol: Smartclocks
 investigadors:
   - id: '19929902'
     name: 'Marco Simó, Josep Maria'
