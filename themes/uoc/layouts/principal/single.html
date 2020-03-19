@@ -213,7 +213,7 @@
 													<img src="{{with .Params.general.img}}{{.}}{{end}}" alt="">
 												</div>
 												<div class="card__contents" >
-													<h3 class="h5 text font-alternate">{{.Params.general.titol}}<a id='x{{$.Scratch.Get "idx"}}' href="{{.Permalink}}"><span class="visually-hidden">External link</span></a></h3>
+													<h3 class="h5 text font-alternate"><a id='x{{$.Scratch.Get "idx"}}' href="{{.Permalink}}">{{.Params.general.titol}}<span class="visually-hidden">{{T "uoc_ri_difusions_link"}}</span></a></h3>
 													{{ with .Params.general.entrada}}<p class="text-small text font-alternate"><blockquote class="pullquote">{{.}}</blockquote></p>{{end}}
 												</div>
 												<div class="card__footer">
