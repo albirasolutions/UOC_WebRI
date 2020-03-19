@@ -23,14 +23,14 @@ function getResultMarkup(difusio, idx){
     var markup='<div class="col-xs-6 col-md-3" role="listitem" data-id="">';
     	
 		markup+='<div class="card">';
-			markup+='<a href="' + difusio.link + '" class="card-absolute-link" aria-hidden="true" aria-labelledby="x'+ idx +' "></a>';
+			markup+='<a href="' + difusio.link + '" class="card-absolute-link" aria-hidden="true" aria-labelledby="x'+ idx +'" tabindex="-1"></a>';
     		markup+='<div class="card__image">';
     			if(difusio.img) markup+='<img src="'+ difusio.img + '" alt="">';
     			markup+='</div>';
     	markup+='<div class="card__contents" >';
-    if(difusio.titol) markup+='<h3 class="h5 text font-alternate">' + difusio.titol + '</h3><a id="x' + idx + '" href="'+ difusio.link +'"><span class="hidden">External link</span></a>'
+    if(difusio.titol) markup+='<h3 class="h5 text font-alternate">' + difusio.titol + '<a id="x' + idx + '" href="'+ difusio.link +'"><span class="visually-hidden">External link</span></a></h3>'
     markup+='</div><div class="card__footer"><span class="float-left p-left-x  icon icon--external-link" aria-hidden="true"></span>';
-	markup+='<span class="float-right p-right-x"><span class="hidden">Tag</span>'+ label +'</span>';
+	markup+='<span class="float-right p-right-x"><span class="visually-hidden">Tag: </span>'+ label +'</span>';
     markup+='</div></div>';
     markup+='</div>';
 
