@@ -30,7 +30,7 @@
                     <div class="img-wpr__contents_no-bg">
                         <div class="row">
                             <div class="col-md-7">
-                                <h3 class=" inverse">{{ with .Params.general.titol}}{{.}}{{end}}<a id="x0" href="{{.Permalink}}"><span class="visually-hidden">External link</span></a></h3>
+                                <h3 class=" inverse"><a id="x0" href="{{.Permalink}}">{{ with .Params.general.titol}}{{.}}{{end}}<span class="visually-hidden">{{T "uoc_ri_difusions_link"}}</span></a></h3>
                             </div>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                         <img src="{{with .Params.general.img}}{{.}}{{end}}" alt="">
                     </div>
                     <div class="card__contents" >
-                        <h3 class="h5 text font-alternate">{{.Params.general.titol}}<a id="x1" href="{{.Permalink}}"><span class="visually-hidden">External link</span></a></h3>
+                        <h3 class="h5 text font-alternate"><a id="x1" href="{{.Permalink}}">{{.Params.general.titol}}<span class="visually-hidden">{{T "uoc_ri_difusions_link"}}</span></a></h3>
                         {{ with .Params.general.entrada}}<p class="text-small text font-alternate"><blockquote class="pullquote">{{.}}</blockquote></p>{{end}}
                     </div>
                     <div class="card__footer">
@@ -96,6 +96,7 @@
         <script type="text/javascript">
             $(".list-difusions .card").matchHeight(); 
             var noticiaLabel = '{{ T "uoc_ri_noticia" }}';
+            var LinkLang = '{{T "uoc_ri_difusions_link"}}';
             var esdevenimentLabel = '{{ T "uoc_ri_esdeveniment" }}';
             var difusionsDestacades = [
                 {{ range (after 2 (where (where .Site.Pages.ByDate.Reverse ".Params.destacat" true) ".Params.language" .Site.Language.Lang))}}
