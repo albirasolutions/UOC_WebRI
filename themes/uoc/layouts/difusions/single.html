@@ -23,7 +23,7 @@
             {{ range first 1 (where (where .Site.Pages.ByDate.Reverse ".Params.destacat" true) ".Params.language" .Site.Language.Lang)}}
             <div class=" col-md-9 col-xs-9" role="region">
                 
-                <div class="bg-simple img-wpr img-wpr--horizontal img--tint link-trigger" aria-label="link">
+                <div class="bg-simple img-wpr img-wpr--horizontal img--tint link-trigger">
                     
                     {{ with .Params.general.img}}<img src="{{.}}" class="img-wpr__cover" alt="">{{end}}
                     <a href="{{.Permalink}}" aria-labelledby="x0" tabindex="-1" aria-hidden="true"></a>
