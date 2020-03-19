@@ -6,7 +6,7 @@ jQuery(document).ready(function ($) {
     allDifusions = allDifusions.concat(restaDifusions);
 
     console.log(allDifusions);
-    var idx=1;
+    var idx=2;
     for(var difusio of allDifusions){
 		difusionsList.push(getResultMarkup(difusio, idx));
 		idx+=1;
