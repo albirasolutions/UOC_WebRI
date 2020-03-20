@@ -2,7 +2,7 @@
 title: epsilon
 language: ca
 general:
-  nom: Patent epsilon
+  nom: Patent epsilonx
   centre: Estudis
   logo: /img/speakapplogo.png
   text_breu: Subtítol epsilon
@@ -10,4 +10,3 @@ general:
   img_background: /img/ods_1.png
   sector: Indústria 4.0
 ---
-
