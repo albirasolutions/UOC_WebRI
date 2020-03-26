@@ -165,15 +165,15 @@
 								<div id="collapse2" class="contentCollapse show">
 									<div class="wrap-richText">
 										<section class="card-home">
-											<div class="row">
+											<div class="row" role="list">
 												{{ range $index, $element := .Params.centres_home }}
-													<div class="col-xs-12 col-md-3 centresHomeList">
-														<a class="card-absolute-link" href="{{$element.url}}" title="{{$element.title}}" aria-hidden='false' target='_blank' aria-labelledby='centresHome_{{$index}}'></a>
+													<div class="col-xs-12 col-md-3 centresHomeList" role="listitem">
+														<a class="card-absolute-link" href="{{$element.url}}" title="{{$element.title}}" aria-hidden='true'  tabindex="-1" target='_blank' aria-labelledby='centresHome_{{$index}}'></a>
 														<div class="card card--brand-corporate">
 															<div class="card__contents">
-																<h3 id="centresHome_{{$index}}">
+																<h3 ><a id="centresHome_{{$index}}" href="{{$element.url}}">
 																	{{$element.title}}
-																</h3>
+																</a></h3>
 																<p>{{$element.description}}</p>
 																<div class="card-link-icon"><span class="icon icon--external-link" aria-hidden="true"></span></div>
 															</div>
