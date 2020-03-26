@@ -660,7 +660,7 @@ collections: # A list of collections the CMS should be able to edit
         fields: 
           - {label: "Títol", name: nom, widget: string, required: true}
           - {label: "Subtítol", name: text_breu, widget: string, required: false}
-          - {label: "Eslògan", name: slogan, widget: string}
+          - {label: "Eslògan", name: slogan, widget: string, required: false}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - label: "Sector"
             name: sector
@@ -833,7 +833,7 @@ collections: # A list of collections the CMS should be able to edit
         fields: 
           - {label: "Títol", name: nom, widget: string, required: true}
           - {label: "Subtítol", name: text_breu, widget: string, required: false}
-          - {label: "Eslògan", name: slogan, widget: string}
+          - {label: "Eslògan", name: slogan, widget: string, required: false}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - label: "Sector"
             name: sector
@@ -1006,7 +1006,7 @@ collections: # A list of collections the CMS should be able to edit
         fields: 
           - {label: "Títol", name: nom, widget: string, required: true}
           - {label: "Subtítol", name: text_breu, widget: string, required: false}
-          - {label: "Eslògan", name: slogan, widget: string}
+          - {label: "Eslògan", name: slogan, widget: string, required: false}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - label: "Sector"
             name: sector
@@ -1569,7 +1569,7 @@ collections: # A list of collections the CMS should be able to edit
         fields: 
           - {label: "Títol", name: nom, widget: string, required: true}
           - {label: "Subtítol", name: text_breu, widget: string, required: false}
-          - {label: "Eslògan", name: slogan, widget: string}
+          - {label: "Eslògan", name: slogan, widget: string, required: false}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - label: "Sector"
             name: sector
@@ -1744,7 +1744,7 @@ collections: # A list of collections the CMS should be able to edit
         fields: 
           - {label: "Títol", name: nom, widget: string, required: true}
           - {label: "Subtítol", name: text_breu, widget: string, required: false}
-          - {label: "Eslògan", name: slogan, widget: string}
+          - {label: "Eslògan", name: slogan, widget: string, required: false}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - label: "Sector"
             name: sector
@@ -1919,7 +1919,7 @@ collections: # A list of collections the CMS should be able to edit
         fields: 
           - {label: "Títol", name: nom, widget: string, required: true}
           - {label: "Subtítol", name: text_breu, widget: string, required: false}
-          - {label: "Eslògan", name: slogan, widget: string}
+          - {label: "Eslògan", name: slogan, widget: string, required: false}
           - {label: "Img Fons", name: "img_background", widget: image, required: true}
           - label: "Sector"
             name: sector
