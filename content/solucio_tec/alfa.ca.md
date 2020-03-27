@@ -115,7 +115,7 @@ investigadors:
 contacte:
   - address: Adreça
     email: transfer_ari@uoc.edu
-    telefon: '1234'
+    telefon: '12345'
     text: SpeakApps
     video: YlzE09OlwNU
 ---
