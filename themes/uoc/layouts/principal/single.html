@@ -57,9 +57,9 @@
 					<div id="tab-content-1" data-tab-content="" role="tabpanel" aria-labelledby="tab-1" aria-hidden="false" class="filters-main__content tab-content cercaFiltres">
 						<form action="" class="radio-accordeon search-form-container">
 							<h4>{{ T "uoc_ri_cercador_cercaper" }}</h4>
-							<div class="radio-collapse-item active">
-								<input role="radiogroup" aria-label="paymentMode" type="radio" name="paymentMode" value="CreditCard" id="creditcard" class="js-payment-mode-radio">
-								<label for="creditcard" class="checkbox-wrapper payment-mode-label">{{ T "uoc_ri_cercador_filtres_ambitsespecialitzacio" }}</label>
+							<div class="radio-collapse-item">
+								<input tabindex="0" role="radiogroup" type="radio" name='{{ T "uoc_ri_cercador_filtres_ambitsespecialitzacio" }}' id="ambits" class="js-payment-mode-radio">
+								<label for="ambits" class="checkbox-wrapper payment-mode-label">{{ T "uoc_ri_cercador_filtres_ambitsespecialitzacio" }}</label>
 								<div class="collapse-content">
 									<ul class="tag-list ambits_especialitzacio">
 										{{ range $index, $element := .Params.ambits_especialitzacio }}
@@ -69,21 +69,25 @@
 								</div>
 							</div>
 							<div class="radio-collapse-item">
-								<input role="radiogroup" aria-label="paymentMode" type="radio" name="paymentMode" value="Boleto" id="boleto" class="js-payment-mode-radio">
-								<label for="boleto" class="checkbox-wrapper payment-mode-label">{{ T "uoc_ri_cercador_filtres_ods"}}</label>
+								<input tabindex="0" role="radiogroup" type="radio" name='{{ T "uoc_ri_cercador_filtres_ods"}}' id="ods" class="js-payment-mode-radio">
+								<label for="ods" class="checkbox-wrapper payment-mode-label">{{ T "uoc_ri_cercador_filtres_ods"}}</label>
 								<div class="collapse-content">
 									<style>.tag-icons li {vertical-align: bottom;}</style>
 									<ul class="tag-icons ods">
 										{{ range $index, $element := .Params.ods }}
 										<li class="tag-icons-{{$element.color}}" tabindex="0">
-											<p> <span class="number">{{add $index 1}}</span><span class="title">{{$element.display_name}}</span></p><span class="icon icon--group"></span>
+											<p> 
+												<span class="number">{{add $index 1}}</span>
+												<span class="text-extra-small" style="font-size: 9px;">{{$element.display_name}}</span>
+											</p>
+											<span class="icon icon--group"></span>
 										</li>
 										{{ end }}
 									</ul>
 								</div>
 							</div>
 							<div class="radio-collapse-item">
-								<input role="radiogroup" type="radio" name='{{ T "uoc_ri_cercador_filtres_unesco" }}' id="unesco" aria-label='{{ T "uoc_ri_cercador_filtres_unesco" }}' class="js-payment-mode-radio">
+								<input tabindex="0" role="radiogroup" type="radio" name='{{ T "uoc_ri_cercador_filtres_unesco" }}' id="unesco" aria-label='{{ T "uoc_ri_cercador_filtres_unesco" }}' class="js-payment-mode-radio">
 								<label for="unesco" class="checkbox-wrapper payment-mode-label">{{ T "uoc_ri_cercador_filtres_unesco" }}</label>
 								<div class="collapse-content"> 
 									<div class="full-width search-container-top">
