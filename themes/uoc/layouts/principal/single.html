@@ -63,7 +63,7 @@
 								<div class="collapse-content">
 									<ul class="tag-list ambits_especialitzacio">
 										{{ range $index, $element := .Params.ambits_especialitzacio }}
-										<li data-ambit="{{ $element.value}}">{{ $element.display_name }}</li>
+										<li data-ambit="{{ $element.value}}" tabindex="0">{{ $element.display_name }}</li>
 										{{ end }}
 									</ul>
 								</div>
@@ -75,7 +75,7 @@
 									<style>.tag-icons li {vertical-align: bottom;}</style>
 									<ul class="tag-icons ods">
 										{{ range $index, $element := .Params.ods }}
-										<li class="tag-icons-{{$element.color}}">
+										<li class="tag-icons-{{$element.color}}" tabindex="0">
 											<p> <span class="number">{{add $index 1}}</span><span class="title">{{$element.display_name}}</span></p><span class="icon icon--group"></span>
 										</li>
 										{{ end }}
@@ -104,7 +104,7 @@
 								<h4>{{ T "uoc_ri_cercador_filtres_centre" }}</h4>
 								<ul class="tag-list centre">
 									{{ range $index, $element := .Params.centre }}
-									<li>{{$element.display_name}}</li>
+									<li tabindex="0">{{$element.display_name}}</li>
 									{{ end }}
 								</ul>
 								<div class="filter-btn">
@@ -119,7 +119,7 @@
 								<h4>{{ T "uoc_ri_cercador_cercapersector" }}</h4>
 								<ul class="tag-list sector_productiu">
 									{{ range $i, $el := .Params.sector_productiu }}
-									<li>{{$el.display_name}}</li>
+									<li tabindex="0">{{$el.display_name}}</li>
 									{{ end }}
 								</ul>
 							</div>
@@ -127,7 +127,7 @@
 								<h4>{{ T "uoc_ri_cercador_filtres_centre" }}</h4>
 								<ul class="tag-list centre">
 									{{ range $index, $element := .Params.centre }}
-									<li>{{$element.display_name}}</li>
+									<li tabindex="0">{{$element.display_name}}</li>
 									{{ end }}
 								</ul>
 								<div class="filter-btn">
