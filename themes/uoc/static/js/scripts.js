@@ -94,6 +94,11 @@ jQuery(document).ready(function ($) {
     if($('.tag-list').length > 0) {
         $('.tag-list').on('click', 'li', function() {
             $(this).toggleClass('active');
+            if($(this).children().attr("aria-pressed")=="false"){
+                $(this).children().attr("aria-pressed","true");
+            }else{
+                $(this).children().attr("aria-pressed","false");
+            }
         })
     }
 
@@ -221,5 +226,5 @@ jQuery(document).ready(function ($) {
        $(this).parent().siblings().children().attr("aria-selected","false");
        $(this).attr("aria-selected","true");
     });
-
+    
 });
