@@ -95,13 +95,21 @@ aplicacions:
 
       Qualsevol xarxa sense fil, especialment aquelles amb un nombre de nodes
       dinàmic que generen trànsit de dades amb intermitències. Aplicacions
-      finals: – Gestió de ciutats intel·ligents (mesurament i control de serveis
-      públics com aigua, electricitat, gas, etc., seguretat pública, medi
-      ambient i transport urbà). – Logística i transport (gestió de flotes,
-      gestió intel·ligent del trànsit). – Indústria (procés, cadena de
-      subministrament i monitoratge d’equips). – Agricultura (gestió de plagues,
-      reg intel·ligent). – Salut digital (teleatenció mèdica, monitoratge remot
-      del pacient, etc.).
+      finals: 
+
+
+      * Gestió de ciutats intel·ligents (mesurament i control de serveis públics
+      com aigua, electricitat, gas, etc., seguretat pública, medi ambient i
+      transport urbà). 
+
+      * Logística i transport (gestió de flotes, gestió intel·ligent del
+      trànsit). 
+
+      * Indústria (procés, cadena de subministrament i monitoratge d’equips). 
+
+      * Agricultura (gestió de plagues, reg intel·ligent).
+
+      * Salut digital (teleatenció mèdica, monitoratge remot del pacient, etc.).
 
 
       <!--EndFragment-->
