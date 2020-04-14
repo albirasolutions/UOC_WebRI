@@ -49,7 +49,7 @@ jQuery(document).ready(function ($) {
 		tab = 'cercadorFiltres';
 		submitSearch(e);
 	});	
-	$('.filters-main__box').on('click', '.tab', function(e) {
+	$('.filters-main__box').click(function(e) {
 		submitSearch(e);
 	});
 	$(".cercadorTextual form").submit(function(e){ //Free text search
