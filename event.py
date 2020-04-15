@@ -42,7 +42,7 @@ def search(event,context):
     existe = consulta.find('or')
     if (existe != -1):
         consulta += ")"
-
+    consulta += "( not content_type:'fitxa') (not content_type:'grup')"
     consulta+=")"
 
     """SEARCHING IN CLOUDSEARCH"""
