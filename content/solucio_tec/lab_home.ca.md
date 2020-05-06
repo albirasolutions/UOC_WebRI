@@ -63,7 +63,10 @@ aplicacions:
       <!--EndFragment-->
     titol: Lab Home aplicacions
 investigadors:
-  - {}
+  - id: "13827602"
+    name: Caballé Llobet, Santi
+    url: https://talent.am.pre.uoc.es/ca/santi-caballe-llobet.html
+    url_img: https://talent.am.pre.uoc.es/img/api/pdi/138276/image/1572253930175
 contacte:
   - email: transfer_ari@uoc.edu
 ---
