@@ -3,33 +3,27 @@ title: Lab@Home
 language: ca
 general:
   nom: Lab@Home
-  text_breu: Eina per a l’ensenyament a distància de les competències
-    d’electrònica analògica bàsica
-  img_background: /img/foto_labhome.jpg
+  text_breu: "Lab@Home: Eina per a l’ensenyament a distància de les competències
+    d’electrònica analògica bàsica"
+  img_background: /img/labhome_1.jpg
   sector: Educació - eLearning
+  centre: Estuids
   logo: /img/logo_labhome.png
-  centre: Estudis
 about:
-  - descripcio: >-
+  - video_list:
+      - video: yE6Jovu_HI
+    titol: Lab@Home_descripcio
+    descripcio: >-
       <!--StartFragment-->
 
 
-      Eina per a l’ensenyament a distància de les competències d’electrònica analògica bàsica. Comprèn una placa d’instrumentació electrònica amb connectivitat a un PC i un programari associat per a la seva gestió.[Lab@Home](mailto:Lab@Home)permet que l’estudiant aprengui, de manera pràctica, el disseny i muntatge de circuits electrònics i la utilització dels aparells de generació de senyals propis d’un laboratori d’electrònica, amb els quals podrà alimentar els circuits i prendre mesures amb un multímetre i un oscil·loscopi.
+      Eina per a l’ensenyament a distància de les competències d’electrònica analògica bàsica. Comprèn una placa d’instrumentació electrònica amb connectivitat a un PC i un programari associat per a la seva gestió.[ ](mailto:Lab@Home)
+
+
+      **[Lab@Home](http://transfer.rdi.uoc.edu/ca/casos/labhome-ladaptacio-de-la-tecnologia-cobrir-una-necessitat-docent-fruit-de-la-collaboracio)** permet que l’estudiant aprengui, de manera pràctica, el disseny i muntatge de circuits electrònics i la utilització dels aparells de generació de senyals propis d’un laboratori d’electrònica, amb els quals podrà alimentar els circuits i prendre mesures amb un multímetre i un oscil·loscopi.
 
 
       <!--EndFragment-->
-
-
-      <!--StartFragment-->
-
-
-      Aquesta solució està protegida mitjançant el model d’utilitat espanyol ES1077336. Té per títol: «Sistema de montaje y medición de circuitos electrónicos».
-
-
-      <!--EndFragment-->
-    titol: Sobre Lab Home
-    docs_rels:
-      - file: /img/doc_cas_itol_uoc-diprotech.pdf
 aspectes_innovadors:
   - descripcio: >-
       <!--StartFragment-->
@@ -42,9 +36,10 @@ aspectes_innovadors:
 
 
       <!--EndFragment-->
-    titol: lab Home aspectes innovadors
+    titol: Lab@Home_aspectes
 aplicacions:
-  - descripcio: >-
+  - titol: Lab@Home_aplicacions
+    descripcio: >-
       <!--StartFragment-->
 
 
@@ -57,16 +52,29 @@ aplicacions:
       <!--StartFragment-->
 
 
+      Aquesta solució està protegida mitjançant el **model d’utilitat espanyol ES1077336**. Té per títol: «Sistema de montaje y medición de circuitos electrónicos».
+
+
+      <!--EndFragment-->
+
+
+      Clients:
+
+
+      Entre els clients d’aquesta eina hi ha centres d’educació de diversos tipus: centres de formació professional, centres d’educació secundària i universitats.
+
+
+      Clients:
+
+
+      <!--StartFragment-->
+
+
       Entre els clients d’aquesta eina hi ha centres d’educació de diversos tipus: centres de formació professional, centres d’educació secundària i universitats.
 
 
       <!--EndFragment-->
-    titol: Lab Home aplicacions
-investigadors:
-  - id: "13827602"
-    name: Caballé Llobet, Santi
-    url: https://talent.am.pre.uoc.es/ca/santi-caballe-llobet.html
-    url_img: https://talent.am.pre.uoc.es/img/api/pdi/138276/image/1572253930175
 contacte:
   - email: transfer_ari@uoc.edu
+    video: F9MD_IgBiMc
 ---
