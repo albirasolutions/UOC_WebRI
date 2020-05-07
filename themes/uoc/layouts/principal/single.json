@@ -88,10 +88,10 @@
 					{{with .address}}{{$.Scratch.Add "contact_address" (slice .)}}{{end}}
 					{{with .telefon}}{{$.Scratch.Add "contact_phone" (slice .)}}{{end}}
 				{{end}}
-				{{ if ne ($.Scratch.Get "contact_name") nil}}"contacts_name": {{$.Scratch.Get "contact_name" | jsonify}},{{end}}
-				{{ if ne ($.Scratch.Get "contact_email") nil}}"contacts_email": {{$.Scratch.Get "contact_email" | jsonify}},{{end}}
-				{{ if ne ($.Scratch.Get "contact_address") nil}}"contacts_address": {{$.Scratch.Get "contact_address" | jsonify}},{{end}}
-				{{ if ne ($.Scratch.Get "contact_phone") nil}}"contacts_phone": {{$.Scratch.Get "contact_phone" | jsonify}},{{end}}
+				{{ if ne (index ($.Scratch.Get "contact_name") 0 ) nil}}"contacts_name": {{$.Scratch.Get "contact_name" | jsonify}},{{end}}
+				{{ if ne (index ($.Scratch.Get "contact_email") 0 ) nil}}"contacts_email": {{$.Scratch.Get "contact_email" | jsonify}},{{end}}
+				{{ if ne (index ($.Scratch.Get "contact_address") 0 ) nil}}"contacts_address": {{$.Scratch.Get "contact_address" | jsonify}},{{end}}
+				{{ if ne (index ($.Scratch.Get "contact_phone") 0 ) nil}}"contacts_phone": {{$.Scratch.Get "contact_phone" | jsonify}},{{end}}
 			{{end}}
 			"content" : "transfer",
 			"content_encoding" : "utf-8",
