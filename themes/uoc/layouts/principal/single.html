@@ -80,13 +80,13 @@
 										<style>.tag-icons li {vertical-align: bottom;}</style>
 										<ul class="tag-icons ods">
 											{{ range $index, $element := .Params.ods }}
-											<li class="tag-icons-{{$element.color}}">
+											<li style="background-image: {{$element.img}}">
 												<span class="js-filter" role="button" aria-pressed="false" tabindex="0">
 													
 														<span class="number">{{add $index 1}}</span>
 														<span id="name-ods">{{$element.display_name}}</span>
 												
-													<span class="icon icon--group" aria-hidden="true"></span>
+													
 												</span>
 											</li>
 											{{ end }}
