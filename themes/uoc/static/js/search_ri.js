@@ -142,8 +142,8 @@ function submitSearch(caller){
 			queryInnovaSolSearchEngine(searchParams);
 		break;
 		case 'cercadorTextual':
-			querySearchEngine(searchParams);
-			queryInnovaSolSearchEngine(searchParams);
+			//querySearchEngine(searchParams);
+			//queryInnovaSolSearchEngine(searchParams);
 		break;
 	}
 	//if($(".general-filter.visualitzacio input:checked").length>0){
@@ -300,7 +300,6 @@ function querySearchEngine(searchParams){
 				for (var i = 0; i < items.length; i++) {
 					dataPaginationFitxa.push(getResultMarkup(items[i], "fitxa", i, $('.grupResults .js-changeVist').hasClass("change-to-list")));
 				}
-				
 				initPagination(dataPaginationFitxa, "fitxa");
 			}
 		}
@@ -489,10 +488,10 @@ function getResultMarkup(item, content_type, idx, listView){
 
 function initPagination(dataset, content_type) {
 	var excepcio =false;
-	console.log("S'inicialitza paginacio per a-->"+ content_type);
+	console.log("S'inicialitza paginacio per a-->"+ content_type+"del tab->"+tab);
 	try{
     $('.pagination-'+content_type+'_'+tab+' .pagination-'+content_type+'-container_'+ tab).pagination({
-	    dataSource: dataset,
+		dataSource: dataset,
 	    pageSize: 6,
 	    autoHidePrevious: true,
 	    autoHideNext: true,
