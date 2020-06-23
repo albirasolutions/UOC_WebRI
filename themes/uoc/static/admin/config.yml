@@ -811,8 +811,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: E-mail, name: email, widget: string, required: true}
           - {label: ID video Youtube, name: video, widget: string,  required: false}
           - {label: Imatge, name: image, widget: image,  required: false}
-    meta:
-      - {label: "Data", name: "date", widget: "datetime"}
   - name: "patent_es"
     label: 'Patents [es]'
     folder: "content/patent/"
@@ -984,8 +982,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: E-mail, name: email, widget: string, required: true}
           - {label: ID video Youtube, name: video, widget: string,  required: false}
           - {label: Imatge, name: image, widget: image,  required: false}
-    meta:
-      - {label: "Data", name: "date", widget: "datetime"}
+
   - name: "patent_en"
     label: 'Patents [en]'
     folder: "content/patent/"
@@ -1157,8 +1154,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: E-mail, name: email, widget: string, required: true}
           - {label: ID video Youtube, name: video, widget: string,  required: false}
           - {label: Imatge, name: image, widget: image,  required: false}
-    meta:
-      - {label: "Data", name: "date", widget: "datetime"}
+
   - name: "servei_ca"
     label: 'Serveis [ca]'
     folder: "content/servei/"
@@ -1287,8 +1283,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: E-mail, name: email, widget: string, required: true}
           - {label: ID video Youtube, name: video, widget: string,  required: false}
           - {label: Imatge, name: image, widget: image,  required: false}
-    meta:
-      - {label: "Data", name: "date", widget: "datetime"}
+
   - name: "servei_es"
     label: 'Serveis [es]'
     folder: "content/servei/"
@@ -1417,8 +1412,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: E-mail, name: email, widget: string, required: true}
           - {label: ID video Youtube, name: video, widget: string,  required: false}
           - {label: Imatge, name: image, widget: image,  required: false}
-    meta:
-      - {label: "Data", name: "date", widget: "datetime"}
+
   - name: "servei_en"
     label: 'Serveis [en]'
     folder: "content/servei/"
@@ -1547,8 +1541,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: E-mail, name: email, widget: string, required: true}
           - {label: ID video Youtube, name: video, widget: string,  required: false}
           - {label: Imatge, name: image, widget: image,  required: false}
-    meta:
-      - {label: "Data", name: "date", widget: "datetime"}
+
   - name: "spin_off_ca"
     label: 'Spin-Offs [ca]'
     folder: "content/spin_off/"
