@@ -28,4 +28,4 @@ rm -r ../PLATACON_WEB_RI_PRE_TMP/
 cd ../PLATACON_WEB_RI_PRE/
 git add -A 
 git commit -m "IECISA update on `date +'%Y-%m-%d %H:%M:%S'`";
-git push https://mfonolledara%40uoc.edu:60%3EXZlpN71Es%224W@github.com/UOC/PLATACON_WEB_RI_PRE.git --all
+git push https://mfonolledara%40uoc.edu:vdk5fRxh3V8pyKq@github.com/UOC/PLATACON_WEB_RI_PRE.git --all
