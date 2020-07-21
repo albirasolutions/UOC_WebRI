@@ -57,7 +57,7 @@
 					<div id="tab-content-1" data-tab-content="" role="tabpanel" aria-labelledby="tab-1" aria-hidden="false" class="filters-main__content tab-content cercaFiltres">
 						<form action="" class="radio-accordeon search-form-container">
 							<div>
-								<h4>{{ T "uoc_ri_cercador_cercaper" }} {{ T "uoc_ri_cercador_filtres_ambitsespecialitzacio" }}</h4>
+								<h4>{{ T "uoc_ri_cercador_filtres_ambitsespecialitzacio" }}</h4>
 								<ul class="tag-list ambits_especialitzacio">
 									{{ range $index, $element := .Params.ambits_especialitzacio }}
 									<li data-ambit="{{ $element.value}}" ><span class="js-filter" role="button" aria-pressed="false" tabindex="0">{{ $element.display_name }}</span></li>
@@ -65,7 +65,7 @@
 								</ul>
 							</div>
 							<div>
-								<h4>{{ T "uoc_ri_cercador_cercaper" }} {{ T "uoc_ri_cercador_filtres_ods" }}</h4>
+								<h4>{{ T "uoc_ri_cercador_filtres_ods" }}</h4>
 								<style>.tag-icons li {vertical-align: bottom;}</style>
 								<ul class="tag-icons ods">
 									{{ range $index, $element := .Params.ods }}
@@ -90,7 +90,7 @@
 								</ul>
 							</div>
 							<div>
-								<h4>{{ T "uoc_ri_cercador_cercaper" }} {{ T "uoc_ri_cercador_filtres_unesco" }}</h4>
+								<h4>{{ T "uoc_ri_cercador_filtres_unesco" }}</h4>
 								<div class="full-width search-container-top">
 									<div class="col-xs-12">
 										<p><a href="javascript:;">{{ T "uoc_ri_home_search_consultaunesco" }}</a></p>
