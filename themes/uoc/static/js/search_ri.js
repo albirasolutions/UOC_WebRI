@@ -451,14 +451,9 @@ function getResultMarkup(item, content_type, idx, listView){
 	}
 	
 	if(content_type == "fitxa"){
-			var posicio = item.fields.posicio;
-			var entradeta = item.fields.entradeta;
 			var ambit = item.fields.ambit_especialitzacio;
 			var dept = item.fields.departament;
 
-			
-			if(typeof item.fields.posicio === 'undefined'){posicio=""}
-			if(typeof item.fields.entradeta === 'undefined'){entradeta=""}
 			if(typeof item.fields.ambit_especialitzacio === 'undefined'){ambit="Salut pública i planetària"}
 			if(typeof item.fields.departament === 'undefined'){dept="eHealth Center"}
 
