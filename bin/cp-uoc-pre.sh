@@ -20,9 +20,10 @@ rm -r ./bin
 cp -r ../PLATACON_WEB_RI_PRE_TMP/content/ .
 cp -r ../PLATACON_WEB_RI_PRE_TMP/static/ .
 cp ../PLATACON_WEB_RI_PRE_TMP/themes/uoc/static/admin/main.js ./themes/uoc/static/admin/main.js
-# copy content principal folder
+# copy content principal and cercador folders
 cd ../UOC_WebRI
 cp -r ./content/principal ../PLATACON_WEB_RI_PRE/content
+cp -r ./content/cercador ../PLATACON_WEB_RI_PRE/content
 # remove backup folder
 rm -r ../PLATACON_WEB_RI_PRE_TMP/
 cd ../PLATACON_WEB_RI_PRE/
