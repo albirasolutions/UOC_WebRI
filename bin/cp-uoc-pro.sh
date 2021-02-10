@@ -17,8 +17,8 @@ rm -r ./content
 rm -r ./static
 rm -r ./bin
 # copy content folder from backup folder
-cp -r ../PLATACON_WEB_RI_PRO_TMP/content/ .
-cp -r ../PLATACON_WEB_RI_PRO_TMP/static/ .
+cp -r ../PLATACON_WEB_RI_PRO_TMP/content/ ./content
+cp -r ../PLATACON_WEB_RI_PRO_TMP/static/ ./static
 cp ../PLATACON_WEB_RI_PRO_TMP/themes/uoc/static/admin/main.js ./themes/uoc/static/admin/main.js
 # copy content principal and cercador folders
 cd ../UOC_WebRI
