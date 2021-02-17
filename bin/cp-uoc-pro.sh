@@ -7,6 +7,7 @@
 mkdir ../PLATACON_WEB_RI_PRO_TMP/
 # copy content to tmp folder
 cd ../PLATACON_WEB_RI_PRO/
+git pull
 cp -r * ../PLATACON_WEB_RI_PRO_TMP/
 # copy new content to folder
 cd ../UOC_WebRI
@@ -24,9 +25,11 @@ cp ../PLATACON_WEB_RI_PRO_TMP/themes/uoc/static/admin/main.js ./themes/uoc/stati
 cd ../UOC_WebRI
 cp -r ./content/principal ../PLATACON_WEB_RI_PRO/content
 cp -r ./content/cercador ../PLATACON_WEB_RI_PRO/content
+cp -r ./content/mapa-ambits-recerca ../PLATACON_WEB_RI_PRO/content
+cp -r ./content/difusions ../PLATACON_WEB_RI_PRO/content
 # remove backup folder
 rm -r ../PLATACON_WEB_RI_PRO_TMP/
 cd ../PLATACON_WEB_RI_PRO/
-git add -A 
-git commit -m "IECISA update on `date +'%Y-%m-%d %H:%M:%S'`";
-git push https://mfonolledara%40uoc.edu:vdk5fRxh3V8pyKq@github.com/UOC/PLATACON_WEB_RI_PRO.git --all
+# git add -A 
+# git commit -m "INETUM update on `date +'%Y-%m-%d %H:%M:%S'`";
+# git push https://mfonolledara%40uoc.edu:vdk5fRxh3V8pyKq@github.com/UOC/PLATACON_WEB_RI_PRO.git --all
