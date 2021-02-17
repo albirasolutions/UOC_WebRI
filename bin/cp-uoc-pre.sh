@@ -30,6 +30,6 @@ cp -r ./content/difusions ../PLATACON_WEB_RI_PRE/content
 # remove backup folder
 rm -r ../PLATACON_WEB_RI_PRE_TMP/
 cd ../PLATACON_WEB_RI_PRE/
-# git add -A 
-# git commit -m "INETUM update on `date +'%Y-%m-%d %H:%M:%S'`";
-# git push https://mfonolledara%40uoc.edu:vdk5fRxh3V8pyKq@github.com/UOC/PLATACON_WEB_RI_PRE.git --all
+git add -A 
+git commit -m "INETUM update on `date +'%Y-%m-%d %H:%M:%S'`";
+git push https://mfonolledara%40uoc.edu:vdk5fRxh3V8pyKq@github.com/UOC/PLATACON_WEB_RI_PRE.git --all
