@@ -12,6 +12,3 @@ jspm_packages
 .vscode
 images/.directory
 package-lock.json
-
-#bin
-bin
