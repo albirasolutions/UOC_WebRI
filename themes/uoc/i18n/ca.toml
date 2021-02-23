@@ -150,6 +150,7 @@
 [uoc_ri_mapaambits_cercaper_general_pdf_description] other = "Organització del grups de recerca de la UOC per àmbits generals"
 [uoc_ri_mapaambits_titol] other = "Descobreix com s'organitzen els grups de recerca per..."
 [uoc_ri_mapaambits_pdf] other = "Descarregar versió PDF"
+[uoc_ri_mapaambits_pdf_alert] other = "El contingut es descarregarà d’acord amb les pestanyes d’àmbits desplegades en pantalla en aquell moment."
 
 [uoc_ri_home_carousel_grups] other = "Grups de recerca"
 [uoc_ri_home_carousel_investigadors] other = "Investigadors"
