@@ -72,7 +72,7 @@
 									{{ end }}
 								</div>
 							</div>
-							<button class="btn btn--primary float-right m-top-2y" onclick='specialPDF({{ T "uoc_ri_mapaambits_cercaper_especialitzacio" }});'>
+							<button class="btn btn--primary float-right m-top-2y" onclick='printPDF({{ T "uoc_ri_mapaambits_cercaper_especialitzacio_pdf_title" }}, {{ T "uoc_ri_mapaambits_cercaper_especialitzacio_pdf_description" }}, "#printFragmentSpecial");'>
 								<span class="icon icon--pdf"></span>
 								<span class="h5">{{T "uoc_ri_mapaambits_pdf"}}</span>
 							</button>
@@ -115,7 +115,7 @@
 									{{ end }}
 								</div>
 							</div>
-							<button class="btn btn--primary float-right m-top-2y" onclick='generalPDF({{ T "uoc_ri_mapaambits_cercaper_general" }});'>
+							<button class="btn btn--primary float-right m-top-2y" onclick='printPDF({{ T "uoc_ri_mapaambits_cercaper_general_pdf_title" }}, {{ T "uoc_ri_mapaambits_cercaper_general_pdf_description" }}, "#printFragmentGeneral");'>
 								<span class="icon icon--pdf"></span>
 								<span class="h5">{{T "uoc_ri_mapaambits_pdf"}}</span>
 							</button>
