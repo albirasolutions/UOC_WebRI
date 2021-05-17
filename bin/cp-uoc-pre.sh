@@ -11,7 +11,7 @@ git pull
 cp -r * ../PLATACON_WEB_RI_PRE_TMP/
 # copy new content to folder
 cd ../UOC_WebRI
-cp * -r ../PLATACON_WEB_RI_PRE/ 
+cp -r * ../PLATACON_WEB_RI_PRE/ 
 # remove content folder
 cd ../PLATACON_WEB_RI_PRE/
 rm -r ./content
