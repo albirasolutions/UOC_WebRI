@@ -180,6 +180,7 @@
 [uoc_contact_fields_textarea] other = "La teva consulta..."
 [uoc_contact_send] other = "Envia la consulta"
 [uoc_contact_not_a_robot] other = "No soc un robot"
+[uoc_contact_response] other = "Consulta enviada correctament!"
 
 [uoc_pagination_next] other = "Següent"
 [uoc_pagination_prev] other = "Anterior"

@@ -180,6 +180,7 @@
 [uoc_contact_fields_textarea] other = "Your query..."
 [uoc_contact_send] other = "Submit your query"
 [uoc_contact_not_a_robot] other = "I'm not a robot"
+[uoc_contact_response] other = "Query sent successfully!"
 
 [uoc_pagination_next] other = "Next"
 [uoc_pagination_prev] other = "Previous"

@@ -25,20 +25,20 @@
 											<div class="form-group">
 												<fieldset>
 													<label aria-label="nom" for="firstName" class="sr-only">{{ T "uoc_contact_fields_name" }}</label>
-													<input aria-label="nom_input" id="firstName" name="{{ T "uoc_contact_fields_name" }}" type="text" size="26" maxlength="30" placeholder="{{ T "uoc_contact_fields_name" }} *" value="" class="form-item" required>
+													<input aria-label="nom_input" id="firstName" name="firstName" type="text" size="26" maxlength="30" placeholder="{{ T "uoc_contact_fields_name" }} *" value="" class="form-item" required>
 												</fieldset>
 											</div>
 											<div class="form-group row">
 												<div class="col-xs-12 col-md-6">
                           <fieldset>
                             <label aria-label="cognom" for="middleName" class="sr-only">{{ T "uoc_contact_fields_middlename" }}</label>
-                            <input aria-label="cognom_input" id="middleName" name="{{ T "uoc_contact_fields_middlename" }}" type="text" size="26" maxlength="30" placeholder="{{ T "uoc_contact_fields_middlename" }} *" value="" class="form-item m-bottom-y-mobile" required>
+                            <input aria-label="cognom_input" id="middleName" name="middleName" type="text" size="26" maxlength="30" placeholder="{{ T "uoc_contact_fields_middlename" }} *" value="" class="form-item m-bottom-y-mobile" required>
                           </fieldset>
                         </div>
                         <div class="col-xs-12 col-md-6">
                           <fieldset>
                             <label aria-label="segon_cognom" for="lastName" class="sr-only">{{ T "uoc_contact_fields_lastname" }}</label>
-                            <input aria-label="segon_cognom_input" id="lastName" name="{{ T "uoc_contact_fields_lastname" }}" type="text" size="26" maxlength="30" placeholder="{{ T "uoc_contact_fields_lastname" }}" value="" class="form-item">
+                            <input aria-label="segon_cognom_input" id="lastName" name="lastName" type="text" size="26" maxlength="30" placeholder="{{ T "uoc_contact_fields_lastname" }}" value="" class="form-item">
                           </fieldset>
                         </div>
                       </div>
@@ -46,31 +46,31 @@
                         <div class="col-xs-12 col-md-6">
                           <fieldset>
                             <label aria-label="correu" for="email" class="sr-only">{{ T "uoc_contact_fields_email" }}</label>
-                            <input aria-label="correu_input" id="email" name="{{ T "uoc_contact_fields_email" }}" type="email" maxlength="50" placeholder="{{ T "uoc_contact_fields_email" }} *" value="" class="form-item m-bottom-y-mobile" required>
+                            <input aria-label="correu_input" id="email" name="email" type="email" maxlength="50" placeholder="{{ T "uoc_contact_fields_email" }} *" value="" class="form-item m-bottom-y-mobile" required>
                           </fieldset>
                         </div>
                         <div class="col-xs-12 col-md-6">
                           <fieldset>
                             <label aria-label="telefon" for="phone" class="sr-only">{{ T "uoc_contact_fields_phone" }}</label>
-                            <input aria-label="telefon_input" id="phone" name="{{ T "uoc_contact_fields_phone" }}" type="tel" placeholder="{{ T "uoc_contact_fields_phone" }} *" value="" class="form-item" pattern="[0-9\-\(\)\s]+" required>
+                            <input aria-label="telefon_input" id="phone" name="phone" type="tel" placeholder="{{ T "uoc_contact_fields_phone" }} *" value="" class="form-item" pattern="[0-9\-\(\)\s]+" required>
                           </fieldset>
                         </div>
                       </div>
                       <div class="form-group">
                         <fieldset>
                           <label aria-label="empresa" for="company" class="sr-only">{{ T "uoc_contact_fields_company" }}</label>
-                          <input aria-label="empresa_input" id="company" name="{{ T "uoc_contact_fields_company" }}" type="text" size="26" maxlength="30" placeholder="{{ T "uoc_contact_fields_company" }}" value="" class="form-item">
+                          <input aria-label="empresa_input" id="company" name="company" type="text" size="26" maxlength="30" placeholder="{{ T "uoc_contact_fields_company" }}" value="" class="form-item">
                         </fieldset>
                       </div>
                       <div class="form-group">
                         <fieldset>
                           <label aria-label="tema" for="subject" class="sr-only">{{ T "uoc_contact_fields_subject" }}</label>
-                          <input aria-label="tema_input" id="subject" name="{{ T "uoc_contact_fields_subject" }}" type="text" size="26" maxlength="30" placeholder="{{ T "uoc_contact_fields_subject" }} *" value="" class="form-item" required>
+                          <input aria-label="tema_input" id="subject" name="subject" type="text" size="26" maxlength="30" placeholder="{{ T "uoc_contact_fields_subject" }} *" value="" class="form-item" required>
                         </fieldset>
                       </div>
                       <div class="form-group">
                         <label aria-label="consulta" for="content" class="sr-only">{{ T "uoc_contact_fields_textarea" }}</label>
-                        <textarea aria-label="consulta_input" name="consulta" id="content" rows="3" cols="40" type="text" maxlength="2500" size="2500" placeholder="{{ T "uoc_contact_fields_textarea" }} *" class="form-item" required></textarea>
+                        <textarea aria-label="consulta_input" name="content" id="content" rows="3" cols="40" type="text" maxlength="2500" size="2500" placeholder="{{ T "uoc_contact_fields_textarea" }} *" class="form-item" required></textarea>
                       </div>
                       <div class="form-group">
                       	<fieldset>
@@ -115,13 +115,46 @@
 		{{ partial "footer.html" . }}
 	</div>
 	{{ partial "ri_js_imports.html" . }}
+
   <script type="text/javascript">
+
 		$('#contacte-form').submit(function(){
 	    $(this).find(':input[type=submit]').prop('disabled', true);
 		});
+
 		function submitClick() {
-      alert("query");
+			var talentUrl = '{{ .Site.Params.talentUrl }}';
+			var alertText = '{{ T "uoc_contact_response" }}';
+			var origin   = window.location.origin;
+			var lang = document.documentElement.lang;
+			if(lang == null) lang = 'ca';
+			var $form = $("#contacte-form");
+			var formData = getFormData($form);
+			formData['lang'] = lang;
+    	$.ajax({
+			  url: talentUrl + '/public/api/contactUs',
+			  type: "POST",
+			  data: JSON.stringify(formData),
+			  contentType: "application/json",
+			  dataType: "json",
+			  success: function(data, status){
+		    	alert(alertText);
+			  },
+		    error: function(data, status, error) { 
+		    	alert("Data: " + JSON.stringify(data) + "\nStatus: " + status + "\nError: " + error);
+		    }
+			})
     }
+
+    function getFormData($form){
+	    var unindexed_array = $form.serializeArray();
+	    var indexed_array = {};
+	    $.map(unindexed_array, function(n, i){
+	        indexed_array[n['name']] = n['value'];
+	    });
+	    return indexed_array;
+		}
+
   </script>
 </body>
 </html>
