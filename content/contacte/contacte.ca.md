@@ -8,7 +8,7 @@
 			"addr_3" : "08018 Barcelona",
 			"phones" : ["+34 934 50 52 00"],
 			"email" : "area_ri@uoc.edu",
-			"urls" : ["https://research.uoc.edu/portal/ca/ri/emprenedoria/index.html"],
+			"urls" : ["https://research.uoc.edu/portal/ca/ri/activitat-rdi/serveis-gestio-rdi/serveis-gestio-rdi.html"],
 			"youtube" : "https://www.youtube.com/embed/F9MD_IgBiMc",
 			"gdpr" : "Accepto i consento que es gestionin les meves dades personals per a donar resposta a la consulta realitzada"
 		}
