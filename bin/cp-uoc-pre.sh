@@ -28,6 +28,7 @@ cp -r ./content/principal ../Gitlab_UOC/PLATACON_WEB_RI_PRE/content
 cp -r ./content/cercador ../Gitlab_UOC/PLATACON_WEB_RI_PRE/content
 cp -r ./content/mapa-ambits-recerca ../Gitlab_UOC/PLATACON_WEB_RI_PRE/content
 cp -r ./content/difusions ../Gitlab_UOC/PLATACON_WEB_RI_PRE/content
+cp -r ./content/contacte ../Gitlab_UOC/PLATACON_WEB_RI_PRE/content
 # remove backup folder
 rm -r ../PLATACON_WEB_RI_PRE_TMP/
 cd ../Gitlab_UOC/PLATACON_WEB_RI_PRE/
