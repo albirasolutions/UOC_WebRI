@@ -3,104 +3,119 @@ title: Video Watermarking System
 language: ca
 general:
   nom: Video Watermarking System
-  text_breu: 'És reversible el teu sistema de marcatge de vídeo? '
-  img_background: /img/video_watermaking.png
-  sector: 'Economia, empresa i TIC'
+  slogan: Video Watermarking, sistema reversible de marques d'aigua en vídeos
+  img_background: /img/imagen_videowatermarking.jpeg
+  sector: Indústria 4.0
   centre: IN3
-  slogan: >-
-    La nostra solució en temps real garanteix la transmissió i l’emmagatzematge
-    de contingut multimèdia sense alterar la velocitat de transferència de dades
-    o el contingut visible per al públic.
+  logo: /img/logo_watervideo.png
+  keywords:
+    - value: TIC
+    - value: ciberseguretat
+    - value: smart cities
+    - value: marca d'aigua
+    - value: publicitat
 about:
-  - descripcio: >-
-      Patent no. PCT/EP2017/057426
-
-
-      <!--EndFragment--><!--StartFragment-->
-
-
-      Una marca d’aigua de vídeo és una seqüència de bits incrustats en un
-      senyal de vídeo. Són imperceptibles per als sentits humans i només poden
-      ser detectats per dispositius com ara telèfons intel·ligents o tauletes.
-      Una marca d’aigua conté identificadors únics tant de la part de vídeo d’on
-      s’ha extret la marca com de la font de distribució en què es pot acreditar
-      el contingut.
-
-
-      El nostre enfocament innovador és la millor manera de combatre la
-      manipulació i la falsificació. A més, ofereix un bon equilibri entre
-      capacitat, transparència i velocitat de transferència de bits, amb
-      múltiples avantatges:
-
-
-      * Reversibilitat total, ja que el contingut original es pot recuperar
-      completament i amb facilitat.
-
-      * Sense distorsions del contingut.
-
-      * Més robustesa, ja que el flux de dades ocult està encriptat mitjançant
-      diverses tecles.
-
-      * Processos d’extracció en temps real, perquè només es requereix la
-      descodificació entròpica, no la descompressió total del vídeo.
-
-      * Alteració mínima de la velocitat de transferència de bits de vídeo.
-
-
-      Més fiabilitat, ja que s’evita el risc de perdre la marca d’aigua a causa
-      de la compressió.
-
-
-      <!--EndFragment-->
-    titol: Sobre la patent
-    video_list:
+  - video_list:
       - video: T9V4-oY-m6E
+    titol: Video Watermarking_Descripció
+    descripcio: >-
+      Sol·licitud de patent núm.: PCT/EP2017/057426 / EP17714427.6 / US
+      16/498,370 Data de prioritat: 29/03/2017 
+
+
+      La tecnologia de **Video Watermarking** consisteix en un esquema de marca d'aigua digital robust i imperceptible que es pot utilitzar per protegir els mitjans digitals contra la pirateria i la manipulació. 
+
+
+      A diferència de molts altres mètodes, sobreviu a **l'última tecnologia de compressió digital H.264.** 
+
+
+      La fortalesa d’aquesta tecnologia es troba a la seva capacitat per treballar amb les tecnologies de **compressió de vídeo** H.264, inclosos àudio i vídeo d’alta definició en discos Blu-ray, fonts d’internet en streaming (Vimeo, YouTube, iTunes), programari web (Flash Player, Silverlight), serveis de difusió, videoconferència i sistemes de seguretat. 
+
+
+      **La marca d’aigua** és pràcticament imperceptible i es pot extreure de manera fiable (fins i tot amb una avaria significativa del senyal), tot incorporant un alt grau d’informació. 
+
+
+      La tecnologia **proposada augmenta la transparència**, la robustesa i la capacitat, que normalment s’equilibren en seleccionar una tecnologia de marca d’aigua. 
+
+
+      Actualment, **la tecnologia es desenvolupa com un esquema de marca d'aigua** semifràgil per a l'autenticació de vídeo i la detecció de manipulacions. 
+
+
+      **En aquestes aplicacions,** un atacant té la intenció d’alterar els mitjans de comunicació intentant que el canvi no sigui detectable. Una marca d'aigua fràgil (o semifràgil) fa que l’atacant pugui alterar el contingut del vídeo sense detectar-lo. 
+
+
+      Per tant, **aquesta tecnologia permet detectar manipulacions** i fins i tot localitzar-les en parts específiques del vídeo. **A més, l’esquema és capaç de resistir un cert nivell de compressió,** mantenint la marca d'aigua incrustada.
     docs_rels:
       - file: /img/uocs_videowatermarkingsystem_brochure.pdf
-aplicacions:
+aspectes_innovadors:
   - descripcio: >-
-      <!--StartFragment-->
+      Video Watermarking ofereix un enfocament innovador per combatre la
+      manipulació i la falsificació i presenta un bon equilibri entre capacitat,
+      transparència i velocitat de transferència de bits, amb **múltiples
+      avantatges:**
 
 
-      Aquesta patent està adreçada al sector de les tecnologies de la informació
-      i la comunicació. Els tipus d’empresa en què es pot utilitzar són: -
-      Proveïdors de tecnologia per al sector audiovisual. - Producció de
-      continguts. - Radiodifusió.
+      \- Reversibilitat total, ja que es pot **restaurar fàcilment el contingut original.** 
 
 
-      <!--EndFragment-->
+      \- **No afegeix distorsió** al contingut multimèdia. 
 
 
-      <!--StartFragment-->
+      \- Més robustesa, **ja que el flux ocult** es xifra mitjançant diverses claus. 
 
 
-      Seguretat digital - Autenticació i confirmació de continguts originals per
-      a vídeo segons demanda (4K, UHD, HDR, etc.). - Una capa més de seguretat
-      per als continguts de vídeo, molt difícil d’eliminar encara que hi hagi
-      redimensionaments, recompressions, retallades o redigitalitzacions. -
-      Detecció de falsificació i pirateria, inclosa una manera fiable de
-      localitzar la font de la filtració. - Anàlisi forense per a ser integrada
-      en la gestió de drets digitals per a vídeo segons demanda. Anàlisi de
-      mitjans - Mesures d’audiència i control d’emissions. - Mesura
-      d’efectivitat de campanyes. - Anàlisi del consumidor en transmissions,
-      vídeo segons demanda o fins i tot distribució a internet. - Millor
-      connexió entre emissions de televisió i usuaris, cosa que augmenta la
-      participació de l’espectador. Incrustació d’informació - Les informacions
-      com subtítols, traduccions o notícies es poden incrustar en el vídeo.
+      \- Extracció en temps real, ja que només es requereixen procediments de descodificació, però no la **descompressió total del vídeo.** 
 
 
-      <!--EndFragment-->
-    titol: Possibles aplicacions
+      \- **Alteració mínima de la velocitat de bits.** 
+
+
+      \- Més fiabilitat, ja que **s’evita el risc de perdre la marca** d'aigua per compressió.
+    titol: Video watermarking video_aspectes
+aplicacions:
+  - titol: Video watermarking_aplicacions
+    descripcio: >-2
+       **Anàlisi de mitjans de comunicació:** 
+
+      \-Mesures **d’audiència** i seguiment de radiodifusió.
+
+
+      \-Mesures de **l'eficàcia** de campanyes. 
+
+
+      \-Anàlisi del consumidor sobre difusió, vídeo a la carta o fins i tot distribució per internet. 
+
+
+      **Seguretat  digital:** 
+
+
+      \- Gestió de **drets** digitals sobre vídeo a la carta o música.
+
+
+      \- Increment de la **seguretat** per detectar la falsificació i la pirateria.
+
+
+      \- Autenticació i **confirmació** de contingut genuí.
+
+       **Publicitat multimèdia:**
+
+      \-**Connexió d’emissions** de televisió amb aplicacions mòbils per augmentar la interacció dels espectadors.
+
+
+      \-**Sincronització** amb publicitat en temps real.
+grups_recerca:
+  - id: "2602"
+    name: KISON
+    description: K-riptography and Information Security for Open Networks
+    url: https://transfer.research.uoc.edu/ca/kison.html
+    url_img: https://transfer.research.uoc.edu/img/api/grupsrecerca/26/image/1594286715997
 investigadors:
-  - id: '13827602'
-    name: 'Caballé Llobet, Santi'
-    url: 'https://talent.am.pre.uoc.es/ca/santi-caballe-llobet.html'
-    url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/138276/image/1572253930175'
-  - id: '14225202'
-    name: 'Baraza Sánchez, Xavier'
-    url: 'https://talent.am.pre.uoc.es/ca/xavier-baraza-sanchez.html'
-    url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/142252/image/1573926396022'
+  - id: "22479602"
+    name: Megías Jiménez, David
+    url: https://talent.uoc.edu/ca/david-megias-jimenez.html
+    url_img: https://talent.uoc.edu/img/api/pdi/224796/image/1588156888077
 contacte:
   - email: transfer_ari@uoc.edu
-    text: 'Knowledge, Transfer& Entrepreneurship'
+    video: F9MD_IgBiMc
+    text: Knowledge, Transfer & Entrepreneurship
 ---

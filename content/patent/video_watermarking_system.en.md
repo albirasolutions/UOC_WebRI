@@ -3,132 +3,116 @@ title: Video Watermarking System
 language: en
 general:
   nom: Video Watermarking System
-  text_breu: Is your video watermarking system reversible?
-  slogan: >-
-    Our real-time solution secures the transmission and storage of multimedia
-    content without altering the data transfer rate or the content seen by
-    viewers.
-  img_background: /img/video_watermarking_system.png
-  sector: 'Economia, empresa i TIC'
+  slogan: A reversible video watermarking system
+  img_background: /img/imagen_videowatermarking.jpeg
+  sector: Industry 4.0
   centre: IN3
-  logo: /img/video_watermarking_system.png
+  logo: /img/logo_watervideo.png
+  keywords:
+    - value: ICT
+    - value: cyber security
+    - value: smart cities
+    - value: watermark
+    - value: advertising
 about:
-  - descripcio: >-
-      <!--StartFragment-->
+  - titol: Video Watermarking_Description
+    descripcio: >-
+      Patent application: PCT/EP2017/057426 / EP17714427.6 / US 16/498,370
+      Priority date: 29/03/2017 
 
 
-      A video watermark is a sequence of bits embedded in a video signal. They
-      are imperceptible to the human senses and are only detected by devices
-      such as smartphones or tablets. A watermark contains unique identifiers of
-      both the portion of the video[](<>)from which the mark was extracted and
-      the distribution source to which the content can be credited.
+      This video **watermarking technology** consists of a robust, imperceptible digital watermarking system that can be used to protect digital media against piracy and tampering. In contrast to many other methods, it survives the latest H.264 digital compression technology. 
 
 
-      Our innovative approach is the best way to fight tampering and
-      counterfeiting. Moreover, it provides a trade-off between capacity,
-      transparency and bit rate, with multiple advantages:
+      The strength of this technology is its capacity to work with H.264 **video compression technologies,** including high-definition audio and video on Blu-ray Discs, internet streaming sources (Vimeo, YouTube, iTunes), website software (Flash Player, Sliverlight), broadcast services, videoconferencing and security systems. 
 
 
-      * Total reversibility, as the original content can easily be fully
-      restored.
+      **The watermark is practically imperceptible** and can be reliably removed (even with a significant loss in signal), while incorporating a high degree of information.
 
-      * Zero distortion of the content.
+       The proposed **technology increases transparency,** robustness and capacity, which are normally subject to a trade-off when selecting watermark technology. The technology is now being developed as a semi-fragile watermarking system to authenticate video and detect tempering. 
 
-      * Greater robustness, as the hidden stream is encrypted using several
-      keys.
-
-      * Real-time extraction processes, since only entropy decoding is required,
-      not total decompression of the video.
-
-      * Minimum alteration of the video bit rate.
+      In these applications, the **attacker aims** to alter the medium without the change being detectable. A fragile (or semi-fragile) watermark makes it possible for the attacker to alter the video content without detecting it. 
 
 
-      Greater reliability, since the risk of losing the watermark due to
-      compression is avoided.
+      Therefore, this technology enables the detection of tampering and even its **location at specific** parts of the video. 
 
 
-      <!--EndFragment-->
-    titol: Prova titol patent
+      The system is also capable of withstanding **a certain level of compression** while maintaining the watermark embedded.
     video_list:
-      - video: v=T9V4-oY-m6E
+      - video: T9V4-oY-m6E
     docs_rels:
       - file: /img/uocs_videowatermarkingsystem_brochure.pdf
-aspectes_innovadors: []
+aspectes_innovadors:
+  - titol: Video watermarking_innovation
+    descripcio: >-
+      Video Watermarking **offers an innovative approach** to combat tampering
+      and counterfeiting and provides a good trade-off between capacity,
+      transparency and bit rate, with multiple advantages: 
+
+
+      \- **Total reversibility,** since the original content can easily be restored.
+
+
+      \- Zero distortion of the **multimedia content** 
+
+
+      \- **More robustness**, as the hidden stream is encrypted using several keys 
+
+
+      \- Real-time extraction processes, since only decoding procedures are required but not total **decompression of the video** 
+
+
+      \- Minimum **alteration of the bit** rate 
+
+
+      \- Greater reliability, since the risk of **losing the watermark** due to compression is avoided
 aplicacions:
-  - descripcio: >-
-      <!--StartFragment-->
+  - titol: Video watermarking_applications
+    descripcio: >-
+      **Media analytics:** 
 
 
-      This patent is aimed at the Information and Communication Technology
-      sector. The types of company in which it could be used are: - Technology
-      providers operating in the audiovisual sector - Content producers -
-      Broadcasters
+      \- Audience measurements and **broadcasting monitoring** 
 
 
-      <!--EndFragment-->
+      \- Campaign effectiveness measurement 
 
 
+      \- Consumer analytics on broadcasting, video on demand and **even internet distribution** 
 
 
-      <!--StartFragment-->
+      **Digital security:**
 
 
-      * Digital security - Authentication and confirmation of genuine content
-      for video on demand (4K, UHD, HDR, etc.) 
-
-      * Another layer of security for video content, very difficult to remove
-      despite resizing, re-compression, cropping or re-digitization. 
-
-      * Detection of counterfeiting and piracy, including a reliable way to
-      trace the source of the leak. 
-
-      * Forensics analysis to be integrated in DRM for video on demand. Media
-      analytics 
-
-      * Audience measurements and broadcasting monitoring. 
-
-      * Measure campaign effectiveness.  
-
-      * Consumer analytics on broadcasting, video on demand or even internet
-      distribution. 
-
-      * Better connection between TV broadcasts and users, increasing viewer
-      engagement. Information embedding 
-
-      * Information such as subtitles, translations, or news items can be
-      embedded in the video.
+      \- Digital rights management for video on demand and music
 
 
-      <!--EndFragment-->
+      \- Anothe**r layer of security to detect** counterfeiting and piracy 
 
 
-      ![](/img/241-projectes-estatals-recerca-logo.jpg)
+      \- Authentication and confirmation of genuine content 
 
 
-      <!--StartFragment-->
+      **Multimedia advertising:**
 
 
-      [Enllaç a
-      video](<https://www.youtube.com/watch?v=T9V4-oY-m6E&feature=youtu.be>)
-      <https://www.youtube.com/watch?v=T9V4-oY-m6E&feature=youtu.be>
+      \- Connection ofkapps to increase viewer engagement
 
 
-      <!--EndFragment-->
-
-
-      Prova Prova
-    titol: Prova Aplications
+      \- Synchronization with advertising in real time
+grups_recerca:
+  - id: "2602"
+    name: KISON
+    description: K-riptography and Information Security for Open Networks
+    url: https://transfer.research.uoc.edu/ca/kison.html
+    url_img: https://transfer.research.uoc.edu/img/api/grupsrecerca/26/image/1594286715997
 investigadors:
-  - id: '13827602'
-    name: 'Caballé Llobet, Santi'
-    url: 'https://talent.am.pre.uoc.es/ca/santi-caballe-llobet.html'
-    url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/138276/image/1572253930175'
-  - id: '14225202'
-    name: 'Baraza Sánchez, Xavier'
-    url: 'https://talent.am.pre.uoc.es/ca/xavier-baraza-sanchez.html'
-    url_img: 'https://talent.am.pre.uoc.es/img/api/pdi/142252/image/1573926396022'
+  - id: "22479602"
+    name: Megías Jiménez, David
+    url: https://talent.uoc.edu/ca/david-megias-jimenez.html
+    url_img: https://talent.uoc.edu/img/api/pdi/224796/image/1588156888077
 contacte:
-  - email: transfer_ari@uoc.edu
-    text: 'Knowledge, transfer& entrepreneurship'
-    image: /img/seu-22-uoc.jpg
+  - text: "Knowledge, Transfer & Entrepreneurship "
+    email: trasnfer_ari@uoc.edu
+    video: F9MD_IgBiMc
 ---
