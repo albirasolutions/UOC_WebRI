@@ -49,6 +49,13 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: "Camp", name: "display_name", widget: string}
           - {label: "Valor", name: "value", widget: string}   
+      - label: "Centres"
+        name: centres_home
+        widget: list
+        fields:
+          - {label: "Títol", name: "title", widget: string}
+          - {label: "Descripció", name: "description", widget: string}   
+          - {label: "Url", name: "url", widget: string}   
       - label: "Infografia"
         name: infografia
         widget: list
@@ -94,6 +101,13 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: "Campo", name: "display_name", widget: string}
           - {label: "Valor", name: "value", widget: string}   
+      - label: "Centros"
+        name: centres_home
+        widget: list
+        fields:
+          - {label: "Título", name: "title", widget: string}
+          - {label: "Descripción", name: "description", widget: string}   
+          - {label: "Url", name: "url", widget: string}   
       - label: "Infografia"
         name: infografia
         widget: list
@@ -139,6 +153,13 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: "Field", name: "display_name", widget: string}
           - {label: "value", name: "value", widget: string}
+      - label: "Centres"
+        name: centres_home
+        widget: list
+        fields:
+          - {label: "Title", name: "title", widget: string}
+          - {label: "Description", name: "description", widget: string}   
+          - {label: "Url", name: "url", widget: string}   
       - label: "Infographic"
         name: infografia
         widget: list
