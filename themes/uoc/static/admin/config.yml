@@ -29,7 +29,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: list
         fields:
           - {label: "Camp", name: "display_name", widget: string}
-          - {label: "Valor", name: "value", widget: string}   
+          - {label: "Valor", name: "value", widget: string, required: false}   
       - label: "ODS"
         name: "ods"
         widget: list
