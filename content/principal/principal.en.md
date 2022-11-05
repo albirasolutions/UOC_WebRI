@@ -7676,19 +7676,20 @@ sector_productiu:
     value: Education - eLearning
 
 infografia:
-  - display_name: Grupos de investigación
+  - display_name: Research groups
     number: 45
     icon: icon--user
-  - display_name: Investigadores
+  - display_name: Researchers
     number: 1200
     icon: icon--search
-  - display_name: Centros de investigación
+  - display_name: Research centres
     number: 2
     icon: icon--lab
-  - display_name: Soluciones innovadoras para empresas
-    number: + de 100
+  - display_name: Innovative solutions for businesses
+    number: more than 100
     icon: icon--pencil
   - display_name: Spin-off
     number: 3
-    icon: icon--profile    
+    icon: icon--profile
+
 ---
