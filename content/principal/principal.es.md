@@ -7673,4 +7673,22 @@ sector_productiu:
     value: Salud - eHealth
   - display_name: Educación - eLearning
     value: Educación - eLearning
+
+infografia:
+  - display_name: Research groups
+    number: 45
+    icon: icon--user
+  - display_name: Researchers
+    number: 1200
+    icon: icon--search
+  - display_name: Research centres
+    number: 2
+    icon: icon--lab
+  - display_name: Innovative solutions for businesses
+    number: more than 100
+    icon: icon--pencil
+  - display_name: Spin-off
+    number: 3
+    icon: icon--profile
+    
 ---

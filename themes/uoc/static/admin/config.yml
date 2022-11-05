@@ -49,6 +49,14 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: "Camp", name: "display_name", widget: string}
           - {label: "Valor", name: "value", widget: string}   
+      - label: "Infografia"
+        name: infografia
+        widget: list
+        fields:
+          - {label: "Nom", name: "display_name", widget: string}
+          - {label: "Nombre", name: "number", widget: string}   
+          - {label: "Icona", name: "icon", widget: string}   
+
   - name: "principal_es"
     label: "Principal [es]"
     folder: "content/principal/"
@@ -86,6 +94,14 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: "Campo", name: "display_name", widget: string}
           - {label: "Valor", name: "value", widget: string}   
+      - label: "Infografia"
+        name: infografia
+        widget: list
+        fields:
+          - {label: "Nombre", name: "display_name", widget: string}
+          - {label: "Número", name: "number", widget: string}   
+          - {label: "Icona", name: "icon", widget: string}   
+
   - name: "principal_en"
     label: "Principal [en]"
     folder: "content/principal/"
@@ -123,6 +139,13 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: "Field", name: "display_name", widget: string}
           - {label: "value", name: "value", widget: string}
+      - label: "Infographic"
+        name: infografia
+        widget: list
+        fields:
+          - {label: "Name", name: "display_name", widget: string}
+          - {label: "Number", name: "number", widget: string}   
+          - {label: "Icon", name: "icon", widget: string}   
 
   - name: "solucio_tec_ca"
     label: 'Solucions Tecnològiques [ca]'
