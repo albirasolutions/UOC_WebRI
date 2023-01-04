@@ -15,7 +15,7 @@
 
 <body>
 	{{ partial "google_code_body.html" . }}
-	<header id="main-header-4" class="brand-header brand-ri header-4 uoc-ri" style="margin-bottom:0">
+	<header id="main-header-4" class="brand-header brand-secondary header-4 uoc-ri" style="margin-bottom:0">
 		<div class="header-container clearfix">
 			<div class="col-xs-12 col-clear nav-menu-top">
 				<div class="col-xs-2 col-sm-1 top-logo top-logo-desktop">
@@ -134,7 +134,7 @@
 		<section class="info-general">
 			<div class="row">
 				<div class="col-xs-12">
-					<div class="page-title title-border-green">
+					<div class="page-title title-border-light-blue">
 						<h2>{{ .Params.nom }}</h2>
 					</div>
 				</div>
@@ -661,23 +661,6 @@
 					</div>
 				</div>
 			</div>
-			<nav aria-label="Marques UOC"
-				class="col-xs-offset-3 col-xs-6 col-clear nav-brands-container nav-brands-reverse col-clear nav-brands-desktop">
-				<ul class="nav-brands">
-					<li class="col-xs-12 col-md-2 selected"><a tabindex="0"	onclick="_gaq.push(['_trackEvent','Header','Links Header', '{{ T "uoc"}}']);" href="https://www.uoc.edu/portal/ca/index.html" 
-						target="_self" title='{{ T "uoc"}}' class="w100-inline-block ruler ruler--secondary"><span class="brand-text">{{ T "uoc"}}</span></a></li>
-					<li class="col-xs-12 col-md-2"><a tabindex="0" onclick="_gaq.push(['_trackEvent','Header','Links Header', '{{ T "uoc_title_ri"}}']);"	href="https://www.uoc.edu/portal/ca/ri/index.html" 
-						target="_self" title='{{ T "uoc_title_ri"}}' class="w100-inline-block ruler ruler--ri"><span class="brand-text">{{ T "uoc_title_ri"}}</span></a></li>
-					<li class="col-xs-12 col-md-2"><a tabindex="0" onclick="_gaq.push(['_trackEvent','Header','Links Header', '{{ T "uoc_x"}}']);" href="//x.uoc.edu/?ac=2535&amp;src=2535&amp;utm_source=LinkWebUOC&amp;utm_medium=Referrals&amp;utm_campaign=WebUOC&amp;utm_term&amp;utm_content=LinkEstudis"
-						target="_self" title='{{ T "uoc_x"}}' class="w100-inline-block ruler ruler--x"><span class="brand-text">{{ T "uoc_x"}}</span></a></li>
-					<li class="col-xs-12 col-md-2"><a tabindex="0" onclick="_gaq.push(['_trackEvent','Header','Links Header', '{{ T "uoc_corp"}}']);" href="https://www.uoc.edu/portal/ca/corporate/index.html" 
-						target="_self" title='{{ T "uoc_corp"}}' class="w100-inline-block ruler ruler--corporate"><span class="brand-text">{{ T "uoc_corp"}}</span></a></li>
-					<li class="col-xs-12 col-md-2"><a tabindex="0" onclick="_gaq.push(['_trackEvent','Header','Links Header', '{{ T "uoc_alumni"}}']);" href="https://alumni.uoc.edu/opencms_alumni/opencms/ca/index.html" 
-						target="_self" title='{{ T "uoc_alumni"}}' class="w100-inline-block ruler ruler--alumni"><span class="brand-text">{{ T "uoc_alumni"}}</span></a></li>
-					<li class="col-xs-12 col-md-2"><a tabindex="0" onclick="_gaq.push(['_trackEvent','Header','Links Header', '{{ T "uoc_media"}}']);" href="https://www.uoc.edu/portal/ca/media/index.html" 
-						target="_self" title='{{ T "uoc_media"}}' class="w100-inline-block ruler ruler--media"><span class="brand-text">{{ T "uoc_media"}}</span></a></li>
-				</ul>
-			</nav>
 		</footer>
 	</div>
 	<script src="/js/lib/jquery-3.3.1.min.js"></script>

@@ -2771,24 +2771,24 @@ footer .brand-box {
 }
 
 .current-brand-ri .ruler--dynamic, .current-brand-ri .border-color-dynamic {
-  border-color: #38ff90;
+  border-color: #73edff;
 }
 
 .current-brand-ri .ruler--dynamic-hover:hover, .current-brand-ri .ruler--dynamic-hover.selected {
-  border-color: #38ff90;
+  border-color: #73edff;
 }
 
 .current-brand-ri .hover--dynamic-hover:hover, .current-brand-ri .hover--dynamic-hover.selected, .current-brand-ri .hover--dynamic-hover.active {
-  background: #38ff90;
+  background: #73edff;
 }
 
 .current-brand-ri .dynamic-bg, .current-brand-ri .btn.dynamic-bg {
-  background-color: #38ff90;
+  background-color: #73edff;
 }
 
 @media (min-width: 62em) {
   .current-brand-ri .smaller .top-logo a {
-    background-color: #38ff90;
+    background-color: #73edff;
   }
 }
 
@@ -2801,7 +2801,7 @@ footer .brand-box {
 }
 
 .current-brand-ri .brand-box a:hover {
-  color: #38ff90;
+  color: #73edff;
 }
 
 .current-brand-x .ruler--dynamic, .current-brand-x .border-color-dynamic {
@@ -4651,7 +4651,7 @@ button.search-form-button.icon:before, a.search-form-button.icon:before {
   content: '';
   width: 100%;
   height: 100%;
-  background-color: #38ff90;
+  background-color: #73edff;
   position: absolute;
   top: 0;
   left: 0;
@@ -11634,7 +11634,7 @@ a.card {
 }
 
 .current-brand-ri .card__calendar__custom tbody td.day.selected {
-  background-color: #38ff90;
+  background-color: #73edff;
 }
 
 .current-brand-x .card__calendar__custom tbody td.day.selected {
@@ -11654,7 +11654,7 @@ a.card {
 }
 
 .current-brand-ri .dynamic-bg:hover, .current-brand-ri .btn.dynamic-bg:hover {
-  background-color: #38ff90;
+  background-color: #73edff;
 }
 
 .current-brand-x .dynamic-bg:hover, .current-brand-x .btn.dynamic-bg:hover {
