@@ -8,7 +8,7 @@
 <body>
 	{{ partial "google_code_body.html" . }}
 	{{ partial "header.html" . }}
-	<div class="site-wrapper"> 
+	<section class="site-wrapper"> 
 		{{ range $index, $elem := .Params.sections }}
 			<section data-collapse-system="" class="destacado-contacto">
 				<div class="row">
@@ -118,8 +118,8 @@
 				</div>
 			</section>
 		{{ end }}
-		{{ partial "footer.html" . }}
-	</div>
+	</section>
+	{{ partial "footer.html" . }}
 	{{ partial "ri_js_imports.html" . }}
 
 	<div id="modal" class="modal" data-modal>

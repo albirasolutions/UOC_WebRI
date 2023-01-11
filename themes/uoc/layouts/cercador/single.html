@@ -14,7 +14,7 @@
 <body onload="paint()">
 	{{ partial "google_code_body.html" . }}
 	{{ partial "header.html" . }}
-	<div class="site-wrapper"> 
+	<section class="site-wrapper"> 
 		<section data-tab-system="" class="filters-main search-list-collapse">
 			<div class="row">
 				<ul class="filters-main-block" role="tablist">
@@ -649,8 +649,8 @@
 				</div>
 			
 		</section>
-		{{ partial "footer.html" . }}
-	</div>
+	</section>
+	{{ partial "footer.html" . }}
 	{{ partial "ri_js_imports.html" . }}
 	<script src="/js/search_ri.js"></script>
 	<script src="/js/lib/pagination.min.js"></script>
