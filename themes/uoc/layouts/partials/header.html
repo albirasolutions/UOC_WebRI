@@ -1,19 +1,19 @@
 <header>
-	<div id="main-header-4" class="brand-header brand-ri header-4">
+	<div id="main-header-4" class="brand-header brand-secondary header-4">
 		 <div class="header-container clearfix">
 				<div class="col-clear nav-menu-top">
 					 <!-- Desktop version -->
 					 <div class="hidden-xs hidden-sm hidden-md">
-							<div class="top-logo top-logo-desktop"><a href="{{ "/index.html" | relLangURL }}"><img src="/img/logo-uoc-ri-white.png" alt="Logo UOC"></a></div>
+							<div class="top-logo top-logo-desktop"><a href="{{ "/index.html" | relLangURL }}"><img src="/img/logo-uoc-white.png" alt="Logo UOC"></a></div>
 							<div class="header-with-logo">
+								<div class="col-md-2">
+									<span class="ruler ruler--dynamic ruler--white w100-inline-block"></span>
+									<p class="nav-menu-title-aside"> {{ T "uoc_title"}}</p>
+									<span class="ruler ruler--dynamic ruler--white w100-inline-block"></span>
+							 	</div>
 								 <div class="col-md-9 col-lg-9">
 										<span class="ruler ruler--dynamic ruler--white w100-inline-block"></span>
 										<p class="nav-menu-title title-more-size"> {{ T "uoc_ri"}}</p>
-										<span class="ruler ruler--dynamic ruler--white w100-inline-block"></span>
-								 </div>
-								 <div class="col-md-2">
-										<span class="ruler ruler--dynamic ruler--white w100-inline-block"></span>
-										<p class="nav-menu-title-aside"> {{ T "uoc_title"}}</p>
 										<span class="ruler ruler--dynamic ruler--white w100-inline-block"></span>
 								 </div>
 								 <div class="col-md-1">
@@ -45,8 +45,8 @@
 								 <div class="menu-mobile-container">
 										<div class="top-logo"><a href="{{ "/index.html" | relLangURL }}"><img src="/img/logo-uoc-white.png" alt="Logo UOC"></a></div>
 										<div class="top-slogan">
-											 <div class="col-xs-5 col-sm-5 title-wrapper"><span class="ruler ruler--double ruler--white ruler--dynamic nav-menu-title left-title">R&amp;I</span></div>
-											 <div class="col-xs-7 col-sm-7 title-wrapper"><span class="ruler ruler--double ruler--white ruler--dynamic nav-menu-title">Universitat Oberta&nbsp;<br aria-hidden="true">de Catalunya</span></div>
+											<div class="col-xs-7 col-sm-7 title-wrapper"><span class="ruler ruler--double ruler--white ruler--dynamic nav-menu-title">Universitat Oberta&nbsp;<br aria-hidden="true">de Catalunya</span></div>
+											<div class="col-xs-5 col-sm-5 title-wrapper"><span class="ruler ruler--double ruler--white ruler--dynamic nav-menu-title left-title">R&amp;I</span></div>
 										</div>
 										<div class="mobile-buttons">
 											 <div class="virtual-campus-button-container-mobile border-color-dynamic"><a  href="#main-nav-menu" aria-label="Menu" title="Menu" accesskey="m"
@@ -64,9 +64,7 @@
 	<!-- Navigation -->
 	<div class="col-xs-12 col-clear"> 
 		 <div class="nav-menu-container uoc-ri">
-				{{ with .Site.GetPage "/principal" }}
-					 <h1 class="m-2y">{{ .Title }}</h1>
-				{{ end }}
+				<h1 class="m-2y">{{ T "uoc_ri_ri_UOC" }}</h1>
 				<div id="nav-menu-scrollable-container-expand" style="margin-bottom: 1em;">
 					 <div id="nav-menu-scrollable-container" class="nav-menu-scrollable-container">
 							<nav id="main-nav-menu" aria-label="Menú de navegació" class="nav-menu nav-menu-soft-dropdown hidden-xs hidden-sm hidden-md">

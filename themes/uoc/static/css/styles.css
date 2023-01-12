@@ -1540,7 +1540,7 @@ header:not(.header-services) .smaller .nav-dropdown.desktop-lang-dropdown {
 .header-with-logo {
   display: inline-block;
   vertical-align: top;
-  width: calc(100% - 65px);
+  width: calc(95% - 65px);
 }
 .brand-header .mobile-menu .mobile-button .icon {
   bottom: -4px;
@@ -15884,13 +15884,13 @@ footer ul li:before {
   content: none;
 }
 
-footer .page-footer-container .ruler--secondary {
+/*footer .page-footer-container .ruler--secondary {
   border-color: #38ff90;
 }
 
 footer .page-footer-container .brand-box {
   border-color: #38ff90;
-}
+}*/
 
 .nav-menu-container.uoc-ri ul {
   padding-top: 5px;
